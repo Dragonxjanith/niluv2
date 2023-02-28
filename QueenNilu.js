@@ -7513,14 +7513,6 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
   caption: xeonezy,
   footer: botname,
   buttons: buttons,
-  mentions: ments,
-  headerType: 4,
-  contextInfo:{externalAdReply:{
-  title: botname,
-  body: "QueenNiluBot",
-  thumbnail: thumb,
-  mediaType: 2
-  }}
   }
   XeonBotInc.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
   }
