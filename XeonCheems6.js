@@ -347,7 +347,7 @@ detectLinks: false,
     //reply fake
 	//group target \\
 const reply = (teks) => {
-           XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `${ownername}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/janiya/bot.jpg`),"sourceUrl": `${linkz}`}}}, { quoted: m})
+           XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `${ownername}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Media/janiya/bot.jpg`),"sourceUrl": `${linkz}`}}}, { quoted: m})
         }
 
 	//button
@@ -3876,7 +3876,7 @@ case 'setthumb':{
                        if (!m.key.fromMe && !isCreator) return m.reply(mess.owner)
                        if (!isQuotedImage) return m.reply('Reply the picture!')
                                  let media = await XeonBotInc.downloadMediaMessage(m.message.extendedTextMessage.contextInfo.quotedMessage.imageMessage, 'image')
-                await fs.writeFileSync('./XeonMedia/janiya/bot.jpg', media)
+                await fs.writeFileSync('./Media/janiya/bot.jpg', media)
                m.reply(mess.success)
             }
           break
@@ -6305,7 +6305,7 @@ headerType: 4,
 contextInfo:{externalAdReply:{
 title:"I deserve something for my hardwork",
 body: "Click to donate", 
-thumbnail: fs.readFileSync("XeonMedia/janiya/bot.jpg"),
+thumbnail: fs.readFileSync("Media/janiya/bot.jpg"),
 mediaType:1,
 mediaUrl: 'https://i.ibb.co/w46VQ8D/Picsart-22-10-08-06-46-30-674.jpg',
 sourceUrl: "https://i.ibb.co/w46VQ8D/Picsart-22-10-08-06-46-30-674.jpg"
@@ -7510,11 +7510,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
             let ments = [ownernya, me, ini_mark]        
             let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: 'All Menu' }, type: 1 },{ buttonId: 'command', buttonText: { displayText: 'List Menu' }, type: 1 },{ buttonId: 'sc', buttonText: { displayText: 'Script' }, type: 1 }]
             let buttonMessage = {
-  document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
-  fileName : `${wm}`,
-  mimetype: `${docs}`,
-  fileLength: '99999999999999',
-  pageCount: '1000000000',
+  image:("Media/janiya/bot.jpg"),
   caption: xeonezy,
   footer: botname,
   buttons: buttons,
@@ -7522,12 +7518,8 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
   headerType: 4,
   contextInfo:{externalAdReply:{
   title: botname,
-  body: wm, 
-  showAdAttribution: true,
-  thumbnail: thumb,
-  mediaType: 2,
-  mediaUrl: websitex,
-  sourceUrl: websitex
+  body: "QueenNiluBot", 
+ 
   }}
   }
   XeonBotInc.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
