@@ -6301,8 +6301,7 @@ jpegThumbnail: log0,
 caption: teks,
 footer: `${botname}`,
 buttons: buttons,
-headerType: 4,
-}
+headerType: 4
 }
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
