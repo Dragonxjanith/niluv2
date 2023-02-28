@@ -7517,8 +7517,9 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
   headerType: 4,
   contextInfo:{externalAdReply:{
   title: botname,
-  body: "QueenNiluBot", 
- 
+  body: "QueenNiluBot",
+  thumbnail: thumb,
+  mediaType: 2
   }}
   }
   XeonBotInc.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
