@@ -22,16 +22,16 @@ global.socialm = "GitHub: DGXeon" //ur github or insta name
 global.location = "India, Mizoram, Aizawl" //ur location
 
 //bot bomdy 
-global.ownernomer = "916909137213" //ur number
-global.premium = ['916909137213'] //ur premium number
-global.botname = 'Cheems Bot MD V6' //ur bot name
-global.linkz = "https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS" //your theme url which will be displayed on whatsapp
-global.websitex = "https://youtu.be/WiIqCdiDjFo" //ur website to be displayed
-global.botscript = 'https://github.com/DGXeon/CheemsBot-MD6' //script link
+global.ownernomer = "" //ur number
+global.premium = [''] //ur premium number
+global.botname = 'QueenNilu' //ur bot name
+global.linkz = "https://chat.whatsapp.com/" //your theme url which will be displayed on whatsapp
+global.websitex = "https://youtu.be/c/janithsadanuwan" //ur website to be displayed
+global.botscript = 'https://github.com/' //script link
 global.themeemoji = "🦄" //ur theme emoji
 global.packname = "Sticker By" //ur sticker watermark packname
 global.author = "Cheems Bot\n\n\nA whatsapp bot developed by\n🦄Dream Guy Xeon\n\n\n\n\n\n\n\n       --------______-------\n\n\n\n\n\n\n\nContact No. : +916909137213" //ur sticker watermark author
-global.wm = "Xeon Bot Inc." //ur watermark
+global.wm = "QueenNilu" //ur watermark
 
 // Other
 global.sessionName = 'session'
@@ -55,10 +55,10 @@ global.mess = {
 }
 
 //media target
-global.thum = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
-global.log0 = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur logo pic
-global.err4r = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur error pic
-global.thumb = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
+global.thum = fs.readFileSync("./Media/janiya/bot.jpg") //ur thumb pic
+global.log0 = fs.readFileSync("./Media/janiya/bot.jpg") //ur logo pic
+global.err4r = fs.readFileSync("./Media/janiya/bot.jpg") //ur error pic
+global.thumb = fs.readFileSync("./Media/janiya/bot.jpg") //ur thumb pic
 
 //menu image maker
 global.flaming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
