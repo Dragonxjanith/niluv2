@@ -1,6 +1,6 @@
 {
-  "name": "CheemsBot-MD",
-  "version": "6.0.0",
+  "name": "QueenNilu-Bot-MD",
+  "version": "2.0.0",
   "description": "Automated whatsapp md bot created using nodejs and baileys lib",
   "type": "commonjs",
   "scripts": {
@@ -9,15 +9,17 @@
   "keywords": [
     "termux",
     "whatsapp",
-    "2022",
-    "base",
+    "2023",
+    "md",
     "baileys-md",
     "bot",
     "bot-md",
     "multi-device",
-    "xeon-bot-inc"
+    "QueenNilu",
+    "janiya",
+    "janithsadanuwan"
   ],
-  "author": "DGXeon",
+  "author": "Janithsadanuwan",
   "license": "AGPL-3",
   "dependencies": {
     "@adiwajshing/baileys": "^4.4.0",
