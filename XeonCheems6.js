@@ -7516,7 +7516,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
    └─────────────┈ ⳹`
             let ments = [ownernya, me, ini_mark]        
             let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: 'All Menu' }, type: 1 },{ buttonId: 'command', buttonText: { displayText: 'List Menu' }, type: 1 },{ buttonId: 'sc', buttonText: { displayText: 'Script' }, type: 1 }]
-  XeonBotInc.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
+  XeonBotInc.sendMessage(m.chat, {quoted: fkontak})
   }
  break
             break
