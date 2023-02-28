@@ -7509,7 +7509,28 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
    └─────────────┈ ⳹`
             let ments = [ownernya, me, ini_mark]        
             let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: 'All Menu' }, type: 1 },{ buttonId: 'command', buttonText: { displayText: 'List Menu' }, type: 1 },{ buttonId: 'sc', buttonText: { displayText: 'Script' }, type: 1 }]
-  XeonBotInc.sendMessage(m.chat, {quoted: fkontak})
+            let buttonMessage = {
+  document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
+  fileName : `${wm}`,
+  mimetype: `${docs}`,
+  fileLength: '99999999999999',
+  pageCount: '1000000000',
+  caption: xeonezy,
+  footer: botname,
+  buttons: buttons,
+  mentions: ments,
+  headerType: 4,
+  contextInfo:{externalAdReply:{
+  title: botname,
+  body: wm, 
+  showAdAttribution: true,
+  thumbnail: thumb,
+  mediaType: 2,
+  mediaUrl: websitex,
+  sourceUrl: websitex
+  }}
+  }
+  XeonBotInc.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
   }
  break
             break
