@@ -97,10 +97,10 @@ const xpicvirus = fs.readFileSync(`./XBug/xpicvirus.png`)
 //warrrrrrrrrr
 
 //database auto reply
-let xeonysticker = JSON.parse(fs.readFileSync('./XeonMedia/theme/Media-Store-Karne-Ke-Liye/sticker.json'));
-let xeonyaudio = JSON.parse(fs.readFileSync('./XeonMedia/theme/Media-Store-Karne-Ke-Liye/audio.json'));
-let xeonyimage = JSON.parse(fs.readFileSync('./XeonMedia/theme/Media-Store-Karne-Ke-Liye/image.json'));
-let xeonyvideo = JSON.parse(fs.readFileSync('./XeonMedia/theme/Media-Store-Karne-Ke-Liye/video.json'));
+let xeonysticker = JSON.parse(fs.readFileSync('./Medial/janiya/sticker.json'));
+let xeonyaudio = JSON.parse(fs.readFileSync('./Medial/janiya/audio.json'));
+let xeonyimage = JSON.parse(fs.readFileSync('./Medial/janiya/image.json'));
+let xeonyvideo = JSON.parse(fs.readFileSync('./Medial/janiya/video.json'));
 
 module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
     try {
