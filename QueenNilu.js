@@ -7506,7 +7506,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
   footer: botname,
   buttons: buttons,
   }
-  XeonBotInc.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
+  XeonBotInc.sendMessage(m.chat, buttonMessage,)
   }
  break
             break
