@@ -6302,14 +6302,7 @@ caption: teks,
 footer: `${botname}`,
 buttons: buttons,
 headerType: 4,
-contextInfo:{externalAdReply:{
-title:"I deserve something for my hardwork",
-body: "Click to donate", 
-thumbnail: fs.readFileSync("Media/janiya/bot.jpg"),
-mediaType:1,
-mediaUrl: 'https://i.ibb.co/w46VQ8D/Picsart-22-10-08-06-46-30-674.jpg',
-sourceUrl: "https://i.ibb.co/w46VQ8D/Picsart-22-10-08-06-46-30-674.jpg"
-}}
+}
 }
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
