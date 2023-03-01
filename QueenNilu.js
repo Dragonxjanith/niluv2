@@ -7658,7 +7658,7 @@ const listMessage = {
   buttonText: "Menu",
   sections
 }
-const sendMsg = await XeonBotInc.sendMessage(m.chat,{ react: { text: `😘`, listMessage}})
+const sendMsg = await XeonBotInc.sendMessage(m.chat, listMessage)
 }
 break
             case 'allmenu':{
