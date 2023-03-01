@@ -7509,7 +7509,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
   }
  break
             break
-            case 'command': {
+            case 'command':case 'menu': {
 	const sections = [{
 								"title": "Initial Features Of Bot 🦄",
 								"rows": [
@@ -7658,7 +7658,7 @@ const listMessage = {
   buttonText: "Menu",
   sections
 }
-const sendMsg = await XeonBotInc.sendMessage(m.chat, listMessage)
+const sendMsg = await XeonBotInc.sendMessage(m.chat,{ react: { text: `😘`, listMessage}})
 }
 break
             case 'allmenu':{
