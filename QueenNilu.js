@@ -7653,7 +7653,15 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 						]
 const listMessage = {
   text: "Please choose the menu",
-  footer: `${botname}\n📍YouTube: ${websitex}\n🍜Script: ${botscript}`,
+  footer: `${botname}\n𝚠𝚎𝚕𝚌𝚘𝚖𝚎 𝚃𝙾 
+  🙈 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 🫶🏻💙
+  
+  
+  👨🏻‍💻𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : 𝘑𝘈𝘕𝘐𝘠𝘈
+  💍𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :_02.00.00_
+  🪷𝚆𝙴𝙱𝚂𝙸𝚃𝙴:_Https://janithsadanuwan.tech/QueenNilu_
+  
+  *Please Choose the Menu*`,
   title: `Hi 👋 ${pushname}`,
   buttonText: "Menu",
   sections
