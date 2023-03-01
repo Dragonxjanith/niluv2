@@ -7509,7 +7509,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
   }
  break
             break
-            case 'command':case 'menu': {
+            case 'command':case 'listmenu': {
 	const sections = [{
 								"title": "Initial Features Of Bot 🦄",
 								"rows": [
