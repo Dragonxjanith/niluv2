@@ -1132,7 +1132,6 @@ Cieeee, What's Going On❤️💖👀`
             }
             break
             case 'buttonmaker': {
-            if (!isPremium) throw mess.premime
 			if (!text) throw `Example : ${prefix + command} hi|hello`
             let jawab = `${text.split("|")[0]}`
             let buttons = [{ buttonId: 'menu', buttonText: { displayText: `${themeemoji}` }, type: 1 }]
@@ -1258,11 +1257,11 @@ Cieeee, What's Going On❤️💖👀`
                 if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
-let teks = `╚»˙·٠${themeemoji}●♥ Tag All ♥●${themeemoji}٠·˙«╝ 
+let teks = `╚»˙·٠💙💍♥ Tag All ♥💙💍٠·˙«╝ 
  
  🌿 *Message : ${q ? q : 'empty'}*\n\n`
                 for (let mem of participants) {
-                teks += `${themeemoji} @${mem.id.split('@')[0]}\n`
+                teks += `🧚‍♀️ @${mem.id.split('@')[0]}\n`
                 }
                 XeonBotInc.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
@@ -1282,7 +1281,7 @@ let teks = `╚»˙·٠${themeemoji}●♥ Tag All ♥●${themeemoji}٠·˙«�
                 let anu = await styletext(text)
                 let teks = `Style Text From ${text}\n\n`
                 for (let i of anu) {
-                    teks += `${themeemoji} *${i.name}* : ${i.result}\n\n`
+                    teks += `💙💍 *${i.name}* : ${i.result}\n\n`
                 }
                 m.reply(teks)
 	    }
@@ -1609,20 +1608,20 @@ await XeonBotInc.sendMessage(i, { video:media,  caption: txt, mentions:participa
 	    break
             case 'listpc': {
                  let anulistp = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v.id)
-                 let teks = `${themeemoji} *PERSONAL CHAT LIST*\n\nTotal Chat : ${anulistp.length} Chat\n\n`
+                 let teks = `💃*PERSONAL CHAT LIST*\n\nTotal Chat : ${anulistp.length} Chat\n\n`
                  for (let i of anulistp) {
                      let nama = store.messages[i].array[0].pushName
-                     teks += `${themeemoji} *Name :* ${nama}\n${themeemoji} *User :* @${i.split('@')[0]}\n${themeemoji} *Chat :* https://wa.me/${i.split('@')[0]}\n\n────────────────────────\n\n`
+                     teks += `💃 *Name :* ${nama}\n💃 *User :* @${i.split('@')[0]}\n💃 *Chat :* https://wa.me/${i.split('@')[0]}\n\n────────────────────────\n\n`
                  }
                  XeonBotInc.sendTextWithMentions(m.chat, teks, m)
              }
              break
                 case 'listgc': {
                  let anulistg = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
-                 let teks = `${themeemoji} *GROUP CHAT LIST*\n\nTotal Group : ${anulistg.length} Group\n\n`
+                 let teks = `🔥 *GROUP CHAT LIST*\n\nTotal Group : ${anulistg.length} Group\n\n`
                  for (let i of anulistg) {
                      let metadata = await XeonBotInc.groupMetadata(i)
-                     teks += `${themeemoji} *Name :* ${metadata.subject}\n${themeemoji} *Owner :* ${metadata.owner !== undefined ? '@' + metadata.owner.split`@`[0] : 'Unknown'}\n${themeemoji} *ID :* ${metadata.id}\n${themeemoji} *Made :* ${moment(metadata.creation * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss')}\n${themeemoji} *Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
+                     teks += `🔥 *Name :* ${metadata.subject}\n🔥 *Owner :* ${metadata.owner !== undefined ? '@' + metadata.owner.split`@`[0] : 'Unknown'}\n🔥*ID :* ${metadata.id}\n🔥 *Made :* ${moment(metadata.creation * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss')}\n🔥 *Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
                  }
                  XeonBotInc.sendTextWithMentions(m.chat, teks, m)
              }
@@ -1630,7 +1629,7 @@ await XeonBotInc.sendMessage(i, { video:media,  caption: txt, mentions:participa
              case 'listonline': case 'onlinelist': {
                     let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
                     let online = [...Object.keys(store.presences[id]), botNumber]
-                    XeonBotInc.sendText(m.chat, 'Online Member:\n\n' + online.map(v => '${themeemoji} @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+                    XeonBotInc.sendText(m.chat, 'Online Member:\n\n' + online.map(v => '🌝 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
              }
              break
 case 'sticker': case 's': case 'stickergif': case 'sgif': {
@@ -1675,7 +1674,7 @@ if(isNaN(q)) return await m.reply('must be a number')
 prmi = args.join(" ")
 premium.push(`${prmi}@s.whatsapp.net`)
 fs.writeFileSync('./database/user/premium.json', JSON.stringify(premium))
-m.reply(`* PREMIUM ADDED *\n\n${themeemoji} *ID*: ${prmi}`)
+m.reply(`* PREMIUM ADDED *\n\n🌝 *ID*: ${prmi}`)
 break
 case 'delprem':
  case 'dellprem':
@@ -4564,10 +4563,10 @@ case 'lyrics2': {
 	const { lyrics, lyricsv2 } = require('@bochilteam/scraper')
     const result = await lyricsv2(text).catch(async _ => await lyrics(text))
     m.reply(`
-${themeemoji} Title : *${result.title}*
-${themeemoji} Author : ${result.author}
-${themeemoji} Lyrics : ${result.lyrics}
-${themeemoji} Url : ${result.link}
+    *🗳️ Title :*${result.title}*
+    *🎗️Tittle :* ${result.author}
+    *📝Lyrics :* ${result.lyrics}
+    *📁Url : *${result.link}
 `.trim())
 }
 break
@@ -4578,9 +4577,9 @@ try {
 const lyrics = await findLyrics(text)
 if (lyrics.lyrics == '') return console.log("it's f up")
 var txt = `
-*${themeemoji} Title :* ${lyrics.title}
-*${themeemoji} Artist :* ${lyrics.artist}
-*${themeemoji} Lyrics :-* \n
+*🗳️ Title :* ${lyrics.title}
+*🎗️Tittle :* ${lyrics.artist}
+*📝Lyrics :* \n
 ${lyrics.lyrics}`
 console.log(lyrics)
  await XeonBotInc.sendMessage(m.chat, {text:txt},{quoted:m})
@@ -4599,8 +4598,8 @@ console.log(lyrics)
                 let buttonMessage = {
                     image: { url: images },
                     caption: `*-------「 GIMAGE SEARCH 」-------*
-${themeemoji} *Query* : ${text}
-${themeemoji} *Media Url* : ${images}`,
+*📁  Query* : ${text}
+*🪄 Media Url* : ${images}`,
                     footer: botname,
                     buttons: buttons,
                     headerType: 4
@@ -4614,7 +4613,7 @@ case 'image': {
 		let { pinterest } = require('./lib/scraperW')
                 anuxeonezy2 = await pinterest(text)
                 resultkkk3 = anuxeonezy2[Math.floor(Math.random() * anuxeonezy2.length)]
-                XeonBotInc.sendMessage(m.chat, { image: { url: resultkkk3 }, caption: ` ${themeemoji} Media Url : `+resultkkk3 }, { quoted: m })
+                XeonBotInc.sendMessage(m.chat, { image: { url: resultkkk3 }, caption: ` 🪄Media Url : `+resultkkk3 }, { quoted: m })
             }
             break
 case 'swm': case 'stickerwm': case 'wm': case 'take': {  
