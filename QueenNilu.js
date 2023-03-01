@@ -7518,52 +7518,82 @@ case 'textshot': {
             break
 //------------------------The End----------------------\\
 			
-case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
-            let ownernya = ownernomer + '@s.whatsapp.net'
-            let me = m.sender
-            let timestampe = speed();
-            let latensie = speed() - timestampe
-            let xeonezy = `┌─❖
-│ Hi 👋 
-└┬❖  ${pushname} 
-┌┤✑  ${ucapanWaktu} 😄
-│└────────────┈ ⳹
-│
-└─ 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊        
-│𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│𝗣𝗼𝘄𝗲𝗿𝗲𝗱 : @${ini_mark.split('@')[0]}
-│𝗕𝗼𝘁 : ${global.botname}
-│𝗢𝘄𝗻𝗲𝗿 : @${ownernya.split('@')[0]}
-│𝗣𝗿𝗲𝗳𝗶𝘅 :  NO-PREFIX 
-│𝗠𝗼𝗱𝗲 : ${XeonBotInc.public ? 'Public' : `Self`}
-│𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
-│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
-│
-└─ 𝙐𝙎𝙀𝙍 𝙄𝙉𝙁𝙊 
-│𝗡𝗮𝗺𝗲 : ${pushname}
-│𝗡𝘂𝗺𝗯𝗲𝗿 : @${me.split('@')[0]}
-│𝗣𝗿𝗲𝗺𝗶𝘂𝗺 : ${isPremium ? '✅' : `❌`}
-│𝗟𝗶𝗺𝗶𝘁 : ${isPremium ? '♾Infinity' : `〽️${db.data.users[m.sender].limit}`}
-│
-└─ 𝙏𝙄𝙈𝙀 𝙄𝙉𝙁𝙊 
-│𝗧𝗶𝗺𝗲 : ${xtime}
-│𝗗𝗮𝘁𝗲 : ${xdate}
-└┬────────────┈ ⳹
-   │✑  Please Select
-   │✑  The Button Below
-   └─────────────┈ ⳹`     
-            let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: 'All Menu' }, type: 1 },{ buttonId: 'command', buttonText: { displayText: 'List Menu' }, type: 1 },{ buttonId: 'About', buttonText: { displayText: '🗣️ ᴀʙᴏᴜᴛ' }, type: 1 }]
-            let buttonMessage = {
-  caption: xeonezy,
-  footer: botname,
-  buttons: buttons
-  }
-  XeonBotInc.sendMessage(m.chat, buttonMessage,)
-  }
+case 'tes': case 'test': case 'alive': case 'bot': case 'robot': case 'zimbot': case 'drips':{
+    ram9000 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
+    timestampe = speed();
+    latensie = speed() - timestampe
+      anu = `
+    *ᴜᴘᴛɪᴍᴇ :* ${runtime(process.uptime())}
+    ┌───〔 *_◉ᴀʙᴏᴜᴛ◉_* 〕
+    ┊ *❗ᴏꜱ ʀᴇʟᴇᴀꜱᴇ:* ${os.release()}
+    ┊ *❕ᴏꜱ ᴛʏᴘᴇ:*   ${os.type()}
+    ┊ *❗ᴅɪʀᴇᴄᴛᴏʀʏ:*  ${os.homedir()}
+    ┊ *❕ꜱᴘᴇᴇᴅ :* ${latensie.toFixed(4)} Second
+    ┊ *ʀᴀᴍᴜsᴀɢᴇ :* ${ram9000}
+    ┊ *❗ᴘʟᴀᴛʟғᴏʀᴍ :* ${os.platform()} 
+    ┊ *❗ꜰʀᴇᴇ ᴍᴏᴍᴏʀʏ:* ${os.freemem()}
+    ┊ *❕ᴛᴏᴛᴀʟ ᴍᴇᴍᴏʀʏ:* ${os.totalmem()}
+    ┊ *❕ᴠᴇʀꜱɪᴏɴ:* ${os.version()}
+    ┊ *❗ᴅᴇᴠɪᴄᴇ :* ${os.hostname()}
+    ┊ *❕ᴛᴏᴛᴀʟ ᴜsᴇʀs :* ${Object.keys(global.db.users).length}
+    └───────────●
+      
+    ┌───〔 *_◉ᴜsᴇʀ ɪɴғᴏ◉_* 〕
+    ┊ *NAME:* ${pushname}
+    ┊  ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
+    ┊ *RANK:* ${role}
+    ┊ *STATUS:* ${elit}
+    ┊ *MONEY:* $${(getBalance(sender, balance))}
+    ┊ *XP:* ${getLevelingXp(sender)}/${reqXp}
+    ┊ *LEVEL:* ${getLevelingLevel(sender)}
+    ┊ *MONEY:* $${(getBalance(sender, balance))}
+    ┊ *GOLD:* ${getEmas(sender)}
+    ┊ *IRON:* ${getBesi(sender)}
+    ┊ *FISH:* ${getFish(sender)}
+    ┊ *DIAMOND:* ${getDm(sender)}
+    └───────────●
+    `
+    const aliveer = fs.readFileSync('./Media/nilu.mp3')
+    XeonBotInc.sendMessage(m.chat, { audio: aliveer, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
+    huso = await getBuffer(picak+'ZIM BOT IS ALIVE')
+    let message = await prepareWAMessageMedia({ image: huso, jpegThumbnail:huso }, { upload: XeonBotInc.waUploadToServer })
+    const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+    templateMessage: {
+    hydratedTemplate: {
+    imageMessage: message.imageMessage,
+    hydratedContentText: anu,
+    hydratedFooterText: `${global.botname}`,
+    hydratedButtons: [{
+    urlButton: {
+    displayText: 'SUBSCRIBE',
+    url: 'https://www.youtube.com/c/janithsadanuwan'
+    }
+    }, {
+    urlButton: {
+    displayText: 'GITHUB',
+    url: 'https://github.com/janithsadanuwan/QueenNilu/fork'
+    }
+    }, {
+    quickReplyButton: {
+    displayText: 'SPEED',
+    id: 'ping'
+    }
+    }, {
+    quickReplyButton: {
+    displayText: 'OWNER',
+    id: 'owner'
+    }  
+    }, {
+    quickReplyButton: {
+    displayText: 'LIST',
+    id: 'listmenu'
+    }
+    }]
+    }
+    }
+    }), { userJid: m.chat, quoted: m })
+    XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
+    }
  break
             break
             case 'command':case 'listmenu': {
