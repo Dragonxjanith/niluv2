@@ -7503,7 +7503,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
             let buttonMessage = {
   caption: xeonezy,
   footer: botname,
-  buttons: buttons,
+  buttons: buttons
   }
   XeonBotInc.sendMessage(m.chat, buttonMessage,)
   }
