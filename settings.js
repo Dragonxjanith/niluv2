@@ -30,7 +30,7 @@ global.websitex = "https://youtu.be/c/janithsadanuwan" //ur website to be displa
 global.botscript = 'https://github.com/' //script link
 global.themeemoji = "🦄" //ur theme emoji
 global.packname = "Sticker By" //ur sticker watermark packname
-global.author = "Cheems Bot\n\n\nA whatsapp bot developed by\n🦄Dream Guy Xeon\n\n\n\n\n\n\n\n       --------______-------\n\n\n\n\n\n\n\nContact No. : +916909137213" //ur sticker watermark author
+global.author = "QueenNilu By janiya" //ur sticker watermark author
 global.wm = "QueenNilu" //ur watermark
 
 // Other
