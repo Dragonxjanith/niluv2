@@ -7536,21 +7536,7 @@ case 'janiya': case 'test': case 'alive': case 'bot': case 'robot': case 'nilubo
     ┊ *❕ᴠᴇʀꜱɪᴏɴ:* ${os.version()}
     ┊ *❗ᴅᴇᴠɪᴄᴇ :* ${os.hostname()}
     └───────────●
-      
-    ┌───〔 *_◉ᴜsᴇʀ ɪɴғᴏ◉_* 〕
-    ┊ *NAME:* ${pushname}
-    ┊  ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-    ┊ *RANK:* ${role}
-    ┊ *STATUS:* ${elit}
-    ┊ *MONEY:* $${(getBalance(sender, balance))}
-    ┊ *XP:* ${getLevelingXp(sender)}/${reqXp}
-    ┊ *LEVEL:* ${getLevelingLevel(sender)}
-    ┊ *MONEY:* $${(getBalance(sender, balance))}
-    ┊ *GOLD:* ${getEmas(sender)}
-    ┊ *IRON:* ${getBesi(sender)}
-    ┊ *FISH:* ${getFish(sender)}
-    ┊ *DIAMOND:* ${getDm(sender)}
-    └───────────●
+
     `
     const aliveer = fs.readFileSync('./Media/nilu.mp3')
     XeonBotInc.sendMessage(m.chat, { audio: aliveer, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
