@@ -22,8 +22,8 @@ global.socialm = "GitHub: DGXeon" //ur github or insta name
 global.location = "India, Mizoram, Aizawl" //ur location
 
 //bot bomdy 
-global.ownernomer = "" //ur number
-global.premium = [''] //ur premium number
+global.ownernomer = "94767438882" //ur number
+global.premium = ['94767438882'] //ur premium number
 global.botname = 'QueenNilu' //ur bot name
 global.linkz = "https://chat.whatsapp.com/" //your theme url which will be displayed on whatsapp
 global.websitex = "https://youtu.be/c/janithsadanuwan" //ur website to be displayed
