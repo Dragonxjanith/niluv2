@@ -8861,9 +8861,9 @@ case 'animemenu':{
 var unicorn = await getBuffer(picak+'Anime Menu')
 
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
+  {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -8931,9 +8931,9 @@ break
 var unicorn = await getBuffer(picak+'Sticker Menu')
 
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
+    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
+    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -8961,9 +8961,9 @@ case 'animestickermenu':{
 var unicorn = await getBuffer(picak+'Anime Sticker Menu')
 
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
+    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
+    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -9009,9 +9009,9 @@ case 'nsfwmenu':{
 var unicorn = await getBuffer(picak+'Nsfw Menu')
 
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
+    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
+    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -9063,9 +9063,9 @@ case 'funmenu':{
 var unicorn = await getBuffer(picak+'Fun Menu')
 
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
+    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
+    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -9153,193 +9153,14 @@ const buttonMessage = {
 const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
 }
 break
-case 'soundmenu':{
-var unicorn = await getBuffer(picak+'Sound Menu')
 
-const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ Sound 	
-╠ ${prefix}sound1
-╠ ${prefix}sound2
-╠ ${prefix}sound3
-╠ ${prefix}sound4
-╠ ${prefix}sound5
-╠ ${prefix}sound6
-╠ ${prefix}sound7
-╠ ${prefix}sound8
-╠ ${prefix}sound9
-╠ ${prefix}sound10
-╠ ${prefix}sound11
-╠ ${prefix}sound12
-╠ ${prefix}sound13
-╠ ${prefix}sound14
-╠ ${prefix}sound15
-╠ ${prefix}sound16
-╠ ${prefix}sound17
-╠ ${prefix}sound18
-╠ ${prefix}sound19
-╠ ${prefix}sound20
-╠ ${prefix}sound21
-╠ ${prefix}sound22
-╠ ${prefix}sound23
-╠ ${prefix}sound24
-╠ ${prefix}sound25
-╠ ${prefix}sound26
-╠ ${prefix}sound27
-╠ ${prefix}sound28
-╠ ${prefix}sound29
-╠ ${prefix}sound30
-╠ ${prefix}sound31
-╠ ${prefix}sound32
-╠ ${prefix}sound33
-╠ ${prefix}sound34
-╠ ${prefix}sound35
-╠ ${prefix}sound36
-╠ ${prefix}sound37
-╠ ${prefix}sound38
-╠ ${prefix}sound39
-╠ ${prefix}sound40
-╠ ${prefix}sound41
-╠ ${prefix}sound42
-╠ ${prefix}sound43
-╠ ${prefix}sound44
-╠ ${prefix}sound45
-╠ ${prefix}sound46
-╠ ${prefix}sound47
-╠ ${prefix}sound48
-╠ ${prefix}sound49
-╠ ${prefix}sound50
-╠ ${prefix}sound51
-╠ ${prefix}sound52
-╠ ${prefix}sound53
-╠ ${prefix}sound54
-╠ ${prefix}sound55
-╠ ${prefix}sound56
-╠ ${prefix}sound57
-╠ ${prefix}sound58
-╠ ${prefix}sound59
-╠ ${prefix}sound60
-╠ ${prefix}sound61
-╠ ${prefix}sound62
-╠ ${prefix}sound63
-╠ ${prefix}sound64
-╠ ${prefix}sound65
-╠ ${prefix}sound66
-╠ ${prefix}sound67
-╠ ${prefix}sound68
-╠ ${prefix}sound69
-╠ ${prefix}sound70
-╠ ${prefix}sound71
-╠ ${prefix}sound72
-╠ ${prefix}sound73
-╠ ${prefix}sound74
-╠ ${prefix}sound75
-╠ ${prefix}sound76
-╠ ${prefix}sound77
-╠ ${prefix}sound78
-╠ ${prefix}sound79
-╠ ${prefix}sound80
-╠ ${prefix}sound81
-╠ ${prefix}sound82
-╠ ${prefix}sound83
-╠ ${prefix}sound84
-╠ ${prefix}sound85
-╠ ${prefix}sound86
-╠ ${prefix}sound87
-╠ ${prefix}sound88
-╠ ${prefix}sound89
-╠ ${prefix}sound90
-╠ ${prefix}sound91
-╠ ${prefix}sound92
-╠ ${prefix}sound93
-╠ ${prefix}sound94
-╠ ${prefix}sound95
-╠ ${prefix}sound96
-╠ ${prefix}sound97
-╠ ${prefix}sound98
-╠ ${prefix}sound99
-╠ ${prefix}sound100
-╠ ${prefix}sound101
-╠ ${prefix}sound102
-╠ ${prefix}sound103
-╠ ${prefix}sound104
-╠ ${prefix}sound105
-╠ ${prefix}sound106
-╠ ${prefix}sound107
-╠ ${prefix}sound108
-╠ ${prefix}sound109
-╠ ${prefix}sound110
-╠ ${prefix}sound111
-╠ ${prefix}sound112
-╠ ${prefix}sound113
-╠ ${prefix}sound114
-╠ ${prefix}sound115
-╠ ${prefix}sound116
-╠ ${prefix}sound117
-╠ ${prefix}sound118
-╠ ${prefix}sound119
-╠ ${prefix}sound120
-╠ ${prefix}sound121
-╠ ${prefix}sound122
-╠ ${prefix}sound123
-╠ ${prefix}sound124
-╠ ${prefix}sound125
-╠ ${prefix}sound126
-╠ ${prefix}sound127
-╠ ${prefix}sound128
-╠ ${prefix}sound129
-╠ ${prefix}sound130
-╠ ${prefix}sound131
-╠ ${prefix}sound132
-╠ ${prefix}sound133
-╠ ${prefix}sound134
-╠ ${prefix}sound135
-╠ ${prefix}sound136
-╠ ${prefix}sound137
-╠ ${prefix}sound138
-╠ ${prefix}sound139
-╠ ${prefix}sound140
-╠ ${prefix}sound141
-╠ ${prefix}sound142
-╠ ${prefix}sound143
-╠ ${prefix}sound144
-╠ ${prefix}sound145
-╠ ${prefix}sound146
-╠ ${prefix}sound147
-╠ ${prefix}sound148
-╠ ${prefix}sound149
-╠ ${prefix}sound150
-╠ ${prefix}sound151
-╠ ${prefix}sound152
-╠ ${prefix}sound153
-╠ ${prefix}sound154
-╠ ${prefix}sound155
-╠ ${prefix}sound156
-╠ ${prefix}sound157
-╠ ${prefix}sound158
-╠ ${prefix}sound159
-╠ ${prefix}sound160
-╠ ${prefix}sound161
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
-}
-break
 case 'gamemenu':{
 var unicorn = await getBuffer(picak+'Game Menu')
 
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
+    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
+    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -9363,9 +9184,9 @@ break
 var unicorn = await getBuffer(picak+'Anonymous Menu')
 
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
+    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
+    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -9386,9 +9207,9 @@ case 'databasemenu':{
 var unicorn = await getBuffer(picak+'Database Menu')
 
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
+    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
+    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -9413,9 +9234,9 @@ case 'othermenu':{
 var unicorn = await getBuffer(picak+'Other Menu')
 
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
+    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
+    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -9452,9 +9273,9 @@ case 'warmenu':{
 var unicorn = await getBuffer(picak+'War Menu')
 
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
+    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
+    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
