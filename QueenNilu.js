@@ -6291,12 +6291,20 @@ const reply = `
     }
     break
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
-teks = `*「 ${global.botname} Script 」*\n\nYouTube: ${global.websitex}\nGitHub: ${global.botscript}\n\nDont forget to donate 🍜`
+teks = `*「𝚠𝚎𝚕𝚌𝚘𝚖𝚎 𝚃𝙾 
+🙈 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 🫶🏻💙
+
+
+👨🏻‍💻𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : 𝘑𝘈𝘕𝘐𝘠𝘈
+💍𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :_02.00.00_
+🪷𝚆𝙴𝙱𝚂𝙸𝚃𝙴:_Https://janithsadanuwan.tech/QueenNilu_
+
+*Please Choose the Menu* 」`
 let buttons = [
 {buttonId: `owner`, buttonText: {displayText: 'Owner 🌺'}, type: 1}
 ]
 let buttonMessage = {
-image: {url: `https://i.ibb.co/w46VQ8D/Picsart-22-10-08-06-46-30-674.jpg`},
+image: {url: `https://te.legra.ph/file/3e57249993356ba15109f.jpg`},
 jpegThumbnail: log0,
 caption: teks,
 footer: `${botname}`,
@@ -7670,9 +7678,9 @@ break
 var unicorn = await getBuffer(picak+'All Menu')
 
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
+  {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
