@@ -6290,7 +6290,7 @@ const reply = `
     return m.reply (`*${q}* isn't a valid text`)
     }
     break
-case 'About': case 'script': case 'bot': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
+case 'About': case 'script': case 'bot': case 'donate': case 'about': case 'updatebot': case 'cekbot': case 'sourcecode': {
 teks = `*「𝚠𝚎𝚕𝚌𝚘𝚖𝚎 𝚃𝙾 
 🙈 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 🫶🏻💙
 
@@ -7649,7 +7649,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 									{
 										"title": "About Queen Nilu",
 										"description": "Displays The List Of Credit Of The Bot !!",
-										"rowId": `${prefix}tqtt`
+										"rowId": `${prefix}about`
 									}
 								]
 							}
@@ -7691,7 +7691,7 @@ const buttonMessage = {
 ╠ ${prefix}block [tag/number]
 ╠ ${prefix}unblock [tag/number]
 ╠═══════✪ GROUP 	
-        
+
 ╠${prefix}grouplink
 ╠${prefix}ephemeral [option]
 ╠${prefix}setgcpp [image]
