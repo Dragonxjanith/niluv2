@@ -7625,7 +7625,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 									     },
 										{
 										"title": "War Menu☣️",
-										"description": "Displays The List Of War Features",
+										"description": "tqttDisplays The List Of War Features",
 										"rowId": `${prefix}warmenu`
 									}
 								]
@@ -7641,10 +7641,10 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 								]
 							},
 							{
-								"title": "Credit ©️",
+								"title": "About Bot",
 								"rows": [
 									{
-										"title": "Thanks To ❤️",
+										"title": "About Queen Nilu",
 										"description": "Displays The List Of Credit Of The Bot !!",
 										"rowId": `${prefix}tqtt`
 									}
@@ -7652,18 +7652,15 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 							}
 						]
 const listMessage = {
-  text: "Please choose the menu",
-  footer: `${botname}\n𝚠𝚎𝚕𝚌𝚘𝚖𝚎 𝚃𝙾 
-  🙈 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 🫶🏻💙
-  
-  
+  text: " *Please Choose the Menu*",
+  footer: `𝚠𝚎𝚕𝚌𝚘𝚖𝚎 𝚃𝙾 
+    🙈 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 🫶🏻💙
+
   👨🏻‍💻𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : 𝘑𝘈𝘕𝘐𝘠𝘈
   💍𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :_02.00.00_
-  🪷𝚆𝙴𝙱𝚂𝙸𝚃𝙴:_Https://janithsadanuwan.tech/QueenNilu_
-  
-  *Please Choose the Menu*`,
+  🪷𝚆𝙴𝙱𝚂𝙸𝚃𝙴:_Https://janithsadanuwan.tech/QueenNilu_`,
   title: `Hi 👋 ${pushname}`,
-  buttonText: "Menu",
+  buttonText: "𝗔𝗟𝗟 𝗠𝗘𝗡𝗨",
   sections
 }
 const sendMsg = await XeonBotInc.sendMessage(m.chat, listMessage)
