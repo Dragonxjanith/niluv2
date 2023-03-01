@@ -3297,6 +3297,56 @@ break
 		XeonBotInc.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
 	    }
 	    break
+
+        case 'apkdl': case 'apkmod': case 'apkd': {      
+  
+            if (!text) return m.reply(`Use${prefix + command} vpn`) 
+            let noh = require('./lib/myfunc2')                
+            noh.rexdl(`${text}`).then(async (data) => {
+            let sections = []   
+            for (let i of data) {
+            const list = {title: `${i.judul}`,
+            rows: [
+                  {
+                   title: `${i.judul}`, 
+                   rowId: `${prefix}donlod ${i.link}`,
+                   description: `CATEGORY: ${i.kategori}\nPUBLISH: ${i.upload_date}\nINFORMATION: ${i.deskripsi}`
+                  }, 
+                  ]
+               }
+               sections.push(list)   
+               }
+            const sendm =  XeonBotInc.sendMessage(
+                m.chat, 
+                {
+                 text: `${ucapannya2} ${pushname} *Search Results From ${text} Click the button below to choose*`,
+                 footer: `© ZIM BOT INC`,
+                 title: "*▊▊▊APK DOWNLOAD▊▊▊*",
+                 buttonText: "CLICK HERE",
+                 sections
+                }, { quoted : m })                 
+                          }).catch((err) => {
+                              reply(`*${text} Not found*`)
+                          })
+                      }
+                      break
+                      case 'donlod':  {  
+                        let dhupi = require('./lib/index.js')             
+                                        if (!text) return m.reply(`Use${prefix + command} whatsapp`)
+                                        if (!isUrl(args[0]) && !args[0].includes('https://rexdl.com/'))
+                                        
+                                   dhupi.rexdldown(`${text}`).then(async (anu) => {        
+                                   if (anu[0].size.split('MB')[0] >= 150) return reply('*File Over Limit* '+util.format(anu))
+                                   for (let i of anu) {    
+                                   linkye = `*▊▊▊APK DOWNLOAD▊▊▊*\n\n*TITLE:* ${i.title}\n*UPDATE:* ${i.up}\n*VERSION:* ${i.vers}\n*FILESIZE:* ${i.size}\n*URL:* \n*DESCRIPTION:* ${i.desc}\n\n*ZIM BOT INC*`         
+                                        XeonBotInc.sendMessage(m.chat, { image: await getBuffer(i.thumb), jpegThumbnail: await getBuffer(i.thumb), caption: `${linkye}` }, { quoted: m })
+                                        XeonBotInc.sendMessage(m.chat, {document: await getBuffer(i.link), mimetype: `application/vnd.android.package-archive`, fileName: `${i.title}`}, {quoted:m})  
+                                        }  
+                                        }).catch((err) => {
+                                            reply(`*Failed When Downloading Media and Sending Files*`)
+                                        }) 
+                                      }
+                                        break
 case 'stickman':
 m.reply(mess.wait)
 XeonBotInc.sendMessage(m.chat, {sticker: {url: `https://api.zeeoneofc.xyz/api/telegram-sticker/manusia-lidi?apikey=dhmDlD5x`}}, {quoted: m })
