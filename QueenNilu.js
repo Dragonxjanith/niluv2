@@ -6290,7 +6290,7 @@ const reply = `
     return m.reply (`*${q}* isn't a valid text`)
     }
     break
-case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
+case 'About': case 'script': case 'bot': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 teks = `*「𝚠𝚎𝚕𝚌𝚘𝚖𝚎 𝚃𝙾 
 🙈 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 🫶🏻💙
 
@@ -7507,7 +7507,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
    │✑  Please Select
    │✑  The Button Below
    └─────────────┈ ⳹`     
-            let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: 'All Menu' }, type: 1 },{ buttonId: 'command', buttonText: { displayText: 'List Menu' }, type: 1 },{ buttonId: 'sc', buttonText: { displayText: 'Script' }, type: 1 }]
+            let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: 'All Menu' }, type: 1 },{ buttonId: 'command', buttonText: { displayText: 'List Menu' }, type: 1 },{ buttonId: 'About', buttonText: { displayText: '🗣️ ᴀʙᴏᴜᴛ' }, type: 1 }]
             let buttonMessage = {
   caption: xeonezy,
   footer: botname,
