@@ -213,7 +213,7 @@ footer: `${botname}`,
 buttons: buttons,
 headerType: 4
 }
-XeonBotInc.sendMessage(anu.id, buttonMessage,)
+XeonBotInc.sendMessage(anu.id, buttonMessage)
                              
                 }
             }
