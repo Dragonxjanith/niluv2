@@ -7518,7 +7518,7 @@ case 'textshot': {
             break
 //------------------------The End----------------------\\
 			
-case 'tes': case 'test': case 'alive': case 'bot': case 'robot': case 'zimbot': case 'drips':{
+case 'janiya': case 'test': case 'alive': case 'bot': case 'robot': case 'nilubot':{
     ram9000 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
     timestampe = speed();
     latensie = speed() - timestampe
@@ -7535,7 +7535,6 @@ case 'tes': case 'test': case 'alive': case 'bot': case 'robot': case 'zimbot': 
     ┊ *❕ᴛᴏᴛᴀʟ ᴍᴇᴍᴏʀʏ:* ${os.totalmem()}
     ┊ *❕ᴠᴇʀꜱɪᴏɴ:* ${os.version()}
     ┊ *❗ᴅᴇᴠɪᴄᴇ :* ${os.hostname()}
-    ┊ *❕ᴛᴏᴛᴀʟ ᴜsᴇʀs :* ${Object.keys(global.db.users).length}
     └───────────●
       
     ┌───〔 *_◉ᴜsᴇʀ ɪɴғᴏ◉_* 〕
