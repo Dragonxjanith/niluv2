@@ -1,6 +1,6 @@
 
 require('./settings')
-const { default: janiyaConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
+const { default: XeonBotIncConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
 const { state, saveState } = useSingleFileAuthState(`${sessionName}.json`)
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
@@ -68,63 +68,63 @@ if (global.db) setInterval(async () => {
     if (global.db.data) await global.db.write()
   }, 30 * 1000)
 
-async function startjaniya() {
-    const janiya = janiyaConnect({
+async function startXeonBotInc() {
+    const XeonBotInc = XeonBotIncConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
         browser: ['QUeen Nilu','Safari','1.0.0'],
         auth: state
     })
 
-    store.bind(janiya.ev)
+    store.bind(XeonBotInc.ev)
     
     // anticall auto block
-    janiya.ws.on('CB:call', async (json) => {
+    XeonBotInc.ws.on('CB:call', async (json) => {
     const callerId = json.content[0].attrs['call-creator']
     if (json.content[0].tag == 'offer') {
-    let blockxeon = await janiya.sendContact(callerId, global.owner)
-    janiya.sendMessage(callerId, { text: `*Automatic blocking system!*\n*Don't call bot*!\n*Please contact the owner to open block !*`}, { quoted : blockxeon })
+    let blockxeon = await XeonBotInc.sendContact(callerId, global.owner)
+    XeonBotInc.sendMessage(callerId, { text: `*Automatic blocking system!*\n*Don't call bot*!\n*Please contact the owner to open block !*`}, { quoted : blockxeon })
     await sleep(8000)
-    await janiya.updateBlockStatus(callerId, "block")
+    await XeonBotInc.updateBlockStatus(callerId, "block")
     }
     })
 
-    janiya.ev.on('messages.upsert', async chatUpdate => {
+    XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
         try {
         mek = chatUpdate.messages[0]
         if (!mek.message) return
         mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
         if (mek.key && mek.key.remoteJid === 'status@broadcast') return
-        if (!janiya.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
+        if (!XeonBotInc.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
         if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
-        m = smsg(janiya, mek, store)
-        require("./QueenNilu")(janiya, m, chatUpdate, store)
+        m = smsg(XeonBotInc, mek, store)
+        require("./QueenNilu")(XeonBotInc, m, chatUpdate, store)
         } catch (e) {
             console.log(e)
         }
     })
     
     // Group Update
-    janiya.ev.on('groups.update', async pea => {
+    XeonBotInc.ev.on('groups.update', async pea => {
        //console.log(pea)
     // Get Profile Picture Group
        try {
-       ppgc = await janiya.profilePictureUrl(pea[0].id, 'image')
+       ppgc = await XeonBotInc.profilePictureUrl(pea[0].id, 'image')
        } catch {
        ppgc = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png'
        }
        let lolXeon = { url : ppgc }
        if (pea[0].announce == true) {
-       janiya.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Closed By Admin, Now Only Admin Can Send Messages !`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Closed By Admin, Now Only Admin Can Send Messages !`, `${botname}`, lolXeon, [])
        } else if(pea[0].announce == false) {
-       janiya.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Opened By Admin, Now Participants Can Send Messages !`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Opened By Admin, Now Participants Can Send Messages !`, `${botname}`, lolXeon, [])
        } else if (pea[0].restrict == true) {
-       janiya.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Restricted, Now Only Admin Can Edit Group Info !`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Restricted, Now Only Admin Can Edit Group Info !`, `${botname}`, lolXeon, [])
        } else if (pea[0].restrict == false) {
-       janiya.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Opened, Now Participants Can Edit Group Info !`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Opened, Now Participants Can Edit Group Info !`, `${botname}`, lolXeon, [])
        } else {
-       janiya.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Subject Has Been Changed To *${pea[0].subject}*`, `${botname}`, lolXeon, [])
+       XeonBotInc.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Subject Has Been Changed To *${pea[0].subject}*`, `${botname}`, lolXeon, [])
      }
     })
     
@@ -136,15 +136,15 @@ return list[Math.floor(list.length * Math.random())]
 let documents = [doc1,doc2,doc3,doc4,doc5,doc6]
 let docs = pickRandom(documents)
 
-    janiya.ev.on('group-participants.update', async (anu) => {
+    XeonBotInc.ev.on('group-participants.update', async (anu) => {
         console.log(anu)
         try {
-            let metadata = await janiya.groupMetadata(anu.id)
+            let metadata = await XeonBotInc.groupMetadata(anu.id)
             let participants = anu.participants
             for (let num of participants) {
                 // Get Profile Picture User
                 try {
-                    ppuser = await janiya.profilePictureUrl(num, 'image')
+                    ppuser = await XeonBotInc.profilePictureUrl(num, 'image')
                 } catch {
                     ppuser = 'https://i.ibb.co/sbqvDMw/avatar-contact-large-v2.png'
                 }
@@ -157,7 +157,7 @@ let docs = pickRandom(documents)
                 }
                 
                 //welcome\\
-        let nama = await janiya.getName(num)
+        let nama = await XeonBotInc.getName(num)
 memb = metadata.participants.length
 XeonWlcm = await getBuffer(ppuser)
 XeonLft = await getBuffer(ppuser)
@@ -187,7 +187,7 @@ footer: `${botname}`,
 buttons: buttons,
 headerType: 4
 }
-janiya.sendMessage(anu.id, buttonMessage)
+XeonBotInc.sendMessage(anu.id, buttonMessage)
                 } else if (anu.action == 'remove') {
                 	const xeonbuffer = await getBuffer(ppuser)
                     const xeontime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
@@ -213,7 +213,7 @@ footer: `${botname}`,
 buttons: buttons,
 headerType: 4
 }
-janiya.sendMessage(anu.id, buttonMessage)
+XeonBotInc.sendMessage(anu.id, buttonMessage)
                              
                 }
             }
@@ -222,7 +222,7 @@ janiya.sendMessage(anu.id, buttonMessage)
         }
     })
     // Setting
-    janiya.decodeJid = (jid) => {
+    XeonBotInc.decodeJid = (jid) => {
         if (!jid) return jid
         if (/:\d+@/gi.test(jid)) {
             let decode = jidDecode(jid) || {}
@@ -230,44 +230,44 @@ janiya.sendMessage(anu.id, buttonMessage)
         } else return jid
     }
     
-    janiya.ev.on('contacts.update', update => {
+    XeonBotInc.ev.on('contacts.update', update => {
         for (let contact of update) {
-            let id = janiya.decodeJid(contact.id)
+            let id = XeonBotInc.decodeJid(contact.id)
             if (store && store.contacts) store.contacts[id] = { id, name: contact.notify }
         }
     })
 
-    janiya.getName = (jid, withoutContact  = false) => {
-        id = janiya.decodeJid(jid)
-        withoutContact = janiya.withoutContact || withoutContact 
+    XeonBotInc.getName = (jid, withoutContact  = false) => {
+        id = XeonBotInc.decodeJid(jid)
+        withoutContact = XeonBotInc.withoutContact || withoutContact 
         let v
         if (id.endsWith("@g.us")) return new Promise(async (resolve) => {
             v = store.contacts[id] || {}
-            if (!(v.name || v.subject)) v = janiya.groupMetadata(id) || {}
+            if (!(v.name || v.subject)) v = XeonBotInc.groupMetadata(id) || {}
             resolve(v.name || v.subject || PhoneNumber('+' + id.replace('@s.whatsapp.net', '')).getNumber('international'))
         })
         else v = id === '0@s.whatsapp.net' ? {
             id,
             name: 'WhatsApp'
-        } : id === janiya.decodeJid(janiya.user.id) ?
-            janiya.user :
+        } : id === XeonBotInc.decodeJid(XeonBotInc.user.id) ?
+            XeonBotInc.user :
             (store.contacts[id] || {})
             return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
     }
     
-        janiya.sendContact = async (jid, kon, quoted = '', opts = {}) => {
+        XeonBotInc.sendContact = async (jid, kon, quoted = '', opts = {}) => {
 	let list = []
 	for (let i of kon) {
 	    list.push({
-	    	displayName: await janiya.getName(i),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await janiya.getName(i)}\nFN:${await janiya.getName(i)}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click here to chat\nitem2.EMAIL;type=INTERNET:${ytname}\nitem2.X-ABLabel:YouTube\nitem3.URL:${socialm}\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	displayName: await XeonBotInc.getName(i),
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await XeonBotInc.getName(i)}\nFN:${await XeonBotInc.getName(i)}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click here to chat\nitem2.EMAIL;type=INTERNET:${ytname}\nitem2.X-ABLabel:YouTube\nitem3.URL:${socialm}\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
-	janiya.sendMessage(jid, { contacts: { displayName: `${list.length} Kontak`, contacts: list }, ...opts }, { quoted })
+	XeonBotInc.sendMessage(jid, { contacts: { displayName: `${list.length} Kontak`, contacts: list }, ...opts }, { quoted })
     }
     
-    janiya.setStatus = (status) => {
-        janiya.query({
+    XeonBotInc.setStatus = (status) => {
+        XeonBotInc.query({
             tag: 'iq',
             attrs: {
                 to: '@s.whatsapp.net',
@@ -283,27 +283,27 @@ janiya.sendMessage(anu.id, buttonMessage)
         return status
     }
 	
-    janiya.public = true
+    XeonBotInc.public = true
 
-    janiya.serializeM = (m) => smsg(janiya, m, store)
+    XeonBotInc.serializeM = (m) => smsg(XeonBotInc, m, store)
 
-    janiya.ev.on('connection.update', async (update) => {
+    XeonBotInc.ev.on('connection.update', async (update) => {
         const { connection, lastDisconnect } = update	    
         if (connection === 'close') {
         let reason = new Boom(lastDisconnect?.error)?.output.statusCode
-            if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); janiya.logout(); }
-            else if (reason === DisconnectReason.connectionClosed) { console.log("Connection closed, reconnecting...."); startjaniya(); }
-            else if (reason === DisconnectReason.connectionLost) { console.log("Connection Lost from Server, reconnecting..."); startjaniya(); }
-            else if (reason === DisconnectReason.connectionReplaced) { console.log("Connection Replaced, Another New Session Opened, Please Close Current Session First"); janiya.logout(); }
-            else if (reason === DisconnectReason.loggedOut) { console.log(`Device Logged Out, Please Scan Again And Run.`); janiya.logout(); }
-            else if (reason === DisconnectReason.restartRequired) { console.log("Restart Required, Restarting..."); startjaniya(); }
-            else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOut, Reconnecting..."); startjaniya(); }
-            else janiya.end(`Unknown DisconnectReason: ${reason}|${connection}`)
+            if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); XeonBotInc.logout(); }
+            else if (reason === DisconnectReason.connectionClosed) { console.log("Connection closed, reconnecting...."); startXeonBotInc(); }
+            else if (reason === DisconnectReason.connectionLost) { console.log("Connection Lost from Server, reconnecting..."); startXeonBotInc(); }
+            else if (reason === DisconnectReason.connectionReplaced) { console.log("Connection Replaced, Another New Session Opened, Please Close Current Session First"); XeonBotInc.logout(); }
+            else if (reason === DisconnectReason.loggedOut) { console.log(`Device Logged Out, Please Scan Again And Run.`); XeonBotInc.logout(); }
+            else if (reason === DisconnectReason.restartRequired) { console.log("Restart Required, Restarting..."); startXeonBotInc(); }
+            else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOut, Reconnecting..."); startXeonBotInc(); }
+            else XeonBotInc.end(`Unknown DisconnectReason: ${reason}|${connection}`)
         }
         console.log('Connected...', update)
     })
 
-    janiya.ev.on('creds.update', saveState)
+    XeonBotInc.ev.on('creds.update', saveState)
 
     // Add Other
 
@@ -315,25 +315,25 @@ janiya.sendMessage(anu.id, buttonMessage)
       * @param {*} quoted
       * @param {*} options
       */
-     janiya.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
+     XeonBotInc.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
       let mime = '';
       let res = await axios.head(url)
       mime = res.headers['content-type']
       if (mime.split("/")[1] === "gif") {
-     return janiya.sendMessage(jid, { video: await getBuffer(url), caption: caption, gifPlayback: true, ...options}, { quoted: quoted, ...options})
+     return XeonBotInc.sendMessage(jid, { video: await getBuffer(url), caption: caption, gifPlayback: true, ...options}, { quoted: quoted, ...options})
       }
       let type = mime.split("/")[0]+"Message"
       if(mime === "application/pdf"){
-     return janiya.sendMessage(jid, { document: await getBuffer(url), mimetype: 'application/pdf', caption: caption, ...options}, { quoted: quoted, ...options })
+     return XeonBotInc.sendMessage(jid, { document: await getBuffer(url), mimetype: 'application/pdf', caption: caption, ...options}, { quoted: quoted, ...options })
       }
       if(mime.split("/")[0] === "image"){
-     return janiya.sendMessage(jid, { image: await getBuffer(url), caption: caption, ...options}, { quoted: quoted, ...options})
+     return XeonBotInc.sendMessage(jid, { image: await getBuffer(url), caption: caption, ...options}, { quoted: quoted, ...options})
       }
       if(mime.split("/")[0] === "video"){
-     return janiya.sendMessage(jid, { video: await getBuffer(url), caption: caption, mimetype: 'video/mp4', ...options}, { quoted: quoted, ...options })
+     return XeonBotInc.sendMessage(jid, { video: await getBuffer(url), caption: caption, mimetype: 'video/mp4', ...options}, { quoted: quoted, ...options })
       }
       if(mime.split("/")[0] === "audio"){
-     return janiya.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options}, { quoted: quoted, ...options })
+     return XeonBotInc.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options}, { quoted: quoted, ...options })
       }
       }
 
@@ -347,7 +347,7 @@ janiya.sendMessage(anu.id, buttonMessage)
       *@param [*] sections
       *@param {*} quoted
       */
-        janiya.sendListMsg = (jid, text = '', footer = '', title = '' , butText = '', sects = [], quoted) => {
+        XeonBotInc.sendListMsg = (jid, text = '', footer = '', title = '' , butText = '', sects = [], quoted) => {
         let sections = sects
         var listMes = {
         text: text,
@@ -356,7 +356,7 @@ janiya.sendMessage(anu.id, buttonMessage)
         buttonText: butText,
         sections
         }
-        janiya.sendMessage(jid, listMes, { quoted: quoted })
+        XeonBotInc.sendMessage(jid, listMes, { quoted: quoted })
         }
 
     /** Send Button 5 Message
@@ -367,14 +367,14 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} button
      * @returns 
      */
-        janiya.send5ButMsg = (jid, text = '' , footer = '', but = []) =>{
+        XeonBotInc.send5ButMsg = (jid, text = '' , footer = '', but = []) =>{
         let templateButtons = but
         var templateMessage = {
         text: text,
         footer: footer,
         templateButtons: templateButtons
         }
-        janiya.sendMessage(jid, templateMessage)
+        XeonBotInc.sendMessage(jid, templateMessage)
         }
 
     /** Send Button 5 Image
@@ -387,8 +387,8 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} options
      * @returns
      */
-    janiya.send5ButImg = async (jid , text = '' , footer = '', img, but = [], options = {}) =>{
-        let message = await prepareWAMessageMedia({ image: img }, { upload: janiya.waUploadToServer })
+    XeonBotInc.send5ButImg = async (jid , text = '' , footer = '', img, but = [], options = {}) =>{
+        let message = await prepareWAMessageMedia({ image: img }, { upload: XeonBotInc.waUploadToServer })
         var template = generateWAMessageFromContent(jid, proto.Message.fromObject({
         templateMessage: {
         hydratedTemplate: {
@@ -399,7 +399,7 @@ janiya.sendMessage(anu.id, buttonMessage)
             }
             }
             }), options)
-            janiya.relayMessage(jid, template.message, { messageId: template.key.id })
+            XeonBotInc.relayMessage(jid, template.message, { messageId: template.key.id })
     }
 
     /** Send Button 5 Video
@@ -412,8 +412,8 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} options
      * @returns
      */
-    janiya.send5ButVid = async (jid , text = '' , footer = '', vid, but = [], options = {}) =>{
-        let message = await prepareWAMessageMedia({ video: vid }, { upload: janiya.waUploadToServer })
+    XeonBotInc.send5ButVid = async (jid , text = '' , footer = '', vid, but = [], options = {}) =>{
+        let message = await prepareWAMessageMedia({ video: vid }, { upload: XeonBotInc.waUploadToServer })
         var template = generateWAMessageFromContent(jid, proto.Message.fromObject({
         templateMessage: {
         hydratedTemplate: {
@@ -424,7 +424,7 @@ janiya.sendMessage(anu.id, buttonMessage)
             }
             }
             }), options)
-            janiya.relayMessage(jid, template.message, { messageId: template.key.id })
+            XeonBotInc.relayMessage(jid, template.message, { messageId: template.key.id })
     }
 
     /** Send Button 5 Gif
@@ -437,8 +437,8 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} options
      * @returns
      */
-    janiya.send5ButGif = async (jid , text = '' , footer = '', gif, but = [], options = {}) =>{
-        let message = await prepareWAMessageMedia({ video: gif, gifPlayback: true }, { upload: janiya.waUploadToServer })
+    XeonBotInc.send5ButGif = async (jid , text = '' , footer = '', gif, but = [], options = {}) =>{
+        let message = await prepareWAMessageMedia({ video: gif, gifPlayback: true }, { upload: XeonBotInc.waUploadToServer })
         var template = generateWAMessageFromContent(jid, proto.Message.fromObject({
         templateMessage: {
         hydratedTemplate: {
@@ -449,7 +449,7 @@ janiya.sendMessage(anu.id, buttonMessage)
             }
             }
             }), options)
-            janiya.relayMessage(jid, template.message, { messageId: template.key.id })
+            XeonBotInc.relayMessage(jid, template.message, { messageId: template.key.id })
     }
 
     /**
@@ -461,7 +461,7 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} quoted 
      * @param {*} options 
      */
-    janiya.sendButtonText = (jid, buttons = [], text, footer, quoted = '', options = {}) => {
+    XeonBotInc.sendButtonText = (jid, buttons = [], text, footer, quoted = '', options = {}) => {
         let buttonMessage = {
             text,
             footer,
@@ -469,7 +469,7 @@ janiya.sendMessage(anu.id, buttonMessage)
             headerType: 2,
             ...options
         }
-        janiya.sendMessage(jid, buttonMessage, { quoted, ...options })
+        XeonBotInc.sendMessage(jid, buttonMessage, { quoted, ...options })
     }
     
     /**
@@ -480,7 +480,7 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} options 
      * @returns 
      */
-    janiya.sendText = (jid, text, quoted = '', options) => janiya.sendMessage(jid, { text: text, ...options }, { quoted })
+    XeonBotInc.sendText = (jid, text, quoted = '', options) => XeonBotInc.sendMessage(jid, { text: text, ...options }, { quoted })
 
     /**
      * 
@@ -491,9 +491,9 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} options 
      * @returns 
      */
-    janiya.sendImage = async (jid, path, caption = '', quoted = '', options) => {
+    XeonBotInc.sendImage = async (jid, path, caption = '', quoted = '', options) => {
 	let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
-        return await janiya.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted })
+        return await XeonBotInc.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted })
     }
 
     /**
@@ -505,9 +505,9 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} options 
      * @returns 
      */
-    janiya.sendVideo = async (jid, path, caption = '', quoted = '', gif = false, options) => {
+    XeonBotInc.sendVideo = async (jid, path, caption = '', quoted = '', gif = false, options) => {
         let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
-        return await janiya.sendMessage(jid, { video: buffer, caption: caption, gifPlayback: gif, ...options }, { quoted })
+        return await XeonBotInc.sendMessage(jid, { video: buffer, caption: caption, gifPlayback: gif, ...options }, { quoted })
     }
 
     /**
@@ -519,9 +519,9 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} options 
      * @returns 
      */
-    janiya.sendAudio = async (jid, path, quoted = '', ptt = false, options) => {
+    XeonBotInc.sendAudio = async (jid, path, quoted = '', ptt = false, options) => {
         let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
-        return await janiya.sendMessage(jid, { audio: buffer, ptt: ptt, ...options }, { quoted })
+        return await XeonBotInc.sendMessage(jid, { audio: buffer, ptt: ptt, ...options }, { quoted })
     }
 
     /**
@@ -532,7 +532,7 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} options 
      * @returns 
      */
-    janiya.sendTextWithMentions = async (jid, text, quoted, options = {}) => janiya.sendMessage(jid, { text: text, contextInfo: { mentionedJid: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net') }, ...options }, { quoted })
+    XeonBotInc.sendTextWithMentions = async (jid, text, quoted, options = {}) => XeonBotInc.sendMessage(jid, { text: text, contextInfo: { mentionedJid: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net') }, ...options }, { quoted })
 
     /**
      * 
@@ -542,7 +542,7 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} options 
      * @returns 
      */
-    janiya.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
+    XeonBotInc.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
         let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
         let buffer
         if (options && (options.packname || options.author)) {
@@ -551,7 +551,7 @@ janiya.sendMessage(anu.id, buttonMessage)
             buffer = await imageToWebp(buff)
         }
 
-        await janiya.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
+        await XeonBotInc.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
         return buffer
     }
 
@@ -563,7 +563,7 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} options 
      * @returns 
      */
-    janiya.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
+    XeonBotInc.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
         let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
         let buffer
         if (options && (options.packname || options.author)) {
@@ -572,7 +572,7 @@ janiya.sendMessage(anu.id, buttonMessage)
             buffer = await videoToWebp(buff)
         }
 
-        await janiya.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
+        await XeonBotInc.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
         return buffer
     }
 	
@@ -583,7 +583,7 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} attachExtension 
      * @returns 
      */
-    janiya.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
+    XeonBotInc.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
         let quoted = message.msg ? message.msg : message
         let mime = (message.msg || message).mimetype || ''
         let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
@@ -599,7 +599,7 @@ janiya.sendMessage(anu.id, buttonMessage)
         return trueFileName
     }
 
-    janiya.downloadMediaMessage = async (message) => {
+    XeonBotInc.downloadMediaMessage = async (message) => {
         let mime = (message.msg || message).mimetype || ''
         let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
         const stream = await downloadContentFromMessage(message, messageType)
@@ -621,8 +621,8 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} options 
      * @returns 
      */
-    janiya.sendMedia = async (jid, path, fileName = '', caption = '', quoted = '', options = {}) => {
-        let types = await janiya.getFile(path, true)
+    XeonBotInc.sendMedia = async (jid, path, fileName = '', caption = '', quoted = '', options = {}) => {
+        let types = await XeonBotInc.getFile(path, true)
            let { mime, ext, res, data, filename } = types
            if (res && res.status !== 200 || file.length <= 65536) {
                try { throw { json: JSON.parse(file.toString()) } }
@@ -642,7 +642,7 @@ janiya.sendMessage(anu.id, buttonMessage)
        else if (/video/.test(mime)) type = 'video'
        else if (/audio/.test(mime)) type = 'audio'
        else type = 'document'
-       await janiya.sendMessage(jid, { [type]: { url: pathFile }, caption, mimetype, fileName, ...options }, { quoted, ...options })
+       await XeonBotInc.sendMessage(jid, { [type]: { url: pathFile }, caption, mimetype, fileName, ...options }, { quoted, ...options })
        return fs.promises.unlink(pathFile)
        }
 
@@ -654,7 +654,7 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} options 
      * @returns 
      */
-    janiya.copyNForward = async (jid, message, forceForward = false, options = {}) => {
+    XeonBotInc.copyNForward = async (jid, message, forceForward = false, options = {}) => {
         let vtype
 		if (options.readViewOnce) {
 			message.message = message.message && message.message.ephemeralMessage && message.message.ephemeralMessage.message ? message.message.ephemeralMessage.message : (message.message || undefined)
@@ -685,11 +685,11 @@ janiya.sendMessage(anu.id, buttonMessage)
                 }
             } : {})
         } : {})
-        await janiya.relayMessage(jid, waMessage.message, { messageId:  waMessage.key.id })
+        await XeonBotInc.relayMessage(jid, waMessage.message, { messageId:  waMessage.key.id })
         return waMessage
     }
 
-    janiya.cMod = (jid, copy, text = '', sender = janiya.user.id, options = {}) => {
+    XeonBotInc.cMod = (jid, copy, text = '', sender = XeonBotInc.user.id, options = {}) => {
         //let copy = message.toJSON()
 		let mtype = Object.keys(copy.message)[0]
 		let isEphemeral = mtype === 'ephemeralMessage'
@@ -710,7 +710,7 @@ janiya.sendMessage(anu.id, buttonMessage)
 		if (copy.key.remoteJid.includes('@s.whatsapp.net')) sender = sender || copy.key.remoteJid
 		else if (copy.key.remoteJid.includes('@broadcast')) sender = sender || copy.key.remoteJid
 		copy.key.remoteJid = jid
-		copy.key.fromMe = sender === janiya.user.id
+		copy.key.fromMe = sender === XeonBotInc.user.id
 
         return proto.WebMessageInfo.fromObject(copy)
     }
@@ -721,7 +721,7 @@ janiya.sendMessage(anu.id, buttonMessage)
      * @param {*} path 
      * @returns 
      */
-    janiya.getFile = async (PATH, save) => {
+    XeonBotInc.getFile = async (PATH, save) => {
         let res
         let data = Buffer.isBuffer(PATH) ? PATH : /^data:.*?\/.*?;base64,/i.test(PATH) ? Buffer.from(PATH.split`,`[1], 'base64') : /^https?:\/\//.test(PATH) ? await (res = await getBuffer(PATH)) : fs.existsSync(PATH) ? (filename = PATH, fs.readFileSync(PATH)) : typeof PATH === 'string' ? PATH : Buffer.alloc(0)
         //if (!Buffer.isBuffer(data)) throw new TypeError('Result is not a buffer')
@@ -741,10 +741,10 @@ janiya.sendMessage(anu.id, buttonMessage)
 
     }
 
-    return janiya
+    return XeonBotInc
 }
 
-startjaniya()
+startXeonBotInc()
 
 
 let file = require.resolve(__filename)
