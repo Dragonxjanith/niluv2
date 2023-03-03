@@ -291,13 +291,13 @@ XeonBotInc.sendMessage(anu.id, buttonMessage)
         const { connection, lastDisconnect } = update	    
         if (connection === 'close') {
         let reason = new Boom(lastDisconnect?.error)?.output.statusCode
-        if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); ElisaBotMd.logout(); }
-        else if (reason === DisconnectReason.connectionClosed) { console.log("💃 Connection closed, reconnecting...."); startElisaBotMd(); }
-        else if (reason === DisconnectReason.connectionLost) { console.log("💃 Connection Lost from Server, reconnecting..."); startElisaBotMd(); }
-        else if (reason === DisconnectReason.connectionReplaced) { console.log("💃 Connection Replaced, Another New Session Opened, Please Close Current Session First"); ElisaBotMd.logout(); }
-        else if (reason === DisconnectReason.loggedOut) { console.log(`💃 Device Logged Out, Please Scan Again And Run.`); ElisaBotMd.logout(); }
-        else if (reason === DisconnectReason.restartRequired) { console.log("💃 Restart Required, Restarting..."); startElisaBotMd(); }
-        else if (reason === DisconnectReason.timedOut) { console.log("💃 Connection TimedOut, Reconnecting..."); startElisaBotMd(); }
+        if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); XeonBotInc.logout(); }
+        else if (reason === DisconnectReason.connectionClosed) { console.log("💃 Connection closed, reconnecting...."); startXeonBotInc(); }
+        else if (reason === DisconnectReason.connectionLost) { console.log("💃 Connection Lost from Server, reconnecting..."); startXeonBotInc(); }
+        else if (reason === DisconnectReason.connectionReplaced) { console.log("💃 Connection Replaced, Another New Session Opened, Please Close Current Session First"); XeonBotInc.logout(); }
+        else if (reason === DisconnectReason.loggedOut) { console.log(`💃 Device Logged Out, Please Scan Again And Run.`); XeonBotInc.logout(); }
+        else if (reason === DisconnectReason.restartRequired) { console.log("💃 Restart Required, Restarting..."); startXeonBotInc(); }
+        else if (reason === DisconnectReason.timedOut) { console.log("💃 Connection TimedOut, Reconnecting..."); startXeonBotInc(); }
         else XeonBotInc.end(`💃 Unknown DisconnectReason: ${reason}|${connection}`)
         }
         console.log('💃👸💬 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐞𝐝...', update)
