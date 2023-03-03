@@ -1157,7 +1157,7 @@ case 'apk':{
               await XeonBotInc.sendMessage(from, { react: { text: `💉`, key: m.key }})
               AGAINTRY = ` ╔══════❨ ❄ ❩══════╗
               
-                          *🎗️ ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴇʜɪ 🎗️*
+                          *🎗️ ǫᴜᴇᴇɴ ɴɪʟᴜ ᴇʜɪ 🎗️*
                   
                ▫ ғʀᴇᴇ ᴇʜɪ
                ▫ ᴍᴀᴋᴇ ᴅᴀᴛᴇ
@@ -6550,28 +6550,65 @@ const reply = `
     }
     break
 case 'About': case 'script': case 'bot': case 'donate': case 'about': case 'updatebot': case 'cekbot': case 'sourcecode': {
-teks = `*「𝚠𝚎𝚕𝚌𝚘𝚖𝚎 𝚃𝙾 
-🙈 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 🫶🏻💙
+    anu = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+    G_LINK = anu.PUBLIC_GROUP
+ //const anu2 = await axios.get(`https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json`)
+ 
+ 
+const msg = `*💃 𝙌𝙐𝙀𝙀𝙉 𝙉𝙄𝙇𝙐 𝙑2 💃*
 
+*👸ᴀʙᴏᴜᴛ ʙᴏᴛ👸*
 
-👨🏻‍💻𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : 𝘑𝘈𝘕𝘐𝘠𝘈
-💍𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :_02.00.00_
-🪷𝚆𝙴𝙱𝚂𝙸𝚃𝙴:_Https://janithsadanuwan.tech/QueenNilu_
+*🧑🏻‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ : 𝙹𝙰𝙽𝙸𝚈𝙰*
+*🔮ᴠᴇʀꜱɪᴏɴ : 2.0.0*
+*📡ᴡᴇʙ ᴀᴘɪ : 𝙱𝙰𝙸𝙻𝚈𝙴𝚂*
+*🪦ʙᴀꜱᴇ : 𝚡𝚎𝚘𝚗*
 
-*Please Choose the Menu* 」`
-let buttons = [
-{buttonId: `owner`, buttonText: {displayText: 'Owner 🌺'}, type: 1}
+*👸ᴅᴇᴘʟᴏʏ Qᴜᴇᴇɴɴɪʟᴜ👸*
+
+•ᴡᴇʙꜱɪᴛᴇ - https://janithsadanuwan.tech/QueenNilu
+•ɢɪᴛʜᴜʙ- https://github.com/Janithsadanuwan
+•Qʀ -https://bit.ly/QueenNiluQR
+
+*© Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ꜱᴛᴀʙʟᴇ*
+`
+const templateButtons = [
+{index: 1, urlButton: {displayText: '𝗕𝗢𝗧 𝗜𝗡𝗦𝗧𝗔𝗟𝗟', url: 'https://github.com/darkmakerofc/Queen-Elisa-Md-V2'}},
+{index: 2, urlButton: {displayText: '𝗪𝗔𝗧𝗖𝗛 𝗩𝗜𝗗𝗘𝗢', url: G_LINK }},
+{index: 3, quickReplyButton: {displayText: '𝗤𝘂𝗲𝗲𝗻 𝗘𝗹𝗶𝘀𝗮 𝗣𝘂𝗯𝗹𝗶𝗰 𝗚𝗿𝗼𝘂𝗽', id: 'publicgroup'}},
 ]
-let buttonMessage = {
-image: {url: `https://te.legra.ph/file/3e57249993356ba15109f.jpg`},
-jpegThumbnail: log0,
-caption: teks,
-footer: `${botname}`,
-buttons: buttons,
+
+const templateMessage = {
+image: {url: 'https://telegra.ph/file/7390dd698fa45dacbdba8.jpg'},
+caption: msg,
+footer: 'ǫᴜᴇᴇɴ ɴɪʟᴜ ᴡᴀ ʙᴏᴛ ᴍᴅ',
+templateButtons: templateButtons,
 headerType: 4
 }
-XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
-}
+
+await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
+
+await ElisaBotMd.sendMessage(from, { react: { text: `❤`, key: m.key }})  
+await new Promise(r => setTimeout(r, 5000))            
+await ElisaBotMd.sendMessage(from, { react: { text: `🧡`, key: m.key }})   
+await new Promise(r => setTimeout(r, 5000))           
+await ElisaBotMd.sendMessage(from, { react: { text: `💛`, key: m.key }})  
+await new Promise(r => setTimeout(r, 5000))            
+await ElisaBotMd.sendMessage(from, { react: { text: `💚`, key: m.key }})   
+await new Promise(r => setTimeout(r, 5000))           
+await ElisaBotMd.sendMessage(from, { react: { text: `💙`, key: m.key }})   
+await new Promise(r => setTimeout(r, 5000))           
+await ElisaBotMd.sendMessage(from, { react: { text: `💜`, key: m.key }})   
+await new Promise(r => setTimeout(r, 5000))           
+await ElisaBotMd.sendMessage(from, { react: { text: `🤎`, key: m.key }})   
+await new Promise(r => setTimeout(r, 5000))           
+await ElisaBotMd.sendMessage(from, { react: { text: `🖤`, key: m.key }})    
+await new Promise(r => setTimeout(r, 5000))          
+await ElisaBotMd.sendMessage(from, { react: { text: `🤍`, key: m.key }})   
+await new Promise(r => setTimeout(r, 5000))           
+await ElisaBotMd.sendMessage(from, { react: { text: `💖`, key: m.key }})              
+ }
+ break
             break
 case 'quotes':
 const quotejaniya = await axios.get(`https://favqs.com/api/qotd`)
