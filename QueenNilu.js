@@ -7566,7 +7566,7 @@ ${ita}💗 THANKS FOR USING QUEEN ELISA 💗${ita}
        buttons: buttons,
        headerType: 4
    }
- return await XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+            return await XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 
 }
 
@@ -7586,7 +7586,7 @@ ${ita}💗 THANKS FOR USING QUEEN ELISA 💗${ita}
  templateButtons: templateButtons,
  image: { url: global.alivelogo }
  }
- await XeonBotInc.sendMessage(m.chat, buttonMessage ,{ quoted: m })
+            await XeonBotInc.sendMessage(m.chat, buttonMessage ,{ quoted: m })
                                           
   
 }
@@ -7736,7 +7736,7 @@ const listMessage = {
   buttonText: "𝗔𝗟𝗟 𝗠𝗘𝗡𝗨",
   sections
 }
-const sendMsg = await XeonBotInc.sendMessage(m.chat, listMessage)
+const sendMsg = await XeonBotInc.sendMessage(m.chat, listMessage,{ react: { text: `👋`, key: m.key }})
 }
 break
             case 'allmenu':{
