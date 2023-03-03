@@ -1184,7 +1184,6 @@ case 'apk':{
               buttons: buttons,
               headerType: 4,
               body: `💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ💃`
-              }}
               }
               QueenNilu.sendMessage(m.chat, buttonMessage, {quoted: m })
             }
