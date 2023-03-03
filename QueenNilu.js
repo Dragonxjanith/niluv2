@@ -1150,6 +1150,32 @@ case 'apk':{
 
               ////----------------------------------------EHI STORE ----------------------------------\\\\\
 
+ case 'testehi' : {
+  const ehinima = await fetchJson ('https://github.com/Dragonxjanith/UPLOADS/raw/main/JSON/EHIJSON.json')
+  msg = ehinima.EHI_FILES[0].SG_FILE1
+  msg2 = ehinima.EHI_FILES[0].SG_FILE2
+  msg3 = ehinima.EHI_FILES[0].SG_FILE3
+  msg4 = ehinima.EHI_FILES[0].SG_FILE4
+  msg5 = ehinima.EHI_FILES[1].US_FILE1
+  msg6 = ehinima.EHI_FILES[1].US_FILE2
+  msg7 = ehinima.EHI_FILES[1].US_FILE3
+  msg8 = ehinima.EHI_FILES[1].US_FILE4
+  
+  
+  
+  await ElisaBotMd.sendText(m.chat, `${ehinima.EHI}
+ 1. ${msg} 
+ 2. ${msg2} 
+ 3. ${msg3}
+ 4. ${msg4}
+ 5. ${msg5}
+ 6. ${msg6}
+ 7. ${msg7}
+ 8. ${msg8}
+ `)
+  }
+  break
+
               case 'ehi' :  {
                 const link = 'http://youtube.com/c/Janithsadanuwan'
                 
@@ -1178,13 +1204,25 @@ case 'apk':{
               
               ]
               let buttonMessage = {
-              mentions: [m.sender],
-              caption: AGAINTRY,
-              footer: `© Janiya`,
-              buttons: buttons,
-              headerType: 4,
-              body: `💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ💃`
-              }
+                document: fs.readFileSync('./lib/tes.xlsx'),
+                mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                jpegThumbnail:buffer,
+                mentions: [m.sender],
+                fileName: `${global.ownernma}`,
+                fileLength: 99999999999999,
+                caption: AGAINTRY,
+                footer: `_© JANIYA_`,
+                buttons: buttons,
+                headerType: 4,
+                contextInfo:{externalAdReply:{
+                title: `${global.botnma}`,
+                body: `💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ💃`,
+                mediaType:2,
+                thumbnail: buffer,
+                sourceUrl: link,
+                mediaUrl: link,
+                }}
+                }
               QueenNilu.sendMessage(m.chat, buttonMessage, {quoted: m })
             }
 
