@@ -38,7 +38,7 @@ global.themeemoji = "🥀" //ur theme emoji
 global.packname = "Sticker By" //ur sticker watermark packname
 global.author = "QueenNilu By janiya" //ur sticker watermark author
 global.wm = "QueenNilu" //ur watermark
-
+global.alive = process.env.ALIVE_MESSAGE
 // Other
 global.sessionName = 'session'
 global.prefa = ['','!','.','#','&']
