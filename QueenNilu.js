@@ -35,6 +35,8 @@ const { fetchBuffer } = require("./lib/myfunc2")
 const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom, getGroupAdmins } = require('./lib/myfunc')
 const ini_mark = `0@s.whatsapp.net`
 const ownernya = ownernomer + '@s.whatsapp.net'
+const Language = require('./language')
+const Lang = Language.getString('elisabot')
 
 //TIME
 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
@@ -7518,10 +7520,76 @@ case 'textshot': {
             break
 //------------------------The End----------------------\\
 			
+//---------------------------------------ALIVE-----------------------------
 
+
+case 'alive': case 'bot':{  
+    // Push Message To Console && Auto Read
+XeonBotInc.readMessages([m.key])
+
+   // await XeonBotInc.sendReadReceipt(from, m.sender, [m.key.id])
+             await XeonBotInc.sendPresenceUpdate('recording', m.chat) 
+             await XeonBotInc.sendMessage(m.chat, { audio: {url :'https://github.com/DarkMakerofc/UPLOADS/raw/main/VOICE/alive.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+ if (global.alive === 'default') {
+ const ita = '```'
+ await XeonBotInc.sendMessage(from, { react: { text: `👋`, key: m.key }})
+ 
+    let buttons = [
+       {buttonId: `panel`, buttonText: {displayText: 'ᴍᴇɴᴜ'}, type: 1},
+       {buttonId: `owner`, buttonText: {displayText: 'ᴏᴡɴᴇʀ'}, type: 1}
+       
+   ]
+   let buttonMessage = {
+       image: { url: global.alivelogo },
+       caption:`${ita}◈ Queen Elisa Bot is Online ◈${ita}
+
+*( ᴅᴇᴘʟᴏʏ ) ▽* 
+_http://github.com/darkmakerofc_
+*( ᴏᴡɴᴇʀ ) ▽* 
+_${global.owner}_
+*( ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ ) ▽*
+_https://chat.whatsapp.com/BbIpvkRD4qP6xKckb8cpT0_
+*( ᴠᴇʀsɪᴏɴ ) ▽*
+_${BOT_VERSION}_
+*( ʏᴏᴜᴛᴜʙᴇ ) ▽*
+_https://youtube.com/MRNIMAOFC_
+
+*[ ⏱️ ʀᴜɴ ᴛɪᴍᴇ ⏱️] ▽*
+${runtime(process.uptime())}
+
+${ita}💗 THANKS FOR USING QUEEN ELISA 💗${ita}
+`,
+       footer: global.botnma,
+       buttons: buttons,
+       headerType: 4
+   }
+ return await XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+
+}
+
+ 
+             await XeonBotInc.sendMessage(from, { react: { text: `👋`, key: m.key }})
+    
+                    const templateButtons = [
+{ urlButton: {displayText: global.BUTTON1 , url: global.BUTTON1_URL }},
+{ urlButton: {displayText: global.BUTTON2 , url: global.BUTTON2_URL }},
+{ quickReplyButton: {displayText: ' 𝙻𝙸𝚂𝚃 𝙼𝙴𝙽𝚄 ', id: 'list' }} , 
+{ quickReplyButton: {displayText: ' 𝙼𝙴𝙽𝚄 ', id: 'allmenu' }}  ,
+{ quickReplyButton: {displayText: ' 𝙿𝙸𝙽𝙶 ️', id: 'ping' }}  
+                        ]
+ const buttonMessage = {
+ caption: global.alive,
+ footer: global.botnma,
+ templateButtons: templateButtons,
+ image: { url: global.alivelogo }
+ }
+ await XeonBotInc.sendMessage(m.chat, buttonMessage ,{ quoted: m })
+                                          
+  
+}
 
             break
-            case 'command':case 'listmenu': {
+            case 'command':case 'listmenu': case 'list': case 'panel':{
 	const sections = [{
 								"title": "Initial Features Of Bot 🦄",
 								"rows": [
