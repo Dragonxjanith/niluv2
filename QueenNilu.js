@@ -1151,7 +1151,6 @@ case 'apk':{
               ////----------------------------------------EHI STORE ----------------------------------\\\\\
 
               case 'ehi' :  {
-                const buffer = await getBuffer('https://te.legra.ph/file/57c7bd5c8b26430634a40.jpg')
                 const link = 'http://youtube.com/c/Janithsadanuwan'
                 
               await QueenNilu.sendMessage(from, { react: { text: `💉`, key: m.key }})
@@ -1179,23 +1178,12 @@ case 'apk':{
               
               ]
               let buttonMessage = {
-              document: fs.readFileSync('./lib/tes.xlsx'),
-              mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-              jpegThumbnail:buffer,
               mentions: [m.sender],
-              fileName: `${global.ownernma}`,
-              fileLength: 99999999999999,
               caption: AGAINTRY,
-              footer: `© DARK MAKER`,
+              footer: `© Janiya`,
               buttons: buttons,
               headerType: 4,
-              contextInfo:{externalAdReply:{
-              title: `${global.botnma}`,
-              body: `💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ💃`,
-              mediaType:2,
-              thumbnail: buffer,
-              sourceUrl: link,
-              mediaUrl: link,
+              body: `💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ💃`
               }}
               }
               QueenNilu.sendMessage(m.chat, buttonMessage, {quoted: m })
