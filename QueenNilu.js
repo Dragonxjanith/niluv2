@@ -1048,7 +1048,208 @@ Type *surrender* to surrender and admit defeat`
             }
             }
             break
-            case 'chat': {
+/////////////////////////////////////////FUNCTIUONSMY ------------------------------------------------------
+
+
+//---------------------------------------------APK DOWNLOADER -------------------------------
+
+case 'apk':{
+    /*var P_LINK = ''
+    if (global.LANG == 'EN') P_LINK = return reply('*👸💬 Please give me a correct link*\n _.apk https://play.google.com/store/apps/details?id=com.whatsapp_')
+    if (global.LANG == 'EN') P_LINK = */
+    
+               if (!text) return reply('*👸💬 Please give plastore app name*')
+                await ElisaBotMd.sendText(m.chat,mess.wait)
+               await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}`)
+                .then(async (nima) => {  
+               const caption = `   *👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙰𝙿𝙺 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*
+    
+     ☛ 𝚃𝙸𝚃𝙻𝙴 : ${nima.hasil[0].title}
+     ☛ 𝙿𝙰𝙲𝙺𝙰𝙶𝙴 𝙽𝙰𝙼𝙴 : ${nima.hasil[0].appId}
+     ☛ 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : ${nima.hasil[0].developer}
+     ☛ 𝚁𝙰𝚃𝙴 : ${nima.hasil[0].scoreText}
+     ☛ 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽 : ${nima.hasil[0].summary}
+     ☛ 𝚄𝚁𝙻 : ${nima.hasil[0].url} 
+    `
+       
+       const buttons = [
+                        {buttonId: `getapk ${nima.hasil[0].url}`, buttonText: {displayText: '🗳️ ᴅᴏᴡɴʟᴏᴀᴅ ᴀᴘᴋ 🗳️'}, type: 1},
+                         
+                    ]
+                const buttonMessage = {
+                        image: { url: nima.hasil[0].icon },
+                        caption: caption,
+                        footer: global.botnma,
+                        buttons: buttons,
+                        headerType: 4
+                    }
+                    
+               await ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                }).catch((err) => m.reply(NOT_FOUND))
+           }
+           break    
+           
+           case 'getapk' : {
+                if (!text.includes('https://play.google.com/')) return reply('*👸💬 Please give me a correct link*\n _.apk https://play.google.com/store/apps/details?id=com.whatsapp_')
+               await ElisaBotMd.sendMessage(from, { text: `*📥 Downloading Playstore apk...*` }, { quoted: m })
+                   //  await getBuffer(`https://apk-dl2.herokuapp.com/api/apk-dl?url=${text}`)
+                  //  const name = nima.hasil[0].title || text
+                    //const kkkkh = await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}
+                    //const name = `${args[0].split('https://play.google.com/store/apps/details?id=')[1]}`
+                  // .then(async (nima) => {  
+                    const apk = 'https://apk-dl2.herokuapp.com/api/apk-dl?url='+text
+                    await ElisaBotMd.sendMessage(from, { text: `*📤 Uploading playstore apk...*` }, { quoted: m })
+                    //https://telegra.ph/file/5c59cd0f4c3e3fa79ee77.jpg
+                    //const buffer = await getBuffer(nima.respon.download)
+                   await ElisaBotMd.sendMessage(m.chat, { document: {url : apk } , mimetype: 'application/vnd.android.package-archive', fileName: `${text}`}, { quoted: m })
+                    //}).catch((err) => m.reply(NOT_FOUND))
+               
+                             }
+                break
+                case 'modapk' :{
+                await ElisaBotMd.sendText(m.chat,mess.wait) 
+                await fetchJson(`https://api.akuari.my.id/search/searchmod?query=${text}`)
+                .then(async (nima) => {  
+                const search = nima.respon
+                let sections = []   
+      for (let i of search) {
+      const list = {title: `SELECT YOUR MOD APP`,
+      rows: [
+            {
+             title: `${i.title}`, 
+             rowId: `modapkdl ${i.link} ${i.title}`,
+          description: `➮ 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ${i.version}`	     
+            }, 
+            ]
+         }
+         sections.push(list)   
+         }
+      const sendm =  ElisaBotMd.sendMessage(
+          m.chat, 
+          {
+           text: `${m.pushName} This is matching apk\n\n➮ ʀᴇǫᴜᴇsᴛ ${text}`,
+           footer: `${global.botnma}`,
+           title: "*👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙼𝙾𝙳 𝙰𝙿𝙺 👸*",
+           buttonText: "DOWNLOAD MOD APK",
+           sections
+          }, { quoted : m })    
+                }).catch((err) => m.reply(NOT_FOUND))
+                }
+                break
+                case 'modapkdl' : {
+                const down = await ElisaBotMd.sendMessage(from, { text: `*📥 Downloding mod apk...*` }, { quoted: m })
+                const nima = await fetchJson(`https://api.akuari.my.id/downloader/dlmod?link=${args[0]}`)
+                const upload = await ElisaBotMd.sendMessage(from, { text: `*📤 Uploading mod apk...*` }, { quoted: m })
+                await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
+                await ElisaBotMd.sendMessage(m.chat, { document: { url : nima.respon.linkdl } , mimetype: 'application/vnd.android.package-archive', fileName: `${args[1]}.apk`}, { quoted: m })
+                await ElisaBotMd.sendMessage(m.chat,{delete : upload.key })  
+               
+                }
+
+              break
+
+              ////----------------------------------------EHI STORE ----------------------------------\\\\\
+
+              case 'ehi' :  {
+                const buffer = await getBuffer('https://te.legra.ph/file/57c7bd5c8b26430634a40.jpg')
+                const link = 'http://youtube.com/c/Janithsadanuwan'
+                
+              await ElisaBotMd.sendMessage(from, { react: { text: `💉`, key: m.key }})
+              AGAINTRY = ` ╔══════❨ ❄ ❩══════╗
+              
+                          *🎗️ ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴇʜɪ 🎗️*
+                  
+               ▫ ғʀᴇᴇ ᴇʜɪ
+               ▫ ᴍᴀᴋᴇ ᴅᴀᴛᴇ
+               ▫ ᴇxᴘɪʀᴇ ᴅᴀᴛᴇ 
+                   
+               _✕ ɴᴏ ʜᴀᴄᴋɪɴɢ_
+               _✕ ɴᴏ sᴘᴀᴍ_ 
+               _✕ ɴᴏ ᴅᴅᴏs_
+               _✕ ᴅᴏɴ\'ᴛ ᴜsᴇ ᴜɴɴᴇᴄᴇssᴀʀʏ ᴡᴏʀᴋ_
+               
+                  *ᴇɴᴊᴏʏ ʏᴏᴜʀ ᴇʜɪ ғɪʟᴇs 💞.*
+              
+              ╚══════[💀]
+               `
+              let buttons = [
+              {buttonId: `httpinjector`, buttonText: {displayText: ' ʜᴛᴛᴘ ɪɴᴊᴇᴄᴛᴏʀ '}, type: 1},
+              {buttonId: `elisaehi`, buttonText: {displayText: ' ᴇʜɪ ғɪʟᴇ '}, type: 1},
+              {buttonId: `aboutehi`, buttonText: {displayText: ' ᴀʙᴏᴜᴛ '}, type: 1}
+              
+              ]
+              let buttonMessage = {
+              document: fs.readFileSync('./lib/tes.xlsx'),
+              mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+              jpegThumbnail:buffer,
+              mentions: [m.sender],
+              fileName: `${global.ownernma}`,
+              fileLength: 99999999999999,
+              caption: AGAINTRY,
+              footer: `© DARK MAKER`,
+              buttons: buttons,
+              headerType: 4,
+              contextInfo:{externalAdReply:{
+              title: `${global.botnma}`,
+              body: `𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 𝙱𝙾𝚃`,
+              mediaType:2,
+              thumbnail: buffer,
+              sourceUrl: link,
+              mediaUrl: link,
+              }}
+              }
+              ElisaBotMd.sendMessage(m.chat, buttonMessage, {quoted: m })
+            }
+
+                 break
+
+                 case 'aboutehi' :{
+                    var ABOUTEHI = ''
+                    if (global.LANG == 'EN') ABOUTEHI = ` *Ehi file is*,
+                     💬 It is a method where you can get free internet by using whatsapp package.
+                     For example, you can use whatsapp package to go to tiktok, fb, youtube, google etc.
+                    
+                     This ehi file does not provide maximum internet speed.  But you can get internet facility at some speed.
+                     You can find this ehi file which we usually use
+                     You can use the type of file suitable for packages like whatsapp, facebook, youtube, zoom etc
+                    
+                    *How to use*
+                     1. Install the http injector app on your phone.
+                     2. Select the ehi file related to your package.
+                     3. Enter that file into the httpinjector app and press the start button.
+                    _( If you want to use this file, you must have one of the above packages installed )_
+                    
+                    
+                    *© ᴍʀ ɴɪᴍᴀ*`
+                    if (global.LANG == 'SI') ABOUTEHI = `*💬 Ehi file යනු* ,
+                    ඔබට whatsapp package බාවිතාකර free internet ලබාගත හැකි ක්‍රමයකි.
+                    
+                    උදාහරණයක් ලෙස , ඔබට whatsapp package එක බාවිතාකරමින් tiktok , fb , youtube , google යාම වැනිදේ සිදුකර හැකිවීම.
+                    මෙම ehi file උපරිම අන්තර්ජාල වේගයක් ලබා නොදෙයි. නමුත් ඔබට යම් වේගයකින් අන්තර්ජාල පහසුකම් ලබාගත හැක.
+                    ඔබට මෙම ehi file සාමාන්‍යයෙන් අප බාවිතාකරන 
+                    whatsapp , facebook , youtube , zoom යන ආදී package වලට ගැලපෙන ආකාරයේ file බාවිතාකර හැක 
+                    
+                    
+                    බාවිතාකරන්නේ කෙසේද ?
+                    1. http injector app එක ඔබගේ phone එකට install කරගන්න 
+                    2. ඔබගේ package එකට අදාල ehi file එක තෝරාගන්න 
+                    3. එම file එක httpinjector app එකට ඇතුලත් කර start බටන් එක ඔබන්න 
+                    ( ඔබට මෙම file බාවිතාකිරීමටනම් ඉහත කිසියම් හෝ package 1ක් දමාගෙන තිබිය යුතුය )
+                    
+                    *© ᴍʀ ɴɪᴍᴀ*`
+                    reply (ABOUTEHI)
+                    }
+                    break 
+                    case 'httpinjector' : {
+                           
+                           const load = await ElisaBotMd.sendText(m.chat,'*📤 Uploading...*' )
+                           await ElisaBotMd.sendMessage(m.chat, { document: { url: 'https://github.com/Dragonxjanithg/UPLOADS/raw/main/APK/HTTP%20Injector%20(SSHProxyV2Ray)%20VPN.apk' }, mimetype: 'application/vnd.android.package-archive', fileName: `HTTP Injector Queen Nilu (SSHProxyV2Ray) VPN.apk`}, { quoted: m })
+                           const app = await ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                           await ElisaBotMd.sendMessage(from, { react: { text: `🚀`, key: app.key }})
+                    }
+                    break
+
+            case'chat': {
                 if (!isCreator) throw mess.owner
                 if (!q) throw 'Option : 1. mute\n2. unmute\n3. archive\n4. unarchive\n5. read\n6. unread\n7. delete'
                 if (args[0] === 'mute') {
@@ -7751,7 +7952,7 @@ break
 //----------------------------------------------------Menu------------------------------------------------------------------------------------------
 
 case 'menu': {
-    const anu = await fetchJson ('https://github.com/Dragonxjanith/UPLOADS/raw/main/JSON/Dragonxjanith.json')
+    const anu = await fetchJson ('https://github.com/Dragonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
     const JSMSG = anu.MENU_NOTE
     const start = new Date().getTime()
     await XeonBotInc.sendMessage(from, { react: { text: `📃`, key: m.key }})
