@@ -279,11 +279,11 @@ return Math.floor(Math.random() * angka) + 1
 const hsjdh = randomNomor(5)
 
 //auto react all message
-XeonBotInc.sendMessage(m.chat, {
-          react: {
-            text: `${pickRandom(['😨','😅','😂','😳','😎', '🥵', '😱', '🐦', '🙄', '🐤','🗿','🐦','🤨','🥴','😐','👆','😔', '👀','👎'])}`,
-            key: m.key,
-          }})
+//XeonBotInc.sendMessage(m.chat, {
+          //: {
+           // text: `${pickRandom(['😨','😅','😂','😳','😎', '🥵', '😱', '🐦', '🙄', '🐤','🗿','🐦','🤨','🥴','😐','👆','😔', '👀','👎'])}`,
+            //key: m.key,
+         // }})
 
 //auto recording all
     if (global.autoRecord) { if (m.chat) { XeonBotInc.sendPresenceUpdate('recording', m.chat) }
