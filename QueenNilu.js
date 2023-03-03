@@ -38,6 +38,9 @@ const ownernya = ownernomer + '@s.whatsapp.net'
 const Language = require('./language')
 const Lang = Language.getString('elisabot')
 
+
+const BOT_VERSION = '2.0.0'
+
 //TIME
 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
