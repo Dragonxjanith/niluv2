@@ -26,6 +26,7 @@ global.socialm = "GitHub: janithsadanuwan" //ur github or insta name
 global.location = "colombo, India, Aizawl" //ur location
 //time
 global.TIME_ZONE = 'Asia/Colombo'
+global.alivelogo = process.env.ALIVE_LOGO || `https://telegra.ph/file/b3f17c16eedf99731a52d.jpg`
 
 global.ownernomer = "94767438882" //ur number
 global.premium = ['94767438882'] //ur premium number
