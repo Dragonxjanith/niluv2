@@ -1062,7 +1062,7 @@ case 'apk':{
                 await QueenNilu.sendText(m.chat,mess.wait)
                await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}`)
                 .then(async (janiya) => {  
-               const caption = `   *👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙰𝙿𝙺 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*
+               const caption = `   *💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴀᴘᴋ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 💃*
     
      ☛ 𝚃𝙸𝚃𝙻𝙴 : ${janiya.hasil[0].title}
      ☛ 𝙿𝙰𝙲𝙺𝙰𝙶𝙴 𝙽𝙰𝙼𝙴 : ${janiya.hasil[0].appId}
@@ -1129,7 +1129,7 @@ case 'apk':{
           {
            text: `${m.pushName} This is matching apk\n\n➮ ʀᴇǫᴜᴇsᴛ ${text}`,
            footer: `${global.botnma}`,
-           title: "*👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙼𝙾𝙳 𝙰𝙿𝙺 👸*",
+           title: "*💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴀᴘᴋ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 💃*",
            buttonText: "DOWNLOAD MOD APK",
            sections
           }, { quoted : m })    
@@ -1191,7 +1191,7 @@ case 'apk':{
               headerType: 4,
               contextInfo:{externalAdReply:{
               title: `${global.botnma}`,
-              body: `𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 𝙱𝙾𝚃`,
+              body: `💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ💃`,
               mediaType:2,
               thumbnail: buffer,
               sourceUrl: link,
