@@ -1059,7 +1059,7 @@ case 'apk':{
     if (global.LANG == 'EN') P_LINK = */
     
                if (!text) return reply('*👸💬 Please give plastore app name*')
-                await ElisaBotMd.sendText(m.chat,mess.wait)
+                await XeonBotInc.sendText(m.chat,mess.wait)
                await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}`)
                 .then(async (nima) => {  
                const caption = `   *👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙰𝙿𝙺 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*
@@ -1084,30 +1084,30 @@ case 'apk':{
                         headerType: 4
                     }
                     
-               await ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+               await XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
                 }).catch((err) => m.reply(NOT_FOUND))
            }
            break    
            
            case 'getapk' : {
                 if (!text.includes('https://play.google.com/')) return reply('*👸💬 Please give me a correct link*\n _.apk https://play.google.com/store/apps/details?id=com.whatsapp_')
-               await ElisaBotMd.sendMessage(from, { text: `*📥 Downloading Playstore apk...*` }, { quoted: m })
+               await XeonBotInc.sendMessage(from, { text: `*📥 Downloading Playstore apk...*` }, { quoted: m })
                    //  await getBuffer(`https://apk-dl2.herokuapp.com/api/apk-dl?url=${text}`)
                   //  const name = nima.hasil[0].title || text
                     //const kkkkh = await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}
                     //const name = `${args[0].split('https://play.google.com/store/apps/details?id=')[1]}`
                   // .then(async (nima) => {  
                     const apk = 'https://apk-dl2.herokuapp.com/api/apk-dl?url='+text
-                    await ElisaBotMd.sendMessage(from, { text: `*📤 Uploading playstore apk...*` }, { quoted: m })
+                    await XeonBotInc.sendMessage(from, { text: `*📤 Uploading playstore apk...*` }, { quoted: m })
                     //https://telegra.ph/file/5c59cd0f4c3e3fa79ee77.jpg
                     //const buffer = await getBuffer(nima.respon.download)
-                   await ElisaBotMd.sendMessage(m.chat, { document: {url : apk } , mimetype: 'application/vnd.android.package-archive', fileName: `${text}`}, { quoted: m })
+                   await XeonBotInc.sendMessage(m.chat, { document: {url : apk } , mimetype: 'application/vnd.android.package-archive', fileName: `${text}`}, { quoted: m })
                     //}).catch((err) => m.reply(NOT_FOUND))
                
                              }
                 break
                 case 'modapk' :{
-                await ElisaBotMd.sendText(m.chat,mess.wait) 
+                await XeonBotInc.sendText(m.chat,mess.wait) 
                 await fetchJson(`https://api.akuari.my.id/search/searchmod?query=${text}`)
                 .then(async (nima) => {  
                 const search = nima.respon
@@ -1124,7 +1124,7 @@ case 'apk':{
          }
          sections.push(list)   
          }
-      const sendm =  ElisaBotMd.sendMessage(
+      const sendm =  XeonBotInc.sendMessage(
           m.chat, 
           {
            text: `${m.pushName} This is matching apk\n\n➮ ʀᴇǫᴜᴇsᴛ ${text}`,
@@ -1137,12 +1137,12 @@ case 'apk':{
                 }
                 break
                 case 'modapkdl' : {
-                const down = await ElisaBotMd.sendMessage(from, { text: `*📥 Downloding mod apk...*` }, { quoted: m })
+                const down = await XeonBotInc.sendMessage(from, { text: `*📥 Downloding mod apk...*` }, { quoted: m })
                 const nima = await fetchJson(`https://api.akuari.my.id/downloader/dlmod?link=${args[0]}`)
-                const upload = await ElisaBotMd.sendMessage(from, { text: `*📤 Uploading mod apk...*` }, { quoted: m })
-                await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
-                await ElisaBotMd.sendMessage(m.chat, { document: { url : nima.respon.linkdl } , mimetype: 'application/vnd.android.package-archive', fileName: `${args[1]}.apk`}, { quoted: m })
-                await ElisaBotMd.sendMessage(m.chat,{delete : upload.key })  
+                const upload = await XeonBotInc.sendMessage(from, { text: `*📤 Uploading mod apk...*` }, { quoted: m })
+                await XeonBotInc.sendMessage(m.chat,{delete : down.key })  
+                await XeonBotInc.sendMessage(m.chat, { document: { url : nima.respon.linkdl } , mimetype: 'application/vnd.android.package-archive', fileName: `${args[1]}.apk`}, { quoted: m })
+                await XeonBotInc.sendMessage(m.chat,{delete : upload.key })  
                
                 }
 
@@ -1154,7 +1154,7 @@ case 'apk':{
                 const buffer = await getBuffer('https://te.legra.ph/file/57c7bd5c8b26430634a40.jpg')
                 const link = 'http://youtube.com/c/Janithsadanuwan'
                 
-              await ElisaBotMd.sendMessage(from, { react: { text: `💉`, key: m.key }})
+              await XeonBotInc.sendMessage(from, { react: { text: `💉`, key: m.key }})
               AGAINTRY = ` ╔══════❨ ❄ ❩══════╗
               
                           *🎗️ ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴇʜɪ 🎗️*
@@ -1198,7 +1198,7 @@ case 'apk':{
               mediaUrl: link,
               }}
               }
-              ElisaBotMd.sendMessage(m.chat, buttonMessage, {quoted: m })
+              XeonBotInc.sendMessage(m.chat, buttonMessage, {quoted: m })
             }
 
                  break
@@ -1242,10 +1242,10 @@ case 'apk':{
                     break 
                     case 'httpinjector' : {
                            
-                           const load = await ElisaBotMd.sendText(m.chat,'*📤 Uploading...*' )
-                           await ElisaBotMd.sendMessage(m.chat, { document: { url: 'https://github.com/Dragonxjanithg/UPLOADS/raw/main/APK/HTTP%20Injector%20(SSHProxyV2Ray)%20VPN.apk' }, mimetype: 'application/vnd.android.package-archive', fileName: `HTTP Injector Queen Nilu (SSHProxyV2Ray) VPN.apk`}, { quoted: m })
-                           const app = await ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-                           await ElisaBotMd.sendMessage(from, { react: { text: `🚀`, key: app.key }})
+                           const load = await XeonBotInc.sendText(m.chat,'*📤 Uploading...*' )
+                           await XeonBotInc.sendMessage(m.chat, { document: { url: 'https://github.com/Dragonxjanithg/UPLOADS/raw/main/APK/HTTP%20Injector%20(SSHProxyV2Ray)%20VPN.apk' }, mimetype: 'application/vnd.android.package-archive', fileName: `HTTP Injector Queen Nilu (SSHProxyV2Ray) VPN.apk`}, { quoted: m })
+                           const app = await XeonBotInc.sendMessage(m.chat, { delete: load.key })
+                           await XeonBotInc.sendMessage(from, { react: { text: `🚀`, key: app.key }})
                     }
                     break
 
@@ -7958,7 +7958,7 @@ case 'menu': {
     await XeonBotInc.sendMessage(from, { react: { text: `📃`, key: m.key }})
     const end = new Date().getTime()
     const ping = end - start
-    const menuimg = ['https://telegra.ph/file/b91dbaab278c1fe440de6.jpg','https://telegra.ph/file/a7954b940ac9acddf285a.jpg','https://telegra.ph/file/6576c2b80ddd95740f302.jpg','https://telegra.ph/file/48e575fbd6978f77ac796.jpg','https://telegra.ph/file/57221b23abeb4e16a9ffd.jpg','https://telegra.ph/file/ddae7eba259b9686bb761.jpg']
+    const menuimg = ['https://te.legra.ph/file/3e57249993356ba15109f.jpg','https://te.legra.ph/file/8be699bf71bfa93acac3f.jpg','https://te.legra.ph/file/a9293226a7c660ecbfffb.jpg']
     const result = menuimg[Math.floor(Math.random() * menuimg.length)]   
     ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
     
