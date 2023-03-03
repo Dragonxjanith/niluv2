@@ -1150,82 +1150,84 @@ case 'apk':{
 
               ////----------------------------------------EHI STORE ----------------------------------\\\\\
 
- case 'testehi' : {
-  const ehinima = await fetchJson ('https://github.com/Dragonxjanith/UPLOADS/raw/main/JSON/EHIJSON.json')
-  msg = ehinima.EHI_FILES[0].SG_FILE1
-  msg2 = ehinima.EHI_FILES[0].SG_FILE2
-  msg3 = ehinima.EHI_FILES[0].SG_FILE3
-  msg4 = ehinima.EHI_FILES[0].SG_FILE4
-  msg5 = ehinima.EHI_FILES[1].US_FILE1
-  msg6 = ehinima.EHI_FILES[1].US_FILE2
-  msg7 = ehinima.EHI_FILES[1].US_FILE3
-  msg8 = ehinima.EHI_FILES[1].US_FILE4
-  
-  
-  
-  await ElisaBotMd.sendText(m.chat, `${ehinima.EHI}
- 1. ${msg} 
- 2. ${msg2} 
- 3. ${msg3}
- 4. ${msg4}
- 5. ${msg5}
- 6. ${msg6}
- 7. ${msg7}
- 8. ${msg8}
- `)
-  }
-  break
 
-              case 'ehi' :  {
-                const buffer = await getBuffer('https://te.legra.ph/file/57c7bd5c8b26430634a40.jpg')
-                const link = 'http://youtube.com/c/Janithsadanuwan'
+              case 'testehi' : {
+                const ehinima = await fetchJson ('https://github.com/Dragonxjanith/UPLOADS/raw/main/JSON/EHIJSON.json')
+                msg = ehinima.EHI_FILES[0].SG_FILE1
+                msg2 = ehinima.EHI_FILES[0].SG_FILE2
+                msg3 = ehinima.EHI_FILES[0].SG_FILE3
+                msg4 = ehinima.EHI_FILES[0].SG_FILE4
+                msg5 = ehinima.EHI_FILES[1].US_FILE1
+                msg6 = ehinima.EHI_FILES[1].US_FILE2
+                msg7 = ehinima.EHI_FILES[1].US_FILE3
+                msg8 = ehinima.EHI_FILES[1].US_FILE4
                 
-              await QueenNilu.sendMessage(from, { react: { text: `💉`, key: m.key }})
-              AGAINTRY = ` ╔══════❨ ❄ ❩══════╗
-              
-                          *🎗️ ǫᴜᴇᴇɴ ɴɪʟᴜ ᴇʜɪ 🎗️*
-                  
-               ▫ ғʀᴇᴇ ᴇʜɪ
-               ▫ ᴍᴀᴋᴇ ᴅᴀᴛᴇ
-               ▫ ᴇxᴘɪʀᴇ ᴅᴀᴛᴇ 
-                   
-               _✕ ɴᴏ ʜᴀᴄᴋɪɴɢ_
-               _✕ ɴᴏ sᴘᴀᴍ_ 
-               _✕ ɴᴏ ᴅᴅᴏs_
-               _✕ ᴅᴏɴ\'ᴛ ᴜsᴇ ᴜɴɴᴇᴄᴇssᴀʀʏ ᴡᴏʀᴋ_
-               
-                  *ᴇɴᴊᴏʏ ʏᴏᴜʀ ᴇʜɪ ғɪʟᴇs 💞.*
-              
-              ╚══════[💀]
-               `
-              let buttons = [
-              {buttonId: `httpinjector`, buttonText: {displayText: ' ʜᴛᴛᴘ ɪɴᴊᴇᴄᴛᴏʀ '}, type: 1},
-              {buttonId: `elisaehi`, buttonText: {displayText: ' ᴇʜɪ ғɪʟᴇ '}, type: 1},
-              {buttonId: `aboutehi`, buttonText: {displayText: ' ᴀʙᴏᴜᴛ '}, type: 1}
-              
-              ]
-              let buttonMessage = {
-                document: fs.readFileSync('./lib/tes.xlsx'),
-                mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-                jpegThumbnail:buffer,
-                mentions: [m.sender],
-                fileName: `${global.ownernma}`,
-                fileLength: 99999999999999,
-                caption: AGAINTRY,
-                footer: `_© JANIYA_`,
-                buttons: buttons,
-                headerType: 4,
-                contextInfo:{externalAdReply:{
-                title: `${global.botnma}`,
-                body: `💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ💃`,
-                mediaType:2,
-                thumbnail: buffer,
-                sourceUrl: link,
-                mediaUrl: link,
-                }}
+                
+                
+                await QueenNilu.sendText(m.chat, `${ehinima.EHI}
+               1. ${msg} 
+               2. ${msg2} 
+               3. ${msg3}
+               4. ${msg4}
+               5. ${msg5}
+               6. ${msg6}
+               7. ${msg7}
+               8. ${msg8}
+               `)
                 }
-              QueenNilu.sendMessage(m.chat, buttonMessage, {quoted: m })
-            }
+                break
+              
+                            case 'ehi' :  {
+                              const buffer = await getBuffer('https://te.legra.ph/file/57c7bd5c8b26430634a40.jpg')
+                              const link = 'http://youtube.com/c/Janithsadanuwan'
+                              
+                            await QueenNilu.sendMessage(from, { react: { text: `💉`, key: m.key }})
+                            AGAINTRY = ` ╔══════❨ ❄ ❩══════╗
+                            
+                                        *🎗️ ǫᴜᴇᴇɴ ɴɪʟᴜ ᴇʜɪ 🎗️*
+                                
+                             ▫ ғʀᴇᴇ ᴇʜɪ
+                             ▫ ᴍᴀᴋᴇ ᴅᴀᴛᴇ
+                             ▫ ᴇxᴘɪʀᴇ ᴅᴀᴛᴇ 
+                                 
+                             _✕ ɴᴏ ʜᴀᴄᴋɪɴɢ_
+                             _✕ ɴᴏ sᴘᴀᴍ_ 
+                             _✕ ɴᴏ ᴅᴅᴏs_
+                             _✕ ᴅᴏɴ\'ᴛ ᴜsᴇ ᴜɴɴᴇᴄᴇssᴀʀʏ ᴡᴏʀᴋ_
+                             
+                                *ᴇɴᴊᴏʏ ʏᴏᴜʀ ᴇʜɪ ғɪʟᴇs 💞.*
+                            
+                            ╚══════[💀]
+                             `
+                            let buttons = [
+                            {buttonId: `httpinjector`, buttonText: {displayText: ' ʜᴛᴛᴘ ɪɴᴊᴇᴄᴛᴏʀ '}, type: 1},
+                            {buttonId: `elisaehi`, buttonText: {displayText: ' ᴇʜɪ ғɪʟᴇ '}, type: 1},
+                            {buttonId: `aboutehi`, buttonText: {displayText: ' ᴀʙᴏᴜᴛ '}, type: 1}
+                            
+                            ]
+                            let buttonMessage = {
+                              document: fs.readFileSync('./lib/tes.xlsx'),
+                              mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                              jpegThumbnail:buffer,
+                              mentions: [m.sender],
+                              fileName: `${global.ownernma}`,
+                              fileLength: 99999999999999,
+                              caption: AGAINTRY,
+                              footer: `_© JANIYA_`,
+                              buttons: buttons,
+                              headerType: 4,
+                              contextInfo:{externalAdReply:{
+                              title: `${global.botname}`,
+                              body: `💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ💃`,
+                              mediaType:2,
+                              thumbnail: buffer,
+                              sourceUrl: link,
+                              mediaUrl: link,
+                              }}
+                              }
+                            QueenNilu.sendMessage(m.chat, buttonMessage, {quoted: m })
+                          }
+              
 
                  break
 
@@ -1246,7 +1248,7 @@ case 'apk':{
                     _( If you want to use this file, you must have one of the above packages installed )_
                     
                     
-                    *© ᴍʀ ɴɪᴍᴀ*`
+                    *© Janiya*`
                     if (global.LANG == 'SI') ABOUTEHI = `*💬 Ehi file යනු* ,
                     ඔබට whatsapp package බාවිතාකර free internet ලබාගත හැකි ක්‍රමයකි.
                     
@@ -1262,14 +1264,14 @@ case 'apk':{
                     3. එම file එක httpinjector app එකට ඇතුලත් කර start බටන් එක ඔබන්න 
                     ( ඔබට මෙම file බාවිතාකිරීමටනම් ඉහත කිසියම් හෝ package 1ක් දමාගෙන තිබිය යුතුය )
                     
-                    *© ᴍʀ ɴɪᴍᴀ*`
+                    *© Janiya*`
                     reply (ABOUTEHI)
                     }
                     break 
                     case 'httpinjector' : {
                            
                            const load = await QueenNilu.sendText(m.chat,'*📤 Uploading...*' )
-                           await QueenNilu.sendMessage(m.chat, { document: { url: 'https://github.com/Dragonxjanithg/UPLOADS/raw/main/APK/HTTP%20Injector%20(SSHProxyV2Ray)%20VPN.apk' }, mimetype: 'application/vnd.android.package-archive', fileName: `HTTP Injector Queen Nilu (SSHProxyV2Ray) VPN.apk`}, { quoted: m })
+                           await QueenNilu.sendMessage(m.chat, { document: { url: 'https://github.com/Dragonxjanith/UPLOADS/raw/main/APK/HTTP%20Injector%20(SSHProxyV2Ray)%20VPN.apk' }, mimetype: 'application/vnd.android.package-archive', fileName: `HTTP Injector Queen Nilu (SSHProxyV2Ray) VPN.apk`}, { quoted: m })
                            const app = await QueenNilu.sendMessage(m.chat, { delete: load.key })
                            await QueenNilu.sendMessage(from, { react: { text: `🚀`, key: app.key }})
                     }
