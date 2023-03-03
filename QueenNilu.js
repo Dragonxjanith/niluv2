@@ -7939,7 +7939,7 @@ ${ita}💗 THANKS FOR USING QUEEN ELISA 💗${ita}
 							}
 						]
 const listMessage = {
-  text: " *Please Choose the Menu*\n\n𝚠𝚎𝚕𝚌𝚘𝚖𝚎 𝚃𝙾\n🙈 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 🫶🏻💙\n\👨🏻‍💻𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : 𝘑𝘈𝘕𝘐𝘠𝘈\n💍𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :_02.00.00_\n🪷𝚆𝙴𝙱𝚂𝙸𝚃𝙴: _https://janithsadanuwan.tech/QueenNilu_\n\n\n*💃ᴜᴇᴇɴ ɴɪʟᴜ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ᴍᴇɴᴜ💃*",
+  text: " *Please Choose the Menu*\n\n𝚠𝚎𝚕𝚌𝚘𝚖𝚎 𝚃𝙾\n🙈 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 🫶🏻💙\n\👨🏻‍💻𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : 𝘑𝘈𝘕𝘐𝘠𝘈\n💍𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :_02.00.00_\n🪷𝚆𝙴𝙱𝚂𝙸𝚃𝙴: _https://janithsadanuwan.tech/QueenNilu_\n\n\n*💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ᴍᴇɴᴜ💃*",
   footer: `𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄`,
   title: `Hi 👋 ${pushname}`,
   buttonText: "𝗔𝗟𝗟 𝗠𝗘𝗡𝗨",
