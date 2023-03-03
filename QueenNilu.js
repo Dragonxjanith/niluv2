@@ -1177,6 +1177,7 @@ case 'apk':{
   break
 
               case 'ehi' :  {
+                const buffer = await getBuffer('https://te.legra.ph/file/57c7bd5c8b26430634a40.jpg')
                 const link = 'http://youtube.com/c/Janithsadanuwan'
                 
               await QueenNilu.sendMessage(from, { react: { text: `💉`, key: m.key }})
