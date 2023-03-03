@@ -6573,9 +6573,9 @@ const msg = `*💃 𝙌𝙐𝙀𝙀𝙉 𝙉𝙄𝙇𝙐 𝙑2 💃*
 *© Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ꜱᴛᴀʙʟᴇ*
 `
 const templateButtons = [
-{index: 1, urlButton: {displayText: '𝗕𝗢𝗧 𝗜𝗡𝗦𝗧𝗔𝗟𝗟', url: 'https://github.com/darkmakerofc/Queen-Elisa-Md-V2'}},
+{index: 1, urlButton: {displayText: '𝗕𝗢𝗧 𝗜𝗡𝗦𝗧𝗔𝗟𝗟', url: 'https://github.com/janithsadanuwan/QueenNilu'}},
 {index: 2, urlButton: {displayText: '𝗪𝗔𝗧𝗖𝗛 𝗩𝗜𝗗𝗘𝗢', url: G_LINK }},
-{index: 3, quickReplyButton: {displayText: '𝗤𝘂𝗲𝗲𝗻 𝗘𝗹𝗶𝘀𝗮 𝗣𝘂𝗯𝗹𝗶𝗰 𝗚𝗿𝗼𝘂𝗽', id: 'publicgroup'}},
+{index: 3, quickReplyButton: {displayText: 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ', id: 'publicgroup'}},
 ]
 
 const templateMessage = {
@@ -6586,29 +6586,52 @@ templateButtons: templateButtons,
 headerType: 4
 }
 
-await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
+await XeonBotInc.sendMessage(m.chat, templateMessage, { quoted: m })   
 
-await ElisaBotMd.sendMessage(from, { react: { text: `❤`, key: m.key }})  
+await XeonBotInc.sendMessage(from, { react: { text: `❤`, key: m.key }})  
 await new Promise(r => setTimeout(r, 5000))            
-await ElisaBotMd.sendMessage(from, { react: { text: `🧡`, key: m.key }})   
+await XeonBotInc.sendMessage(from, { react: { text: `🧡`, key: m.key }})   
 await new Promise(r => setTimeout(r, 5000))           
-await ElisaBotMd.sendMessage(from, { react: { text: `💛`, key: m.key }})  
+await XeonBotInc.sendMessage(from, { react: { text: `💛`, key: m.key }})  
 await new Promise(r => setTimeout(r, 5000))            
-await ElisaBotMd.sendMessage(from, { react: { text: `💚`, key: m.key }})   
+await XeonBotInc.sendMessage(from, { react: { text: `💚`, key: m.key }})   
 await new Promise(r => setTimeout(r, 5000))           
-await ElisaBotMd.sendMessage(from, { react: { text: `💙`, key: m.key }})   
+await XeonBotInc.sendMessage(from, { react: { text: `💙`, key: m.key }})   
 await new Promise(r => setTimeout(r, 5000))           
-await ElisaBotMd.sendMessage(from, { react: { text: `💜`, key: m.key }})   
+await XeonBotInc.sendMessage(from, { react: { text: `💜`, key: m.key }})   
 await new Promise(r => setTimeout(r, 5000))           
-await ElisaBotMd.sendMessage(from, { react: { text: `🤎`, key: m.key }})   
+await XeonBotInc.sendMessage(from, { react: { text: `🤎`, key: m.key }})   
 await new Promise(r => setTimeout(r, 5000))           
-await ElisaBotMd.sendMessage(from, { react: { text: `🖤`, key: m.key }})    
+await XeonBotInc.sendMessage(from, { react: { text: `🖤`, key: m.key }})    
 await new Promise(r => setTimeout(r, 5000))          
-await ElisaBotMd.sendMessage(from, { react: { text: `🤍`, key: m.key }})   
+await XeonBotInc.sendMessage(from, { react: { text: `🤍`, key: m.key }})   
 await new Promise(r => setTimeout(r, 5000))           
-await ElisaBotMd.sendMessage(from, { react: { text: `💖`, key: m.key }})              
+await XeonBotInc.sendMessage(from, { react: { text: `💖`, key: m.key }})              
  }
  break
+
+ case 'publicgroup' : {
+    const anu = await fetchJson ('https://github.com/Dragonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
+const msg =  `*💃𝗤𝗨𝗘𝗘𝗡 𝗡𝗜𝗟𝗨 𝗣𝗨𝗕𝗟𝗜𝗖 𝗚𝗥𝗢𝗨𝗣 💃*
+
+${anu.PUBLIC_GROUP_RULES}
+
+`
+const templateButtons = [
+{index: 1, urlButton: {displayText: 'ᴊᴏɪɴ ɴᴏᴡ', url: 'https://chat.whatsapp.com/IeODOwZ6Ot1BqGzEgFjKEw'}},
+{index: 2, urlButton: {displayText: 'sᴜʙsᴄʀɪʙᴇ', url: 'https://youtube.com/c/Janithsadanuwan'}}
+
+]
+
+const templateMessage = {
+text: msg,
+footer: 'Qᴜᴇᴇɴ ɴɪʟᴜ',
+templateButtons: templateButtons
+}
+
+const sendｍsg = await XeonBotInc.sendMessage(m.chat, templateMessage, { quoted: m })   
+
+}
             break
 case 'quotes':
 const quotejaniya = await axios.get(`https://favqs.com/api/qotd`)
