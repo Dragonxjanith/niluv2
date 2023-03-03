@@ -2126,9 +2126,9 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 var GIVEME = ''
                 if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක හෝ ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen elisa bot*"
                 if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make queen elisa bot*"
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                                                  await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                                   if (!text) return reply (GIVEME)
-                                                  await ElisaBotMd.sendText(m.chat,mess.wait, m, )
+                                                  await QueenNilu.sendText(m.chat,mess.wait, m, )
                                                   let yts = require("youtube-yts")
                                                   var svid = text.replace("shorts/","watch?v=")
                                                   var s2vid = svid.replace("?feature=share","")
@@ -2160,7 +2160,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                     headerType: 4
                                 }
                                 
-                               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                               QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
                                  
                 } else if (search.all[0].type == 'video') {
                                 let nima = search.all           
@@ -2188,7 +2188,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                     headerType: 4
                                 }
                                 
-                               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                               QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
                                  
                 }})
                                                   
@@ -2204,7 +2204,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 const hdmidpid = rash.sdmiddlid
                 const hdpid = rash.hddlid
                                               if (!text) throw `${Lang.EXAMPLE}\n : *${prefix + command} How to make queen elisa V2*`
-                                                  await ElisaBotMd.sendText(m.chat, `\n*🔄 Please wait ${m.pushName}...*\n`, m, )
+                                                  await QueenNilu.sendText(m.chat, `\n*🔄 Please wait ${m.pushName}...*\n`, m, )
                                                   let yts = require("youtube-yts")
                                                   var svid = text.replace("shorts/","watch?v=")
                                                   var s2vid = svid.replace("?feature=share","")
@@ -2237,12 +2237,12 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                   sections
                 }
                 
-                const me = await ElisaBotMd.sendMessage(m.chat, listMessage)}).catch((err) => m.reply('*Sorry, Can\'t Find your reqest ❗*'))
-                await ElisaBotMd.sendMessage(from, { react: { text: `🎦`, key: m.key }})
+                const me = await QueenNilu.sendMessage(m.chat, listMessage)}).catch((err) => m.reply('*Sorry, Can\'t Find your reqest ❗*'))
+                await QueenNilu.sendMessage(from, { react: { text: `🎦`, key: m.key }})
                 await new Promise(r => setTimeout(r, 2000)) 
-                await ElisaBotMd.sendMessage(from, { react: { text: `⏳`, key: m.key }})
+                await QueenNilu.sendMessage(from, { react: { text: `⏳`, key: m.key }})
                 await new Promise(r => setTimeout(r, 2000)) 
-                await ElisaBotMd.sendMessage(from, { react: { text: `🎦`, key: m.key }})
+                await QueenNilu.sendMessage(from, { react: { text: `🎦`, key: m.key }})
                   }
                             break
                 
@@ -2253,9 +2253,9 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
                 const audidd = rash.audcmd
                 const docidd = rash.doccmd
-                                              await ElisaBotMd.sendMessage(from, { react: { text: `🎵`, key: m.key }})
+                                              await QueenNilu.sendMessage(from, { react: { text: `🎵`, key: m.key }})
                                                   if (!text) return reply(GIVEME)
-                                                  await ElisaBotMd.sendText(m.chat, mess.wait, m, )
+                                                  await QueenNilu.sendText(m.chat, mess.wait, m, )
                                                   let yts = require("youtube-yts")
                                                  // let search = await yts(text)
                                                   yts(text).then(async (search) => {  
@@ -2289,7 +2289,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                     headerType: 4
                                 }
                                 
-                               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })})
+                               QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })})
                                  
                                              }
                                              break
@@ -2303,9 +2303,9 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen elisa bot*"
                 if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video name.```\n *Example - .video how to make queen elisa bot*"
                 
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                                          await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                                   if (!text) return reply (GIVEME)
-                                                  await ElisaBotMd.sendText(m.chat, mess.wait, m, )
+                                                  await QueenNilu.sendText(m.chat, mess.wait, m, )
                                                   let yts = require("youtube-yts")
                                                   var svid = text.replace("shorts/","watch?v=")
                                                   var s2vid = svid.replace("?feature=share","")
@@ -2338,7 +2338,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                     headerType: 4
                                 }
                                 
-                               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                               QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
                                  
                 } else if (search.all[0].type == 'video') {
                 const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
@@ -2371,7 +2371,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                     headerType: 4
                                 }
                                 
-                               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                               QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
                                  
                 }})
                                                   
@@ -2384,32 +2384,32 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song2 lelena*"
                 text1 = q.split(";")[0]
                 text2 = q.split(";")[1]
-                await ElisaBotMd.sendMessage(from, { react: { text: `⌛`, key: m.key }})
+                await QueenNilu.sendMessage(from, { react: { text: `⌛`, key: m.key }})
                 
-                                          //await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+                                          //await QueenNilu.sendMessage(from, { react: { text: `🎧`, key: m.key }})
                                                   if (!text) return reply (GIVEME)
                                                   let yts = require("youtube-yts")
-                                                  //const load = await ElisaBotMd.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
-                                                  const load = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                                                  //const load = await QueenNilu.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
+                                                  const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
                                                   yts(text).then(async (search) => {  
                                                   
                                                   let nima = search.all
                                                   let media = await fetchJson(`https://queen-elisa-api-1-2-3.herokuapp.com/api/dowloader/yt?url=${search.all[0].url}`)
                                                   buf = await getBuffer(media.result.thumb)
-                                                  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-                                                  //const up = await ElisaBotMd.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
-                                                  const up = await ElisaBotMd.sendText(m.chat, global.SONG_UP, m, )
+                                                  await  QueenNilu.sendMessage(m.chat, { delete: load.key })
+                                                  //const up = await QueenNilu.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
+                                                  const up = await QueenNilu.sendText(m.chat, global.SONG_UP, m, )
                                                   
                                                   if (media.result.song_size >= 120000) return reply('*FILE SIZE IS BIG !!!*')
-                                                  const doc = await ElisaBotMd.sendMessage(m.chat, {document:{ url: media.result.mp3 }, mimetype:"audio/mpeg", fileName: `${media.result.Title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                                  const doc = await QueenNilu.sendMessage(m.chat, {document:{ url: media.result.mp3 }, mimetype:"audio/mpeg", fileName: `${media.result.Title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
                                 title:`${media.result.Title}`,
                                 body:"YOUTUBE MP3",
                                 mediaType:2,
                                 thumbnail:buf,
                                 mediaUrl:`${text}`, 
                                 sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
-                                await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+                                await QueenNilu.sendMessage(m.chat, { delete: up.key })
+                                                  await QueenNilu.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
                 
                                                   }).catch((err) => m.reply(NOT_FOUND))
                                            }
@@ -2419,32 +2419,32 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song2 lelena*"
                 if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song2 lelena*"
                 
-                await ElisaBotMd.sendMessage(from, { react: { text: `⌛`, key: m.key }})
+                await QueenNilu.sendMessage(from, { react: { text: `⌛`, key: m.key }})
                 
-                                          //await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+                                          //await QueenNilu.sendMessage(from, { react: { text: `🎧`, key: m.key }})
                                                    if (!text) return reply (GIVEME)
                                                   let yts = require("youtube-yts")
-                                                  //const load = await ElisaBotMd.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
-                                                  const load = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                                                  //const load = await QueenNilu.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
+                                                  const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
                                                   yts(text).then(async (search) => {  
                                                   
                                                   let nima = search.all
                                                   let media = await fetchJson(`https://test-apiyaa.herokuapp.com/api/dowloader/yt?url=${search.all[0].url}`)
                                                   buf = await getBuffer(media.result.thumb)
-                                                  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-                                                  //const up = await ElisaBotMd.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
-                                                  const up = await ElisaBotMd.sendText(m.chat, global.SONG_UP, m, )
+                                                  await  QueenNilu.sendMessage(m.chat, { delete: load.key })
+                                                  //const up = await QueenNilu.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
+                                                  const up = await QueenNilu.sendText(m.chat, global.SONG_UP, m, )
                                                   
                                                   if (media.result.song_size >= 120000) return reply('*FILE SIZE IS BIG !!!*')
-                                                  const doc = await ElisaBotMd.sendMessage(m.chat, {audio:{ url: media.result.mp3 }, mimetype:"audio/mpeg", fileName: `${media.result.Title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                                  const doc = await QueenNilu.sendMessage(m.chat, {audio:{ url: media.result.mp3 }, mimetype:"audio/mpeg", fileName: `${media.result.Title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
                                 title:`${media.result.Title}`,
                                 body:"YOUTUBE MP3",
                                 mediaType:2,
                                 thumbnail:buf,
                                 mediaUrl:`${text}`, 
                                 sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
-                                await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+                                await QueenNilu.sendMessage(m.chat, { delete: up.key })
+                                                  await QueenNilu.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
                 
                                                   }).catch((err) => m.reply(NOT_FOUND))
                                            }
@@ -2455,28 +2455,28 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song3 lelena*"
                 text1 = q.split(";")[0]
                 text2 = q.split(";")[1]
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+                                          await QueenNilu.sendMessage(from, { react: { text: `🎧`, key: m.key }})
                                                   if (!text) return reply (GIVEME)
                                                   let yts = require("youtube-yts")
-                                                  //const load = await ElisaBotMd.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
-                                                  const laod = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                                                  //const load = await QueenNilu.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
+                                                  const laod = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
                                                   yts(text).then(async (search) => {  
                                                   let nima = search.all
                                           
                                           const akur = await fetchJson(`https://a.api.akuari.my.id/downloader/youtube3?link=${search.all[0].url}&type=360`)
                                           const gettsong = akur.audio.audio
-                                          await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-                                          //const up = await ElisaBotMd.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
-                                          const up = await ElisaBotMd.sendText(m.chat, global.SONG_UP, m, )
+                                          await  QueenNilu.sendMessage(m.chat, { delete: load.key })
+                                          //const up = await QueenNilu.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
+                                          const up = await QueenNilu.sendText(m.chat, global.SONG_UP, m, )
                                           if ( text2 === 'audio' ){
                                                  // if (media.filesize >= 120000) return reply('❗ Audio size is too big '+util.format(media))
-                                                  await ElisaBotMd.sendMessage(m.chat, { audio: { url : gettsong }, mimetype: 'audio/mpeg', fileName: `${akur.title}.mp3` }, { quoted: m })
-                                                  return await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
+                                                  await QueenNilu.sendMessage(m.chat, { audio: { url : gettsong }, mimetype: 'audio/mpeg', fileName: `${akur.title}.mp3` }, { quoted: m })
+                                                  return await QueenNilu.sendMessage(m.chat, { delete: up.key })
                                                   
                                                   }
                                                  // if (media.filesize >= 120000) return reply('❗ Audio size is too big '+util.format(media))
-                                                  await ElisaBotMd.sendMessage(m.chat, { document: { url : gettsong }, mimetype: 'audio/mpeg', fileName: `${akur.title}.mp3` }, { quoted: m })
-                                                  await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
+                                                  await QueenNilu.sendMessage(m.chat, { document: { url : gettsong }, mimetype: 'audio/mpeg', fileName: `${akur.title}.mp3` }, { quoted: m })
+                                                  await QueenNilu.sendMessage(m.chat, { delete: up.key })
                                                   
                                           }).catch((err) => m.reply(err))
                                           }
@@ -2488,9 +2488,9 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 text1 = q.split(";")[0]
                 text2 = q.split(";")[1]
                                           if (!text) return reply(GIVEME)
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `🎥`, key: m.key }})
+                                          await QueenNilu.sendMessage(from, { react: { text: `🎥`, key: m.key }})
                                           const yts = require("youtube-yts")
-                                          const load = await ElisaBotMd.sendText(m.chat, `📥 Downloading ${m.pushName} your video...*`, m, )
+                                          const load = await QueenNilu.sendText(m.chat, `📥 Downloading ${m.pushName} your video...*`, m, )
                                           const search = await yts(text)
                                         //  for (let i of search.all)  
                                           const vid = await fetchJson(`https://youtubeapisdownloader.vercel.app/youtube/downloader/video?url=${search.all[0].url}`)
@@ -2503,19 +2503,19 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           `
                                           const sdsize = vid.result.downloads.tubemp3_biz[0].size
                                           const hdsize = vid.result.downloads.tubemp3_biz[1].size
-                                          await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                                          await  QueenNilu.sendMessage(m.chat, { delete: load.key })
                                           if (text.split(";")[1] == 'hd'){
                                           if (hdsize.split('MB')[0] >= 110) return reply('*CAN\'T UPLODE YOUR FILE* \n_YOUR VIDEO BIGGER THAN 100mb_\n\nfile size')
                                           const video = vid.result.downloads.tubemp3_biz[1].url
-                                          const upload = await ElisaBotMd.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
-                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: video }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: capp }, { quoted: m })
+                                          const upload = await QueenNilu.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
+                                          await QueenNilu.sendMessage(m.chat, { video: { url: video }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: capp }, { quoted: m })
                                           return 
                                           }
                                           if (sdsize.split('MB')[0] >= 110) return reply('*CAN\'T UPLODE YOUR FILE* \n_YOUR VIDEO BIGGER THAN 100mb_\n\nfile size')
                                           const video = vid.result.downloads.tubemp3_biz[0].url
-                                          const upload = await ElisaBotMd.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
-                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: video }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: capp }, { quoted: m })
-                                          await  ElisaBotMd.sendMessage(m.chat, { delete: upload.key })
+                                          const upload = await QueenNilu.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
+                                          await QueenNilu.sendMessage(m.chat, { video: { url: video }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: capp }, { quoted: m })
+                                          await  QueenNilu.sendMessage(m.chat, { delete: upload.key })
                                           }     
                                           break 
                                           case 'video2' :{
@@ -2525,11 +2525,11 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           if (text.includes('https://youtu')){
                                          // if (!text.includes('-')) return reply('*👸💬 Please give me a correct type*\n_example .video2 https://youtube.com/watch?v=on3sJ8OlH8M - 360p')
                                           const quality = args[1] ? args[1] : '360'
-                                          const load = await ElisaBotMd.sendText(m.chat, `*📥 Downloading ${m.pushName} your video...*`, m, )
+                                          const load = await QueenNilu.sendText(m.chat, `*📥 Downloading ${m.pushName} your video...*`, m, )
                                           const nima = await fetchJson(`https://api.akuari.my.id/downloader/youtube3?link=${args[0]}&type=${quality}`)
-                                          const upload = await ElisaBotMd.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
+                                          const upload = await QueenNilu.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
                                           if (nima.mp4.size.split('MB')[0] >= 110) return m.reply('*FILE SIZE IS BIG !!!*')
-                                          return await ElisaBotMd.sendMessage(m.chat, { video: { url: nima.mp4.download }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: `${global.cap}` }, { quoted: m })
+                                          return await QueenNilu.sendMessage(m.chat, { video: { url: nima.mp4.download }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: `${global.cap}` }, { quoted: m })
                                          
                                           }
                                     m.reply(mess.wait)
@@ -2555,7 +2555,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                      }
                      sections.push(list)   
                      }
-                  const sendm =  ElisaBotMd.sendMessage(
+                  const sendm =  QueenNilu.sendMessage(
                       m.chat, 
                       {
                        text: `${text} *Here is the list of videos, click the button below to choose*\n\n${m.pushName}`,
@@ -2574,10 +2574,10 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               if (!text) throw '*Please Give me a link*'
                                               let yts = require("youtube-yts")
                                               const search = await yts(text)
-                                                  //const load = await ElisaBotMd.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
+                                                  //const load = await QueenNilu.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
                                                   //yts(text).then(async (search) => {  
                    //buf = await getBuffer(thub.SF_THUB)
-                  // const download = await ElisaBotMd.sendText(m.chat, ` *Please Wait ${global.botnma} Prosesing Your  ${m.pushName} Video ... 🔄*`)
+                  // const download = await QueenNilu.sendText(m.chat, ` *Please Wait ${global.botnma} Prosesing Your  ${m.pushName} Video ... 🔄*`)
                 
                                 let bicil = require('@bochilteam/scraper')
                 
@@ -2603,7 +2603,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                      }
                      sections.push(list)   
                      }
-                  const sendm =  ElisaBotMd.sendMessage(
+                  const sendm =  QueenNilu.sendMessage(
                       m.chat, 
                       {
                        text: `${text} *Here is the list of videos, click the button below to choose*\n\n${m.pushName}`,
@@ -2629,7 +2629,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const dl_url3 = await nima.video['240p'].download()
                                           const dl_url2 = await nima.video['720p'].download()
                                           const dl_url4 = await nima.audio['128kbps'].download()
-                                          await ElisaBotMd.sendText(m.chat,`
+                                          await QueenNilu.sendText(m.chat,`
                 360 ${dl_url}
                 240 ${dl_url2}
                 720 ${dl_url3}
@@ -2672,10 +2672,10 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 const nima3 = await api.downloader.youtube.ytplay(query)
                 const nima4 = await api.downloader.youtube.ytplayvid(query)
                 
-                await ElisaBotMd.sendText(m.chat , `${jsonformat(nima4)}`)
-                await ElisaBotMd.sendText(m.chat , `${jsonformat(nima1)}`)
-                await ElisaBotMd.sendText(m.chat , `${jsonformat(nima2)}`)
-                await ElisaBotMd.sendText(m.chat , `${jsonformat(nima3)}`)
+                await QueenNilu.sendText(m.chat , `${jsonformat(nima4)}`)
+                await QueenNilu.sendText(m.chat , `${jsonformat(nima1)}`)
+                await QueenNilu.sendText(m.chat , `${jsonformat(nima2)}`)
+                await QueenNilu.sendText(m.chat , `${jsonformat(nima3)}`)
                 
                 
                 
@@ -2683,8 +2683,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           break
                                           case '144getvideo' : {
                                          if(!text) return m.reply('need text')
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                                          await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          await QueenNilu.sendText(m.chat,mess.wait)
                                           const yts = require("youtube-yts")
                                           const search = await yts(`${args[0]}`)
                                           let boltc = require('@bochilteam/scraper')
@@ -2695,15 +2695,15 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const size = nima.video['144p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
                                        //   if(nima.video.720p.fileSize >= 110000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
+                                          await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
                                           }).catch((err) => m.reply(NOT_FOUND))
                                       
                                           }
                                           break
                                           case '240getvideo' : {
                                          if(!text) return m.reply('need text')
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                                          await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          await QueenNilu.sendText(m.chat,mess.wait)
                                           const yts = require("youtube-yts")
                                           const search = await yts(`${args[0]}`)
                                           let boltc = require('@bochilteam/scraper')
@@ -2714,15 +2714,15 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const size = nima.video['240p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
                                        //   if(nima.video.720p.fileSize >= 110000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
+                                          await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
                                           }).catch((err) => m.reply(NOT_FOUND))
                                       
                                           }
                                           break
                                           case 'getvideo' : {
                                           if(!text) return m.reply('need text')
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                                          await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          await QueenNilu.sendText(m.chat,mess.wait)
                                           const yts = require("youtube-yts")
                                           const search = await yts(text)
                                           let boltc = require('@bochilteam/scraper')
@@ -2731,16 +2731,16 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const dl_url = await nima.video['360p'].download()
                                           const size = nima.video['360p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
-                                          //await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: `${global.cap}` }, { quoted: m })
+                                          await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          //await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: `${global.cap}` }, { quoted: m })
                                           }).catch((err) => m.reply(NOT_FOUND))
                                       
                                           }
                                           break
                                           case '480getvideo' : {
                                           if(!text) return m.reply('need text')
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                                          await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          await QueenNilu.sendText(m.chat,mess.wait)
                                           const yts = require("youtube-yts")
                                           const search = await yts(text.split("480")[0])
                                           let boltc = require('@bochilteam/scraper')
@@ -2749,15 +2749,15 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const dl_url = await nima.video['480p'].download()
                                           const size = nima.video['480p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
+                                          await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
                                           }).catch((err) => m.reply(NOT_FOUND))
                                       
                                           }
                                           break
                                           case '720getvideo' : {
                                          if(!text) return m.reply('need text')
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                                          await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          await QueenNilu.sendText(m.chat,mess.wait)
                                           const yts = require("youtube-yts")
                                           const search = await yts(`${args[0]}`)
                                           let boltc = require('@bochilteam/scraper')
@@ -2768,15 +2768,15 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const size = nima.video['720p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
                                        //   if(nima.video.720p.fileSize >= 110000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
+                                          await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
                                           }).catch((err) => m.reply(NOT_FOUND))
                                       
                                           }
                                           break
                                           case 'song3' : {
                                           if(!text) return m.reply('need text')
-                                         // await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                                          const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN,m,)
+                                         // await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          const down = await QueenNilu.sendText(m.chat,global.SONG_DOWN,m,)
                                           const yts = require("youtube-yts")
                                           const search = await yts(text)
                                           const buf = await getBuffer(search.all[0].thumbnail)
@@ -2784,19 +2784,19 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           await boltc.youtubedlv2(search.all[0].url)
                                           .then(async(nima) => {
                                           const dl_url = await nima.audio['128kbps'].download()
-                                          await ElisaBotMd.sendMessage(m.chat,{delete : down.key }) 
-                                          const up = await ElisaBotMd.sendText(m.chat,global.SONG_UP,m,)
-                                          const doc = await ElisaBotMd.sendMessage(m.chat, {document:{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${nima.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                          await QueenNilu.sendMessage(m.chat,{delete : down.key }) 
+                                          const up = await QueenNilu.sendText(m.chat,global.SONG_UP,m,)
+                                          const doc = await QueenNilu.sendMessage(m.chat, {document:{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${nima.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
                                 title:`${nima.title}`,
                                 body:"YOUTUBE MP3",
                                 mediaType:2,
                                 thumbnail:buf,
                                 mediaUrl:`${text}`, 
                                 sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
-                                await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
-                //await ElisaBotMd.sendMessage(m.chat,{delete : up.key }) 
-                                           //await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: m.key }})
+                                await QueenNilu.sendMessage(m.chat, { delete: up.key })
+                                                  await QueenNilu.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+                //await QueenNilu.sendMessage(m.chat,{delete : up.key }) 
+                                           //await QueenNilu.sendMessage(from, { react: { text: `🎶`, key: m.key }})
                 
                                                   }).catch((err) => m.reply(err))
                                       
@@ -2804,8 +2804,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           break
                                           case 'song5' : {
                                           if(!text) return m.reply('need text')
-                                         // await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                                          const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN,m,)
+                                         // await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          const down = await QueenNilu.sendText(m.chat,global.SONG_DOWN,m,)
                                           const yts = require("youtube-yts")
                                           const search = await yts(text)
                                           //const buf = await getBuffer(search.all[0].thumbnail)
@@ -2813,11 +2813,11 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           await boltc.youtubedlv3(search.all[0].url)
                                           .then(async(nima) => {
                                           const dl_url = await nima.audio['131'].download()
-                                          await ElisaBotMd.sendMessage(m.chat,{delete : down.key }) 
-                                          const up = await ElisaBotMd.sendText(m.chat,global.SONG_UP,m,)
-                                          await ElisaBotMd.sendMessage(m.chat, { audio : { url : dl_url }, mimetype: 'audio/mpeg', fileName: `${search.all[0].title}.mp3` }, { quoted: m })
-                                          await ElisaBotMd.sendMessage(m.chat,{delete : up.key }) 
-                                           //await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: m.key }})
+                                          await QueenNilu.sendMessage(m.chat,{delete : down.key }) 
+                                          const up = await QueenNilu.sendText(m.chat,global.SONG_UP,m,)
+                                          await QueenNilu.sendMessage(m.chat, { audio : { url : dl_url }, mimetype: 'audio/mpeg', fileName: `${search.all[0].title}.mp3` }, { quoted: m })
+                                          await QueenNilu.sendMessage(m.chat,{delete : up.key }) 
+                                           //await QueenNilu.sendMessage(from, { react: { text: `🎶`, key: m.key }})
                 
                                                   }).catch((err) => m.reply(err))
                                       
@@ -2825,8 +2825,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           break
                                           case 'audiosong3' : {
                                           if(!text) return m.reply('need text')
-                                         // await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                                          const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN,m,)
+                                         // await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          const down = await QueenNilu.sendText(m.chat,global.SONG_DOWN,m,)
                                           const yts = require("youtube-yts")
                                           const search = await yts(text)
                                           const buf = await getBuffer(search.all[0].thumbnail)
@@ -2834,19 +2834,19 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           await boltc.youtubedlv2(search.all[0].url)
                                           .then(async(nima) => {
                                           const dl_url = await nima.audio['128kbps'].download()
-                                          await ElisaBotMd.sendMessage(m.chat,{delete : down.key }) 
-                                          const up = await ElisaBotMd.sendText(m.chat,global.SONG_UP,m,)
-                                          const doc = await ElisaBotMd.sendMessage(m.chat, {audio :{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${nima.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                          await QueenNilu.sendMessage(m.chat,{delete : down.key }) 
+                                          const up = await QueenNilu.sendText(m.chat,global.SONG_UP,m,)
+                                          const doc = await QueenNilu.sendMessage(m.chat, {audio :{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${nima.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
                                 title:`${nima.title}`,
                                 body:"YOUTUBE MP3",
                                 mediaType:2,
                                 thumbnail:buf,
                                 mediaUrl:`${text}`, 
                                 sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
-                                await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
-                //await ElisaBotMd.sendMessage(m.chat,{delete : up.key }) 
-                                           //await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: m.key }})
+                                await QueenNilu.sendMessage(m.chat, { delete: up.key })
+                                                  await QueenNilu.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+                //await QueenNilu.sendMessage(m.chat,{delete : up.key }) 
+                                           //await QueenNilu.sendMessage(from, { react: { text: `🎶`, key: m.key }})
                 
                                                   }).catch((err) => m.reply(err))
                                       
@@ -2854,7 +2854,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           break
                                          /* case 'yt2' : {
                                           if (!text) return m.reply('Please Give me a youtube link')
-                                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                                          await QueenNilu.sendText(m.chat,mess.wait)
                                           let boltc = require('@bochilteam/scraper')
                                           await boltc.youtubedlv2(`${text}`)
                                           .then(async(nima) => {
@@ -2885,7 +2885,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                     headerType: 4
                 }
                 
-                await ElisaBotMd.sendMessage(m.chat, buttonMessage)
+                await QueenNilu.sendMessage(m.chat, buttonMessage)
                 })
                                           }
                                           break*/
@@ -2923,11 +2923,11 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           break
                                           case 'directvideo4' : {
                                           
-                       const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
-                       const up = await ElisaBotMd.sendText(m.chat, global.SONG_UP, m, )
-                       await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
-                       await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
-                       await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+                       const down = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
+                       const up = await QueenNilu.sendText(m.chat, global.SONG_UP, m, )
+                       await QueenNilu.sendMessage(m.chat,{delete : down.key })  
+                       await QueenNilu.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
+                       await QueenNilu.sendMessage(m.chat,{delete : up.key })  
                                   
                                           }
                                           break
@@ -2938,83 +2938,83 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 var UPLOAD = ''
                 if (global.LANG == 'SI' ) UPLOAD = '*📤 ඔබගේ විඩියෝව ඔබවෙත එවමින් පවතී...*'
                 if (global.LANG == 'EN' ) UPLOAD = '*📤 UPLOADING YOUR VIDEO...*'
-                       const down = await ElisaBotMd.sendText(m.chat,DOWNLOAD, m, )
+                       const down = await QueenNilu.sendText(m.chat,DOWNLOAD, m, )
                        const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
                        buf = await getBuffer(thub.SF_THUB)
-                       const up = await ElisaBotMd.sendText(m.chat,UPLOAD, m, )
-                       await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
-                       await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, mimetype: 'video/mp4', fileName: `${text}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
-                       //await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
-                       await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+                       const up = await QueenNilu.sendText(m.chat,UPLOAD, m, )
+                       await QueenNilu.sendMessage(m.chat,{delete : down.key })  
+                       await QueenNilu.sendMessage(m.chat, { video: { url: text }, mimetype: 'video/mp4', fileName: `${text}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                       //await QueenNilu.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
+                       await QueenNilu.sendMessage(m.chat,{delete : up.key })  
                                   }
                 break
                 case 'directaudiodown' : {
                 
-                       const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                       const down = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
                      //  const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
                        buf = await getBuffer(thub.SF_THUB)
-                       const up = await ElisaBotMd.sendText(m.chat,global.SONG_UP, m, )
-                       await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
-                       await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, mimetype: 'video/mp4', fileName: `${text}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
-                       //await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
-                       await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+                       const up = await QueenNilu.sendText(m.chat,global.SONG_UP, m, )
+                       await QueenNilu.sendMessage(m.chat,{delete : down.key })  
+                       await QueenNilu.sendMessage(m.chat, { video: { url: text }, mimetype: 'video/mp4', fileName: `${text}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                       //await QueenNilu.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
+                       await QueenNilu.sendMessage(m.chat,{delete : up.key })  
                                   }
                 break
                                           case 'ytmp3': case 'ytaudio': {  
-                                          //await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                                          //await QueenNilu.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                                                   
                                                   if (!text && text.includes("https://youtu")) return m.reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp3 https://youtube.com/watch?v=WoWlWb6vbzA```')
-                                                 const load = await ElisaBotMd.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your song...*\n`, m, )
-                                                 //const load = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                                                 const load = await QueenNilu.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your song...*\n`, m, )
+                                                 //const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
                                                   await fetchJson(`https://queen-elisa-api-1-2-3.herokuapp.com/api/dowloader/yt?url=${text}`)
                                                   .then(async (media) => { 
                                                   buf = await getBuffer(media.result.thumb)
                                                   if (media.result.song_size.split("MB")[0] >= 120) return m.reply('*FILE SIZE IS BIG !!!*')
                                                   //reply('❗ Audio size is too big '+util.format(media))
-                                                  //ElisaBotMd.sendImage(m.chat, media.thumb, `🟡 𝗧𝗜𝗧𝗟𝗘 : ${media.title}\n🎀 𝗙𝗜𝗟𝗘 𝗦𝗜𝗭𝗘 : ${media.filesizeF}\n📡 𝗨𝗥𝗟 : ${isUrl(text)}\n📜 𝗘𝗫𝗧 : MP3\n📑 𝗥𝗘𝗦𝗢𝗟𝗨𝗧𝗜𝗢𝗡 : ${args[1] || '256kbps'}`, m)
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                                  //QueenNilu.sendImage(m.chat, media.thumb, `🟡 𝗧𝗜𝗧𝗟𝗘 : ${media.title}\n🎀 𝗙𝗜𝗟𝗘 𝗦𝗜𝗭𝗘 : ${media.filesizeF}\n📡 𝗨𝗥𝗟 : ${isUrl(text)}\n📜 𝗘𝗫𝗧 : MP3\n📑 𝗥𝗘𝗦𝗢𝗟𝗨𝗧𝗜𝗢𝗡 : ${args[1] || '256kbps'}`, m)
+                                                  await QueenNilu.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
                                                  // 
-                                                  await ElisaBotMd.sendMessage(m.chat, {document:{ url: media.result.mp3 }, mimetype:"audio/mpeg", fileName: `${media.result.Title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                                  await QueenNilu.sendMessage(m.chat, {document:{ url: media.result.mp3 }, mimetype:"audio/mpeg", fileName: `${media.result.Title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
                                 title:`🐣 ᴛɪᴛʟᴇ - ${media.result.Title}\n`,
                                 body:"YOUTUBE MP3",
                                 mediaType:2,
                                 thumbnail:buf,
                                 mediaUrl:`${text}`, 
                                 sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
-                                await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
-                                await ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                                await QueenNilu.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                await QueenNilu.sendMessage(m.chat, { delete: load.key })
                                                   
-                              //  await ElisaBotMd.sendMessage(m.chat,{ delete : upload.key })  
+                              //  await QueenNilu.sendMessage(m.chat,{ delete : upload.key })  
                       
                       }).catch((err) => reply(err))
                       
                                               }
                                               break
                                               case 'seleytmp3': case 'seleytaudio': {  
-                                         // await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                                         // await QueenNilu.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                                                   let { yta } = require('./lib/y2mate')
                                                   if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtF6Tccag%27 320kbps`
-                                                 // const load = await ElisaBotMd.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your Document type song...*\n`, m, )
-                                                 const load = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                                                 // const load = await QueenNilu.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your Document type song...*\n`, m, )
+                                                 const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
                       
                                                   let quality = args[1] ? args[1] : '128kbps'
                                                   await yta(text, quality)
                                                   .then(async (media) => { 
                                                   buf = await getBuffer(media.thumb)
                                                   if (media.filesize >= 150000) return reply('❗ Audio size is too big '+util.format(media))
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                                  await QueenNilu.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
                                                   
                     
-                                                  ElisaBotMd.sendMessage(m.chat, {document:{ url: media.dl_link }, mimetype:"audio/mpeg", fileName: `${media.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                                  QueenNilu.sendMessage(m.chat, {document:{ url: media.dl_link }, mimetype:"audio/mpeg", fileName: `${media.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
                                 title:`🐣 ᴛɪᴛʟᴇ - ${media.title}\n🎧 sɪᴢᴇ - ${media.filesize}`,
                                 body:"YOUTUBE MP3",
                                 mediaType:2,
                                 thumbnail:buf,
                                 mediaUrl:`${text}`, 
                                 sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
-                                await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-                                await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})}).catch((err) => m.reply(NOT_FOUND))
-                                //await ElisaBotMd.sendMessage(m.chat,{delete : upload.key })  
+                                await  QueenNilu.sendMessage(m.chat, { delete: load.key })
+                                await QueenNilu.sendMessage(from, { react: { text: `✅`, key: m.key }})}).catch((err) => m.reply(NOT_FOUND))
+                                //await QueenNilu.sendMessage(m.chat,{delete : upload.key })  
                     
                                               }
                                               break
@@ -3023,7 +3023,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 const sdpid = rash.sddlid
                 const hdmidpid = rash.sdmiddlid
                 const hdpid = rash.hddlid
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                                          await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                 
                                               
                                     YTMASS = `
@@ -3042,14 +3042,14 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                           { buttonId: `${hdpid} ${text}`, buttonText: { displayText: '720p' }, type: 1 }
                                                       
                                                       ]
-                                                      await ElisaBotMd.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝙴𝙻𝙸𝚂𝙰 𝙱𝙾𝚃 ` ,m)
+                                                      await QueenNilu.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝙴𝙻𝙸𝚂𝙰 𝙱𝙾𝚃 ` ,m)
                                                   }
                                                   break
                                                   case 'audioselecttypebutton': {  
                                                   const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
                 const audidd = rash.audcmd
                 const docidd = rash.doccmd
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+                                          await QueenNilu.sendMessage(from, { react: { text: `🎧`, key: m.key }})
                 
                                               
                                     YTMASS = `
@@ -3066,7 +3066,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                           { buttonId: `${docidd} ${text}`, buttonText: { displayText: '📁 DOCUMENT 📁' }, type: 1 },
                                                           { buttonId: `${audidd} ${text}`, buttonText: { displayText: '🎧 AUDIO 🎧' }, type: 1 }
                                                       ]
-                                                      await ElisaBotMd.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝙴𝙻𝙸𝚂𝙰 𝙱𝙾𝚃 ` ,m)
+                                                      await QueenNilu.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝙴𝙻𝙸𝚂𝙰 𝙱𝙾𝚃 ` ,m)
                                                   }
                                                   break
                                                   case 'ytmp4' : {
@@ -3074,8 +3074,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               const buf = await getBuffer(thub.YT_THUB)
                                           if(!text) return m.reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
                                           if (!text.includes('https://youtu')) return m.reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
-                                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                                          await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          await QueenNilu.sendText(m.chat,mess.wait)
                                           let quality = args[1] ? args[1] : '360p'
                                           //const yts = require("youtube-yts")
                                          // const search = await yts(args[0])
@@ -3086,10 +3086,10 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const dl_url = await nima.video[quality].download()
                                           const size = nima.video[quality].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                          const viddd = await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', fileName: `${nima.title}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: viddd.key }})
-                                          // await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
-                                          //await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: `${global.cap}` }, { quoted: m })
+                                          const viddd = await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', fileName: `${nima.title}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: viddd.key }})
+                                          // await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          //await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: `${global.cap}` }, { quoted: m })
                                           }).catch((err) => m.reply(NOT_FOUND))
                                       
                                           }
@@ -3102,45 +3102,45 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                       ]
                                                   let { yta } = require('./lib/y2mate')
                                                   if (!text) throw `Example : ${prefix + command} https://Subscribe.com/watch?v=PtF6Tccag%27 320kbps`
-                                                  const load = await ElisaBotMd.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your song...*\n`, m, )
+                                                  const load = await QueenNilu.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your song...*\n`, m, )
                                                   let quality = args[1] ? args[1] : '256kbps'
                                                   let media = await yta(text, quality)
                                                   if (media.filesize >= 150000) return reply('❗ Audio size is too big '+util.format(media))
-                                                  var upload = await ElisaBotMd.sendButtonText(m.chat, buttons, AGAINTRY, `${m.pushName} Use this only if you have not received the request.` ,m)
-                                                  ElisaBotMd.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
-                                                   ElisaBotMd.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: upload.key.id, participant: m.quoted.sender } })
+                                                  var upload = await QueenNilu.sendButtonText(m.chat, buttons, AGAINTRY, `${m.pushName} Use this only if you have not received the request.` ,m)
+                                                  QueenNilu.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+                                                   QueenNilu.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: upload.key.id, participant: m.quoted.sender } })
                                               }
                                               break*/
                                              case 'audio': case 'seleytaudio': {  
-                                         // await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                                         // await QueenNilu.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                                                   let { yta } = require('./lib/y2mate')
                                                   if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtF6Tccag%27 320kbps`
-                                                 // const load = await ElisaBotMd.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your Document type song...*\n`, m, )
-                                                 const load = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                                                 // const load = await QueenNilu.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your Document type song...*\n`, m, )
+                                                 const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
                       
                                                   let quality = args[1] ? args[1] : '128kbps'
                                                   await yta(text, quality)
                                                   .then(async (media) => { 
                                                   buf = await getBuffer(media.thumb)
                                                   if (media.filesize >= 150000) return reply('❗ Audio size is too big '+util.format(media))
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                                  await QueenNilu.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
                                                   
                     
-                                                  ElisaBotMd.sendMessage(m.chat, {audio:{ url: media.dl_link }, mimetype:"audio/mpeg", fileName: `${media.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                                  QueenNilu.sendMessage(m.chat, {audio:{ url: media.dl_link }, mimetype:"audio/mpeg", fileName: `${media.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
                                 title:`🐣 ᴛɪᴛʟᴇ - ${media.title}\n🎧 sɪᴢᴇ - ${media.filesize}`,
                                 body:"YOUTUBE MP3",
                                 mediaType:2,
                                 thumbnail:buf,
                                 mediaUrl:`${text}`, 
                                 sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
-                              //  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-                                await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})}).catch((err) => m.reply(NOT_FOUND))
-                                await ElisaBotMd.sendMessage(m.chat,{delete : load.key })  
+                              //  await  QueenNilu.sendMessage(m.chat, { delete: load.key })
+                                await QueenNilu.sendMessage(from, { react: { text: `✅`, key: m.key }})}).catch((err) => m.reply(NOT_FOUND))
+                                await QueenNilu.sendMessage(m.chat,{delete : load.key })  
                     
                                               }
                                               break
                                               case 'audioretry': case 'ytaudioretry': {  
-                                         const up = await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                                         const up = await QueenNilu.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                                               
                                                   let { yta } = require('./lib/y2mate')
                                                   if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtF6Tccag%27 320kbps`
@@ -3148,15 +3148,15 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   await yta(text, quality)
                                                   .then(async (media) => { 
                                                   if (media.filesize >= 150000) return reply('❗ Audio size is too big '+util.format(media))
-                                                  ElisaBotMd.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })}).catch((err) => m.reply(NOT_FOUND))
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
-                                                  await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+                                                  QueenNilu.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })}).catch((err) => m.reply(NOT_FOUND))
+                                                  await QueenNilu.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                                  await QueenNilu.sendMessage(m.chat,{delete : up.key })  
                       
                                               }
                                               break
                                               case '22ytmp4' : {
-                                              await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
-                                              await ElisaBotMd.sendText(m.chat,mess.wait)
+                                              await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                                              await QueenNilu.sendText(m.chat,mess.wait)
                                               const qulity = args[1]
                                               /*const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
@@ -3177,7 +3177,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const dl_url = await nima.video['144p'].download()
                                           const size = nima.video['144p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
                                               }else if(qulity = '240p'){
                                               const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
@@ -3190,7 +3190,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const dl_url = await nima.video['240p'].download()
                                           const size = nima.video['240p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
                                               }else if(qulity = '480'){
                                               const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
@@ -3203,7 +3203,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const dl_url = await nima.video['480p'].download()
                                           const size = nima.video['480p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
                                               
                                               }else if(qulity = '720'){
@@ -3217,7 +3217,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                            const dl_url = await nima.video['720p'].download()
                                           const size = nima.video['720p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
                                               
                                               }else if (qulity = '1080'){
@@ -3231,7 +3231,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const dl_url = await nima.video['1080p'].download()
                                           const size = nima.video['1080p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
                                               }
                                               const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
@@ -3244,20 +3244,20 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const dl_url = await nima.video['360p'].download()
                                           const size = nima.video['360p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
                                               
                                               
                                               }
                                               break
                                               case '22ytmp4': case '22ytvideo': {  
-                                              await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                                              await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                               const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
                                               buf = await getBuffer(thub.YT_THUB)
                 
                                                   let { ytv } = require('./lib/y2mate')
                                                   if (!text) return reply( `${Lang.EXAMPLE}\n ${prefix + command} https://youtube.com/watch?v=on3sJ8OlH8M`)
-                                                  const load = await ElisaBotMd.sendText(m.chat, mess.wait, m, )
+                                                  const load = await QueenNilu.sendText(m.chat, mess.wait, m, )
                                                   let quality = args[1] ? args[1] : '360p'
                                                   await ytv(text, quality)
                                                   .then(async (media) => { 
@@ -3281,20 +3281,20 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   templateButtons: templateButtons
                                                   }
                 
-                                                  return await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
+                                                  return await QueenNilu.sendMessage(m.chat, templateMessage, { quoted: m })   
                 
                                                  // return reply('❗ Video size is too big '+util.format(media)+'.mp4')
                                                   }
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-                                                  await ElisaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                                  await QueenNilu.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                                  await QueenNilu.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                                   
                                                   .catch((err) => m.reply('*Sorry, Can\'t Find your reqest 🥴*'))
-                                                  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })}).catch((err) => m.reply(NOT_FOUND))
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                                  await  QueenNilu.sendMessage(m.chat, { delete: load.key })}).catch((err) => m.reply(NOT_FOUND))
+                                                  await QueenNilu.sendMessage(from, { react: { text: `✅`, key: m.key }})
                                               }
                                               break
                                               case 'secytmp4': case 'secytvideo': {  
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `🎥`, key: m.key }})
+                                          await QueenNilu.sendMessage(from, { react: { text: `🎥`, key: m.key }})
                                               AGAINTRY = ` 💃 ENJOY YOUR VIDEO `
                                               
                                               buttons = [
@@ -3309,11 +3309,11 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               
                                                   let { ytv } = require('./lib/y2mate')
                                                   if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtFMhcag%27 360p`
-                                                  const load = await ElisaBotMd.sendText(m.chat,mess.wait, m, )
+                                                  const load = await QueenNilu.sendText(m.chat,mess.wait, m, )
                                                   let quality = args[1] ? args[1] : '360p'
                                                   await ytv(text, quality)
                                                   .then(async (media) => { 
-                                                  await ElisaBotMd.sendText(m.chat, ` *ʟᴏᴀᴅɪɴɢ ${m.pushName} ʏᴏᴜʀ ᴠɪᴅᴇᴏ... 🔄*`)
+                                                  await QueenNilu.sendText(m.chat, ` *ʟᴏᴀᴅɪɴɢ ${m.pushName} ʏᴏᴜʀ ᴠɪᴅᴇᴏ... 🔄*`)
                                                   if (media.filesize >= 100000)  {
                                                   const msg = `*⛔ FILE SIZE UP TO 100MB ⛔*
                                                   
@@ -3334,26 +3334,26 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   templateButtons: templateButtons
                                                   }
                 
-                                                  return await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m }) 
+                                                  return await QueenNilu.sendMessage(m.chat, templateMessage, { quoted: m }) 
                                                   }  
                 //return reply('❗ Video size is too big '+util.format(media)+'.mp4')
-                                                  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-                                                  const upload = await ElisaBotMd.sendMessage(m.chat, buttonMessage , { quoted: m })
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-                                                  ElisaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
-                                                  await  ElisaBotMd.sendMessage(m.chat, { delete: upload.key })}).catch((err) => m.reply(NOT_FOUND))
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                                  await  QueenNilu.sendMessage(m.chat, { delete: load.key })
+                                                  const upload = await QueenNilu.sendMessage(m.chat, buttonMessage , { quoted: m })
+                                                  await QueenNilu.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                                  QueenNilu.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
+                                                  await  QueenNilu.sendMessage(m.chat, { delete: upload.key })}).catch((err) => m.reply(NOT_FOUND))
+                                                  await QueenNilu.sendMessage(from, { react: { text: `✅`, key: m.key }})
                                                   
                                               }
                                               break
                                               case 'retryytmp4': case 'retrysecytvideo': {  
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                                          await QueenNilu.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                                               
                                                   let { ytv } = require('./lib/y2mate')
                                                   if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtFMhcag%27 360p`
                                                   let quality = args[1] ? args[1] : '360p'
                                                   let media = await ytv(text, quality)
-                                                  await ElisaBotMd.sendText(m.chat, ` *ʟᴏᴀᴅɪɴɢ ${m.pushName} ʏᴏᴜʀ ᴠɪᴅᴇᴏ... 🔄*`)
+                                                  await QueenNilu.sendText(m.chat, ` *ʟᴏᴀᴅɪɴɢ ${m.pushName} ʏᴏᴜʀ ᴠɪᴅᴇᴏ... 🔄*`)
                                                   if (media.filesize >= 100000)  {
                                                   const msg = `*⛔ FILE SIZE UP TO 100MB ⛔*
                                                   
@@ -3373,20 +3373,20 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   templateButtons: templateButtons
                                                   }
                 
-                                                  return await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
+                                                  return await QueenNilu.sendMessage(m.chat, templateMessage, { quoted: m })   
                                                   }
                 //return reply('❗ Video size is too big '+util.format(media)+'.mp4')
-                                                  var up = await ElisaBotMd.sendText(m.chat, `*ENJOY*`)
-                                                  ElisaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                                  var up = await QueenNilu.sendText(m.chat, `*ENJOY*`)
+                                                  QueenNilu.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
+                                                  await QueenNilu.sendMessage(from, { react: { text: `✅`, key: m.key }})
                                                   
                                               }
                                               break
                                               case '360pvideo': case 'yt360pvideo': {  
-                                          await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                                          await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                                   let { ytv } = require('./lib/y2mate')
                                                   if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtFMhcag%27 360p`
-                                                  const load = await ElisaBotMd.sendText(m.chat, `\n*🔄 Please wait ${m.pushName}...*\n`, m, )
+                                                  const load = await QueenNilu.sendText(m.chat, `\n*🔄 Please wait ${m.pushName}...*\n`, m, )
                                                   let quality = args[1] ? args[1] : '360p'
                                                   let media = await ytv(text, quality)
                                                   if (media.filesize >= 100000) {
@@ -3408,13 +3408,13 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   templateButtons: templateButtons
                                                   }
                 
-                                                  return await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
+                                                  return await QueenNilu.sendMessage(m.chat, templateMessage, { quoted: m })   
                                                   }
                 // return reply('❗ Video size is too big '+util.format(media)+'.mp4')
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-                                                  await ElisaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
-                                                  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
-                                                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                                  await QueenNilu.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                                  await QueenNilu.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
+                                                  await  QueenNilu.sendMessage(m.chat, { delete: load.key })
+                                                  await QueenNilu.sendMessage(from, { react: { text: `✅`, key: m.key }})
                                               }
                                               break
 
@@ -10393,21 +10393,21 @@ break
 case 'attp' :{
     if (!text) return reply ('Need some word \n ex - attp Mr janiya')
     const Stik = `https://api.akuari.my.id/other/attp?text=${text}`
-    await ElisaBotMd.sendMedia(m.chat, Stik , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+    await QueenNilu.sendMedia(m.chat, Stik , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
     
    }
    break
    case 'attp2' :{
    if (!text) return reply ('Need some word \n ex - attp Mr janiya')
    const Stik = `https://my-shinz.herokuapp.com/api/maker/attp?text=${text}`
-    await ElisaBotMd.sendMedia(m.chat, Stik , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+    await QueenNilu.sendMedia(m.chat, Stik , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
     
    }
    break
    case 'ttp' :{
    if (!text) return reply ('Need some word \n ex - ttp Mr janiya')
    //const Stik = `https://my-shinz.herokuapp.com/api/maker/attp?text=${text}`
-    await ElisaBotMd.sendMedia(m.chat, `https://my-shinz.herokuapp.com/api/maker/ttp?text=${text}` , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+    await QueenNilu.sendMedia(m.chat, `https://my-shinz.herokuapp.com/api/maker/ttp?text=${text}` , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
     
    }
    break
@@ -10426,11 +10426,11 @@ case 'attp' :{
    break
    case 'triggered' :{
    if (!quoted) return reply('*👸💬 Please reply sticker.*')
-   let media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
+   let media = await QueenNilu.downloadAndSaveMediaMessage(quoted)
    const img = `https://api.violetics.pw/api/converter/webp-to-image?apikey=b5cd-368b-055f&image=${media}`
    const stick = 'https://api.akuari.my.id/canvas/triggered2?link='+img
-   await ElisaBotMd.sendMessage(from, { react: { text: `✨`, key: m.key }})
-   await ElisaBotMd.sendMedia(m.chat, stick , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+   await QueenNilu.sendMessage(from, { react: { text: `✨`, key: m.key }})
+   await QueenNilu.sendMedia(m.chat, stick , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
    }
    break
 
@@ -10451,7 +10451,7 @@ rowId: `dltone ${i.audio}`
 sections.push(list)   
 }
 //.catch((err) => reply('*👸💬 Error*'))
-const sendm =  ElisaBotMd.sendMessage(
+const sendm =  QueenNilu.sendMessage(
 m.chat, 
 {
 text: `Queen Elisa Ring Tone Downloader`,
@@ -10463,8 +10463,8 @@ sections
    }
    break*/
    case 'dltone' : {
-   //await ElisaBotMd.sendText(m.chat, `\n*🔄 Please wait ${m.pushName}...*\n`, m, )
-   await ElisaBotMd.sendMessage(m.chat, { audio: { url: text } , mimetype: 'audio/mpeg' }, { quoted: m })
+   //await QueenNilu.sendText(m.chat, `\n*🔄 Please wait ${m.pushName}...*\n`, m, )
+   await QueenNilu.sendMessage(m.chat, { audio: { url: text } , mimetype: 'audio/mpeg' }, { quoted: m })
     
    }
    break
