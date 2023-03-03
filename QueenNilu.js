@@ -7739,589 +7739,277 @@ const listMessage = {
 const sendMsg = await XeonBotInc.sendMessage(m.chat, listMessage,{ react: { text: `👋`, key: m.key }})
 }
 break
-            case 'allmenu':{
-var unicorn = await getBuffer(picak+'All Menu')
-
-const buttons = [
-  {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-  {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ OWNER 	
-╠ ${prefix}self
-╠ ${prefix}public
-╠ ${prefix}join [link]
-╠ ${prefix}leavegc
-╠ ${prefix}setbio
-╠ ${prefix}bctext [text]
-╠ ${prefix}bcimage [reply img/text]
-╠ ${prefix}bcvideo [reply img/text]
-╠ ${prefix}setbotpp [image]
-╠ ${prefix}setthumb [reply img]
-╠ ${prefix}setexif
-╠ ${prefix}hijack
-╠ ${prefix}creategroup [name]
-╠ ${prefix}block [tag/number]
-╠ ${prefix}unblock [tag/number]
-╠═══════✪ GROUP 	
-
-╠${prefix}grouplink
-╠${prefix}ephemeral [option]
-╠${prefix}setgcpp [image]
-╠${prefix}setname [text]
-╠${prefix}setdesc [text]
-╠${prefix}group 
-╠${prefix}resetgrouplink
-╠${prefix}editinfo [option]
-╠${prefix}menfess [number]
-╠${prefix}add [user]
-╠${prefix}kick [reply/tag]
-╠${prefix}hidetag [text]
-╠${prefix}tagall [text]
-╠${prefix}antilinkgc [on/off]
-╠${prefix}antilinktg [on/off]
-╠${prefix}antilinktt [on/off]
-╠${prefix}antilinkytch [on/off]
-╠${prefix}antilinkytvid [on/off]
-╠${prefix}antilinkig [on/off]
-╠${prefix}antilinkfb [on/off]
-╠${prefix}antilinktwit [on/off]
-╠${prefix}antilinkall [on/off]
-╠${prefix}antivirus [on/off]
-╠${prefix}antitoxic [on/off]
-╠${prefix}antiwame [on/off]
-╠${prefix}nsfw [on/off]
-╠${prefix}promote [reply/tag]
-╠${prefix}demote [reply/tag]
-╠${prefix}react [reply emoji]
-╠${prefix}vote
-╠${prefix}devote
-╠${prefix}upvote
-╠${prefix}checkvote
-╠${prefix}delvote
-╠═══════✪ MAKER 
-
-╠${prefix}candy
-╠${prefix}blackpinkneon
-╠${prefix}deepsea
-╠${prefix}scifi
-╠${prefix}fiction
-╠${prefix}berry
-╠${prefix}fruitjuice
-╠${prefix}biscuit
-╠${prefix}wood
-╠${prefix}chocolate
-╠${prefix}matrix
-╠${prefix}blood
-╠${prefix}halloween
-╠${prefix}wicker
-╠${prefix}darkgold
-╠${prefix}firework
-╠${prefix}skeleton
-╠${prefix}sand
-╠${prefix}glue
-╠${prefix}leaves
-╠${prefix}magma
-╠${prefix}lava
-╠${prefix}rockart
-╠${prefix}bloodglas
-╠${prefix}underwater
-╠${prefix}textmaker
-╠${prefix}honey
-╠${prefix}ice
-╠${prefix}watercolor
-╠${prefix}multicolor
-╠${prefix}snow
-╠${prefix}harrypot
-╠${prefix}harrypotter
-╠${prefix}brokenglass
-╠${prefix}waterpipe
-╠${prefix}spooky
-╠${prefix}circuit
-╠${prefix}metallic
-╠${prefix}demon
-╠${prefix}sparklechristmas
-╠${prefix}christmas
-╠${prefix}3dchristmas
-╠${prefix}3dbox
-╠${prefix}waterdrop
-╠${prefix}lion2
-╠${prefix}papercut
-╠${prefix}transformer
-╠${prefix}neondevil
-╠${prefix}3davengers
-╠${prefix}3dstone
-╠${prefix}3dstone2
-╠${prefix}summertime
-╠${prefix}thunder
-╠${prefix}window
-╠${prefix}graffiti
-╠${prefix}graffitibike
-╠${prefix}pornhub
-╠${prefix}glitch
-╠${prefix}blackpinkart
-╠${prefix}glitch2
-╠${prefix}glitch3
-╠${prefix}3dspace
-╠${prefix}lion
-╠${prefix}3dneon
-╠${prefix}greenneon
-╠${prefix}bokeh
-╠${prefix}holographic
-╠${prefix}bear
-╠${prefix}wolf
-╠${prefix}joker
-╠${prefix}dropwater
-╠${prefix}dropwater2
-╠${prefix}thewall
-╠${prefix}neonlight
-╠${prefix}natural
-╠${prefix}carbon
-╠${prefix}pencil
-╠${prefix}blackpink2
-╠${prefix}neon
-╠${prefix}neonlight2
-╠${prefix}toxic
-╠${prefix}strawberry
-╠${prefix}discovery
-╠${prefix}1917
-╠ ${prefix}sci_fi
-╠ ${prefix}ancient
-╠ ${prefix}fabric
-╠ ${prefix}hoorror
-╠ ${prefix}whitebear
-╠ ${prefix}juice
-╠ ${prefix}batman
-╠ ${prefix}multicolor
-╠ ${prefix}wonderful
-╠ ${prefix}sketch
-╠ ${prefix}marvel
-╠ ${prefix}foggy
-╠ ${prefix}writing
-╠ ${prefix}halloweenfire
-╠ ${prefix}halloween
-╠ ${prefix}watercolor
-╠ ${prefix}classic
-╠═════✪ DOWNLOAD 
-
-╠${prefix}tiktok [url]
-╠${prefix}tiktokaudio [url]
-╠${prefix}instagram [url]
-╠${prefix}spotify [url]
-╠${prefix}mediafire [url]
-╠${prefix}ytmp3 [url|quality]
-╠${prefix}ytmp4 [url|quality]
-╠${prefix}gitclone [repo link]
-╠═══════✪ SEARCH 	
-
-╠${prefix}play [query]
-╠${prefix}song [query]
-╠${prefix}yts [query]
-╠${prefix}lyrics [query]
-╠${prefix}gimage [query]
-╠${prefix}google [query]
-╠${prefix}anime [query]
-╠${prefix}pinterest [query]
-╠${prefix}image [query]
-╠${prefix}wallpaper [query]
-╠${prefix}searchno [number]
-╠${prefix}horoscope [query]
-╠${prefix}imdb [movie name]
-╠${prefix}weather [loc name]
-╠${prefix}genshin [char name]
-╠${prefix}wikimedia [query]
-╠${prefix}ytsearch [query]
-╠${prefix}ringtone [query]
-
-╠═══════✪ CONVERT 
-╠ ${prefix}toimage [reply stick]
-╠ ${prefix}sticker [reply img|gif]
-╠ ${prefix}take [reply img|gif|stik]
-╠ ${prefix}smeme [reply img]
-╠ ${prefix}emoji [emoji]
-╠ ${prefix}tovideo [reply img]
-╠ ${prefix}togif [reply stick]
-╠ ${prefix}tovn [reply aud]
-╠ ${prefix}tomp3 [reply vn]
-╠ ${prefix}toaudio [reply vid]
-╠ ${prefix}ebinary [reply txt]
-╠ ${prefix}dbinary [reply txt]
-╠ ${prefix}tinyurl [link]
-╠ ${prefix}styletext [text]
-╠${prefix}volume [reply aud]
-╠${prefix}bass [reply aud]
-╠${prefix}blown [reply aud]
-╠${prefix}deep [reply aud]
-╠${prefix}earrape [reply aud]
-╠${prefix}fast [reply aud]
-╠${prefix}fat [reply aud]
-╠${prefix}nightcore [reply aud]
-╠${prefix}reverse [reply aud]
-╠${prefix}robot [reply aud]
-╠${prefix}slow [reply aud]
-╠${prefix}smooth [reply aud]
-╠${prefix}squirrel [reply aud]
-╠═══════✪ IMG EFFECT 
-
-╠${prefix}removebg [reply img]
-╠═══════✪ RANDOM IMG 
-
-╠${prefix}coffee
-╠${prefix}woof
-╠${prefix}meow
-╠${prefix}lizard
-╠${prefix}chinese
-╠${prefix}japanese
-╠${prefix}korean
-╠${prefix}indo
-╠${prefix}thai
-╠${prefix}vietnamese
-╠${prefix}malay
-╠${prefix}hijab
-╠${prefix}randomgirl
-╠${prefix}randomboy
-╠${prefix}aesthetic
-╠${prefix}antiwork
-╠${prefix}cosplay
-╠${prefix}car
-╠${prefix}bike
-╠${prefix}doggo
-╠${prefix}cat
-╠${prefix}notnot
-╠${prefix}kayes
-╠${prefix}justina
-╠${prefix}ryujin
-╠${prefix}boneka
-╠${prefix}rose
-╠${prefix}kpop
-╠${prefix}blackpink
-╠${prefix}ulzzangboy
-╠${prefix}ulzzanggirl
-╠${prefix}pubg
-╠${prefix}hacking
-╠${prefix}profilepicture
-╠${prefix}couplepicture
-╠${prefix}wallphone
-╠${prefix}wallml
-
-╠═══════✪ RANDOM VIDEO
-╠${prefix}tiktokgirl	
-╠${prefix}tiktoknukhty
-╠${prefix}tiktokpanrika
-╠${prefix}tiktokkayes
-╠${prefix}tiktoknotnot
-╠${prefix}tiktokghea
-╠${prefix}tiktoksantuy
-╠${prefix}tiktokbocil
-╠═══════✪ EMOTE 
-
-╠${prefix}instagramemoji
-╠${prefix}facebookemoji
-╠${prefix}iphoneemoji
-╠${prefix}samsungemoji
-╠${prefix}joyemoji
-╠${prefix}skypeemoji
-╠${prefix}twitteremoji
-╠${prefix}whatsappemoji
-╠${prefix}microsoftemoji
-╠${prefix}googleemoji
-╠${prefix}pediaemoji
-╠${prefix}microsoftemoji
-╠═══════✪ ANIME 
-
-╠${prefix}animeneko
-╠${prefix}waifu
-╠${prefix}animewaifu
-╠${prefix}animeawoo
-╠${prefix}shinobu
-╠${prefix}foxgirl
-╠${prefix}animemegumin
-╠${prefix}loli-waifu
-╠${prefix}8ball
-╠${prefix}animenom
-╠${prefix}goose
-╠${prefix}avatar
-╠${prefix}tickle
-╠${prefix}gecg
-╠${prefix}feed
-╠${prefix}husbu
-╠${prefix}neko2
-╠${prefix}randomanime
-╠${prefix}shota
-╠${prefix}waifu2
-╠${prefix}animeslap
-╠${prefix}animepat
-╠${prefix}animeneko
-╠${prefix}animekiss
-╠${prefix}animewlp
-╠${prefix}animecuddle
-╠${prefix}animecry
-╠${prefix}animekill
-╠${prefix}animelick
-╠${prefix}animebite
-╠${prefix}animeyeet
-╠${prefix}animebully
-╠${prefix}animebonk
-╠${prefix}animewink
-╠${prefix}animepoke
-╠${prefix}animesmile
-╠${prefix}animewave
-╠${prefix}animeawoo
-╠${prefix}animeblush
-╠${prefix}animesmug
-╠${prefix}animeglomp
-╠${prefix}animehappy
-╠${prefix}animedance
-╠${prefix}animecringe
-╠${prefix}animehighfive
-╠${prefix}animehandhold
-╠${prefix}animemegumin
-╠${prefix}animesmug
-╠${prefix}couplepp
-╠${prefix}animewall [query]
-╠${prefix}animewall2 [query]
-╠══════✪ STICKER 
-╠ ${prefix}patrick
-╠ ${prefix}emoji
-╠ ${prefix}emojimix
-╠ ${prefix}doge
-╠ ${prefix}lovesticker
-╠ ${prefix}animestick
-╠ ${prefix}spongebob
-╠ ${prefix}gojosatoru
-╠ ${prefix}nicholas
-╠ ${prefix}cartoon
-╠ ${prefix}stickman
-
-╠════✪ ANIME STICKER 
-╠${prefix}loli
-╠${prefix}bully
-╠${prefix}cuddle
-╠${prefix}cry
-╠${prefix}hug
-╠${prefix}awoo
-╠${prefix}kiss
-╠${prefix}lick
-╠${prefix}pat
-╠${prefix}smug
-╠${prefix}bonk
-╠${prefix}yeet
-╠${prefix}blush
-╠${prefix}smile
-╠${prefix}wave
-╠${prefix}highfive
-╠${prefix}handhold
-╠${prefix}nom
-╠${prefix}glomp
-╠${prefix}bite
-╠${prefix}slap
-╠${prefix}kill
-╠${prefix}happy
-╠${prefix}wink
-╠${prefix}poke
-╠${prefix}dance
-╠${prefix}cringe
-╠${prefix}neko
-╠${prefix}gura
-
-╠═══════✪ NSFW 
-╠${prefix}gifhentai
-╠${prefix}gifblowjob
-╠${prefix}hentaivideo
-╠${prefix}hneko
-╠${prefix}nwaifu
-╠${prefix}animespank
-╠${prefix}trap
-╠${prefix}gasm
-╠${prefix}ahegao
-╠${prefix}ass
-╠${prefix}bdsm
-╠${prefix}blowjob
-╠${prefix}cuckold
-╠${prefix}cum
-╠${prefix}milf
-╠${prefix}eba
-╠${prefix}ero
-╠${prefix}femdom
-╠${prefix}foot
-╠${prefix}gangbang
-╠${prefix}glasses
-╠${prefix}hentai
-╠${prefix}jahy
-╠${prefix}manga
-╠${prefix}masturbation
-╠${prefix}neko-hentai
-╠${prefix}neko-hentai2
-╠${prefix}nsfwloli
-╠${prefix}orgy
-╠${prefix}panties
-╠${prefix}pussy
-╠${prefix}tentacles
-╠${prefix}thights
-╠${prefix}yuri
-╠${prefix}zettai
-
-╠═══════✪ FUN 
-╠ ${prefix}say [text]
-╠ ${prefix}define [text]
-╠ ${prefix}how [text
-╠ ${prefix}when [text]
-╠ ${prefix}where [text]
-╠ ${prefix}is [text]
-╠ ${prefix}what [text]
-╠ ${prefix}can [text]
-╠ ${prefix}rate [text]
-╠ ${prefix}coolcheck [tag]
-╠ ${prefix}stupidcheck [tag]
-╠ ${prefix}waifucheck [tag]
-╠ ${prefix}evilcheck [tag]
-╠ ${prefix}dogcheck [tag]
-╠ ${prefix}hotcheck [tag]
-╠ ${prefix}smartcheck [tag]
-╠ ${prefix}uncleancheck [tag]
-╠ ${prefix}greatcheck [tag]
-╠ ${prefix}beautifulcheck [tag]
-╠ ${prefix}awesomecheck [tag]
-╠ ${prefix}prettycheck [tag]
-╠ ${prefix}lesbiancheck [tag]
-╠ ${prefix}gaycheck [tag]
-╠ ${prefix}cutecheck [tag]
-╠ ${prefix}uglycheck [tag]
-╠ ${prefix}hornycheck [tag]
-╠ ${prefix}charactercheck [tag]
-╠ ${prefix}lovelycheck [tag]
-╠ ${prefix}couple
-╠ ${prefix}soulmate
-╠ ${prefix}hot
-╠ ${prefix}sexy
-╠ ${prefix}kind
-╠ ${prefix}idiot
-╠ ${prefix}handsome
-╠ ${prefix}beautiful
-╠ ${prefix}cute
-╠ ${prefix}pretty
-╠ ${prefix}lesbian
-╠ ${prefix}noob
-╠ ${prefix}bastard
-╠ ${prefix}foolish
-╠ ${prefix}nerd
-╠ ${prefix}asshole
-╠ ${prefix}gay
-╠ ${prefix}smart
-╠ ${prefix}stubble
-╠ ${prefix}dog
-╠ ${prefix}horny
-╠ ${prefix}cunt
-╠ ${prefix}wibu
-╠ ${prefix}noobra
-╠ ${prefix}nibba
-╠ ${prefix}nibbi
-╠ ${prefix}comrade
-╠ ${prefix}mumu
-╠ ${prefix}rascal
-╠ ${prefix}scumbag
-╠ ${prefix}nuts
-╠ ${prefix}fagot
-╠ ${prefix}scoundrel
-╠ ${prefix}ditch
-╠ ${prefix}dope
-╠ ${prefix}gucci
-╠ ${prefix}lit
-╠ ${prefix}dumbass
-╠ ${prefix}crackhead
-╠ ${prefix}mf
-╠ ${prefix}motherfucker
-╠ ${prefix}sucker
-╠ ${prefix}fuckboy
-╠ ${prefix}playboy
-╠ ${prefix}fuckgirl
-╠ ${prefix}playgirl
-╠ ${prefix}quotes
-
-╠══════✪ GAME 
-╠ ${prefix}truth
-╠ ${prefix}dare
-╠ ${prefix}tictactoe
-╠ ${prefix}delttt
-╠ ${prefix}guess [option]
-╠ ${prefix}math [mode]
-╠ ${prefix}suitpvp [tag]
-╠══✪ ANONYMOUS CHAT 
-╠${prefix}anonymous
-╠${prefix}start
-╠${prefix}next
-╠${prefix}leave
-╠══════✪ DATABASE 
-╠ ${prefix}setcmd
-╠ ${prefix}listcmd
-╠ ${prefix}delcmd
-╠ ${prefix}lockcmd
-╠ ${prefix}addmsg
-╠ ${prefix}listmsg
-╠ ${prefix}getmsg
-╠ ${prefix}delmsg
-╠══════✪ OTHER 
-╠ ${prefix}afk
-╠ ${prefix}id
-╠ ${prefix}toqr [link]
-╠ ${prefix}repeat
-╠ ${prefix}readmore [text]
-╠ ${prefix}toviewonce
-╠ ${prefix}fliptext [text]]
-╠ ${prefix}chatinfo
-╠ ${prefix}alive
-╠ ${prefix}script
-╠ ${prefix}ping
-╠ ${prefix}owner
-╠ ${prefix}menu
-╠ ${prefix}delete
-╠ ${prefix}quoted
-╠ ${prefix}listpc
-╠ ${prefix}listgc
-╠ ${prefix}donate
-╠ ${prefix}request
-╠ ${prefix}report [bug]
-╠═══════✪「 BUG MENU 」	
-╠════☾pc attack☽
-╠${prefix}pcbut [number]
-╠${prefix}pcvn [number]
-╠${prefix}pcstick [number]
-╠${prefix}pcfast [number]
-╠${prefix}pcslow [number]
-╠${prefix}pcbunny [number]
-╠${prefix}xcrasher [amount]
-╠${prefix}pccontact [amount]
-╠${prefix}virtex5 [amount]
-╠${prefix}flower [amount]
-╠${prefix}pollbug [amount]
-╠${prefix}catalogbug [amount]
-╠${prefix}trollybug [amount]
-╠${prefix}trollybug2 [amount]
-╠════☾gc attack☽
-╠${prefix}gcslow
-╠${prefix}gcfast
-╠${prefix}gcbunny
-╠${prefix}tagallbug
-╠════☾pc & gc attack☽
-╠${prefix}vnbug [amount]
-╠${prefix}docbug [amount]
-╠${prefix}pcgcslow [number]
-╠${prefix}pcgcfast [number]
-╠${prefix}pcgcbunny [number]
-╠${prefix}textshot
-╠${prefix}docfuck [amount]
-╠${prefix}docsoft [amount]
-╠${prefix}docsoft2 [amount]
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
-}
-break
+case 'menu': {
+    const anu = await fetchJson ('https://github.com/Dragonxjanith/UPLOADS/raw/main/JSON/Dragonxjanith.json')
+    const JSMSG = anu.MENU_NOTE
+    const start = new Date().getTime()
+    await XeonBotInc.sendMessage(from, { react: { text: `📃`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = end - start
+    const menuimg = ['https://telegra.ph/file/b91dbaab278c1fe440de6.jpg','https://telegra.ph/file/a7954b940ac9acddf285a.jpg','https://telegra.ph/file/6576c2b80ddd95740f302.jpg','https://telegra.ph/file/48e575fbd6978f77ac796.jpg','https://telegra.ph/file/57221b23abeb4e16a9ffd.jpg','https://telegra.ph/file/ddae7eba259b9686bb761.jpg']
+    const result = menuimg[Math.floor(Math.random() * menuimg.length)]   
+    ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
+    
+             const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+             var utch = new Date().toLocaleDateString( get_localized_date)
+             var time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+             const biography = '*📅 ᴛᴏᴅᴀʏ ɪs :* ' + utch + '\n*⌚ ɴᴏᴡ ᴛɪᴍᴇ :* ' + time
+  
+                                   message = await prepareWAMessageMedia({ image : { url: global.alivelogo} }, { upload:   XeonBotInc.waUploadToServer })
+  
+         const MENUMSG = `*WELCOME ${m.pushName}*
+  
+  *👸 ᴜᴘ ᴛɪᴍᴇ :* ${runtime(process.uptime())}
+  ${biography}
+  
+  ➮ 𝙱𝙾𝚃 𝙽𝙰𝙼𝙴 - ${global.botnma}
+  ➮ 𝙱𝙾𝚃 𝙾𝚆𝙽𝙴𝚁 - ${global.ownernma}
+  ➮ 𝙽𝚄𝙼𝙱𝙴𝚁 - ${global.owner}
+  ➮ 𝚁𝙴𝚂𝙿𝙾𝙽𝙳 𝚂𝙿𝙴𝙴𝙳 - ${(end - start)} Ms
+  ➮ 𝚁𝙰𝙼 𝚄𝚂𝙰𝙶𝙴 - ${ram0}
+  
+  ${JSMSG}
+  
+  ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+  ╭──❰ *𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂* ❱
+  │ ${prefix}tiktok
+  │ ${prefix}tiktok2
+  │ ${prefix}video
+  │ ${prefix}video2
+  │ ${prefix}song
+  │ ${prefix}song2
+  │ ${prefix}song3
+  │ ${prefix}fb
+  │ ${prefix}fb2
+  │ ${prefix}fb3
+  │ ${prefix}fbook
+  │ ${prefix}ig
+  │ ${prefix}ig2
+  │ ${prefix}twitter
+  │ ${prefix}ytmp3
+  │ ${prefix}ytmp4
+  │ ${prefix}ehi
+  │ ${prefix}apk
+  │ ${prefix}modapk
+  │ ${prefix}downxvid
+  ╰────────────⦁
+  
+  ╭──❰ *𝚂𝙴𝙰𝚁𝙲𝙷 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂* ❱
+  │ ${prefix}play
+  │ ${prefix}yts
+  │ ${prefix}img
+  │ ${prefix}pinterest
+  │ ${prefix}wikimedia
+  │ ${prefix}ytsearch
+  │ ${prefix}apk
+  │ ${prefix}modapk
+  ╰────────────⦁
+  
+  ╭──❰ *𝚁𝙰𝙽𝙳𝙾𝙼 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂* ❱
+  │ ${prefix}pic
+  │ ${prefix}coffee
+  │ ${prefix}couplepp
+  ╰─────────────⦁
+  
+  ╭──❰ *𝙵𝚄𝙽 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂* ❱
+  │ ${prefix}couple
+  │ ${prefix}mysoulmate
+  │ ${prefix}math
+  ╰────────────⦁
+  
+  ╭──❰ *𝙰𝚂𝚄𝙿𝙰𝙽 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂* ❱
+  │ ${prefix}cecan
+  │ ${prefix}china
+  │ ${prefix}cogan
+  │ ${prefix}indonesia
+  │ ${prefix}japan
+  │ ${prefix}korea
+  │ ${prefix}malaysia
+  │ ${prefix}thailand
+  │ ${prefix}vietnam 
+  ╰────────────⦁
+  
+  ╭──❰ *𝚅𝙾𝙸𝙲𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂* ❱
+  │ ${prefix}bass
+  │ ${prefix}blown
+  │ ${prefix}deep
+  │ ${prefix}earrape
+  │ ${prefix}fast
+  │ ${prefix}fat
+  │ ${prefix}nightcore
+  │ ${prefix}reverse
+  │ ${prefix}robot
+  │ ${prefix}slow
+  │ ${prefix}squirrel
+  ╰────────────⦁
+  
+  ╭──❰ *𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙴𝚁 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂* ❱
+  │ ${prefix}photo
+  │ ${prefix}ss
+  │ ${prefix}removebg
+  │ ${prefix}sticker
+  │ ${prefix}emojimix
+  │ ${prefix}tovideo
+  │ ${prefix}togif
+  │ ${prefix}attp
+  │ ${prefix}attp2
+  │ ${prefix}attp3
+  │ ${prefix}ttp
+  │ ${prefix}tts
+  │ ${prefix}unvoice
+  │ ${prefix}fancy
+  ╰─────────────⦁
+    
+  ╭──❰ *𝚁𝙰𝙽𝙳𝙾𝙼 𝙰𝙽𝙸𝙼𝙴* ❱
+  │ ${prefix}akira  
+  │ ${prefix}ana
+  │ ${prefix}asuna 
+  │ ${prefix}ayuzawa 
+  │ ${prefix}boruto
+  │ ${prefix}elaina 
+  │ ${prefix}emilia 
+  │ ${prefix}erza  
+  │ ${prefix}gremory  
+  │ ${prefix}inori  
+  │ ${prefix}kaga  
+  │ ${prefix}kaori  
+  │ ${prefix}kurumi  
+  │ ${prefix}loli  
+  │ ${prefix}madara  
+  │ ${prefix}mikasa  
+  │ ${prefix}miku  
+  │ ${prefix}naruto  
+  │ ${prefix}nezuko  
+  │ ${prefix}rize  
+  │ ${prefix}sakura  
+  │ ${prefix}sasuke  
+  │ ${prefix}shina  
+  │ ${prefix}shinka  
+  │ ${prefix}shota  
+  │ ${prefix}waifu  
+  │ ${prefix}yuki  
+  │ ${prefix}bully
+  │ ${prefix}cuddle
+  │ ${prefix}cry
+  │ ${prefix}hug
+  │ ${prefix}awoo
+  │ ${prefix}kiss
+  │ ${prefix}lick
+  │ ${prefix}pat
+  │ ${prefix}smug
+  │ ${prefix}bonk
+  │ ${prefix}yeet
+  │ ${prefix}blush
+  │ ${prefix}smile
+  │ ${prefix}wave
+  │ ${prefix}highfive
+  │ ${prefix}handhold
+  │ ${prefix}nom
+  │ ${prefix}bite
+  │ ${prefix}glomp
+  │ ${prefix}slap
+  │ ${prefix}kill
+  │ ${prefix}happy
+  │ ${prefix}wink
+  │ ${prefix}poke
+  │ ${prefix}dance
+  │ ${prefix}cringe
+  ╰─────────────⦁
+  
+  ╭──❰ *𝙶𝚁𝙾𝚄𝙿 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂* ❱
+  │ ${prefix}grouplink
+  │ ${prefix}ephemeral
+  │ ${prefix}setgrouppp
+  │ ${prefix}setname
+  │ ${prefix}group
+  │ ${prefix}editinfo
+  │ ${prefix}grupinfo
+  │ ${prefix}add
+  │ ${prefix}kick
+  │ ${prefix}promote
+  │ ${prefix}demote
+  │ ${prefix}delm
+  ╰────────────⦁
+  
+  ╭──❰ *𝙼𝙸𝚂𝙲 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂* ❱
+  │ ${prefix}speedtest
+  │ ${prefix}ping
+  │ ${prefix}ping2
+  │ ${prefix}owner
+  │ ${prefix}donate
+  │ ${prefix}menu
+  │ ${prefix}delete
+  │ ${prefix}chatinfo
+  │ ${prefix}quoted
+  │ ${prefix}listpc
+  │ ${prefix}listgc
+  │ ${prefix}listonline
+  │ ${prefix}report
+  ╰─────────────⦁
+  
+  ╭──❰ *𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂* ❱
+  │ ${prefix}setcmd
+  │ ${prefix}listcmd
+  │ ${prefix}delcmd
+  │ ${prefix}lockcmd
+  │ ${prefix}addmsg
+  │ ${prefix}listmsg
+  │ ${prefix}getmsg
+  │ ${prefix}delmsg
+  ╰─────────────⦁ 
+  
+  ╭────❰ *𝙻𝙾𝙶𝙾 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂* ❱   
+  │ ${prefix}logo
+  │ ${prefix}logo2
+  │ ${prefix}logo3
+  ╰──────────────⦁
+  
+  ╭───❰ *𝙾𝚆𝙽𝙴𝚁 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂* ❱
+  │ ${prefix}chat
+  │ ${prefix}join
+  │ ${prefix}leave
+  │ ${prefix}setbotpp
+  │ ${prefix}block
+  │ ${prefix}unblock
+  │ ${prefix}bcgroup
+  │ ${prefix}bcall
+  ╰────────────⦁
+  
+  ╭───❮ *𝙾𝚃𝙷𝙴𝚁 𝙲𝙾𝙼𝙼𝙰𝙽𝚂* ❯
+  │ ${prefix}alive
+  │ ${prefix}bug
+  │ ${prefix}xnxxsh
+  │ ${prefix}xvideo
+  │ ${prefix}about
+  │ ${prefix}news
+  │ ${prefix}readmore
+  │ ${prefix}areadmore
+  │ ${prefix}cyberspace
+  │ ${prefix}mountain
+  │ ${prefix}programming
+  │ ${prefix}technology
+  ╰─────────────⦁`
+  const templateButtons = [
+    {buttonId: `panel`, buttonText: {displayText: 'ʟɪsᴛ ᴍᴇɴᴜ'}, type: 1},
+    {buttonId: `owner`, buttonText: {displayText: 'ᴏᴡɴᴇʀ‍️'}, type: 1},
+    {buttonId: `stetus`, buttonText: {displayText: 'sᴛᴇᴛᴜs'}, type: 1}
+  
+      ]
+  
+  let buttonMessage = {
+                      image: { url: result },
+                      caption: MENUMSG ,
+                      footer: global.botnma,
+                      buttons: templateButtons,
+                      headerType: 4
+                  }
+                 await XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: fakestatus })
+            
+       
+       //await XeonBotInc.sendMessage(m.chat, templateMessage, { quoted: fakestatus })   
+  
+                                }
+                                break
       case 'ownermenu':{
 	   var unicorn = await getBuffer(picak+'Owner Menu')
 const buttons = [
