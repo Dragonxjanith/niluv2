@@ -37,6 +37,10 @@ const ini_mark = `0@s.whatsapp.net`
 const ownernya = ownernomer + '@s.whatsapp.net'
 const Language = require('./language')
 const Lang = Language.getString('elisabot')
+const TIME_ZONE = global.TIME_ZONE
+const MENU_IMOJI = global.MENU_IMOJI
+  const M_E = MENU_IMOJI.split('|')[0]
+  const D_E = MENU_IMOJI.split('|')[1]
 
 
 const BOT_VERSION = '2.0.0'
@@ -7591,7 +7595,11 @@ ${ita}💗 THANKS FOR USING QUEEN ELISA 💗${ita}
   
 }
 
+
             break
+
+//----------------------------------------------------------LIST MENU --------------------------------------------
+
             case 'command':case 'listmenu': case 'list': case 'panel':{
 	const sections = [{
 								"title": "Initial Features Of Bot 🦄",
@@ -7739,6 +7747,9 @@ const listMessage = {
 const sendMsg = await XeonBotInc.sendMessage(m.chat, listMessage,{ react: { text: `👋`, key: m.key }})
 }
 break
+
+//----------------------------------------------------Menu------------------------------------------------------------------------------------------
+
 case 'menu': {
     const anu = await fetchJson ('https://github.com/Dragonxjanith/UPLOADS/raw/main/JSON/Dragonxjanith.json')
     const JSMSG = anu.MENU_NOTE
@@ -8010,6 +8021,20 @@ case 'menu': {
   
                                 }
                                 break
+
+//----------Status-------------------------------------
+
+case 'botstetus' : case 'stetus' : {
+    const start = new Date().getTime()
+    await XeonBotInc.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + 'ms' 
+   // const runtime = 
+    const ramusage = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
+    m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ Run Time :* ```'+runtime(process.uptime())+'``` \n*📶 Ram Usage :*``` '+ramusage+'```\n')
+    }
+    break
+
       case 'ownermenu':{
 	   var unicorn = await getBuffer(picak+'Owner Menu')
 const buttons = [

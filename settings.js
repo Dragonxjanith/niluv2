@@ -5,11 +5,11 @@ const chalk = require('chalk')
 //lng
 global.LANG = 'EN'
 
-//aumto functioner
+
 global.autoTyping = false //auto tying in gc (true to on, false to off)
 global.autoRecord = false //auto recording (true to on, false to off)
 
-//documents variants
+
 global.doc1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
 global.doc2 = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
 global.doc3 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
@@ -17,14 +17,16 @@ global.doc4 = 'application/zip'
 global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
 
-//owmner v card
+//👇 Menu imoji 
+global.MENU_IMOJI = '👸|ℹ️'
 global.owner = ['916909137213'] //ur owner number
 global.ownername = "🦄Dream Guy Xeon" //ur owner name
 global.ytname = "YT: janithsadanuwan" //ur yt chanel name
 global.socialm = "GitHub: janithsadanuwan" //ur github or insta name
 global.location = "colombo, India, Aizawl" //ur location
+//time
+global.TIME_ZONE = 'Asia/Colombo'
 
-//bot bomdy 
 global.ownernomer = "94767438882" //ur number
 global.premium = ['94767438882'] //ur premium number
 global.botname = 'QueenNilu' //ur bot name
