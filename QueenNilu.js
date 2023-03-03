@@ -7809,23 +7809,23 @@ XeonBotInc.readMessages([m.key])
    ]
    let buttonMessage = {
        image: { url: global.alivelogo },
-       caption:`${ita}◈ Queen Elisa Bot is Online ◈${ita}
+       caption:`${ita}◈ Queen Nilu Bot is Online ◈${ita}
 
 *( ᴅᴇᴘʟᴏʏ ) ▽* 
-_http://github.com/darkmakerofc_
+_http://github.com/janithsadanuwan_
 *( ᴏᴡɴᴇʀ ) ▽* 
 _${global.owner}_
 *( ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ ) ▽*
-_https://chat.whatsapp.com/BbIpvkRD4qP6xKckb8cpT0_
+_https://chat.whatsapp.com/
 *( ᴠᴇʀsɪᴏɴ ) ▽*
 _${BOT_VERSION}_
 *( ʏᴏᴜᴛᴜʙᴇ ) ▽*
-_https://youtube.com/MRNIMAOFC_
+_https://youtube.com/janithsadanuwan
 
 *[ ⏱️ ʀᴜɴ ᴛɪᴍᴇ ⏱️] ▽*
 ${runtime(process.uptime())}
 
-${ita}💗 THANKS FOR USING QUEEN ELISA 💗${ita}
+${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
 `,
        footer: global.botnma,
        buttons: buttons,
@@ -9214,6 +9214,102 @@ const buttonMessage = {
 const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
 }
 break
+
+case 'attp' :{
+    if (!text) return reply ('Need some word \n ex - attp Mr nima')
+    const Stik = `https://api.akuari.my.id/other/attp?text=${text}`
+    await ElisaBotMd.sendMedia(m.chat, Stik , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+    
+   }
+   break
+   case 'attp2' :{
+   if (!text) return reply ('Need some word \n ex - attp Mr nima')
+   const Stik = `https://my-shinz.herokuapp.com/api/maker/attp?text=${text}`
+    await ElisaBotMd.sendMedia(m.chat, Stik , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+    
+   }
+   break
+   case 'ttp' :{
+   if (!text) return reply ('Need some word \n ex - ttp Mr nima')
+   //const Stik = `https://my-shinz.herokuapp.com/api/maker/attp?text=${text}`
+    await ElisaBotMd.sendMedia(m.chat, `https://my-shinz.herokuapp.com/api/maker/ttp?text=${text}` , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+    
+   }
+   break
+   case 'short' :{
+   if (!isUrl(args[0])) return reply('*👸💬 Please Give Me a Correct Link*\n_Example - .short https://youtube.com/c/NIMAOFC')
+   const nima = await fetchJson(`https://my-shinz.herokuapp.com/api/linkshort/cuttly?link=${text}`)
+   m.reply(nima.result)
+   }
+   break
+   //https://my-shinz.herokuapp.com/api/linkshort/cuttly?link=https://api-alpis.herokuapp.com
+   case 'short2' :{
+   if (!isUrl(args[0])) return reply('*👸💬 Please Give Me a Correct Link*\n_Example - .short2 https://youtu.be/hbwvPcnuTlY_')
+   const nima = await fetchJson(`https://my-shinz.herokuapp.com/api/linkshort/tinyurlwithalias?link=${args[0]}&alias=${args[1]}`)
+   m.reply(nima.result)
+   }
+   break
+   case 'triggered' :{
+   if (!quoted) return reply('*👸💬 Please reply sticker.*')
+   let media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
+   const img = `https://api.violetics.pw/api/converter/webp-to-image?apikey=b5cd-368b-055f&image=${media}`
+   const stick = 'https://api.akuari.my.id/canvas/triggered2?link='+img
+   await ElisaBotMd.sendMessage(from, { react: { text: `✨`, key: m.key }})
+   await ElisaBotMd.sendMedia(m.chat, stick , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+   }
+   break
+
+ /*  case 'ringtone' :{
+     if (!text) return reply('*👸💬 Please Enter ringtone name*\n_Example - ringtone iphone_')
+     const anu = fetchJson(`https://my-shinz.herokuapp.com/api/search/ringtone?text=${text}`)
+     const search = anu.result
+     let sections = []   
+for (let i of anu.result) {
+const list = {title: `👸💬 sᴇʟᴇᴄᴛ ʏᴏᴜʀ ʀɪɴɢᴛᴏɴᴇ`,
+rows: [
+{
+title: i.title, 
+rowId: `dltone ${i.audio}`    
+}, 
+]
+}
+sections.push(list)   
+}
+//.catch((err) => reply('*👸💬 Error*'))
+const sendm =  ElisaBotMd.sendMessage(
+m.chat, 
+{
+text: `Queen Elisa Ring Tone Downloader`,
+footer: `${global.botnma}`,
+title: "RINGTONS",
+buttonText: "sᴇʟᴇᴄᴛ",
+sections
+}, { quoted : m })    
+   }
+   break*/
+   case 'dltone' : {
+   //await ElisaBotMd.sendText(m.chat, `\n*🔄 Please wait ${m.pushName}...*\n`, m, )
+   await ElisaBotMd.sendMessage(m.chat, { audio: { url: text } , mimetype: 'audio/mpeg' }, { quoted: m })
+    
+   }
+   break
+   case 'ebinary': {
+   if (!m.quoted.text && !text) throw `Send/reply text with caption ${prefix + command}`
+   let { eBinary } = require('./lib/binary')
+   let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text
+   let eb = await eBinary(teks)
+   reply(eb)
+}
+break
+   case 'dbinary': {
+   if (!m.quoted.text && !text) throw `Send/reply text with caption ${prefix + command}`
+   let { dBinary } = require('./lib/binary')
+   let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text
+   let db = await dBinary(teks)
+   reply(db)
+}
+break
+   
             default:
                 if (budy.startsWith('=>')) {
                     if (!isCreator) return m.reply(mess.owner)
