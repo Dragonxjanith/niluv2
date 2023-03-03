@@ -2087,6 +2087,9 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
             })
             }
         break    
+
+
+        ////////////////////////////////Meada start ------------------------------------\\\\\\\\\\\\\\\\\\\\\\\\\\
         case 'findsong':{
         if (!text) return m.reply(`Example : ${prefix + command} stay jb`)
             let ytslagu = require("youtube-yts")
@@ -2119,135 +2122,1307 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
             }
             break
         
-    case 'play': case 'ytplay':{
-                if (!text) throw `Example : ${prefix + command} anime whatsapp status`
-                let yts = require("youtube-yts")
-                let search = await yts(text)
-                let anulay = search.videos[Math.floor(Math.random() * search.videos.length)]
-                let buttons = [
-                    {buttonId: `playmp3 ${anulay.url}`, buttonText: {displayText: '♫ Audio'}, type: 1},
-                    {buttonId: `playmp4 ${anulay.url}`, buttonText: {displayText: '► Video'}, type: 1}
+            case 'play': case 'yt': { 
+                var GIVEME = ''
+                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක හෝ ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen elisa bot*"
+                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make queen elisa bot*"
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                                                  if (!text) return reply (GIVEME)
+                                                  await ElisaBotMd.sendText(m.chat,mess.wait, m, )
+                                                  let yts = require("youtube-yts")
+                                                  var svid = text.replace("shorts/","watch?v=")
+                                                  var s2vid = svid.replace("?feature=share","")
+                                                  yts(s2vid).then(async (search) => { 
+                                                  let nima = search.all     
+                if (search.all[0].type == 'channel') {
+                
+                                const buttons = [
+                                    {buttonId: `selecttypebutton ${search.all[1].url}`, buttonText: {displayText: '🎬 VIDEO 🎬'}, type: 1},
+                                    {buttonId: `audioselecttypebutton  ${search.all[1].url} `, buttonText: {displayText: '🎧 AUDIO 🎧'}, type: 1},
+                 ]
+                            const buttonMessage = {
+                                    image: { url: search.all[1].thumbnail },
+                                    caption: `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚈𝚃 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                
+                *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
+                
+                 ➥ ᴛɪᴛʟᴇ -  ${search.all[1].title}
+                
+                 ➥ ᴠɪᴇᴡs - ${search.all[1].views}
+                
+                 ➥ ᴅᴜʀᴀᴛɪᴏɴ - ${search.all[1].timestamp}
+                
+                 ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - ${search.all[1].ago}
+                
+                 ➥ ᴜʀʟ - ${search.all[1].url}` ,
+                                    footer: global.botnma,
+                                    buttons: buttons,
+                                    headerType: 4
+                                }
+                                
+                               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                                 
+                } else if (search.all[0].type == 'video') {
+                                let nima = search.all           
+                                const buttons = [
+                                    {buttonId: `selecttypebutton ${search.all[0].url}`, buttonText: {displayText: '🎬 VIDEO 🎬'}, type: 1},
+                                    {buttonId: `audioselecttypebutton  ${search.all[0].url} `, buttonText: {displayText: '🎧 AUDIO 🎧'}, type: 1},
                 ]
-                let buttonMessage = {
-                    image: { url: anulay.thumbnail },
-                    caption: `
-${themeemoji} Title : ${anulay.title}
-${themeemoji} Ext : Search
-${themeemoji} ID : ${anulay.videoId}
-${themeemoji} Duration : ${anulay.timestamp}
-${themeemoji} Viewers : ${anulay.views}
-${themeemoji} Upload At : ${anulay.ago}
-${themeemoji} Author : ${anulay.author.name}
-${themeemoji} Channel : ${anulay.author.url}
-${themeemoji} Description : ${anulay.description}
-${themeemoji} Url : ${anulay.url}`,
-                    footer: botname,
+                            const buttonMessage = {
+                                    image: { url: search.all[0].thumbnail },
+                                    caption:   `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚈𝚃 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                
+                *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
+                
+                 ➥ ᴛɪᴛʟᴇ -  ${search.all[0].title}
+                
+                 ➥ ᴠɪᴇᴡs - ${search.all[0].views}
+                
+                 ➥ ᴅᴜʀᴀᴛɪᴏɴ - ${search.all[0].timestamp}
+                
+                 ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - ${search.all[0].ago}
+                
+                 ➥ ᴜʀʟ - ${search.all[0].url}` ,
+                                    footer: global.botnma,
+                                    buttons: buttons,
+                                    headerType: 4
+                                }
+                                
+                               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                                 
+                }})
+                                                  
+                
+                 
+                                 }
+                                              break
+                                              case 'ytv': {
+                const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+                const mp14 = rash.mp14
+                const mp24 = rash.mp24
+                const sdpid = rash.sddlid
+                const hdmidpid = rash.sdmiddlid
+                const hdpid = rash.hddlid
+                                              if (!text) throw `${Lang.EXAMPLE}\n : *${prefix + command} How to make queen elisa V2*`
+                                                  await ElisaBotMd.sendText(m.chat, `\n*🔄 Please wait ${m.pushName}...*\n`, m, )
+                                                  let yts = require("youtube-yts")
+                                                  var svid = text.replace("shorts/","watch?v=")
+                                                  var s2vid = svid.replace("?feature=share","")
+                                                  yts(s2vid).then(async (search) => {  
+                                                  for (let i of search.all)   
+                                                  views = search.all[0].views
+                                                      ngen = '⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸\n\n*ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*\n\n ➥ ᴛɪᴛʟᴇ - '+search.all[0].title+'\n\n ➥ ᴠɪᴇᴡs - '+views+'\n\n ➥ ᴅᴜʀᴀᴛɪᴏɴ - '+search.all[0].timestamp+'\n\n ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - '+search.all[0].ago+'\n\n ➥ ᴜʀʟ - '+search.all[0].url
+                
+                                
+                                
+                const sections = [
+                    {
+                    title: "ＱＵＥＥＮ  ＥＬＩＳＡ Ｖ2",
+                    rows: [
+                        {title: "144P 𝚀𝚞𝚊𝚕𝚒𝚝𝚢", rowId: `${mp14} ${search.all[0].url} 144p`, description: `${search.all[0].title}`},
+                        {title: "240P 𝚀𝚞𝚊𝚕𝚒𝚝𝚢", rowId: `${mp24} ${search.all[0].url} 240p`, description: `${search.all[0].title}`},
+                        {title: "360P 𝚀𝚞𝚊𝚕𝚒𝚝𝚢", rowId: `${sdpid} ${search.all[0].url} 360p`, description: `${search.all[0].title}`},
+                        {title: "480P 𝚀𝚞𝚊𝚕𝚒𝚝𝚢", rowId: `${hdmidpid} ${search.all[0].url} 480p`, description: `${search.all[0].title}`},
+                        {title: "720P 𝚀𝚞𝚊𝚕𝚒𝚝𝚢", rowId: `${hdpid} ${search.all[0].url} 720p`, description: `${search.all[0].title}`},
+                        {title: "1080P 𝚀𝚞𝚊𝚕𝚒𝚝𝚢", rowId: `video2 ${search.all[0].url} 1080p`, description: `${search.all[0].title}`}
+                    
+                    ]
+                    },
+                ]
+                
+                const listMessage = {
+                  text: ngen,
+                  footer: global.botnma,
+                  buttonText: "ＳＥＬＥＣＴ ＶＩＤＥＯ",
+                  sections
+                }
+                
+                const me = await ElisaBotMd.sendMessage(m.chat, listMessage)}).catch((err) => m.reply('*Sorry, Can\'t Find your reqest ❗*'))
+                await ElisaBotMd.sendMessage(from, { react: { text: `🎦`, key: m.key }})
+                await new Promise(r => setTimeout(r, 2000)) 
+                await ElisaBotMd.sendMessage(from, { react: { text: `⏳`, key: m.key }})
+                await new Promise(r => setTimeout(r, 2000)) 
+                await ElisaBotMd.sendMessage(from, { react: { text: `🎦`, key: m.key }})
+                  }
+                            break
+                
+                                              case 'song' : {
+                var GIVEME = ''
+                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song rosa male natuwe katu*"
+                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song rosa male natuwe katu*"
+                const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+                const audidd = rash.audcmd
+                const docidd = rash.doccmd
+                                              await ElisaBotMd.sendMessage(from, { react: { text: `🎵`, key: m.key }})
+                                                  if (!text) return reply(GIVEME)
+                                                  await ElisaBotMd.sendText(m.chat, mess.wait, m, )
+                                                  let yts = require("youtube-yts")
+                                                 // let search = await yts(text)
+                                                  yts(text).then(async (search) => {  
+                                                  for (let i of search.all)  
+                                                  if(search.all.length < 1) throw Lang.NOT_FOUND 
+                                                     
+                                              
+                                const footer = global.botnma
+                                const buttons = [
+                                    {buttonId: `${docidd} ${search.all[0].url}`, buttonText: {displayText: '📁 DOCUMENT 📁'}, type: 1},
+                                    {buttonId: `${audidd}  ${search.all[0].url}`, buttonText: {displayText: '🎧 AUDIO 🎧'}, type: 1}
+                                    
+                                ]
+                            const buttonMessage = {
+                                    image: { url: search.all[0].thumbnail },
+                                    caption: `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                
+                *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
+                
+                 ➥ ᴛɪᴛʟᴇ -  ${search.all[0].title}
+                
+                 ➥ ᴠɪᴇᴡs - ${search.all[0].views}
+                
+                 ➥ ᴅᴜʀᴀᴛɪᴏɴ - ${search.all[0].timestamp}
+                
+                 ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - ${search.all[0].ago}
+                
+                 ➥ ᴜʀʟ - ${search.all[0].url}`,
+                                    footer: footer,
+                                    buttons: buttons,
+                                    headerType: 4
+                                }
+                                
+                               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })})
+                                 
+                                             }
+                                             break
+                                              case 'video': { 
+                const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+                const sdpid = rash.sddlid
+                const hdmidpid = rash.sdmiddlid
+                const hdpid = rash.hddlid
+                
+                var GIVEME = ''
+                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen elisa bot*"
+                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video name.```\n *Example - .video how to make queen elisa bot*"
+                
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                                                  if (!text) return reply (GIVEME)
+                                                  await ElisaBotMd.sendText(m.chat, mess.wait, m, )
+                                                  let yts = require("youtube-yts")
+                                                  var svid = text.replace("shorts/","watch?v=")
+                                                  var s2vid = svid.replace("?feature=share","")
+                                                  yts(s2vid).then(async (search) => { 
+                                                  let nima = search.all     
+                if (search.all[0].type == 'channel') {
+                
+                                const buttons = [
+                                    {buttonId: `${sdpid} ${search.all[1].url}`, buttonText: {displayText: '360p'}, type: 1},
+                                    {buttonId: `${hdmidpid} ${search.all[1].url} 480p`, buttonText: {displayText: '480p'}, type: 1},
+                                    {buttonId: `${hdpid} ${search.all[1].url} 720p`, buttonText: {displayText: '720p'}, type: 1}
+                                ]
+                            const buttonMessage = {
+                                    image: { url: search.all[1].thumbnail },
+                                    caption: `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                
+                *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
+                
+                 ➥ ᴛɪᴛʟᴇ -  ${search.all[1].title}
+                
+                 ➥ ᴠɪᴇᴡs - ${search.all[1].views}
+                
+                 ➥ ᴅᴜʀᴀᴛɪᴏɴ - ${search.all[1].timestamp}
+                
+                 ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - ${search.all[1].ago}
+                
+                 ➥ ᴜʀʟ - ${search.all[1].url}` ,
+                                    footer: global.botnma,
+                                    buttons: buttons,
+                                    headerType: 4
+                                }
+                                
+                               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                                 
+                } else if (search.all[0].type == 'video') {
+                const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+                const sdpid = rash.sddlid
+                const hdmidpid = rash.sdmiddlid
+                const hdpid = rash.hddlid
+                                let nima = search.all           
+                                const buttons = [
+                                    {buttonId: `${sdpid} ${search.all[1].url}`, buttonText: {displayText: '360p'}, type: 1},
+                                    {buttonId: `${hdmidpid} ${search.all[1].url} 480p`, buttonText: {displayText: '480p'}, type: 1},
+                                    {buttonId: `${hdpid} ${search.all[1].url} 720p`, buttonText: {displayText: '720p'}, type: 1}
+                                ]
+                            const buttonMessage = {
+                                    image: { url: search.all[0].thumbnail },
+                                    caption:   `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                
+                *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
+                
+                 ➥ ᴛɪᴛʟᴇ -  ${search.all[0].title}
+                
+                 ➥ ᴠɪᴇᴡs - ${search.all[0].views}
+                
+                 ➥ ᴅᴜʀᴀᴛɪᴏɴ - ${search.all[0].timestamp}
+                
+                 ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - ${search.all[0].ago}
+                
+                 ➥ ᴜʀʟ - ${search.all[0].url}` ,
+                                    footer: global.botnma,
+                                    buttons: buttons,
+                                    headerType: 4
+                                }
+                                
+                               ElisaBotMd.sendMessage(m.chat, buttonMessage, { quoted: m })
+                                 
+                }})
+                                                  
+                
+                }
+                                          break
+                                          case 'song2' : {
+                var GIVEME = ''
+                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song2 lelena*"
+                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song2 lelena*"
+                text1 = q.split(";")[0]
+                text2 = q.split(";")[1]
+                await ElisaBotMd.sendMessage(from, { react: { text: `⌛`, key: m.key }})
+                
+                                          //await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+                                                  if (!text) return reply (GIVEME)
+                                                  let yts = require("youtube-yts")
+                                                  //const load = await ElisaBotMd.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
+                                                  const load = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                                                  yts(text).then(async (search) => {  
+                                                  
+                                                  let nima = search.all
+                                                  let media = await fetchJson(`https://queen-elisa-api-1-2-3.herokuapp.com/api/dowloader/yt?url=${search.all[0].url}`)
+                                                  buf = await getBuffer(media.result.thumb)
+                                                  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                                                  //const up = await ElisaBotMd.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
+                                                  const up = await ElisaBotMd.sendText(m.chat, global.SONG_UP, m, )
+                                                  
+                                                  if (media.result.song_size >= 120000) return reply('*FILE SIZE IS BIG !!!*')
+                                                  const doc = await ElisaBotMd.sendMessage(m.chat, {document:{ url: media.result.mp3 }, mimetype:"audio/mpeg", fileName: `${media.result.Title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                title:`${media.result.Title}`,
+                                body:"YOUTUBE MP3",
+                                mediaType:2,
+                                thumbnail:buf,
+                                mediaUrl:`${text}`, 
+                                sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
+                                await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+                
+                                                  }).catch((err) => m.reply(NOT_FOUND))
+                                           }
+                                          break  
+                                          case 'audiosong2' : {
+                var GIVEME = ''
+                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song2 lelena*"
+                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song2 lelena*"
+                
+                await ElisaBotMd.sendMessage(from, { react: { text: `⌛`, key: m.key }})
+                
+                                          //await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+                                                   if (!text) return reply (GIVEME)
+                                                  let yts = require("youtube-yts")
+                                                  //const load = await ElisaBotMd.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
+                                                  const load = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                                                  yts(text).then(async (search) => {  
+                                                  
+                                                  let nima = search.all
+                                                  let media = await fetchJson(`https://test-apiyaa.herokuapp.com/api/dowloader/yt?url=${search.all[0].url}`)
+                                                  buf = await getBuffer(media.result.thumb)
+                                                  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                                                  //const up = await ElisaBotMd.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
+                                                  const up = await ElisaBotMd.sendText(m.chat, global.SONG_UP, m, )
+                                                  
+                                                  if (media.result.song_size >= 120000) return reply('*FILE SIZE IS BIG !!!*')
+                                                  const doc = await ElisaBotMd.sendMessage(m.chat, {audio:{ url: media.result.mp3 }, mimetype:"audio/mpeg", fileName: `${media.result.Title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                title:`${media.result.Title}`,
+                                body:"YOUTUBE MP3",
+                                mediaType:2,
+                                thumbnail:buf,
+                                mediaUrl:`${text}`, 
+                                sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
+                                await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+                
+                                                  }).catch((err) => m.reply(NOT_FOUND))
+                                           }
+                                          break  
+                                          case 'song4' : {
+                                          var GIVEME = ''
+                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song3 lelena*"
+                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song3 lelena*"
+                text1 = q.split(";")[0]
+                text2 = q.split(";")[1]
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+                                                  if (!text) return reply (GIVEME)
+                                                  let yts = require("youtube-yts")
+                                                  //const load = await ElisaBotMd.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
+                                                  const laod = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                                                  yts(text).then(async (search) => {  
+                                                  let nima = search.all
+                                          
+                                          const akur = await fetchJson(`https://a.api.akuari.my.id/downloader/youtube3?link=${search.all[0].url}&type=360`)
+                                          const gettsong = akur.audio.audio
+                                          await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                                          //const up = await ElisaBotMd.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
+                                          const up = await ElisaBotMd.sendText(m.chat, global.SONG_UP, m, )
+                                          if ( text2 === 'audio' ){
+                                                 // if (media.filesize >= 120000) return reply('❗ Audio size is too big '+util.format(media))
+                                                  await ElisaBotMd.sendMessage(m.chat, { audio: { url : gettsong }, mimetype: 'audio/mpeg', fileName: `${akur.title}.mp3` }, { quoted: m })
+                                                  return await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
+                                                  
+                                                  }
+                                                 // if (media.filesize >= 120000) return reply('❗ Audio size is too big '+util.format(media))
+                                                  await ElisaBotMd.sendMessage(m.chat, { document: { url : gettsong }, mimetype: 'audio/mpeg', fileName: `${akur.title}.mp3` }, { quoted: m })
+                                                  await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
+                                                  
+                                          }).catch((err) => m.reply(err))
+                                          }
+                                          break
+                                          case 'video3' :{
+                var GIVEME = ''
+                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen elisa bot*"
+                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make queen elisa bot*"
+                text1 = q.split(";")[0]
+                text2 = q.split(";")[1]
+                                          if (!text) return reply(GIVEME)
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `🎥`, key: m.key }})
+                                          const yts = require("youtube-yts")
+                                          const load = await ElisaBotMd.sendText(m.chat, `📥 Downloading ${m.pushName} your video...*`, m, )
+                                          const search = await yts(text)
+                                        //  for (let i of search.all)  
+                                          const vid = await fetchJson(`https://youtubeapisdownloader.vercel.app/youtube/downloader/video?url=${search.all[0].url}`)
+                                          //const data = await fetchJson(`https://cakrayp.herokuapp.com/api/youtube/video/search?query=${text}&type=default&apikey=cakrayp24Q6`)
+                                          const capp = `${global.cap}
+                                          
+                 *➮ ᴛɪᴛʟᴇ :* ${vid.result.title}
+                 
+                 *➮ ᴜʀʟ* ${search.all[0].url}
+                                          `
+                                          const sdsize = vid.result.downloads.tubemp3_biz[0].size
+                                          const hdsize = vid.result.downloads.tubemp3_biz[1].size
+                                          await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                                          if (text.split(";")[1] == 'hd'){
+                                          if (hdsize.split('MB')[0] >= 110) return reply('*CAN\'T UPLODE YOUR FILE* \n_YOUR VIDEO BIGGER THAN 100mb_\n\nfile size')
+                                          const video = vid.result.downloads.tubemp3_biz[1].url
+                                          const upload = await ElisaBotMd.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
+                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: video }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: capp }, { quoted: m })
+                                          return 
+                                          }
+                                          if (sdsize.split('MB')[0] >= 110) return reply('*CAN\'T UPLODE YOUR FILE* \n_YOUR VIDEO BIGGER THAN 100mb_\n\nfile size')
+                                          const video = vid.result.downloads.tubemp3_biz[0].url
+                                          const upload = await ElisaBotMd.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
+                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: video }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: capp }, { quoted: m })
+                                          await  ElisaBotMd.sendMessage(m.chat, { delete: upload.key })
+                                          }     
+                                          break 
+                                          case 'video2' :{
+                                          const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                          buf = await getBuffer(thub.YT_THUB)
+                                          if (!text) return reply('*👸💬 Need video name or url*')
+                                          if (text.includes('https://youtu')){
+                                         // if (!text.includes('-')) return reply('*👸💬 Please give me a correct type*\n_example .video2 https://youtube.com/watch?v=on3sJ8OlH8M - 360p')
+                                          const quality = args[1] ? args[1] : '360'
+                                          const load = await ElisaBotMd.sendText(m.chat, `*📥 Downloading ${m.pushName} your video...*`, m, )
+                                          const nima = await fetchJson(`https://api.akuari.my.id/downloader/youtube3?link=${args[0]}&type=${quality}`)
+                                          const upload = await ElisaBotMd.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
+                                          if (nima.mp4.size.split('MB')[0] >= 110) return m.reply('*FILE SIZE IS BIG !!!*')
+                                          return await ElisaBotMd.sendMessage(m.chat, { video: { url: nima.mp4.download }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: `${global.cap}` }, { quoted: m })
+                                         
+                                          }
+                                    m.reply(mess.wait)
+                                    const yts = require("youtube-yts")
+                                    const nima = await yts(text)
+                                    const search = nima.all
+                                    
+                                   let sections = []   
+                  for (let i of search) {
+                  const list = { title: `✨ select ✨`,
+                   rows :[
+                        {
+                         title: `${i.title}`, 
+                         rowId: `video2 ${i.url} `,
+                      description: `DOWNLOAD 360P QULITY`	     
+                        },
+                        {
+                         title: `${i.title}`, 
+                         rowId: `video2 ${i.url} 720`,
+                      description: `DOWNLOAD 720P QULITY`	     
+                        }, 
+                        ]
+                     }
+                     sections.push(list)   
+                     }
+                  const sendm =  ElisaBotMd.sendMessage(
+                      m.chat, 
+                      {
+                       text: `${text} *Here is the list of videos, click the button below to choose*\n\n${m.pushName}`,
+                       footer: `${global.botnma}`,
+                       title: `*👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*\n\n Search from ${text}`,
+                       buttonText: "ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ",
+                       sections
+                      }, { quoted : m })    
+                               
+                                          
+                                           
+                                             
+                                          }
+                                          break
+                                          case 'video4' : {
+                                              if (!text) throw '*Please Give me a link*'
+                                              let yts = require("youtube-yts")
+                                              const search = await yts(text)
+                                                  //const load = await ElisaBotMd.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
+                                                  //yts(text).then(async (search) => {  
+                   //buf = await getBuffer(thub.SF_THUB)
+                  // const download = await ElisaBotMd.sendText(m.chat, ` *Please Wait ${global.botnma} Prosesing Your  ${m.pushName} Video ... 🔄*`)
+                
+                                let bicil = require('@bochilteam/scraper')
+                
+                                let urlnya = search.all[0].url
+                
+                                bicil.savefrom(urlnya)
+                
+                                .then(async(result) => {	  	                                	                      	            
+                
+                                
+                                for (let i of result.url) {
+                                if(i.url.includes('mp4')){		           			    				
+                
+                                let sections = []   
+                  const list = { title: `✨ select ✨`,
+                   rows :[
+                        {
+                         title: `${i.title}`, 
+                         rowId: `directvideo4 ${i.url} `,
+                      description: `🎬 Download ${i.subname} Quality`	     
+                        },
+                        ]
+                     }
+                     sections.push(list)   
+                     }
+                  const sendm =  ElisaBotMd.sendMessage(
+                      m.chat, 
+                      {
+                       text: `${text} *Here is the list of videos, click the button below to choose*\n\n${m.pushName}`,
+                       footer: `${global.botnma}`,
+                       title: `*👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*\n\n Search from ${text}`,
+                       buttonText: "ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ",
+                       sections
+                      }, { quoted : m })    
+                               
+                
+                              }
+                
+                            }).catch((err) => m.reply(err))
+                
+                                          
+                                          }
+                                          break
+                                          case 'ytdl4' : {
+                                          let boltc = require('@bochilteam/scraper')
+                                          await boltc.youtubedlv2(`${text}`)
+                                          .then(async(nima) => {
+                                          const dl_url = await nima.video['360p'].download()
+                                          const dl_url3 = await nima.video['240p'].download()
+                                          const dl_url2 = await nima.video['720p'].download()
+                                          const dl_url4 = await nima.audio['128kbps'].download()
+                                          await ElisaBotMd.sendText(m.chat,`
+                360 ${dl_url}
+                240 ${dl_url2}
+                720 ${dl_url3}
+                audio ${dl_url4}
+                    
+                                          
+                                                                
+                ${jsonformat(nima)}`)
+                                          })
+                                          }
+                                          break
+                                          case 'bolchidl' : {
+                                          let boltc = require('@bochilteam/scraper')
+                                          const nima = await boltc.youtubedl(`${text}`)
+                                          const nima1 = await boltc.youtubedlv2(`${text}`)
+                                          const nima2 = await boltc.youtubedl3(`${text}`)
+                                          reply(`${jsonformat(nima)}
+                ▷▷▷
+                
+                ${jsonformat(nima1)}
+                
+                ▷▷▷▷
+                
+                ${jsonformat(nima2)}
+                `)
+                                          }
+                                          break
+                                          case 'bolchiyt' : {
+                                          let boltc = require('@bochilteam/scraper')
+                                          const nima = await boltc.youtubeSearch(`${text}`)
+                                          reply(`${jsonformat(nima)}`)
+                                          }
+                                          break
+                                          case 'ytdl5' : {
+                                          const url = text.split(";")[0]
+                                          const query = text.split(";")[1]
+                                          const api = require("onx-api")
+                const nima1 = await api.downloader.youtube.ytmp3(url)
+                const nima2 = await api.downloader.youtube.ytmp4(url)
+                const nima3 = await api.downloader.youtube.ytplay(query)
+                const nima4 = await api.downloader.youtube.ytplayvid(query)
+                
+                await ElisaBotMd.sendText(m.chat , `${jsonformat(nima4)}`)
+                await ElisaBotMd.sendText(m.chat , `${jsonformat(nima1)}`)
+                await ElisaBotMd.sendText(m.chat , `${jsonformat(nima2)}`)
+                await ElisaBotMd.sendText(m.chat , `${jsonformat(nima3)}`)
+                
+                
+                
+                                          }
+                                          break
+                                          case '144getvideo' : {
+                                         if(!text) return m.reply('need text')
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                                          const yts = require("youtube-yts")
+                                          const search = await yts(`${args[0]}`)
+                                          let boltc = require('@bochilteam/scraper')
+                                          await boltc.youtubedlv2(search.all[0].url)
+                                          
+                                          .then(async(nima) => {
+                                          const dl_url = await nima.video['144p'].download()
+                                          const size = nima.video['144p'].fileSize
+                                          if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                       //   if(nima.video.720p.fileSize >= 110000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
+                                          }).catch((err) => m.reply(NOT_FOUND))
+                                      
+                                          }
+                                          break
+                                          case '240getvideo' : {
+                                         if(!text) return m.reply('need text')
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                                          const yts = require("youtube-yts")
+                                          const search = await yts(`${args[0]}`)
+                                          let boltc = require('@bochilteam/scraper')
+                                          await boltc.youtubedlv2(search.all[0].url)
+                                          
+                                          .then(async(nima) => {
+                                          const dl_url = await nima.video['240p'].download()
+                                          const size = nima.video['240p'].fileSize
+                                          if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                       //   if(nima.video.720p.fileSize >= 110000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
+                                          }).catch((err) => m.reply(NOT_FOUND))
+                                      
+                                          }
+                                          break
+                                          case 'getvideo' : {
+                                          if(!text) return m.reply('need text')
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                                          const yts = require("youtube-yts")
+                                          const search = await yts(text)
+                                          let boltc = require('@bochilteam/scraper')
+                                          await boltc.youtubedlv2(search.all[0].url)
+                                          .then(async(nima) => {
+                                          const dl_url = await nima.video['360p'].download()
+                                          const size = nima.video['360p'].fileSize
+                                          if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          //await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: `${global.cap}` }, { quoted: m })
+                                          }).catch((err) => m.reply(NOT_FOUND))
+                                      
+                                          }
+                                          break
+                                          case '480getvideo' : {
+                                          if(!text) return m.reply('need text')
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                                          const yts = require("youtube-yts")
+                                          const search = await yts(text.split("480")[0])
+                                          let boltc = require('@bochilteam/scraper')
+                                          await boltc.youtubedlv2(search.all[0].url)
+                                          .then(async(nima) => {
+                                          const dl_url = await nima.video['480p'].download()
+                                          const size = nima.video['480p'].fileSize
+                                          if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
+                                          }).catch((err) => m.reply(NOT_FOUND))
+                                      
+                                          }
+                                          break
+                                          case '720getvideo' : {
+                                         if(!text) return m.reply('need text')
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                                          const yts = require("youtube-yts")
+                                          const search = await yts(`${args[0]}`)
+                                          let boltc = require('@bochilteam/scraper')
+                                          await boltc.youtubedlv2(search.all[0].url)
+                                          
+                                          .then(async(nima) => {
+                                          const dl_url = await nima.video['720p'].download()
+                                          const size = nima.video['720p'].fileSize
+                                          if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                       //   if(nima.video.720p.fileSize >= 110000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
+                                          }).catch((err) => m.reply(NOT_FOUND))
+                                      
+                                          }
+                                          break
+                                          case 'song3' : {
+                                          if(!text) return m.reply('need text')
+                                         // await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN,m,)
+                                          const yts = require("youtube-yts")
+                                          const search = await yts(text)
+                                          const buf = await getBuffer(search.all[0].thumbnail)
+                                          const boltc = require('@bochilteam/scraper')
+                                          await boltc.youtubedlv2(search.all[0].url)
+                                          .then(async(nima) => {
+                                          const dl_url = await nima.audio['128kbps'].download()
+                                          await ElisaBotMd.sendMessage(m.chat,{delete : down.key }) 
+                                          const up = await ElisaBotMd.sendText(m.chat,global.SONG_UP,m,)
+                                          const doc = await ElisaBotMd.sendMessage(m.chat, {document:{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${nima.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                title:`${nima.title}`,
+                                body:"YOUTUBE MP3",
+                                mediaType:2,
+                                thumbnail:buf,
+                                mediaUrl:`${text}`, 
+                                sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
+                                await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+                //await ElisaBotMd.sendMessage(m.chat,{delete : up.key }) 
+                                           //await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: m.key }})
+                
+                                                  }).catch((err) => m.reply(err))
+                                      
+                                          }
+                                          break
+                                          case 'song5' : {
+                                          if(!text) return m.reply('need text')
+                                         // await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN,m,)
+                                          const yts = require("youtube-yts")
+                                          const search = await yts(text)
+                                          //const buf = await getBuffer(search.all[0].thumbnail)
+                                          const boltc = require('@bochilteam/scraper')
+                                          await boltc.youtubedlv3(search.all[0].url)
+                                          .then(async(nima) => {
+                                          const dl_url = await nima.audio['131'].download()
+                                          await ElisaBotMd.sendMessage(m.chat,{delete : down.key }) 
+                                          const up = await ElisaBotMd.sendText(m.chat,global.SONG_UP,m,)
+                                          await ElisaBotMd.sendMessage(m.chat, { audio : { url : dl_url }, mimetype: 'audio/mpeg', fileName: `${search.all[0].title}.mp3` }, { quoted: m })
+                                          await ElisaBotMd.sendMessage(m.chat,{delete : up.key }) 
+                                           //await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: m.key }})
+                
+                                                  }).catch((err) => m.reply(err))
+                                      
+                                          }
+                                          break
+                                          case 'audiosong3' : {
+                                          if(!text) return m.reply('need text')
+                                         // await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN,m,)
+                                          const yts = require("youtube-yts")
+                                          const search = await yts(text)
+                                          const buf = await getBuffer(search.all[0].thumbnail)
+                                          const boltc = require('@bochilteam/scraper')
+                                          await boltc.youtubedlv2(search.all[0].url)
+                                          .then(async(nima) => {
+                                          const dl_url = await nima.audio['128kbps'].download()
+                                          await ElisaBotMd.sendMessage(m.chat,{delete : down.key }) 
+                                          const up = await ElisaBotMd.sendText(m.chat,global.SONG_UP,m,)
+                                          const doc = await ElisaBotMd.sendMessage(m.chat, {audio :{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${nima.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                title:`${nima.title}`,
+                                body:"YOUTUBE MP3",
+                                mediaType:2,
+                                thumbnail:buf,
+                                mediaUrl:`${text}`, 
+                                sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
+                                await ElisaBotMd.sendMessage(m.chat, { delete: up.key })
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: doc.key }})
+                //await ElisaBotMd.sendMessage(m.chat,{delete : up.key }) 
+                                           //await ElisaBotMd.sendMessage(from, { react: { text: `🎶`, key: m.key }})
+                
+                                                  }).catch((err) => m.reply(err))
+                                      
+                                          }
+                                          break
+                                         /* case 'yt2' : {
+                                          if (!text) return m.reply('Please Give me a youtube link')
+                                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                                          let boltc = require('@bochilteam/scraper')
+                                          await boltc.youtubedlv2(`${text}`)
+                                          .then(async(nima) => {
+                                          const dl_url = await nima.video['480p'].download()
+                                          const dl_url3 = await nima.video['240p'].download()
+                                          const dl_url2 = await nima.video['720p'].download()
+                                          const dl_url4 = await nima.audio['128kbps'].download()
+                                         
+                           const buttons = [
+                  {buttonId: `directvideodown ${dl_url3}`, buttonText: {displayText: '240P'}, type: 1},
+                  {buttonId: `directvideodown ${dl_url}`, buttonText: {displayText: '480P'}, type: 1},
+                  {buttonId: `directaudiodown ${dl_url4}`, buttonText: {displayText: 'AUDIO'}, type: 1}
+                ]
+                
+                const buttonMessage = {
+                    image: {url: nima.thubnail},
+                    caption: `╭────[👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙱𝙾𝚃 👸] 
+                │
+                ◯ ᴛɪᴛʟᴇ : ${nima.title}
+                
+                ◯ ᴠɪᴅᴇᴏ ɪᴅ : ${nima.id}
+                
+                ◯ ʀᴇǫᴜsᴛᴇʀ : ${m.pushName}
+                │
+                ╰────────────◯`,
+                    footer: global.botnma,
                     buttons: buttons,
                     headerType: 4
                 }
-                QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
-            }
-            break
-case 'playmp3': //credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
-if (!text) throw `Example : ${prefix + command} anime whatsapp status`
-const xeonplaymp3 = require('./lib/ytdl2')
-let yts = require("youtube-yts")
-        let search = await yts(text)
-        let anup3k = search.videos[0]
-const pl= await xeonplaymp3.mp3(anup3k.url)
-await QueenNilu.sendMessage(m.chat,{
-    audio: fs.readFileSync(pl.path),
-    fileName: anup3k.title + '.mp3',
-    mimetype: 'audio/mp4', ptt: true,
-    contextInfo:{
-        externalAdReply:{
-            title:anup3k.title,
-            body: botname,
-            thumbnail: await fetchBuffer(pl.meta.image),
-            mediaType:2,
-            mediaUrl:anup3k.url,
-        }
+                
+                await ElisaBotMd.sendMessage(m.chat, buttonMessage)
+                })
+                                          }
+                                          break*/
+                                          case 'tiktokjson' : {
+                                          let boltc = require('@bochilteam/scraper')    
+                 //  if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'                
+                   boltc.youtubedlv3(`${text}`).then(async (video) => {  
+                   reply(`${jsonformat(video)}`)
+                     })  
+                                          }
+                                          break
+                                          case 'tiktokjson2' : {
+                                          let boltc = require('@bochilteam/scraper')    
+                 //  if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'                
+                   boltc.youtubedl(`${text}`).then(async (video) => {  
+                   reply(`${jsonformat(video)}`)
+                     })  
+                                          }
+                                          break
+                                          case 'tiktokjson3' : {
+                                          let boltc = require('@bochilteam/scraper')    
+                 //  if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'                
+                   boltc.youtubedlv2(`${text}`).then(async (video) => {  
+                   reply(`${jsonformat(video)}`)
+                     })  
+                                          }
+                                          break
+                                          case 'savevid' : {
+                                          let boltc = require('@bochilteam/scraper')
+                                          boltc.savefrom(text)
+                                         .then(async(result) => {
+                                         reply(`${jsonformat(result)}`)
+                                         })
+                                          }
+                                          break
+                                          case 'directvideo4' : {
+                                          
+                       const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                       const up = await ElisaBotMd.sendText(m.chat, global.SONG_UP, m, )
+                       await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
+                       await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
+                       await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+                                  
+                                          }
+                                          break
+                case 'directvideodown' : {
+                var DOWNLOAD = ''
+                if (global.LANG == 'SI' ) DOWNLOAD = '*📥 ඔබගේ වීඩියෝව බාගත කරමින් පවති...*'
+                if (global.LANG == 'EN' ) DOWNLOAD = '*📥 DOWNLOADING YOUR VIDEO...*'
+                var UPLOAD = ''
+                if (global.LANG == 'SI' ) UPLOAD = '*📤 ඔබගේ විඩියෝව ඔබවෙත එවමින් පවතී...*'
+                if (global.LANG == 'EN' ) UPLOAD = '*📤 UPLOADING YOUR VIDEO...*'
+                       const down = await ElisaBotMd.sendText(m.chat,DOWNLOAD, m, )
+                       const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                       buf = await getBuffer(thub.SF_THUB)
+                       const up = await ElisaBotMd.sendText(m.chat,UPLOAD, m, )
+                       await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
+                       await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, mimetype: 'video/mp4', fileName: `${text}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                       //await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
+                       await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+                                  }
+                break
+                case 'directaudiodown' : {
+                
+                       const down = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                     //  const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                       buf = await getBuffer(thub.SF_THUB)
+                       const up = await ElisaBotMd.sendText(m.chat,global.SONG_UP, m, )
+                       await ElisaBotMd.sendMessage(m.chat,{delete : down.key })  
+                       await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, mimetype: 'video/mp4', fileName: `${text}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                       //await ElisaBotMd.sendMessage(m.chat, { video: { url: text }, caption: global.cap}, { quoted: m })
+                       await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+                                  }
+                break
+                                          case 'ytmp3': case 'ytaudio': {  
+                                          //await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                                                  
+                                                  if (!text && text.includes("https://youtu")) return m.reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp3 https://youtube.com/watch?v=WoWlWb6vbzA```')
+                                                 const load = await ElisaBotMd.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your song...*\n`, m, )
+                                                 //const load = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                                                  await fetchJson(`https://queen-elisa-api-1-2-3.herokuapp.com/api/dowloader/yt?url=${text}`)
+                                                  .then(async (media) => { 
+                                                  buf = await getBuffer(media.result.thumb)
+                                                  if (media.result.song_size.split("MB")[0] >= 120) return m.reply('*FILE SIZE IS BIG !!!*')
+                                                  //reply('❗ Audio size is too big '+util.format(media))
+                                                  //ElisaBotMd.sendImage(m.chat, media.thumb, `🟡 𝗧𝗜𝗧𝗟𝗘 : ${media.title}\n🎀 𝗙𝗜𝗟𝗘 𝗦𝗜𝗭𝗘 : ${media.filesizeF}\n📡 𝗨𝗥𝗟 : ${isUrl(text)}\n📜 𝗘𝗫𝗧 : MP3\n📑 𝗥𝗘𝗦𝗢𝗟𝗨𝗧𝗜𝗢𝗡 : ${args[1] || '256kbps'}`, m)
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                                 // 
+                                                  await ElisaBotMd.sendMessage(m.chat, {document:{ url: media.result.mp3 }, mimetype:"audio/mpeg", fileName: `${media.result.Title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                title:`🐣 ᴛɪᴛʟᴇ - ${media.result.Title}\n`,
+                                body:"YOUTUBE MP3",
+                                mediaType:2,
+                                thumbnail:buf,
+                                mediaUrl:`${text}`, 
+                                sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
+                                await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                await ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                                                  
+                              //  await ElisaBotMd.sendMessage(m.chat,{ delete : upload.key })  
+                      
+                      }).catch((err) => reply(err))
+                      
+                                              }
+                                              break
+                                              case 'seleytmp3': case 'seleytaudio': {  
+                                         // await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                                                  let { yta } = require('./lib/y2mate')
+                                                  if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtF6Tccag%27 320kbps`
+                                                 // const load = await ElisaBotMd.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your Document type song...*\n`, m, )
+                                                 const load = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                      
+                                                  let quality = args[1] ? args[1] : '128kbps'
+                                                  await yta(text, quality)
+                                                  .then(async (media) => { 
+                                                  buf = await getBuffer(media.thumb)
+                                                  if (media.filesize >= 150000) return reply('❗ Audio size is too big '+util.format(media))
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                                  
+                    
+                                                  ElisaBotMd.sendMessage(m.chat, {document:{ url: media.dl_link }, mimetype:"audio/mpeg", fileName: `${media.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                title:`🐣 ᴛɪᴛʟᴇ - ${media.title}\n🎧 sɪᴢᴇ - ${media.filesize}`,
+                                body:"YOUTUBE MP3",
+                                mediaType:2,
+                                thumbnail:buf,
+                                mediaUrl:`${text}`, 
+                                sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
+                                await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                                await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})}).catch((err) => m.reply(NOT_FOUND))
+                                //await ElisaBotMd.sendMessage(m.chat,{delete : upload.key })  
+                    
+                                              }
+                                              break
+                                              case 'selecttypebutton': {  
+                const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+                const sdpid = rash.sddlid
+                const hdmidpid = rash.sdmiddlid
+                const hdpid = rash.hddlid
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                
+                                              
+                                    YTMASS = `
+                
+                ╭───[  *ᴇʟɪsᴀ ʙᴏᴛ*  ]───◉
+                │
+                │  🎬 ʏᴛ  ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 🎬
+                │ 
+                │ ➧ sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴠɪᴅᴇᴏ ʀᴇsᴏʟᴜᴛɪᴏɴ 
+                │
+                ╰──────◉
+                `,
+                                            buttons = [
+                                                          { buttonId: `${sdpid} ${text}`, buttonText: { displayText: '360p' }, type: 1 },
+                                                          { buttonId: `${hdmidpid} ${text} 480p`, buttonText: { displayText: '480p' }, type: 1 },
+                                                          { buttonId: `${hdpid} ${text}`, buttonText: { displayText: '720p' }, type: 1 }
+                                                      
+                                                      ]
+                                                      await ElisaBotMd.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝙴𝙻𝙸𝚂𝙰 𝙱𝙾𝚃 ` ,m)
+                                                  }
+                                                  break
+                                                  case 'audioselecttypebutton': {  
+                                                  const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+                const audidd = rash.audcmd
+                const docidd = rash.doccmd
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `🎧`, key: m.key }})
+                
+                                              
+                                    YTMASS = `
+                
+                ╭───[  *ᴇʟɪsᴀ ʙᴏᴛ*  ]───◉
+                │
+                │  🎬 ʏᴛ  sᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 🎬
+                │ 
+                │ ➧ sᴇʟᴇᴄᴛ ʏᴏᴜʀ sᴏɴɢ ᴛʏᴘᴇ
+                │
+                ╰──────◉
+                `,
+                                            buttons = [
+                                                          { buttonId: `${docidd} ${text}`, buttonText: { displayText: '📁 DOCUMENT 📁' }, type: 1 },
+                                                          { buttonId: `${audidd} ${text}`, buttonText: { displayText: '🎧 AUDIO 🎧' }, type: 1 }
+                                                      ]
+                                                      await ElisaBotMd.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝙴𝙻𝙸𝚂𝙰 𝙱𝙾𝚃 ` ,m)
+                                                  }
+                                                  break
+                                                  case 'ytmp4' : {
+                                                  const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const buf = await getBuffer(thub.YT_THUB)
+                                          if(!text) return m.reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
+                                          if (!text.includes('https://youtu')) return m.reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `📥`, key: m.key }})
+                                          await ElisaBotMd.sendText(m.chat,mess.wait)
+                                          let quality = args[1] ? args[1] : '360p'
+                                          //const yts = require("youtube-yts")
+                                         // const search = await yts(args[0])
+                                          const dltext = args[0]
+                                          let boltc = require('@bochilteam/scraper')
+                                          await boltc.youtubedlv2(dltext)
+                                          .then(async(nima) => {
+                                          const dl_url = await nima.video[quality].download()
+                                          const size = nima.video[quality].fileSize
+                                          if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                          const viddd = await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', fileName: `${nima.title}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: viddd.key }})
+                                          // await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          //await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: `${global.cap}` }, { quoted: m })
+                                          }).catch((err) => m.reply(NOT_FOUND))
+                                      
+                                          }
+                                          break
+                                             /* case 'audytmp3': case 'audytaudio': {
+                                              
+                                              AGAINTRY = ` *💃 ENJOY YOUR SONG* `
+                                              buttons = [
+                                                          { buttonId: `audioretry ${text}`, buttonText: { displayText: '♻ ᴛʀʏ ᴀɢᴀɪɴ ️♻️' }, type: 1 }
+                                                      ]
+                                                  let { yta } = require('./lib/y2mate')
+                                                  if (!text) throw `Example : ${prefix + command} https://Subscribe.com/watch?v=PtF6Tccag%27 320kbps`
+                                                  const load = await ElisaBotMd.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your song...*\n`, m, )
+                                                  let quality = args[1] ? args[1] : '256kbps'
+                                                  let media = await yta(text, quality)
+                                                  if (media.filesize >= 150000) return reply('❗ Audio size is too big '+util.format(media))
+                                                  var upload = await ElisaBotMd.sendButtonText(m.chat, buttons, AGAINTRY, `${m.pushName} Use this only if you have not received the request.` ,m)
+                                                  ElisaBotMd.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+                                                   ElisaBotMd.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: upload.key.id, participant: m.quoted.sender } })
+                                              }
+                                              break*/
+                                             case 'audio': case 'seleytaudio': {  
+                                         // await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                                                  let { yta } = require('./lib/y2mate')
+                                                  if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtF6Tccag%27 320kbps`
+                                                 // const load = await ElisaBotMd.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your Document type song...*\n`, m, )
+                                                 const load = await ElisaBotMd.sendText(m.chat,global.SONG_DOWN, m, )
+                      
+                                                  let quality = args[1] ? args[1] : '128kbps'
+                                                  await yta(text, quality)
+                                                  .then(async (media) => { 
+                                                  buf = await getBuffer(media.thumb)
+                                                  if (media.filesize >= 150000) return reply('❗ Audio size is too big '+util.format(media))
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                                  
+                    
+                                                  ElisaBotMd.sendMessage(m.chat, {audio:{ url: media.dl_link }, mimetype:"audio/mpeg", fileName: `${media.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                title:`🐣 ᴛɪᴛʟᴇ - ${media.title}\n🎧 sɪᴢᴇ - ${media.filesize}`,
+                                body:"YOUTUBE MP3",
+                                mediaType:2,
+                                thumbnail:buf,
+                                mediaUrl:`${text}`, 
+                                sourceUrl: `${global.ytchannel}` }}}, {quoted:m})
+                              //  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                                await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})}).catch((err) => m.reply(NOT_FOUND))
+                                await ElisaBotMd.sendMessage(m.chat,{delete : load.key })  
+                    
+                                              }
+                                              break
+                                              case 'audioretry': case 'ytaudioretry': {  
+                                         const up = await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                                              
+                                                  let { yta } = require('./lib/y2mate')
+                                                  if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtF6Tccag%27 320kbps`
+                                                  let quality = args[1] ? args[1] : '128kbps'
+                                                  await yta(text, quality)
+                                                  .then(async (media) => { 
+                                                  if (media.filesize >= 150000) return reply('❗ Audio size is too big '+util.format(media))
+                                                  ElisaBotMd.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })}).catch((err) => m.reply(NOT_FOUND))
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                                  await ElisaBotMd.sendMessage(m.chat,{delete : up.key })  
+                      
+                                              }
+                                              break
+                                              case '22ytmp4' : {
+                                              await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                                              await ElisaBotMd.sendText(m.chat,mess.wait)
+                                              const qulity = args[1]
+                                              /*const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const buf = await getBuffer(thub.YT_THUB)
+                                              const boltc = require('@bochilteam/scraper')
+                                              //const search = args[0]
+                                              const yts = require("youtube-yts")
+                                              const search = await yts(`${args[0]}`)
+                                              const nima = await boltc.youtubedlv2(search.all[0].url)
+                                              */
+                                              if(qulity = '144p'){
+                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const buf = await getBuffer(thub.YT_THUB)
+                                              const boltc = require('@bochilteam/scraper')
+                                              //const search = args[0]
+                                              const yts = require("youtube-yts")
+                                              const search = await yts(`${args[0]}`)
+                                              const nima = await boltc.youtubedlv2(search.all[0].url) 
+                                          const dl_url = await nima.video['144p'].download()
+                                          const size = nima.video['144p'].fileSize
+                                          if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          
+                                              }else if(qulity = '240p'){
+                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const buf = await getBuffer(thub.YT_THUB)
+                                              const boltc = require('@bochilteam/scraper')
+                                              //const search = args[0]
+                                              const yts = require("youtube-yts")
+                                              const search = await yts(`${args[0]}`)
+                                              const nima = await boltc.youtubedlv2(search.all[0].url)
+                                          const dl_url = await nima.video['240p'].download()
+                                          const size = nima.video['240p'].fileSize
+                                          if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          
+                                              }else if(qulity = '480'){
+                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const buf = await getBuffer(thub.YT_THUB)
+                                              const boltc = require('@bochilteam/scraper')
+                                              //const search = args[0]
+                                              const yts = require("youtube-yts")
+                                              const search = await yts(`${args[0]}`)
+                                              const nima = await boltc.youtubedlv2(search.all[0].url)
+                                          const dl_url = await nima.video['480p'].download()
+                                          const size = nima.video['480p'].fileSize
+                                          if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          
+                                              
+                                              }else if(qulity = '720'){
+                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const buf = await getBuffer(thub.YT_THUB)
+                                              const boltc = require('@bochilteam/scraper')
+                                              //const search = args[0]
+                                              const yts = require("youtube-yts")
+                                              const search = await yts(`${args[0]}`)
+                                              const nima = await boltc.youtubedlv2(search.all[0].url)
+                                           const dl_url = await nima.video['720p'].download()
+                                          const size = nima.video['720p'].fileSize
+                                          if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          
+                                              
+                                              }else if (qulity = '1080'){
+                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const buf = await getBuffer(thub.YT_THUB)
+                                              const boltc = require('@bochilteam/scraper')
+                                              //const search = args[0]
+                                              const yts = require("youtube-yts")
+                                              const search = await yts(`${args[0]}`)
+                                              const nima = await boltc.youtubedlv2(search.all[0].url)
+                                          const dl_url = await nima.video['1080p'].download()
+                                          const size = nima.video['1080p'].fileSize
+                                          if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          
+                                              }
+                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const buf = await getBuffer(thub.YT_THUB)
+                                              const boltc = require('@bochilteam/scraper')
+                                              //const search = args[0]
+                                              const yts = require("youtube-yts")
+                                              const search = await yts(`${args[0]}`)
+                                              const nima = await boltc.youtubedlv2(search.all[0].url)
+                                          const dl_url = await nima.video['360p'].download()
+                                          const size = nima.video['360p'].fileSize
+                                          if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                          await ElisaBotMd.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          
+                                              
+                                              
+                                              }
+                                              break
+                                              case '22ytmp4': case '22ytvideo': {  
+                                              await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              buf = await getBuffer(thub.YT_THUB)
+                
+                                                  let { ytv } = require('./lib/y2mate')
+                                                  if (!text) return reply( `${Lang.EXAMPLE}\n ${prefix + command} https://youtube.com/watch?v=on3sJ8OlH8M`)
+                                                  const load = await ElisaBotMd.sendText(m.chat, mess.wait, m, )
+                                                  let quality = args[1] ? args[1] : '360p'
+                                                  await ytv(text, quality)
+                                                  .then(async (media) => { 
+                                                  buf = await getBuffer(thub.YT_THUB)
+                                                  if (media.filesize >= 100000) {
+                                                  const msg = `*⛔ FILE SIZE UP TO 100MB ⛔*
+                                                  
+                *ғɪʟᴇ ɴᴀᴍᴇ :* ${media.title}
+                                                  
+                *ғɪʟᴇ sɪᴢᴇ :* ${media.filesize}
+                `
+                                                  const templateButtons = [
+                                                  {index: 1, urlButton: {displayText: 'DOWNLOAD ON WEB', url: media.dl_link+'.mp4' }},
+                                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
+                    
+                                                  ]
+                
+                                                  const templateMessage = {
+                                                  text: msg,
+                                                  footer: global.botnma,
+                                                  templateButtons: templateButtons
+                                                  }
+                
+                                                  return await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
+                
+                                                 // return reply('❗ Video size is too big '+util.format(media)+'.mp4')
+                                                  }
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                                  await ElisaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                                  
+                                                  .catch((err) => m.reply('*Sorry, Can\'t Find your reqest 🥴*'))
+                                                  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })}).catch((err) => m.reply(NOT_FOUND))
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                              }
+                                              break
+                                              case 'secytmp4': case 'secytvideo': {  
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `🎥`, key: m.key }})
+                                              AGAINTRY = ` 💃 ENJOY YOUR VIDEO `
+                                              
+                                              buttons = [
+                                                          { buttonId: `audioretry ${text}`, buttonText: { displayText: '♻ ᴛʀʏ ᴀɢᴀɪɴ ♻️' }, type: 1 }
+                                                      ]
+                                                const buttonMessage = {
+                    text: AGAINTRY ,
+                    footer: `${m.pushName} Use this only if you have not received the request.` ,
+                    buttons: buttons,
+                    headerType: 2
+                }       
+                                              
+                                                  let { ytv } = require('./lib/y2mate')
+                                                  if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtFMhcag%27 360p`
+                                                  const load = await ElisaBotMd.sendText(m.chat,mess.wait, m, )
+                                                  let quality = args[1] ? args[1] : '360p'
+                                                  await ytv(text, quality)
+                                                  .then(async (media) => { 
+                                                  await ElisaBotMd.sendText(m.chat, ` *ʟᴏᴀᴅɪɴɢ ${m.pushName} ʏᴏᴜʀ ᴠɪᴅᴇᴏ... 🔄*`)
+                                                  if (media.filesize >= 100000)  {
+                                                  const msg = `*⛔ FILE SIZE UP TO 100MB ⛔*
+                                                  
+                *ғɪʟᴇ ɴᴀᴍᴇ :* ${media.title}
+                                                  
+                *ғɪʟᴇ sɪᴢᴇ :* ${media.filesize}
+                
+                `
+                                                  const templateButtons = [
+                                                  {index: 1, urlButton: {displayText: 'DOWNLOAD ON WEB', url: media.dl_link+'.mp4' }},
+                                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
+                    
+                                                  ]
+                
+                                                  const templateMessage = {
+                                                  text: msg,
+                                                  footer: global.botnma,
+                                                  templateButtons: templateButtons
+                                                  }
+                
+                                                  return await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m }) 
+                                                  }  
+                //return reply('❗ Video size is too big '+util.format(media)+'.mp4')
+                                                  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                                                  const upload = await ElisaBotMd.sendMessage(m.chat, buttonMessage , { quoted: m })
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                                  ElisaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
+                                                  await  ElisaBotMd.sendMessage(m.chat, { delete: upload.key })}).catch((err) => m.reply(NOT_FOUND))
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                                  
+                                              }
+                                              break
+                                              case 'retryytmp4': case 'retrysecytvideo': {  
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                                              
+                                                  let { ytv } = require('./lib/y2mate')
+                                                  if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtFMhcag%27 360p`
+                                                  let quality = args[1] ? args[1] : '360p'
+                                                  let media = await ytv(text, quality)
+                                                  await ElisaBotMd.sendText(m.chat, ` *ʟᴏᴀᴅɪɴɢ ${m.pushName} ʏᴏᴜʀ ᴠɪᴅᴇᴏ... 🔄*`)
+                                                  if (media.filesize >= 100000)  {
+                                                  const msg = `*⛔ FILE SIZE UP TO 100MB ⛔*
+                                                  
+                *ғɪʟᴇ ɴᴀᴍᴇ :* ${media.title}
+                                                  
+                *ғɪʟᴇ sɪᴢᴇ :* ${media.filesize}
+                `
+                                                  const templateButtons = [
+                                                  {index: 1, urlButton: {displayText: 'DOWNLOAD ON WEB', url: media.dl_link+'.mp4' }},
+                                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
+                    
+                                                  ]
+                
+                                                  const templateMessage = {
+                                                  text: msg,
+                                                  footer: global.botnma,
+                                                  templateButtons: templateButtons
+                                                  }
+                
+                                                  return await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
+                                                  }
+                //return reply('❗ Video size is too big '+util.format(media)+'.mp4')
+                                                  var up = await ElisaBotMd.sendText(m.chat, `*ENJOY*`)
+                                                  ElisaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                                  
+                                              }
+                                              break
+                                              case '360pvideo': case 'yt360pvideo': {  
+                                          await ElisaBotMd.sendMessage(from, { react: { text: `📽️`, key: m.key }})
+                                                  let { ytv } = require('./lib/y2mate')
+                                                  if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtFMhcag%27 360p`
+                                                  const load = await ElisaBotMd.sendText(m.chat, `\n*🔄 Please wait ${m.pushName}...*\n`, m, )
+                                                  let quality = args[1] ? args[1] : '360p'
+                                                  let media = await ytv(text, quality)
+                                                  if (media.filesize >= 100000) {
+                                                  const msg = `*⛔ FILE SIZE UP TO 100MB ⛔*
+                                                  
+                *ғɪʟᴇ ɴᴀᴍᴇ :* ${media.title}
+                                                  
+                *ғɪʟᴇ sɪᴢᴇ :* ${media.filesize}
+                `
+                                                  const templateButtons = [
+                                                  {index: 1, urlButton: {displayText: 'DOWNLOAD ON WEB', url: media.dl_link+'.mp4' }},
+                                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
+                    
+                                                  ]
+                
+                                                  const templateMessage = {
+                                                  text: msg,
+                                                  footer: global.botnma,
+                                                  templateButtons: templateButtons
+                                                  }
+                
+                                                  return await ElisaBotMd.sendMessage(m.chat, templateMessage, { quoted: m })   
+                                                  }
+                // return reply('❗ Video size is too big '+util.format(media)+'.mp4')
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                                  await ElisaBotMd.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: global.cap }, { quoted: m })
+                                                  await  ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+                                                  await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: m.key }})
+                                              }
+                                              break
 
-    },
-},{quoted:m})
-await fs.unlinkSync(pl.path)
-break
-case 'playmp4': //credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
-if(!text) throw `Example : ${prefix + command} anime whatsapp status`
-const xeonplaymp4 = require('./lib/ytdl2')
-let ytsmp4 = require("youtube-yts")
-        let xeonsearch13 = await ytsmp4(text)
-        let anuvidoke4 = xeonsearch13.videos[0]
-const pl2= await xeonplaymp4.mp4(anuvidoke4.url)
-await QueenNilu.sendMessage(m.chat,{
-    document: {url:pl2.videoUrl},
-    fileName: anuvidoke4.title + '.mp4',
-    mimetype: 'video/mp4',
-    contextInfo:{
-        externalAdReply:{
-            title:anuvidoke4.title,
-            body: botname,
-            thumbnail: await fetchBuffer(anuvidoke4.thumbnail),
-            mediaType:2,
-            mediaUrl:anuvidoke4.url,
-        }
 
-    },
-},{quoted:m})
-break
-case 'ytmp3': case 'ytaudio': //credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
-const xeonaudp3 = require('./lib/ytdl2')
-if (args.length < 1 || !isUrl(text) || !xeonaudp3.isYTUrl(text)) throw `Where's the yt link?\nExample: ${prefix + command} https://youtube.com/shorts/YQf-vMjDuKY?feature=share`
-const audio=await xeonaudp3.mp3(text)
-await QueenNilu.sendMessage(m.chat,{
-    audio: fs.readFileSync(audio.path),
-    mimetype: 'audio/mp4', ptt: true,
-    contextInfo:{
-        externalAdReply:{
-            title:audio.meta.title,
-            body: botname,
-            thumbnail: await fetchBuffer(audio.meta.image),
-            mediaType:2,
-            mediaUrl:text,
-        }
 
-    },
-},{quoted:m})
-await fs.unlinkSync(audio.path)
-break
-	    case 'ytmp3xx': case 'ytaudioxx': {
-                let { yta } = require('./lib/y2mate')
-                if (!text) throw `Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`
-                let quality = args[1] ? args[1] : '128kbps'
-                let media = await yta(text, quality)
-                if (media.filesize >= 100000) return m.reply('File Over Limit '+util.format(media))
-                QueenNilu.sendImage(m.chat, media.thumb, `${themeemoji} Title : ${media.title}\n${themeemoji} File Size : ${media.filesizeF}\n${themeemoji} Url : ${isUrl(text)}\n${themeemoji} Ext : MP3\n${themeemoji} Resolution : ${args[1] || '128kbps'}`, m)
-                QueenNilu.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
-            }
-            break
-case 'ytmp4': case 'ytvideo': //credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
-const xeonvidoh = require('./lib/ytdl2')
-if (args.length < 1 || !isUrl(text) || !xeonvidoh.isYTUrl(text)) throw `Where is the link??\n\nExample : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`
-const vid=await xeonvidoh.mp4(text)
-const ytc=`
-*${themeemoji}Tittle:* ${vid.title}
-*${themeemoji}Date:* ${vid.date}
-*${themeemoji}Duration:* ${vid.duration}
-*${themeemoji}Quality:* ${vid.quality}`
-await QueenNilu.sendMessage(m.chat,{
-    video: {url:vid.videoUrl},
-    caption: ytc
-},{quoted:m})
-break
-            case 'ytmp4xx': case 'ytvideoxx': {
-                let { ytv } = require('./lib/y2mate')
-                if (!text) throw `Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`
-                let quality = args[1] ? args[1] : '360p'
-                let media = await ytv(text, quality)
-                if (media.filesize >= 100000) return m.reply('File Over Limit '+util.format(media))
-                QueenNilu.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `${themeemoji} Title : ${media.title}\n${themeemoji} File Size : ${media.filesizeF}\n${themeemoji} Url : ${isUrl(text)}\n${themeemoji} Ext : MP3\n${themeemoji} Resolution : ${args[1] || '360p'}` }, { quoted: m })
-            }
-            break
+
+
+                                              //////////////////////////////////--------------------------Meadia end
 case 'pinterest': {
                 m.reply(mess.wait)
 		let { pinterest } = require('./lib/scraper')
