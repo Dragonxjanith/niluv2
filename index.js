@@ -97,7 +97,7 @@ return
 },30 * 1000)
 */
 async function startQueenNilu() {
-    const QueenNilu = DarkMakerincConnect({
+    const QueenNilu = QueenNiluincConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
         browser: ['QueenNilu','Safari','1.0.0'],
