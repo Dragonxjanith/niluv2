@@ -87,8 +87,8 @@ const templateMessage = {
     headerType: 4
 }
      
-      await ElisaBotMd.sendMessage('120363039428064381@g.us', templateMessage, { quoted: m })
-      await ElisaBotMd.sendMessage('120363039428064381@g.us',{delete : load.key })  
+      await QueenNilu.sendMessage('120363039428064381@g.us', templateMessage, { quoted: m })
+      await QueenNilu.sendMessage('120363039428064381@g.us',{delete : load.key })  
      global.global.newss_id = newid 
 
 } else {
@@ -96,8 +96,8 @@ return
 }
 },30 * 1000)
 */
-async function startElisaBotMd() {
-    const ElisaBotMd = DarkMakerincConnect({
+async function startQueenNilu() {
+    const QueenNilu = DarkMakerincConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
         browser: ['QueenNilu','Safari','1.0.0'],
@@ -105,13 +105,13 @@ async function startElisaBotMd() {
     })
 
 
-    store.bind(ElisaBotMd.ev)
+    store.bind(QueenNilu.ev)
     
     // anticall auto block
     
 
-    ElisaBotMd.ev.on('messages.upsert', async chatUpdate => {
-   // await ElisaBotMd.sendPresenceUpdate('unavailable')
+    QueenNilu.ev.on('messages.upsert', async chatUpdate => {
+   // await QueenNilu.sendPresenceUpdate('unavailable')
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
         try {
         mek = chatUpdate.messages[0]
@@ -123,35 +123,35 @@ async function startElisaBotMd() {
         if (!mek.message) return
         mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
         if (mek.key && mek.key.remoteJid === 'status@broadcast') return
-        if (!ElisaBotMd.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
+        if (!QueenNilu.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
         if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
       
-        m = smsg(ElisaBotMd, mek, store)
-        require("./ElisaBot-V2")(ElisaBotMd, m, chatUpdate, store)
+        m = smsg(QueenNilu, mek, store)
+        require("./QueenNilu")(QueenNilu, m, chatUpdate, store)
         } catch (err) {
             console.log(err)
         }
     })
   //GROUP UPDATE\\
-    ElisaBotMd.ev.on('group-participants.update', async (anu) => {
+    QueenNilu.ev.on('group-participants.update', async (anu) => {
         if (anu.id == '120363043491784571@g.us') return
         if (anu.id == '120363052773472047@g.us') return
         if (global.SEND_WELCOME == 'false') return
         console.log(anu)
         try {
-            let metadata = await ElisaBotMd.groupMetadata(anu.id)
+            let metadata = await QueenNilu.groupMetadata(anu.id)
             let participants = anu.participants
             for (let num of participants) {
                 // Get Profile Picture User
                 try {
-                    ppuser = await ElisaBotMd.profilePictureUrl(num, 'image')
+                    ppuser = await QueenNilu.profilePictureUrl(num, 'image')
                 } catch {
                     ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
                 }
 
                 // Get Profile Picture Group
                 try {
-                    ppgroup = await ElisaBotMd.profilePictureUrl(anu.id, 'image')
+                    ppgroup = await QueenNilu.profilePictureUrl(anu.id, 'image')
                 } catch {
                     ppgroup = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
                 }
@@ -184,7 +184,7 @@ sourceUrl: link,
 mediaUrl: link,
 }}
 }
-ElisaBotMd.sendMessage(anu.id, buttonMessage, {quoted:fgclink})
+QueenNilu.sendMessage(anu.id, buttonMessage, {quoted:fgclink})
                 } else if (anu.action == 'remove') {
                     let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                     he = `He/She is gone bro ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
@@ -212,7 +212,7 @@ sourceUrl: link,
 mediaUrl: link,
 }}
 }
-ElisaBotMd.sendMessage(anu.id, buttonMessage, {quoted:fgclink})
+QueenNilu.sendMessage(anu.id, buttonMessage, {quoted:fgclink})
                 }
             }
         } catch (err) {
@@ -221,7 +221,7 @@ ElisaBotMd.sendMessage(anu.id, buttonMessage, {quoted:fgclink})
     })
 	
     //Setting\\
-    ElisaBotMd.decodeJid = (jid) => {
+    QueenNilu.decodeJid = (jid) => {
         if (!jid) return jid
         if (/:\d+@/gi.test(jid)) {
             let decode = jidDecode(jid) || {}
@@ -229,44 +229,44 @@ ElisaBotMd.sendMessage(anu.id, buttonMessage, {quoted:fgclink})
         } else return jid
     }
     
-    ElisaBotMd.ev.on('contacts.update', update => {
+    QueenNilu.ev.on('contacts.update', update => {
         for (let contact of update) {
-            let id = ElisaBotMd.decodeJid(contact.id)
+            let id = QueenNilu.decodeJid(contact.id)
             if (store && store.contacts) store.contacts[id] = { id, name: contact.notify }
         }
     })
 
-    ElisaBotMd.getName = (jid, withoutContact  = false) => {
-        id = ElisaBotMd.decodeJid(jid)
-        withoutContact = ElisaBotMd.withoutContact || withoutContact 
+    QueenNilu.getName = (jid, withoutContact  = false) => {
+        id = QueenNilu.decodeJid(jid)
+        withoutContact = QueenNilu.withoutContact || withoutContact 
         let v
         if (id.endsWith("@g.us")) return new Promise(async (resolve) => {
             v = store.contacts[id] || {}
-            if (!(v.name || v.subject)) v = ElisaBotMd.groupMetadata(id) || {}
+            if (!(v.name || v.subject)) v = QueenNilu.groupMetadata(id) || {}
             resolve(v.name || v.subject || PhoneNumber('+' + id.replace('@s.whatsapp.net', '')).getNumber('international'))
         })
         else v = id === '0@s.whatsapp.net' ? {
             id,
             name: 'WhatsApp'
-        } : id === ElisaBotMd.decodeJid(ElisaBotMd.user.id) ?
-            ElisaBotMd.user :
+        } : id === QueenNilu.decodeJid(QueenNilu.user.id) ?
+            QueenNilu.user :
             (store.contacts[id] || {})
             return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
     }
     
-ElisaBotMd.sendContact = async (jid, kon, quoted = '', opts = {}) => {
+QueenNilu.sendContact = async (jid, kon, quoted = '', opts = {}) => {
         let list = []
         for (let i of kon) {
             list.push({
-                displayName: await ElisaBotMd.getName(i + '@s.whatsapp.net'),
-                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await ElisaBotMd.getName(i + '@s.whatsapp.net')}\nFN:${await ElisaBotMd.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:ELISA BOT MD 2022\nitem2.EMAIL;type=INTERNET:GitHub: ELISA-BOT\nEND:VCARD`
+                displayName: await QueenNilu.getName(i + '@s.whatsapp.net'),
+                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await QueenNilu.getName(i + '@s.whatsapp.net')}\nFN:${await QueenNilu.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:ELISA BOT MD 2022\nitem2.EMAIL;type=INTERNET:GitHub: ELISA-BOT\nEND:VCARD`
             })
         }
-        ElisaBotMd.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
+        QueenNilu.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
         }
     
-    ElisaBotMd.setStatus = (status) => {
-        ElisaBotMd.query({
+    QueenNilu.setStatus = (status) => {
+        QueenNilu.query({
             tag: 'iq',
             attrs: {
                 to: '@s.whatsapp.net',
@@ -282,11 +282,11 @@ ElisaBotMd.sendContact = async (jid, kon, quoted = '', opts = {}) => {
         return status
     }
 	
-    ElisaBotMd.public = true
+    QueenNilu.public = true
 
-    ElisaBotMd.serializeM = (m) => smsg(ElisaBotMd, m, store)
+    QueenNilu.serializeM = (m) => smsg(QueenNilu, m, store)
 
-    ElisaBotMd.ev.on('connection.update', async (update) => {
+    QueenNilu.ev.on('connection.update', async (update) => {
         const { connection, lastDisconnect } = update	    
         if (connection === 'close') {
         
@@ -294,27 +294,27 @@ ElisaBotMd.sendContact = async (jid, kon, quoted = '', opts = {}) => {
         let reason = new Boom(lastDisconnect?.error)?.output.statusCode
 
 
-            if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); ElisaBotMd.logout(); }
-            else if (reason === DisconnectReason.connectionClosed) { console.log("💃 Connection closed, reconnecting...."); startElisaBotMd(); }
-            else if (reason === DisconnectReason.connectionLost) { console.log("💃 Connection Lost from Server, reconnecting..."); startElisaBotMd(); }
-            else if (reason === DisconnectReason.connectionReplaced) { console.log("💃 Connection Replaced, Another New Session Opened, Please Close Current Session First"); ElisaBotMd.logout(); }
-            else if (reason === DisconnectReason.loggedOut) { console.log(`💃 Device Logged Out, Please Scan Again And Run.`); ElisaBotMd.logout(); }
-            else if (reason === DisconnectReason.restartRequired) { console.log("💃 Restart Required, Restarting..."); startElisaBotMd(); }
-            else if (reason === DisconnectReason.timedOut) { console.log("💃 Connection TimedOut, Reconnecting..."); startElisaBotMd(); }
-            else ElisaBotMd.end(`💃 Unknown DisconnectReason: ${reason}|${connection}`)
+            if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); QueenNilu.logout(); }
+            else if (reason === DisconnectReason.connectionClosed) { console.log("💃 Connection closed, reconnecting...."); startQueenNilu(); }
+            else if (reason === DisconnectReason.connectionLost) { console.log("💃 Connection Lost from Server, reconnecting..."); startQueenNilu(); }
+            else if (reason === DisconnectReason.connectionReplaced) { console.log("💃 Connection Replaced, Another New Session Opened, Please Close Current Session First"); QueenNilu.logout(); }
+            else if (reason === DisconnectReason.loggedOut) { console.log(`💃 Device Logged Out, Please Scan Again And Run.`); QueenNilu.logout(); }
+            else if (reason === DisconnectReason.restartRequired) { console.log("💃 Restart Required, Restarting..."); startQueenNilu(); }
+            else if (reason === DisconnectReason.timedOut) { console.log("💃 Connection TimedOut, Reconnecting..."); startQueenNilu(); }
+            else QueenNilu.end(`💃 Unknown DisconnectReason: ${reason}|${connection}`)
         }
 
 
 
         console.log('👸💬 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐞𝐝...',update);
-        await ElisaBotMd.groupAcceptInvite('DCQ9hERaQRHC23Fxxp6182').then((res) => console.log('joined support group')).catch((err) => console.log('error'))
-        //await ElisaBotMd.sendText(ElisaBotMd.user.id,`Good Morning `)
-        await ElisaBotMd.sendMessage(ElisaBotMd.user.id, { image: { url : 'https://telegra.ph/file/dc1f402eb040f9b68aa5c.jpg'} , caption : "● *👸 QUEEN ELISA WHATSAPP BOT  👸* ●\n\n\n*✅ SUCCESS CONNECT YOUR WHATSAPP*\n\n*_🌐 website 🌐_*\n ```http://nimaelisa.cf``` \n\n*_🖥️ github link 🖥️_*\n```https://bit.ly/3QFzqKi```\n\n*_🖨️ Qr scan 🖨️_*\n```https://bit.ly/3dvhTWM```\n\n*_🎬 Youtube  🎬_*\n```http://youtube.com/c/MRNIMAOFC```\n\n💬  _USE_ *ping* _CHECK YOUR CONNECTION_\n\n\n```THANKS FRO USING QUEEN ELISA 💃♥️```" })
+        await QueenNilu.groupAcceptInvite('DCQ9hERaQRHC23Fxxp6182').then((res) => console.log('joined support group')).catch((err) => console.log('error'))
+        //await QueenNilu.sendText(QueenNilu.user.id,`Good Morning `)
+        await QueenNilu.sendMessage(QueenNilu.user.id, { image: { url : 'https://telegra.ph/file/dc1f402eb040f9b68aa5c.jpg'} , caption : "● *👸 QUEEN ELISA WHATSAPP BOT  👸* ●\n\n\n*✅ SUCCESS CONNECT YOUR WHATSAPP*\n\n*_🌐 website 🌐_*\n ```http://nimaelisa.cf``` \n\n*_🖥️ github link 🖥️_*\n```https://bit.ly/3QFzqKi```\n\n*_🖨️ Qr scan 🖨️_*\n```https://bit.ly/3dvhTWM```\n\n*_🎬 Youtube  🎬_*\n```http://youtube.com/c/MRNIMAOFC```\n\n💬  _USE_ *ping* _CHECK YOUR CONNECTION_\n\n\n```THANKS FRO USING QUEEN ELISA 💃♥️```" })
    
 
  })
 
-    ElisaBotMd.ev.on('creds.update', saveState)
+    QueenNilu.ev.on('creds.update', saveState)
 
     // Add Other
     /** Send Button 5 Image
@@ -327,8 +327,8 @@ ElisaBotMd.sendContact = async (jid, kon, quoted = '', opts = {}) => {
      * @param {*} options
      * @returns
      */
-    ElisaBotMd.send5ButImg = async (jid , text = '' , footer = '', img, but = [], options = {}) =>{
-        let message = await prepareWAMessageMedia({ image: img }, { upload: ElisaBotMd.waUploadToServer })
+    QueenNilu.send5ButImg = async (jid , text = '' , footer = '', img, but = [], options = {}) =>{
+        let message = await prepareWAMessageMedia({ image: img }, { upload: QueenNilu.waUploadToServer })
         var template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
         templateMessage: {
         hydratedTemplate: {
@@ -339,10 +339,10 @@ ElisaBotMd.sendContact = async (jid, kon, quoted = '', opts = {}) => {
             }
             }
             }), options)
-            ElisaBotMd.relayMessage(jid, template.message, { messageId: template.key.id })
+            QueenNilu.relayMessage(jid, template.message, { messageId: template.key.id })
     }
 //FIX LIST MASSAGE 🦄
-ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = '', sects = [], quoted) => {
+QueenNilu.sendListMsg = (jid, text = '', footer = '', title = '' , butText = '', sects = [], quoted) => {
         let sections = sects
         var listMes = {
         text: text,
@@ -351,7 +351,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
         buttonText: butText,
         sections
         }
-        ElisaBotMd.sendMessage(jid, listMes, { quoted: quoted })
+        QueenNilu.sendMessage(jid, listMes, { quoted: quoted })
         }
     /**
      * 
@@ -362,7 +362,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
      * @param {*} quoted 
      * @param {*} options 
      */
-    ElisaBotMd.sendButtonText = (jid, buttons = [], text, footer, quoted = '', options = {}) => {
+    QueenNilu.sendButtonText = (jid, buttons = [], text, footer, quoted = '', options = {}) => {
         let buttonMessage = {
             text,
             footer,
@@ -370,7 +370,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
             headerType: 2,
             ...options
         }
-        ElisaBotMd.sendMessage(jid, buttonMessage, { quoted, ...options })
+        QueenNilu.sendMessage(jid, buttonMessage, { quoted, ...options })
     }
     
     /**
@@ -381,7 +381,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
      * @param {*} options 
      * @returns 
      */
-    ElisaBotMd.sendText = (jid, text, quoted = '', options) => ElisaBotMd.sendMessage(jid, { text: text, ...options }, { quoted })
+    QueenNilu.sendText = (jid, text, quoted = '', options) => QueenNilu.sendMessage(jid, { text: text, ...options }, { quoted })
 
     /**
      * 
@@ -392,9 +392,9 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
      * @param {*} options 
      * @returns 
      */
-    ElisaBotMd.sendImage = async (jid, path, caption = '', quoted = '', options) => {
+    QueenNilu.sendImage = async (jid, path, caption = '', quoted = '', options) => {
 	let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
-        return await ElisaBotMd.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted })
+        return await QueenNilu.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted })
     }
 
     /**
@@ -406,9 +406,9 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
      * @param {*} options 
      * @returns 
      */
-    ElisaBotMd.sendVideo = async (jid, path, caption = '', quoted = '', gif = false, options) => {
+    QueenNilu.sendVideo = async (jid, path, caption = '', quoted = '', gif = false, options) => {
         let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
-        return await ElisaBotMd.sendMessage(jid, { video: buffer, caption: caption, gifPlayback: gif, ...options }, { quoted })
+        return await QueenNilu.sendMessage(jid, { video: buffer, caption: caption, gifPlayback: gif, ...options }, { quoted })
     }
 
     /**
@@ -420,9 +420,9 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
      * @param {*} options 
      * @returns 
      */
-    ElisaBotMd.sendAudio = async (jid, path, quoted = '', ptt = false, options) => {
+    QueenNilu.sendAudio = async (jid, path, quoted = '', ptt = false, options) => {
         let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
-        return await ElisaBotMd.sendMessage(jid, { audio: buffer, ptt: ptt, ...options }, { quoted })
+        return await QueenNilu.sendMessage(jid, { audio: buffer, ptt: ptt, ...options }, { quoted })
     }
 
     /**
@@ -433,7 +433,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
      * @param {*} options 
      * @returns 
      */
-    ElisaBotMd.sendTextWithMentions = async (jid, text, quoted, options = {}) => ElisaBotMd.sendMessage(jid, { text: text, contextInfo: { mentionedJid: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net') }, ...options }, { quoted })
+    QueenNilu.sendTextWithMentions = async (jid, text, quoted, options = {}) => QueenNilu.sendMessage(jid, { text: text, contextInfo: { mentionedJid: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net') }, ...options }, { quoted })
 
     /**
      * 
@@ -443,7 +443,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
      * @param {*} options 
      * @returns 
      */
-    ElisaBotMd.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
+    QueenNilu.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
         let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
         let buffer
         if (options && (options.packname || options.author)) {
@@ -452,7 +452,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
             buffer = await imageToWebp(buff)
         }
 
-        await ElisaBotMd.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
+        await QueenNilu.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
         return buffer
     }
 
@@ -464,7 +464,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
      * @param {*} options 
      * @returns 
      */
-    ElisaBotMd.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
+    QueenNilu.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
         let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
         let buffer
         if (options && (options.packname || options.author)) {
@@ -473,7 +473,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
             buffer = await videoToWebp(buff)
         }
 
-        await ElisaBotMd.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
+        await QueenNilu.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
         return buffer
     }
 	
@@ -484,7 +484,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
      * @param {*} attachExtension 
      * @returns 
      */
-    ElisaBotMd.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
+    QueenNilu.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
         let quoted = message.msg ? message.msg : message
         let mime = (message.msg || message).mimetype || ''
         let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
@@ -500,7 +500,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
         return trueFileName
     }
 
-    ElisaBotMd.downloadMediaMessage = async (message) => {
+    QueenNilu.downloadMediaMessage = async (message) => {
         let mime = (message.msg || message).mimetype || ''
         let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
         const stream = await downloadContentFromMessage(message, messageType)
@@ -522,8 +522,8 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
      * @param {*} options 
      * @returns 
      */
-    ElisaBotMd.sendMedia = async (jid, path, fileName = '', caption = '', quoted = '', options = {}) => {
-        let types = await ElisaBotMd.getFile(path, true)
+    QueenNilu.sendMedia = async (jid, path, fileName = '', caption = '', quoted = '', options = {}) => {
+        let types = await QueenNilu.getFile(path, true)
            let { mime, ext, res, data, filename } = types
            if (res && res.status !== 200 || file.length <= 65536) {
                try { throw { json: JSON.parse(file.toString()) } }
@@ -543,7 +543,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
        else if (/video/.test(mime)) type = 'video'
        else if (/audio/.test(mime)) type = 'audio'
        else type = 'document'
-       await ElisaBotMd.sendMessage(jid, { [type]: { url: pathFile }, caption, mimetype, fileName, ...options }, { quoted, ...options })
+       await QueenNilu.sendMessage(jid, { [type]: { url: pathFile }, caption, mimetype, fileName, ...options }, { quoted, ...options })
        return fs.promises.unlink(pathFile)
        }
 
@@ -555,7 +555,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
      * @param {*} options 
      * @returns 
      */
-    ElisaBotMd.copyNForward = async (jid, message, forceForward = false, options = {}) => {
+    QueenNilu.copyNForward = async (jid, message, forceForward = false, options = {}) => {
         let vtype
 		if (options.readViewOnce) {
 			message.message = message.message && message.message.ephemeralMessage && message.message.ephemeralMessage.message ? message.message.ephemeralMessage.message : (message.message || undefined)
@@ -586,11 +586,11 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
                 }
             } : {})
         } : {})
-        await ElisaBotMd.relayMessage(jid, waMessage.message, { messageId:  waMessage.key.id })
+        await QueenNilu.relayMessage(jid, waMessage.message, { messageId:  waMessage.key.id })
         return waMessage
     }
 
-    ElisaBotMd.cMod = (jid, copy, text = '', sender = ElisaBotMd.user.id, options = {}) => {
+    QueenNilu.cMod = (jid, copy, text = '', sender = QueenNilu.user.id, options = {}) => {
         //let copy = message.toJSON()
 		let mtype = Object.keys(copy.message)[0]
 		let isEphemeral = mtype === 'ephemeralMessage'
@@ -611,7 +611,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
 		if (copy.key.remoteJid.includes('@s.whatsapp.net')) sender = sender || copy.key.remoteJid
 		else if (copy.key.remoteJid.includes('@broadcast')) sender = sender || copy.key.remoteJid
 		copy.key.remoteJid = jid
-		copy.key.fromMe = sender === ElisaBotMd.user.id
+		copy.key.fromMe = sender === QueenNilu.user.id
 
         return proto.WebMessageInfo.fromObject(copy)
     }
@@ -622,7 +622,7 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
      * @param {*} path 
      * @returns 
      */
-    ElisaBotMd.getFile = async (PATH, save) => {
+    QueenNilu.getFile = async (PATH, save) => {
         let res
         let data = Buffer.isBuffer(PATH) ? PATH : /^data:.*?\/.*?;base64,/i.test(PATH) ? Buffer.from(PATH.split`,`[1], 'base64') : /^https?:\/\//.test(PATH) ? await (res = await getBuffer(PATH)) : fs.existsSync(PATH) ? (filename = PATH, fs.readFileSync(PATH)) : typeof PATH === 'string' ? PATH : Buffer.alloc(0)
         //if (!Buffer.isBuffer(data)) throw new TypeError('Result is not a buffer')
@@ -642,10 +642,10 @@ ElisaBotMd.sendListMsg = (jid, text = '', footer = '', title = '' , butText = ''
 
     }
 
-    return ElisaBotMd
+    return QueenNilu
 }
 
-startElisaBotMd()
+startQueenNilu()
 
 
 let file = require.resolve(__filename)
