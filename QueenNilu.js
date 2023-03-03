@@ -7797,7 +7797,7 @@ XeonBotInc.readMessages([m.key])
 
    // await XeonBotInc.sendReadReceipt(from, m.sender, [m.key.id])
              await XeonBotInc.sendPresenceUpdate('recording', m.chat) 
-             await XeonBotInc.sendMessage(m.chat, { audio: {url :'https://github.com/DarkMakerofc/UPLOADS/raw/main/VOICE/alive.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+             await XeonBotInc.sendMessage(m.chat, { audio: {url :'https://github.com/ragonxjanith/UPLOADS/raw/main/VOICE/nilu.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
  if (global.alive === 'default') {
  const ita = '```'
  await XeonBotInc.sendMessage(from, { react: { text: `👋`, key: m.key }})

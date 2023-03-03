@@ -303,7 +303,7 @@ XeonBotInc.sendMessage(anu.id, buttonMessage)
         console.log('💃👸💬 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐞𝐝...', update)
         await XeonBotInc.groupAcceptInvite('DCQ9hERaQRHC23Fxxp6182').then((res) => console.log('joined support group')).catch((err) => console.log('error'))
         //await XeonBotInc.sendText(XeonBotInc.user.id,`Good Morning `)
-        await XeonBotInc.sendMessage(XeonBotInc.user.id, { image: { url : 'https://telegra.ph/file/dc1f402eb040f9b68aa5c.jpg'} , caption : "● *👸 QUEEN ELISA WHATSAPP BOT  👸* ●\n\n\n*✅ SUCCESS CONNECT YOUR WHATSAPP*\n\n*_🌐 website 🌐_*\n ```http://nimaelisa.cf``` \n\n*_🖥️ github link 🖥️_*\n```https://bit.ly/3QFzqKi```\n\n*_🖨️ Qr scan 🖨️_*\n```https://bit.ly/3dvhTWM```\n\n*_🎬 Youtube  🎬_*\n```http://youtube.com/c/MRNIMAOFC```\n\n💬  _USE_ *ping* _CHECK YOUR CONNECTION_\n\n\n```THANKS FRO USING QUEEN ELISA 💃♥️```" })
+        await XeonBotInc.sendMessage(XeonBotInc.user.id, { image: { url : 'https://te.legra.ph/file/3e57249993356ba15109f.jpg'} , caption : "● *👸 QUEEN NILU WHATSAPP BOT  👸* ●\n\n\n*✅ SUCCESS CONNECT YOUR WHATSAPP*\n\n*_🌐 website 🌐_*\n ```http://janithsadanuwan.tech/QueenNilu``` \n\n*_🖥️ github link 🖥️_*\n```https://bit.ly/3QFzqKi```\n\n*_🖨️ Qr scan 🖨️_*\n```https://bit.ly/3dvhTWM```\n\n*_🎬 Youtube  🎬_*\n```http://youtube.com/c/MRNIMAOFC```\n\n💬  _USE_ *ping* _CHECK YOUR CONNECTION_\n\n\n```THANKS FRO USING QUEEN ELISA 💃♥️```" })
     })
 
     XeonBotInc.ev.on('creds.update', saveState)
