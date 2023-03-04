@@ -88,10 +88,10 @@
     "src": "src"
   },
   "devDependencies": {},
-  "repository": "git+https://github.com/Dragonxjanith/QueenNIluv2.git",
+  "repository": "git+https://github.com/.git",
   "bugs": {
-    "url": "https://github.com/Dragonxjanith/QueenNIluv2/issues"
+    "url": "https://github.com/issues"
   },
-  "homepage": "https://github.com/Dragonxjanith/QueenNIluv2/#readme",
+  "homepage": "https://github.com//#readme",
   "main": "index.js"
 }
