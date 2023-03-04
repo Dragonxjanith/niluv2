@@ -88,10 +88,10 @@
     "src": "src"
   },
   "devDependencies": {},
-  "repository": "git+https://github.com/DarkMakerofc/Queen-Elisa-MD-V2.git",
+  "repository": "git+https://github.com/Dragonxjanith/QueenNIluv2.git",
   "bugs": {
-    "url": "https://github.com/DarkMakerofc/Queen-Elisa-MD-V2/issues"
+    "url": "https://github.com/Dragonxjanith/QueenNIluv2/issues"
   },
-  "homepage": "https://github.com/DarkMakerofc/Queen-Elisa-MD-V2/#readme",
+  "homepage": "https://github.com/Dragonxjanith/QueenNIluv2/#readme",
   "main": "index.js"
 }
