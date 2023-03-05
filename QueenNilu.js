@@ -7958,25 +7958,8 @@ headerType: 4
 
 await QueenNilu.sendMessage(m.chat, templateMessage, { quoted: m })   
 
-await QueenNilu.sendMessage(from, { react: { text: `❤`, key: m.key }})  
-await new Promise(r => setTimeout(r, 5000))            
-await QueenNilu.sendMessage(from, { react: { text: `🧡`, key: m.key }})   
-await new Promise(r => setTimeout(r, 5000))           
-await QueenNilu.sendMessage(from, { react: { text: `💛`, key: m.key }})  
-await new Promise(r => setTimeout(r, 5000))            
-await QueenNilu.sendMessage(from, { react: { text: `💚`, key: m.key }})   
-await new Promise(r => setTimeout(r, 5000))           
-await QueenNilu.sendMessage(from, { react: { text: `💙`, key: m.key }})   
-await new Promise(r => setTimeout(r, 5000))           
-await QueenNilu.sendMessage(from, { react: { text: `💜`, key: m.key }})   
-await new Promise(r => setTimeout(r, 5000))           
-await QueenNilu.sendMessage(from, { react: { text: `🤎`, key: m.key }})   
-await new Promise(r => setTimeout(r, 5000))           
-await QueenNilu.sendMessage(from, { react: { text: `🖤`, key: m.key }})    
-await new Promise(r => setTimeout(r, 5000))          
-await QueenNilu.sendMessage(from, { react: { text: `🤍`, key: m.key }})   
-await new Promise(r => setTimeout(r, 5000))           
-await QueenNilu.sendMessage(from, { react: { text: `💖`, key: m.key }})              
+await QueenNilu.sendMessage(from, { react: { text: `💃`, key: m.key }})  
+           
  }
  break
 
