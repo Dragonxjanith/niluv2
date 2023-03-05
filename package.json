@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "QueenNilu",
   "version": "3.3.3",
   "description": "Automated whatsapp md bot created using nodejs and baileys lib",
   "type": "commonjs",
@@ -20,7 +20,7 @@
   "author": "MR-NIMA",
   "license": "AGPL-3",
   "dependencies": {
-    "@adiwajshing/baileys": "hostinger-bot/baileys",
+    "@adiwajshing/Baileys": "https://github.com/adiwajshing/Baileys.git",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@bochilteam/scraper": "^2.0.0",
     "@vitalets/google-translate-api": "^9.0.0",
