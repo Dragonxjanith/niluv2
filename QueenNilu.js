@@ -7945,7 +7945,7 @@ const msg = `*💃 𝙌𝙐𝙀𝙀𝙉 𝙉𝙄𝙇𝙐 𝙑2 💃*
 const templateButtons = [
 {index: 1, urlButton: {displayText: '𝗕𝗢𝗧 𝗜𝗡𝗦𝗧𝗔𝗟𝗟', url: 'https://github.com/janithsadanuwan/QueenNilu'}},
 {index: 2, urlButton: {displayText: '𝗪𝗔𝗧𝗖𝗛 𝗩𝗜𝗗𝗘𝗢', url: G_LINK }},
-{index: 3, quickReplyButton: {displayText: 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ', id: 'publicgroup'}},
+{index: 3, quickReplyButton: {displayText: 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ', id: 'publicgroup'}},{index: 3, quickReplyButton: {displayText: 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ', id: 'publicgroup'}},
 ]
 
 const templateMessage = {
