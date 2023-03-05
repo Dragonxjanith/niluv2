@@ -8639,7 +8639,7 @@ case 'menu': {
   │ ${prefix}technology
   ╰─────────────⦁`
   const templateButtons = [
-    {buttonId: `panel`, buttonText: {displayText: 'ʟɪsᴛ ᴍᴇɴᴜ'}, type: 1}, {buttonId: `owner`, buttonText: {displayText: 'ᴏᴡɴᴇʀ‍️'}, type: 2},
+    {buttonId: `panel`, buttonText: {displayText: 'ʟɪsᴛ ᴍᴇɴᴜ'}, type: 1},
     {buttonId: `owner`, buttonText: {displayText: 'ᴏᴡɴᴇʀ‍️'}, type: 1},
     {buttonId: `stetus`, buttonText: {displayText: 'sᴛᴇᴛᴜs'}, type: 1}
   
