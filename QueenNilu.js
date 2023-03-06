@@ -8199,14 +8199,29 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
              await QueenNilu.sendMessage(from, { react: { text: `👋`, key: m.key }})
     
                     const templateButtons = [
-{ urlButton: {displayText: global.BUTTON1 , url: global.BUTTON1_URL }},
-{ urlButton: {displayText: global.BUTTON2 , url: global.BUTTON2_URL }},
 { quickReplyButton: {displayText: ' 𝙻𝙸𝚂𝚃 𝙼𝙴𝙽𝚄 ', id: 'list' }} , 
 { quickReplyButton: {displayText: ' 𝙼𝙴𝙽𝚄 ', id: 'allmenu' }}  ,
 { quickReplyButton: {displayText: ' 𝙿𝙸𝙽𝙶 ️', id: 'ping' }}  
                         ]
  const buttonMessage = {
- caption: global.alive,
+ caption: `${ita}◈ Queen Nilu Bot is Online ◈${ita}
+
+ *( ᴅᴇᴘʟᴏʏ ) ▽* 
+ _http://github.com/janithsadanuwan_
+ *( ᴏᴡɴᴇʀ ) ▽* 
+ _${global.owner}_
+ *( ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ ) ▽*
+ _https://chat.whatsapp.com/
+ *( ᴠᴇʀsɪᴏɴ ) ▽*
+ _${BOT_VERSION}_
+ *( ʏᴏᴜᴛᴜʙᴇ ) ▽*
+ _https://youtube.com/janithsadanuwan
+ 
+ *[ ⏱️ ʀᴜɴ ᴛɪᴍᴇ ⏱️] ▽*
+ ${runtime(process.uptime())}
+ 
+ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
+ `,
  footer: global.botnma,
  templateButtons: templateButtons,
  image: { url: global.alivelogo }
