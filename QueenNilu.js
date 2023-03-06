@@ -42,7 +42,7 @@ const MENU_IMOJI = global.MENU_IMOJI
   const M_E = MENU_IMOJI.split('|')[0]
   const D_E = MENU_IMOJI.split('|')[1]
 
-  
+
   var LOGO_MAKING = ''
   if (global.LANG == 'EN') LOGO_MAKING = '*🌈 Take a moment to createing your textlogo...*'
   if (global.LANG == 'SI') LOGO_MAKING = '*🌈 මදක් රැදීසිටින්න ඔබගේ textlogo සෑදමින් පවතී...*'
@@ -8318,9 +8318,8 @@ const msg = `*💃 𝙌𝙐𝙀𝙀𝙉 𝙉𝙄𝙇𝙐 𝙑2 💃*
 *© Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ꜱᴛᴀʙʟᴇ*
 `
 const templateButtons = [
-{index: 1, urlButton: {displayText: '𝗕𝗢𝗧 𝗜𝗡𝗦𝗧𝗔𝗟𝗟', url: 'https://github.com/janithsadanuwan/QueenNilu'}},
-{index: 2, urlButton: {displayText: '𝗪𝗔𝗧𝗖𝗛 𝗩𝗜𝗗𝗘𝗢', url: G_LINK }},
-{index: 3, quickReplyButton: {displayText: 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ', id: 'publicgroup'}},
+    {buttonId: `publicgroup`, buttonText: {displayText: 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ'}, type: 1},
+    {buttonId: `botstatus`, buttonText: {displayText: 'sᴛᴇᴛᴜs'}, type: 1}
 ]
 
 const templateMessage = {
@@ -10436,7 +10435,7 @@ case 'grpmenu': {
   if (global.LANG == 'EN') BCALL= '```Send broadcast all chats```'
   if (global.LANG == 'SI') BCALL= '```සියලුම චැට් සදහා බ්‍රෝඩ්කාස්ට් යැවීම```'
   prefix = '.'
-  anu = `*◯───────[ DOWNLOAD MENU ]───────◯*
+  anu = `*◯───────[ OWNER MENU ]───────◯*
   
   ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownername}
   ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
@@ -10465,7 +10464,7 @@ case 'grpmenu': {
      footer = global.botname
                    buttons = [
                       {buttonId: `nilusistemmenu`, buttonText: {displayText: back}, type: 1},
-                      {buttonId: `about `, buttonText: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ'}, type: 1}
+                      {buttonId: `about`, buttonText: {displayText: 'ǫᴜᴇᴇɴ ɴɪʟᴜ'}, type: 1}
                       
                   ]
                   let buttonMessage = {
