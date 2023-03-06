@@ -1498,7 +1498,7 @@ Cieeee, What's Going On❤️💖👀`
             let sections = []   
            for (let i of all_news) {
          //  reply(i.news_id)
-           const list = {title: `ǫᴜᴇᴇɴ ᴇʟɪsᴀ ɴᴇᴡs `,
+           const list = {title: `ǫᴜᴇᴇɴ  ɴɪʟᴜ ɴᴇᴡs `,
            rows: [
                  {
                   title: `${i.title}`, 
@@ -3238,7 +3238,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               
                                     YTMASS = `
                 
-                ╭───[  *ᴇʟɪsᴀ ʙᴏᴛ*  ]───◉
+                ╭───[  * ɴɪʟᴜ ʙᴏᴛ*  ]───◉
                 │
                 │  🎬 ʏᴛ  ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 🎬
                 │ 
@@ -3264,7 +3264,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               
                                     YTMASS = `
                 
-                ╭───[  *ᴇʟɪsᴀ ʙᴏᴛ*  ]───◉
+                ╭───[  * ɴɪʟᴜ ʙᴏᴛ*  ]───◉
                 │
                 │  🎬 ʏᴛ  sᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 🎬
                 │ 
@@ -3481,7 +3481,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 `
                                                   const templateButtons = [
                                                   {index: 1, urlButton: {displayText: 'DOWNLOAD ON WEB', url: media.dl_link+'.mp4' }},
-                                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
+                                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ  ɴɪʟᴜ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
                     
                                                   ]
                 
@@ -3534,7 +3534,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 `
                                                   const templateButtons = [
                                                   {index: 1, urlButton: {displayText: 'DOWNLOAD ON WEB', url: media.dl_link+'.mp4' }},
-                                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
+                                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ  ɴɪʟᴜ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
                     
                                                   ]
                 
@@ -3573,7 +3573,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 `
                                                   const templateButtons = [
                                                   {index: 1, urlButton: {displayText: 'DOWNLOAD ON WEB', url: media.dl_link+'.mp4' }},
-                                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
+                                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ  ɴɪʟᴜ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
                     
                                                   ]
                 
@@ -3608,7 +3608,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 `
                                                   const templateButtons = [
                                                   {index: 1, urlButton: {displayText: 'DOWNLOAD ON WEB', url: media.dl_link+'.mp4' }},
-                                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
+                                                  {index: 2, urlButton: {displayText: 'ǫᴜᴇᴇɴ  ɴɪʟᴜ ᴘᴜʙʟɪᴄ', url: 'https://chat.whatsapp.com/JlIOrWU08K19dFrHkOGI5N'}}
                     
                                                   ]
                 
