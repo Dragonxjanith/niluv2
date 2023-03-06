@@ -2,9 +2,9 @@
     "_ELISAJSON_": true,
     "LANGUAGE": "Sinhala",
     "LANGCODE": "SI",
-    "AUTHOR": "MR.NIMA",
+    "AUTHOR": "janiya",
     "STRINGS": {
-        "elisabot": {
+        "nilubot": {
             "COMMAND": "විධානය",
             "DESC": "විස්තර",
             "EXAMPLE": "උදාහරණ",

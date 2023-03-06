@@ -8237,142 +8237,93 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
 //----------------------------------------------------------LIST MENU --------------------------------------------
 
             case 'command':case 'listmenu': case 'list': case 'panel':{
-	const sections = [{
-								"title": "Initial Features Of Bot 🦄",
-								"rows": [
-									{
-										"title": "Other ☕",
-										"description": "Displays The List Of Other Features",
-										"rowId": `${prefix}othermenu`
-									}
-								]
-							},
-							{
-								"title": "Bot Features ❤️",
-								"rows": [
-									{
-										"title": "All Menu 🥀",
-										"description": "Displays The List Of All The Features!",
-										"rowId": `${prefix}allmenu`
-									},
-									{
-										"title": "Owner Menu 💠",
-										"description": "Displays The List Of Owner Features",
-										"rowId": `${prefix}ownermenu`
-										},
-									{
-										"title": "Group Menu ✨",
-										"description": "Displays The List Of Main Features",
-										"rowId": `${prefix}groupmenu`
-										},
-										{
-										"title": "Maker Menu 🌈",
-										"description": "Displays The List Of Logo Making Features",
-										"rowId": `${prefix}makermenu`
-									},
-									{
-										"title": "Download Menu ↘️",
-										"description": "Displays The List Of Download Features",
-										"rowId": `${prefix}downloadmenu`
-									},
-									{
-										"title": "Sticker Menu 🃏",
-										"description": "Displays The List Of Sticker Features",
-										"rowId": `${prefix}stickermenu`
-									},
-									{
-										"title": "Search Menu 🔎",
-										"description": "Displays The List Of Searching Features",
-										"rowId": `${prefix}searchmenu`
-									},
-									{
-										"title": "Random Image Menu 🌆",
-										"description": "Displays The List Of Random Image Features",
-										"rowId": `${prefix}randomimagemenu`
-									},
-									{
-										"title": "Random Video Menu 🌆",
-										"description": "Displays The List Of Random Video Features",
-										"rowId": `${prefix}randomvideomenu`
-									},
-									{
-										"title": "Image Effect Menu 🖼️",
-										"description": "Displays The List Of Image Effect Features",
-										"rowId": `${prefix}imageeffectmenu`
-									},
-										{
-											"title": "Anime Menu 😘",
-										"description": "Displays The List Of Random Anime Features",
-										"rowId": `${prefix}animemenu`
-										},
-										{
-											"title": "Emote Menu 😀",
-										"description": "Displays The List Of Emote Features",
-										"rowId": `${prefix}emotemenu`
-										},
-										{
-										"title": "Anime Sticker Menu ☺️",
-										"description": "Displays The List Of Anime Sticker Features",
-										"rowId": `${prefix}animestickermenu`
-									     },
-									{
-										"title": "Nsfw Menu 🤓",
-										"description": "Displays The List Of Nsfe Features",
-										"rowId": `${prefix}nsfwmenu`
-									     },
-										{
-											"title": "Fun Menu 🕺",
-										"description": "Displays The List Of Fun Features",
-										"rowId": `${prefix}funmenu`
-										},
-										{
-										"title": "Game Menu 🎮",
-										"description": "Displays The List Of Game Features",
-										"rowId": `${prefix}gamemenu`
-									},
-										{
-											"title": "Convert Menu ⚒️",
-										"description": "Displays The List Of Convert Features",
-										"rowId": `${prefix}convertmenu`
-										},
-										{
-											"title": "Database Menu ♻️",
-										"description": "Displays The List Of Database Features",
-										"rowId": `${prefix}databasemenu`
-										},
-										{
-										"title": "Other Menu 🐸",
-										"description": "Displays The List Miscellaneous Features",
-										"rowId": `${prefix}othermenu`
-									     },
-										{
-										"title": "War Menu☣️",
-										"description": "tqttDisplays The List Of War Features",
-										"rowId": `${prefix}warmenu`
-									}
-								]
-							},
-							{
-								"title": "Chat With Fellow Users 🌝",
-								"rows": [
-									{
-										"title": "Anonymous Chat Menu 🏻‍♂️",
-										"description": "Displays The List Of Anonymous Chat Features",
-										"rowId": `${prefix}anonymousmenu`
-									}
-								]
-							},
-							{
-								"title": "About Bot",
-								"rows": [
-									{
-										"title": "About Queen Nilu",
-										"description": "Displays The List Of Credit Of The Bot !!",
-										"rowId": `${prefix}about`
-									}
-								]
-							}
-						]
+	const sections =[{
+
+        "title": "ʙᴏᴛ ʟɪsᴛ ᴍᴇɴᴜ ᴄʟɪᴄᴋ ᴀɴᴅ sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴏᴡɴ",
+                                                 "rows": [
+                                                     {
+                                                         "title": "▷ GROUP MENU ◁",
+                                                         "description": Lang.GROUP_CMD_DESC ,
+                                                         "rowId": `${prefix}grpmenu`
+                                                     }
+                                                 ]
+                                             },
+                                             {
+                                                 "title": `${global.botnma} *ᗰᗴᑎᑌ* `,
+                                                 "rows": [
+                                                     {
+                                                         "title": "▷ DOWNLOAD MENU ◁",
+                                                         "description": Lang.DOWNLOAD_CMD ,
+                                                         "rowId": `${prefix}elisadownloadmenu`
+                                                     },
+                                                     {
+                                                         "title": "▷ SEARCH MENU ◁",
+                                                         "description": Lang.SEARCH_CMD ,
+                                                         "rowId": `${prefix}elisasearchmenu`
+                                                     },
+                                                         {
+                                                             "title": "▷ FUN MENU ◁",
+                                                         "description": Lang.FUN_CMD ,
+                                                         "rowId": `${prefix}funmenu`
+                                                         },
+                                                         {
+                                                             "title": "▷ CONVERT MENU ◁",
+                                                         "description": Lang.CONVERT_CMD ,
+                                                         "rowId": `${prefix}elisaconvertmenu`
+                                                         },
+                                                         {
+                                                             "title": "▷ RANDOM ANIME MENU ◁",
+                                                         "description": Lang.RANDOM_ANIME ,
+                                                         "rowId": `${prefix}elisaranimemenu`
+                                                         },
+                                                         {
+                                                         "title": "▷ MISC MENU ◁",
+                                                         "description": Lang.MISC_CMD ,
+                                                         "rowId": `${prefix}elisanocategorymenu`
+                                                         },
+                                                         {
+                                                             "title": "▷ TEXT TO LOGO ◁",
+                                                         "description": Lang.LOGO_CMD ,
+                                                         "rowId": `${prefix}textlogo`
+                                                         },
+                                                         {
+                                                             "title": "▷ LOGO PACK MENU ◁",
+                                                         "description": Lang.LOGO_CMD ,
+                                                         "rowId": `${prefix}logomenu`
+                                                         },
+                                                         {
+                                                             "title": "▷ VOICE MENU ◁",
+                                                         "description": Lang.VOICE_CMD ,
+                                                         "rowId": `${prefix}elisavoicemenu`
+                                                         }
+                                                 ]
+                                             },
+                                             {
+                                                 "title": "▷ OWNER ◁",
+                                                 "rows": [
+                                                     {
+                                                         "title": "▷ OWNER MENU◁",
+                                                         "description": Lang.OWNER_CMD ,
+                                                         "rowId": `${prefix}ownermenu`
+                                                     }
+                                                 ]
+                                             },
+                                             {
+                                                 "title": "▷ CREDITS BOT ◁",
+                                                 "rows": [
+                                                     {
+                                                         "title": "▷ ABOUT ◁",
+                                                         "description": Lang.ABOUT_CMD ,
+                                                         "rowId": `${prefix}about`
+                                                     },
+                                                     {
+                                                         "title": "▷ HELPERS ◁",
+                                                         "description": Lang.ABOUT_CMD ,
+                                                        "rowId": `${prefix}helpers`
+                                                     }
+                                                   ]
+                           }
+                       ]
 const listMessage = {
   text: " *Please Choose the Menu*\n\n𝚠𝚎𝚕𝚌𝚘𝚖𝚎 𝚃𝙾\n🙈 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 🫶🏻💙\n\👨🏻‍💻𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : 𝘑𝘈𝘕𝘐𝘠𝘈\n💍𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :_02.00.00_\n🪷𝚆𝙴𝙱𝚂𝙸𝚃𝙴: _https://janithsadanuwan.tech/QueenNilu_\n\n\n*💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ᴍᴇɴᴜ💃*",
   footer: `𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄`,

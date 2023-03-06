@@ -2,10 +2,10 @@
     "_ELISAJSON_": true,
      "LANGUAGE": "English",
      "LANGCODE": "EN",
-     "AUTHOR": "MR.NIMA",
+     "AUTHOR": "janiya",
    
    "STRINGS": {
-         "elisabot": {
+         "nilubot": {
              "COMMAND": "Command",
              "DESC": "Description",
              "EXAMPLE": "Example",
