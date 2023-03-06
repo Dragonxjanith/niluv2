@@ -8968,7 +8968,7 @@ case 'menu': {
 
 case 'botstetus' : case 'stetus' : {
     const start = new Date().getTime()
-    await QueenNilu.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
+    await QueenNilu.sendMessage(from, { react: { text: `💠`, key: m.key }})
     const end = new Date().getTime()
     const ping = (end - start) + 'ms' 
    // const runtime = 
