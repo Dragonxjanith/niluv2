@@ -1393,7 +1393,7 @@ Cieeee, What's Going On❤️💖👀`
          
          const templateMessage = {
              image: {url: news.img },
-             caption: '     ⫷ 💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ⫸\n\n'+cap,
+             caption: '     ◉ 💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ◉\n\n'+cap,
              footer: global.botname,
              templateButtons: templateButtons,
              headerType: 4
@@ -1427,7 +1427,7 @@ Cieeee, What's Going On❤️💖👀`
          
          const templateMessage = {
              image: {url: img },
-             caption: '     ⫷ 💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ⫸\n\n'+cap,
+             caption: '     ◉ 💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ◉\n\n'+cap,
              footer: global.botname+'\n ᴛʜᴀɴᴋs ᴛᴏ sɪsᴜʟʏᴀ',
              templateButtons: templateButtons,
              headerType: 4
@@ -1498,7 +1498,7 @@ Cieeee, What's Going On❤️💖👀`
                {
                 text: NEWSSS,
                 footer: global.botname+'\n get on helakuru.com' ,
-                title: "*⫷  💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ⫸*",
+                title: "*◉  💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ◉*",
                 buttonText: "GET NEWS",
                 sections
                }, { quoted : m })    
@@ -1531,7 +1531,7 @@ Cieeee, What's Going On❤️💖👀`
          
          const templateMessage = {
              image: {url: img },
-             caption: '     ⫷ 👸 *𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙽𝙴𝚆𝚂* 👸 ⫸\n\n'+cap,
+             caption: '     ◉ 💃 *𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝙽𝙴𝚆𝚂* 💃 ◉\n\n'+cap,
              footer: `${global.botname}` ,
              templateButtons: templateButtons,
              headerType: 4
@@ -2337,7 +2337,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                  ]
                             const buttonMessage = {
                                     image: { url: search.all[1].thumbnail },
-                                    caption: `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚈𝚃 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                                    caption: `◉⦁[ *💃 𝙽𝙸𝙻𝚄 𝚈𝚃 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 💃* ]⦁◉
                 
                 *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
                 
@@ -2365,7 +2365,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 ]
                             const buttonMessage = {
                                     image: { url: search.all[0].thumbnail },
-                                    caption:   `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚈𝚃 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                                    caption:   `◉⦁[ *💃 𝙽𝙸𝙻𝚄 𝚈𝚃 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 💃* ]⦁◉
                 
                 *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
                 
@@ -2406,7 +2406,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   yts(s2vid).then(async (search) => {  
                                                   for (let i of search.all)   
                                                   views = search.all[0].views
-                                                      ngen = '⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸\n\n*ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*\n\n ➥ ᴛɪᴛʟᴇ - '+search.all[0].title+'\n\n ➥ ᴠɪᴇᴡs - '+views+'\n\n ➥ ᴅᴜʀᴀᴛɪᴏɴ - '+search.all[0].timestamp+'\n\n ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - '+search.all[0].ago+'\n\n ➥ ᴜʀʟ - '+search.all[0].url
+                                                      ngen = '◉⦁[ *💃 𝙽𝙸𝙻𝚄 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 💃* ]⦁◉\n\n*ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*\n\n ➥ ᴛɪᴛʟᴇ - '+search.all[0].title+'\n\n ➥ ᴠɪᴇᴡs - '+views+'\n\n ➥ ᴅᴜʀᴀᴛɪᴏɴ - '+search.all[0].timestamp+'\n\n ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - '+search.all[0].ago+'\n\n ➥ ᴜʀʟ - '+search.all[0].url
                 
                                 
                                 
@@ -2466,7 +2466,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                 ]
                             const buttonMessage = {
                                     image: { url: search.all[0].thumbnail },
-                                    caption: `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                                    caption: `◉⦁[ *💃 𝙽𝙸𝙻𝚄 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 💃* ]⦁◉
                 
                 *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
                 
@@ -2515,7 +2515,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                 ]
                             const buttonMessage = {
                                     image: { url: search.all[1].thumbnail },
-                                    caption: `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                                    caption: `◉⦁[ *💃 𝙽𝙸𝙻𝚄 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 💃* ]⦁◉
                 
                 *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
                 
@@ -2548,7 +2548,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                 ]
                             const buttonMessage = {
                                     image: { url: search.all[0].thumbnail },
-                                    caption:   `⫷⦁[ *👸 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸* ]⦁⫸
+                                    caption:   `◉⦁[ *💃 𝙽𝙸𝙻𝚄 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 💃* ]⦁◉
                 
                 *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
                 
@@ -2755,7 +2755,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                       {
                        text: `${text} *Here is the list of videos, click the button below to choose*\n\n${m.pushName}`,
                        footer: `${global.botname}`,
-                       title: `*👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*\n\n Search from ${text}`,
+                       title: `*💃 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 💃*\n\n Search from ${text}`,
                        buttonText: "ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ",
                        sections
                       }, { quoted : m })    
@@ -2803,7 +2803,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                       {
                        text: `${text} *Here is the list of videos, click the button below to choose*\n\n${m.pushName}`,
                        footer: `${global.botname}`,
-                       title: `*👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*\n\n Search from ${text}`,
+                       title: `*💃 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 💃*\n\n Search from ${text}`,
                        buttonText: "ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ",
                        sections
                       }, { quoted : m })    
@@ -3066,7 +3066,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 
                 const buttonMessage = {
                     image: {url: nima.thubnail},
-                    caption: `╭────[👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙱𝙾𝚃 👸] 
+                    caption: `╭────[💃 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝙱𝙾𝚃 💃] 
                 │
                 ◯ ᴛɪᴛʟᴇ : ${nima.title}
                 
@@ -3237,7 +3237,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                           { buttonId: `${hdpid} ${text}`, buttonText: { displayText: '720p' }, type: 1 }
                                                       
                                                       ]
-                                                      await QueenNilu.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝙴𝙻𝙸𝚂𝙰 𝙱𝙾𝚃 ` ,m)
+                                                      await QueenNilu.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝙽𝙸𝙻𝚄 𝙱𝙾𝚃 ` ,m)
                                                   }
                                                   break
                                                   case 'audioselecttypebutton': {  
@@ -3261,7 +3261,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                           { buttonId: `${docidd} ${text}`, buttonText: { displayText: '📁 DOCUMENT 📁' }, type: 1 },
                                                           { buttonId: `${audidd} ${text}`, buttonText: { displayText: '🎧 AUDIO 🎧' }, type: 1 }
                                                       ]
-                                                      await QueenNilu.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝙴𝙻𝙸𝚂𝙰 𝙱𝙾𝚃 ` ,m)
+                                                      await QueenNilu.sendButtonText(m.chat, buttons, YTMASS, `𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝙽𝙸𝙻𝚄 𝙱𝙾𝚃 ` ,m)
                                                   }
                                                   break
                                                   case 'ytmp4' : {
@@ -8287,14 +8287,14 @@ case 'About': case 'script': case 'bot': case 'donate': case 'about': case 'upda
  
 const msg = `*💃 𝙌𝙐𝙀𝙀𝙉 𝙉𝙄𝙇𝙐 𝙑2 💃*
 
-*👸ᴀʙᴏᴜᴛ ʙᴏᴛ👸*
+*💃ᴀʙᴏᴜᴛ ʙᴏᴛ💃*
 
 *🧑🏻‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ : 𝙹𝙰𝙽𝙸𝚈𝙰*
 *🔮ᴠᴇʀꜱɪᴏɴ : 2.0.0*
 *📡ᴡᴇʙ ᴀᴘɪ : 𝙱𝙰𝙸𝙻𝚈𝙴𝚂*
 *🪦ʙᴀꜱᴇ : 𝚡𝚎𝚘𝚗*
 
-*👸ᴅᴇᴘʟᴏʏ Qᴜᴇᴇɴɴɪʟᴜ👸*
+*💃ᴅᴇᴘʟᴏʏ Qᴜᴇᴇɴɴɪʟᴜ💃*
 
 •ᴡᴇʙꜱɪᴛᴇ - https://janithsadanuwan.tech/QueenNilu
 •ɢɪᴛʜᴜʙ- https://github.com/Janithsadanuwan
@@ -8712,7 +8712,7 @@ case 'menu': {
   
          const MENUMSG = `*WELCOME ${m.pushName}*
   
-  *👸 ᴜᴘ ᴛɪᴍᴇ :* ${runtime(process.uptime())}
+  *💃 ᴜᴘ ᴛɪᴍᴇ :* ${runtime(process.uptime())}
   ${biography}
   
   ➮ 𝙱𝙾𝚃 𝙽𝙰𝙼𝙴 - ${global.botname}
@@ -10374,21 +10374,21 @@ case 'grpmenu': {
 case 'attp' :{
     if (!text) return reply ('Need some word \n ex - attp Mr janiya')
     const Stik = `https://api.akuari.my.id/other/attp?text=${text}`
-    await QueenNilu.sendMedia(m.chat, Stik , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+    await QueenNilu.sendMedia(m.chat, Stik , '𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
     
    }
    break
    case 'attp2' :{
    if (!text) return reply ('Need some word \n ex - attp Mr janiya')
    const Stik = `https://my-shinz.herokuapp.com/api/maker/attp?text=${text}`
-    await QueenNilu.sendMedia(m.chat, Stik , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+    await QueenNilu.sendMedia(m.chat, Stik , '𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
     
    }
    break
    case 'ttp' :{
    if (!text) return reply ('Need some word \n ex - ttp Mr janiya')
    //const Stik = `https://my-shinz.herokuapp.com/api/maker/attp?text=${text}`
-    await QueenNilu.sendMedia(m.chat, `https://my-shinz.herokuapp.com/api/maker/ttp?text=${text}` , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+    await QueenNilu.sendMedia(m.chat, `https://my-shinz.herokuapp.com/api/maker/ttp?text=${text}` , '𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
     
    }
    break
@@ -10411,7 +10411,7 @@ case 'attp' :{
    const img = `https://api.violetics.pw/api/converter/webp-to-image?apikey=b5cd-368b-055f&image=${media}`
    const stick = 'https://api.akuari.my.id/canvas/triggered2?link='+img
    await QueenNilu.sendMessage(from, { react: { text: `✨`, key: m.key }})
-   await QueenNilu.sendMedia(m.chat, stick , '𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
+   await QueenNilu.sendMedia(m.chat, stick , '𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
    }
    break
 
