@@ -5600,7 +5600,7 @@ case 'keluar': case 'leave': {
                 m.reply('*Successful in Changing To Self Usage*')
             }
             break 
-            case 'ping' : case 'ping2' : {
+            case 'ping' : case 'ping2' : case 'p' :{
                 const start = new Date().getTime()
 await QueenNilu.sendText(m.chat, '*📡  ʀᴜɴɪɴɢ ʀᴇsᴘᴏɴᴅ...*')
 const end = new Date().getTime()
