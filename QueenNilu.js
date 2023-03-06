@@ -42,6 +42,21 @@ const MENU_IMOJI = global.MENU_IMOJI
   const M_E = MENU_IMOJI.split('|')[0]
   const D_E = MENU_IMOJI.split('|')[1]
 
+  
+  var LOGO_MAKING = ''
+  if (global.LANG == 'EN') LOGO_MAKING = '*🌈 Take a moment to createing your textlogo...*'
+  if (global.LANG == 'SI') LOGO_MAKING = '*🌈 මදක් රැදීසිටින්න ඔබගේ textlogo සෑදමින් පවතී...*'
+
+var NOT_FOUND = ''
+  if (global.LANG == 'EN') NOT_FOUND = '*🚫💬 I CAN\'T FIND ANYTHING !*'
+  if (global.LANG == 'SI') NOT_FOUND = '*🚫💬 මට කිසිවක් සොයාගත නොහැකිවිය !*'
+var FILE_DOWNLOAD = ''
+var FILE_UPLOAD = ''
+   if (global.LANG == 'EN') FILE_DOWNLOAD = '*📥 DOWNLOADING YOUR FILE...*'
+   if (global.LANG == 'EN') FILE_UPLOAD =  '*📤 UPLOADING YOUR FILE...*'
+   if (global.LANG == 'SI') FILE_DOWNLOAD = '*📥 ඔබගේ ගොනුව බාගතකරමින් පවති...*'
+   if (global.LANG == 'SI') FILE_UPLOAD = '*📤 ඔබගේ ගොනුව එවමින් පවතී...*'
+
 
 const BOT_VERSION = '2.0.0'
 
