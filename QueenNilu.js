@@ -9080,7 +9080,7 @@ case 'grpmenu': {
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                        url: 'https://youtube.com/c/janithsadanuwan'
                                                     }
                                                 }, {
                                                     quickReplyButton: {
@@ -9344,7 +9344,7 @@ case 'grpmenu': {
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                        url: 'https://youtube.com/c/janithsadanuwan'
                                                     }
                                                 }, {
                                                     quickReplyButton: {
@@ -9421,7 +9421,7 @@ case 'grpmenu': {
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                        url: 'https://youtube.com/c/janithsadanuwan'
                                                     }
                                                 }, {
                                                     quickReplyButton: {
@@ -9503,7 +9503,7 @@ case 'grpmenu': {
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                        url: 'https://youtube.com/c/janithsadanuwan'
                                                     }
                                                 }, {
                                                     quickReplyButton: {
@@ -9587,7 +9587,7 @@ case 'grpmenu': {
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                        url: 'https://youtube.com/c/janithsadanuwan'
                                                     }
                                                 }, {
                                                     quickReplyButton: {
@@ -9626,7 +9626,7 @@ case 'grpmenu': {
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: 'SUBSCRIBE',
-                                                        url: 'https://www.youtube.com/c/MRNIMAOFC'
+                                                        url: 'https://www.youtube.com/c/janithsadanuwan'
                                                     }
                                                 }, {
                                                     quickReplyButton: {
@@ -9684,7 +9684,7 @@ case 'grpmenu': {
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: 'SUBSCRIBE',
-                                                        url: 'https://www.youtube.com/c/MRNIMAOFC'
+                                                        url: 'https://www.youtube.com/c/janithsadanuwan'
                                                     }
                                                 }, {
                                                     quickReplyButton: {
@@ -9785,7 +9785,7 @@ case 'grpmenu': {
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                        url: 'https://youtube.com/c/janithsadanuwan'
                                                     }
                                                 }, {
                                                     quickReplyButton: {
@@ -9906,7 +9906,7 @@ case 'grpmenu': {
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                        url: 'https://youtube.com/c/janithsadanuwan'
                                                     }
                                                 }, {
                                                     quickReplyButton: {
@@ -10025,7 +10025,7 @@ case 'grpmenu': {
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                        url: 'https://youtube.com/c/janithsadanuwan'
                                                     }
                                                 }, {
                                                     quickReplyButton: {
@@ -10108,7 +10108,7 @@ case 'grpmenu': {
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                        url: 'https://youtube.com/c/janithsadanuwan'
                                                     }
                                                 }, {
                                                     quickReplyButton: {
@@ -10219,7 +10219,7 @@ case 'grpmenu': {
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
-                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                        url: 'https://youtube.com/c/janithsadanuwan'
                                                     }
                                                 }, {
                                                     quickReplyButton: {
@@ -10282,7 +10282,7 @@ case 'grpmenu': {
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: 'SUBSCRIBE',
-                                                        url: 'https://www.youtube.com/c/MRNIMAOFC'
+                                                        url: 'https://www.youtube.com/c/janithsadanuwan'
                                                     }
                                                 }, {
                                                     quickReplyButton: {
@@ -10393,7 +10393,7 @@ case 'attp' :{
    }
    break
    case 'short' :{
-   if (!isUrl(args[0])) return reply('*💃 Please Give Me a Correct Link*\n_Example - .short https://youtube.com/c/NIMAOFC')
+   if (!isUrl(args[0])) return reply('*💃 Please Give Me a Correct Link*\n_Example - .short https://youtube.com/c/Janithsadanuwan')
    const janiya = await fetchJson(`https://my-shinz.herokuapp.com/api/linkshort/cuttly?link=${text}`)
    m.reply(janiya.result)
    }
