@@ -18,8 +18,8 @@ global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
 
 //👇 Menu imoji 
-global.MENU_IMOJI = '👸|ℹ️'
-global.owner = ['916909137213'] //ur owner number
+global.MENU_IMOJI = '💃|💍'
+global.owner = ['94767438882'] //ur owner number
 global.ownername = "Janith sadanuwan" //ur owner name
 global.ytname = "YT: janithsadanuwan" //ur yt chanel name
 global.socialm = "GitHub: janithsadanuwan" //ur github or insta name
