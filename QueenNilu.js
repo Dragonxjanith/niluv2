@@ -3721,7 +3721,7 @@ case 'pinterest': {
       
              const desmsg = `╔═════════════════════☐
     
-          *_𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙻𝚘𝚐𝚘 𝙻𝚒𝚜𝚝_*
+          *_𝚀𝚞𝚎𝚎𝚗 𝙽𝚒𝚕𝚞 𝙻𝚘𝚐𝚘 𝙻𝚒𝚜𝚝_*
     
     *▣ ʀᴇǫᴜᴇsᴛᴇʀ -*  ${m.pushName}
     *▣ ʟᴏɢᴏ ᴛᴇxᴛ -* ${text}
@@ -9622,7 +9622,7 @@ case 'grpmenu': {
                                                 hydratedContentText: anu,
                                                 locationMessage: {
                                                 jpegThumbnail: fs.readFileSync('./image/nilu.jpg')},
-                                                hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
+                                                hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙽𝚒𝚕𝚞 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: 'SUBSCRIBE',
@@ -9680,7 +9680,7 @@ case 'grpmenu': {
                                                 hydratedContentText: anu,
                                                 locationMessage: {
                                                 jpegThumbnail: fs.readFileSync('./image/nilu.jpg')},
-                                                hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
+                                                hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙽𝚒𝚕𝚞 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: 'SUBSCRIBE',
@@ -10278,7 +10278,7 @@ case 'grpmenu': {
                                                 hydratedContentText: anu,
                                                 locationMessage: {
                                                 jpegThumbnail: fs.readFileSync('./image/nilu.jpg')},
-                                                hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
+                                                hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙽𝚒𝚕𝚞 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: 'SUBSCRIBE',
