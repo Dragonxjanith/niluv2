@@ -36,7 +36,7 @@ const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, 
 const ini_mark = `0@s.whatsapp.net`
 const ownernya = owner + '@s.whatsapp.net'
 const Language = require('./language')
-const Lang = Language.getString('elisabot')
+const Lang = Language.getString('nilubot')
 const TIME_ZONE = global.TIME_ZONE
 const MENU_IMOJI = global.MENU_IMOJI
   const M_E = MENU_IMOJI.split('|')[0]
@@ -1141,7 +1141,7 @@ case 'apk':{
               ////----------------------------------------EHI STORE ----------------------------------\\\\\
 
 
-              case 'elisaehi': {
+              case 'niluehi': {
     
                 const ehinima = await fetchJson ('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/EHIJSON.json')
               ehi = ehinima.EHI_FILES[0].SG_FILE1
@@ -1196,7 +1196,7 @@ case 'apk':{
                              `
                             let buttons = [
                             {buttonId: `httpinjector`, buttonText: {displayText: ' ʜᴛᴛᴘ ɪɴᴊᴇᴄᴛᴏʀ '}, type: 1},
-                            {buttonId: `elisaehi`, buttonText: {displayText: ' ᴇʜɪ ғɪʟᴇ '}, type: 1},
+                            {buttonId: `niluehi`, buttonText: {displayText: ' ᴇʜɪ ғɪʟᴇ '}, type: 1},
                             {buttonId: `aboutehi`, buttonText: {displayText: ' ᴀʙᴏᴜᴛ '}, type: 1}
                             
                             ]
@@ -2319,8 +2319,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
         
             case 'play': case 'yt': { 
                 var GIVEME = ''
-                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක හෝ ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen elisa bot*"
-                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make queen elisa bot*"
+                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක හෝ ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen nilu bot*"
+                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make queen nilu bot*"
                                                   await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                                   if (!text) return reply (GIVEME)
                                                   await QueenNilu.sendText(m.chat,mess.wait, m, )
@@ -2398,7 +2398,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 const sdpid = rash.sddlid
                 const hdmidpid = rash.sdmiddlid
                 const hdpid = rash.hddlid
-                                              if (!text) throw `${Lang.EXAMPLE}\n : *${prefix + command} How to make queen elisa V2*`
+                                              if (!text) throw `${Lang.EXAMPLE}\n : *${prefix + command} How to make queen nilu V2*`
                                                   await QueenNilu.sendText(m.chat, `\n*🔄 Please wait ${m.pushName}...*\n`, m, )
                                                   let yts = require("youtube-yts")
                                                   var svid = text.replace("shorts/","watch?v=")
@@ -2495,8 +2495,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 const hdpid = rash.hddlid
                 
                 var GIVEME = ''
-                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen elisa bot*"
-                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video name.```\n *Example - .video how to make queen elisa bot*"
+                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen nilu bot*"
+                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video name.```\n *Example - .video how to make queen nilu bot*"
                 
                                           await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                                   if (!text) return reply (GIVEME)
@@ -2589,7 +2589,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   yts(text).then(async (search) => {  
                                                   
                                                   let nima = search.all
-                                                  let media = await fetchJson(`https://queen-elisa-api-1-2-3.herokuapp.com/api/dowloader/yt?url=${search.all[0].url}`)
+                                                  let media = await fetchJson(`https://queen-nilu-api-1-2-3.herokuapp.com/api/dowloader/yt?url=${search.all[0].url}`)
                                                   buf = await getBuffer(media.result.thumb)
                                                   await  QueenNilu.sendMessage(m.chat, { delete: load.key })
                                                   //const up = await QueenNilu.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
@@ -2678,8 +2678,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           break
                                           case 'video3' :{
                 var GIVEME = ''
-                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen elisa bot*"
-                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make queen elisa bot*"
+                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen nilu bot*"
+                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make queen nilu bot*"
                 text1 = q.split(";")[0]
                 text2 = q.split(";")[1]
                                           if (!text) return reply(GIVEME)
@@ -2714,7 +2714,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           }     
                                           break 
                                           case 'video2' :{
-                                          const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                          const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
                                           buf = await getBuffer(thub.YT_THUB)
                                           if (!text) return reply('*👸💬 Need video name or url*')
                                           if (text.includes('https://youtu')){
@@ -3134,7 +3134,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 if (global.LANG == 'SI' ) UPLOAD = '*📤 ඔබගේ විඩියෝව ඔබවෙත එවමින් පවතී...*'
                 if (global.LANG == 'EN' ) UPLOAD = '*📤 UPLOADING YOUR VIDEO...*'
                        const down = await QueenNilu.sendText(m.chat,DOWNLOAD, m, )
-                       const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                       const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
                        buf = await getBuffer(thub.SF_THUB)
                        const up = await QueenNilu.sendText(m.chat,UPLOAD, m, )
                        await QueenNilu.sendMessage(m.chat,{delete : down.key })  
@@ -3146,7 +3146,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 case 'directaudiodown' : {
                 
                        const down = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
-                     //  const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                     //  const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
                        buf = await getBuffer(thub.SF_THUB)
                        const up = await QueenNilu.sendText(m.chat,global.SONG_UP, m, )
                        await QueenNilu.sendMessage(m.chat,{delete : down.key })  
@@ -3161,7 +3161,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   if (!text && text.includes("https://youtu")) return m.reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp3 https://youtube.com/watch?v=WoWlWb6vbzA```')
                                                  const load = await QueenNilu.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your song...*\n`, m, )
                                                  //const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
-                                                  await fetchJson(`https://queen-elisa-api-1-2-3.herokuapp.com/api/dowloader/yt?url=${text}`)
+                                                  await fetchJson(`https://queen-nilu-api-1-2-3.herokuapp.com/api/dowloader/yt?url=${text}`)
                                                   .then(async (media) => { 
                                                   buf = await getBuffer(media.result.thumb)
                                                   if (media.result.song_size.split("MB")[0] >= 120) return m.reply('*FILE SIZE IS BIG !!!*')
@@ -3265,7 +3265,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   }
                                                   break
                                                   case 'ytmp4' : {
-                                                  const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                                  const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                           if(!text) return m.reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
                                           if (!text.includes('https://youtu')) return m.reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
@@ -3353,7 +3353,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                               await QueenNilu.sendText(m.chat,mess.wait)
                                               const qulity = args[1]
-                                              /*const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              /*const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                               const boltc = require('@bochilteam/scraper')
                                               //const search = args[0]
@@ -3362,7 +3362,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               const nima = await boltc.youtubedlv2(search.all[0].url)
                                               */
                                               if(qulity = '144p'){
-                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                               const boltc = require('@bochilteam/scraper')
                                               //const search = args[0]
@@ -3375,7 +3375,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
                                               }else if(qulity = '240p'){
-                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                               const boltc = require('@bochilteam/scraper')
                                               //const search = args[0]
@@ -3388,7 +3388,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
                                               }else if(qulity = '480'){
-                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                               const boltc = require('@bochilteam/scraper')
                                               //const search = args[0]
@@ -3402,7 +3402,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           
                                               
                                               }else if(qulity = '720'){
-                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                               const boltc = require('@bochilteam/scraper')
                                               //const search = args[0]
@@ -3416,7 +3416,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           
                                               
                                               }else if (qulity = '1080'){
-                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                               const boltc = require('@bochilteam/scraper')
                                               //const search = args[0]
@@ -3429,7 +3429,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
                                               }
-                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                               const boltc = require('@bochilteam/scraper')
                                               //const search = args[0]
@@ -3447,7 +3447,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               break
                                               case '22ytmp4': case '22ytvideo': {  
                                               await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: m.key }})
-                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
                                               buf = await getBuffer(thub.YT_THUB)
                 
                                                   let { ytv } = require('./lib/y2mate')
@@ -5213,15 +5213,15 @@ case 'keluar': case 'leave': {
             break 
             case 'ping' : case 'ping2' : {
                 const start = new Date().getTime()
-await ElisaBotMd.sendText(m.chat, '*📡  ʀᴜɴɪɴɢ ʀᴇsᴘᴏɴᴅ...*')
+await niluBotMd.sendText(m.chat, '*📡  ʀᴜɴɪɴɢ ʀᴇsᴘᴏɴᴅ...*')
 const end = new Date().getTime()
-const poonn = await ElisaBotMd.sendText(m.chat, '*ᴘᴏɴɢ* ' + (end - start) + ' *_ᴍs_*' )
-await ElisaBotMd.sendMessage(from, { react: { text: `✅`, key: poonn.key }})
+const poonn = await niluBotMd.sendText(m.chat, '*ᴘᴏɴɢ* ' + (end - start) + ' *_ᴍs_*' )
+await niluBotMd.sendMessage(from, { react: { text: `✅`, key: poonn.key }})
 }
 break
 case 'botstetus' : case 'stetus' : {
 const start = new Date().getTime()
-await ElisaBotMd.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
+await niluBotMd.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
 const end = new Date().getTime()
 const ping = (end - start) + 'ms' 
 // const runtime = 
@@ -8225,12 +8225,12 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
                                                      {
                                                          "title": "▷ DOWNLOAD MENU ◁",
                                                          "description": Lang.DOWNLOAD_CMD ,
-                                                         "rowId": `${prefix}elisadownloadmenu`
+                                                         "rowId": `${prefix}niludownloadmenu`
                                                      },
                                                      {
                                                          "title": "▷ SEARCH MENU ◁",
                                                          "description": Lang.SEARCH_CMD ,
-                                                         "rowId": `${prefix}elisasearchmenu`
+                                                         "rowId": `${prefix}nilusearchmenu`
                                                      },
                                                          {
                                                              "title": "▷ FUN MENU ◁",
@@ -8240,17 +8240,17 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
                                                          {
                                                              "title": "▷ CONVERT MENU ◁",
                                                          "description": Lang.CONVERT_CMD ,
-                                                         "rowId": `${prefix}elisaconvertmenu`
+                                                         "rowId": `${prefix}niluconvertmenu`
                                                          },
                                                          {
                                                              "title": "▷ RANDOM ANIME MENU ◁",
                                                          "description": Lang.RANDOM_ANIME ,
-                                                         "rowId": `${prefix}elisaranimemenu`
+                                                         "rowId": `${prefix}niluranimemenu`
                                                          },
                                                          {
                                                          "title": "▷ MISC MENU ◁",
                                                          "description": Lang.MISC_CMD ,
-                                                         "rowId": `${prefix}elisanocategorymenu`
+                                                         "rowId": `${prefix}nilunocategorymenu`
                                                          },
                                                          {
                                                              "title": "▷ TEXT TO LOGO ◁",
@@ -8265,7 +8265,7 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
                                                          {
                                                              "title": "▷ VOICE MENU ◁",
                                                          "description": Lang.VOICE_CMD ,
-                                                         "rowId": `${prefix}elisavoicemenu`
+                                                         "rowId": `${prefix}niluvoicemenu`
                                                          }
                                                  ]
                                              },
@@ -8669,7 +8669,7 @@ case 'grpmenu': {
   footer = global.botnma
                    buttons = [
                       {buttonId: `list`, buttonText: {displayText: back}, type: 1},
-                      {buttonId: `elisadownloadmenu`, buttonText: {displayText: next}, type: 1}
+                      {buttonId: `niludownloadmenu`, buttonText: {displayText: next}, type: 1}
                       
                   ]
                   let buttonMessage = {
@@ -8701,7 +8701,7 @@ case 'grpmenu': {
                                                     },  {
                                                     quickReplyButton: {
                                                         displayText: `${next}` ,
-                                                        id: 'elisadownloadmenu'
+                                                        id: 'niludownloadmenu'
                                                         }
                                                 }]
                                             }
@@ -8712,7 +8712,7 @@ case 'grpmenu': {
   }
                     break
 
-                    case 'elisadownloadmenu': {  
+                    case 'niludownloadmenu': {  
   const start = new Date().getTime()
     await QueenNilu.sendMessage(from, { react: { text: `♥️`, key: m.key }})
     const end = new Date().getTime()
@@ -8834,7 +8834,7 @@ case 'grpmenu': {
         footer = global.botnma
                    buttons = [
                       {buttonId: `grpmenu`, buttonText: {displayText: back}, type: 1},
-                      {buttonId: `elisasearchmenu`, buttonText: {displayText: next}, type: 1}
+                      {buttonId: `nilusearchmenu`, buttonText: {displayText: next}, type: 1}
                       
                   ]
                   let buttonMessage = {
@@ -8862,7 +8862,7 @@ case 'grpmenu': {
                                                     },  {
                                                     quickReplyButton: {
                                                         displayText: `${next}` ,
-                                                        id: 'elisasearchmenu'
+                                                        id: 'nilusearchmenu'
                                                         }
                                                 }]
                                             }
@@ -8872,7 +8872,7 @@ case 'grpmenu': {
                                */
   }
                                 break 
-                                case 'elisasearchmenu': { 
+                                case 'nilusearchmenu': { 
   const start = new Date().getTime()
     await QueenNilu.sendMessage(from, { react: { text: `♥️`, key: m.key }})
     const end = new Date().getTime()
@@ -8932,7 +8932,7 @@ case 'grpmenu': {
                       
                       footer = global.botnma
                    buttons = [
-                      {buttonId: `elisadownloadmenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `niludownloadmenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `randommenu`, buttonText: {displayText: next}, type: 1}
                       
                   ]
@@ -8960,7 +8960,7 @@ case 'grpmenu': {
                                                 }, {
                                                     quickReplyButton: {
                                                         displayText: `${back}` ,
-                                                        id: 'elisadownloadmenu'
+                                                        id: 'niludownloadmenu'
                                                         }
                                                     },  {
                                                     quickReplyButton: {
@@ -9008,7 +9008,7 @@ case 'grpmenu': {
   
   footer = global.botnma
                    buttons = [
-                      {buttonId: `elisasearchmenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `nilusearchmenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `funmenu`, buttonText: {displayText: next}, type: 1}
                       
                   ]
@@ -9037,7 +9037,7 @@ case 'grpmenu': {
                                                 }, {
                                                     quickReplyButton: {
                                                         displayText: `${back}` ,
-                                                        id: 'elisasearchmenu'
+                                                        id: 'nilusearchmenu'
                                                         }
                                                     },  {
                                                     quickReplyButton: {
@@ -9092,7 +9092,7 @@ case 'grpmenu': {
                      footer = global.botnma
                    buttons = [
                       {buttonId: `randommenu`, buttonText: {displayText: back}, type: 1},
-                      {buttonId: `elisavoicemenu`, buttonText: {displayText: next}, type: 1}
+                      {buttonId: `niluvoicemenu`, buttonText: {displayText: next}, type: 1}
                       
                   ]
                   let buttonMessage = {
@@ -9124,7 +9124,7 @@ case 'grpmenu': {
                                                     },  {
                                                     quickReplyButton: {
                                                         displayText: `${next}` ,
-                                                        id: 'elisavoicemenu'
+                                                        id: 'niluvoicemenu'
                                                         }
                                                 }]
                                             }
@@ -9134,7 +9134,7 @@ case 'grpmenu': {
                                */
   }
                     break
-                    case 'elisavoicemenu': {  
+                    case 'niluvoicemenu': {  
   const start = new Date().getTime()
     await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
     const end = new Date().getTime()
@@ -9175,7 +9175,7 @@ case 'grpmenu': {
   footer = global.botnma
                    buttons = [
                       {buttonId: `funmenu`, buttonText: {displayText: back}, type: 1},
-                      {buttonId: `elisaconvertmenu`, buttonText: {displayText: next}, type: 1}
+                      {buttonId: `niluconvertmenu`, buttonText: {displayText: next}, type: 1}
                       
                   ]
                   let buttonMessage = {
@@ -9208,7 +9208,7 @@ case 'grpmenu': {
                                                     },  {
                                                     quickReplyButton: {
                                                         displayText: `${next}` ,
-                                                        id: 'elisaconvertmenu'
+                                                        id: 'niluconvertmenu'
                                                         }
                                                 }]
                                             }
@@ -9232,7 +9232,7 @@ case 'grpmenu': {
                                             hydratedTemplate: {
                                                 hydratedContentText: anu,
                                                 locationMessage: {
-                                                jpegThumbnail: fs.readFileSync('./image/Elisa.jpg')},
+                                                jpegThumbnail: fs.readFileSync('./image/nilu.jpg')},
                                                 hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
                                                 hydratedButtons: [{
                                                     urlButton: {
@@ -9290,7 +9290,7 @@ case 'grpmenu': {
                                             hydratedTemplate: {
                                                 hydratedContentText: anu,
                                                 locationMessage: {
-                                                jpegThumbnail: fs.readFileSync('./image/Elisa.jpg')},
+                                                jpegThumbnail: fs.readFileSync('./image/nilu.jpg')},
                                                 hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
                                                 hydratedButtons: [{
                                                     urlButton: {
@@ -9309,7 +9309,7 @@ case 'grpmenu': {
                                     QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
                                 }
                     break
-                    case 'elisaconvertmenu': {  
+                    case 'niluconvertmenu': {  
   const start = new Date().getTime()
     await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
     const end = new Date().getTime()
@@ -9373,8 +9373,8 @@ case 'grpmenu': {
   
       footer = global.botnma
                    buttons = [
-                      {buttonId: `elisavoicemenu`, buttonText: {displayText: back}, type: 1},
-                      {buttonId: `elisaranimemenu`, buttonText: {displayText: next}, type: 1}
+                      {buttonId: `niluvoicemenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `niluranimemenu`, buttonText: {displayText: next}, type: 1}
                       
                   ]
                   let buttonMessage = {
@@ -9401,12 +9401,12 @@ case 'grpmenu': {
                                                 }, {
                                                     quickReplyButton: {
                                                         displayText: `${back}` ,
-                                                        id: 'elisavoicemenu'
+                                                        id: 'niluvoicemenu'
                                                         }
                                                     },  {
                                                     quickReplyButton: {
                                                         displayText: `${next}` ,
-                                                        id: 'elisaranimemenu'
+                                                        id: 'niluranimemenu'
                                                         }
                                                 }]
                                             }
@@ -9416,7 +9416,7 @@ case 'grpmenu': {
                                */
   }
                     break
-                    case 'elisaranimemenu': {  
+                    case 'niluranimemenu': {  
   const start = new Date().getTime()
     await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
     const end = new Date().getTime()
@@ -9494,8 +9494,8 @@ case 'grpmenu': {
   
   footer = global.botnma
                    buttons = [
-                      {buttonId: `elisaconvertmenu`, buttonText: {displayText: back}, type: 1},
-                      {buttonId: `elisanocategorymenu`, buttonText: {displayText: next}, type: 1}
+                      {buttonId: `niluconvertmenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `nilunocategorymenu`, buttonText: {displayText: next}, type: 1}
                       
                   ]
                   let buttonMessage = {
@@ -9522,12 +9522,12 @@ case 'grpmenu': {
                                                 }, {
                                                     quickReplyButton: {
                                                         displayText: `${back}` ,
-                                                        id: 'elisaconvertmenu'
+                                                        id: 'niluconvertmenu'
                                                         }
                                                     },  {
                                                     quickReplyButton: {
                                                         displayText: `${next}` ,
-                                                        id: 'elisanocategorymenu'
+                                                        id: 'nilunocategorymenu'
                                                         }
                                                 }]
                                             }
@@ -9537,7 +9537,7 @@ case 'grpmenu': {
                                */
   }
                     break
-                    case 'elisanocategorymenu': {  
+                    case 'nilunocategorymenu': {  
   const start = new Date().getTime()
     await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
     const end = new Date().getTime()
@@ -9613,7 +9613,7 @@ case 'grpmenu': {
   `
                       footer = global.botnma
                    buttons = [
-                      {buttonId: `elisaranimemenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `niluranimemenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `textlogo`, buttonText: {displayText: next}, type: 1}
                       
                   ]
@@ -9641,12 +9641,12 @@ case 'grpmenu': {
                                                 }, {
                                                     quickReplyButton: {
                                                         displayText: `${back}` ,
-                                                        id: 'elisaranimemenu'
+                                                        id: 'niluranimemenu'
                                                         }
                                                     },  {
                                                     quickReplyButton: {
                                                         displayText: `${next}` ,
-                                                        id: 'elisadatabasemenu'
+                                                        id: 'niludatabasemenu'
                                                         }
                                                 }]
                                             }
@@ -9696,7 +9696,7 @@ case 'grpmenu': {
   
   footer = global.botnma
                    buttons = [
-                      {buttonId: `elisanocategorymenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `nilunocategorymenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `logomenu`, buttonText: {displayText: next}, type: 1}
                       
                   ]
@@ -9724,12 +9724,12 @@ case 'grpmenu': {
                                                 }, {
                                                     quickReplyButton: {
                                                         displayText: `${back}` ,
-                                                        id: 'elisanocategorymenu'
+                                                        id: 'nilunocategorymenu'
                                                         }
                                                     },  {
                                                     quickReplyButton: {
                                                         displayText: `${next}` ,
-                                                        id: 'elisaanonymouschatmenu'
+                                                        id: 'niluanonymouschatmenu'
                                                         }
                                                 }]
                                             }
@@ -9739,7 +9739,7 @@ case 'grpmenu': {
                                 */
   }
                     break
-                    case 'elisaanonymouschatmenu': {
+                    case 'niluanonymouschatmenu': {
   next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
                         anu = `
@@ -9750,7 +9750,7 @@ case 'grpmenu': {
                         `
                         footer = global.botnma
                    buttons = [
-                      {buttonId: `elisadatabasemenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `niludatabasemenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `logomenu`, buttonText: {displayText: next}, type: 1}
                       
                   ]
@@ -9807,8 +9807,8 @@ case 'grpmenu': {
   
   footer = global.botnma
                    buttons = [
-                      {buttonId: `elisanocategorymenu`, buttonText: {displayText: back}, type: 1},
-                      {buttonId: `elisasistemmenu`, buttonText: {displayText: next}, type: 1}
+                      {buttonId: `nilunocategorymenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `nilusistemmenu`, buttonText: {displayText: next}, type: 1}
                       
                   ]
                   let buttonMessage = {
@@ -9835,7 +9835,7 @@ case 'grpmenu': {
                                                 }, {
                                                     quickReplyButton: {
                                                         displayText: `${back}` ,
-                                                        id: 'elisadatabasemenu'
+                                                        id: 'niludatabasemenu'
                                                         }
                                                     },  {
                                                     quickReplyButton: {
@@ -9850,7 +9850,7 @@ case 'grpmenu': {
                               */
                                 }
                     break
-                    case 'elisasistemmenu': {
+                    case 'nilusistemmenu': {
   const start = new Date().getTime()
     await QueenNilu.sendMessage(from, { react: { text: `♥️`, key: m.key }})
     const end = new Date().getTime()
@@ -9888,7 +9888,7 @@ case 'grpmenu': {
                                             hydratedTemplate: {
                                                 hydratedContentText: anu,
                                                 locationMessage: {
-                                                jpegThumbnail: fs.readFileSync('./image/Elisa.jpg')},
+                                                jpegThumbnail: fs.readFileSync('./image/nilu.jpg')},
                                                 hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
                                                 hydratedButtons: [{
                                                     urlButton: {
@@ -9966,7 +9966,7 @@ case 'grpmenu': {
      
      footer = global.botnma
                    buttons = [
-                      {buttonId: `elisasistemmenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `nilusistemmenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `about `, buttonText: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ'}, type: 1}
                       
                   ]
