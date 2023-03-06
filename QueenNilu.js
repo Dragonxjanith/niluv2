@@ -8210,7 +8210,7 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
             case 'command':case 'listmenu': case 'list': case 'panel':{
 	const sections =[{
 
-        "title": "ʙᴏᴛ ʟɪsᴛ ᴍᴇɴᴜ ᴄʟɪᴄᴋ ᴀɴᴅ sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴏᴡɴ",
+        "title": "● ʙᴏᴛ ʟɪsᴛ ᴍᴇɴᴜ ᴄʟɪᴄᴋ ᴀɴᴅ sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴏᴡɴ ●",
                                                  "rows": [
                                                      {
                                                          "title": "👥 ɢʀᴏᴜᴘ ᴄᴏᴍᴍᴀɴᴅꜱ",
@@ -8223,47 +8223,47 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
                                                  "title": `${global.botname} ● Qᴜᴇᴇɴ ɴɪʟᴜ ᴍᴇɴᴜ ● `,
                                                  "rows": [
                                                      {
-                                                         "title": "▷ DOWNLOAD MENU ◁",
+                                                         "title": "📥 ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏᴍᴍᴀɴᴅꜱ",
                                                          "description": Lang.DOWNLOAD_CMD ,
                                                          "rowId": `${prefix}niludownloadmenu`
                                                      },
                                                      {
-                                                         "title": "▷ SEARCH MENU ◁",
+                                                         "title": "🔍 ꜱᴇᴀʀᴄʜ ᴄᴏᴍᴍᴀɴᴅꜱ",
                                                          "description": Lang.SEARCH_CMD ,
                                                          "rowId": `${prefix}nilusearchmenu`
                                                      },
                                                          {
-                                                             "title": "▷ FUN MENU ◁",
+                                                             "title": "🤹‍♂️ ꜰᴜɴ ᴄᴏᴍᴍᴀɴᴅꜱ",
                                                          "description": Lang.FUN_CMD ,
                                                          "rowId": `${prefix}funmenu`
                                                          },
                                                          {
-                                                             "title": "▷ CONVERT MENU ◁",
+                                                             "title": "💱 ᴄᴏɴᴠᴇʀᴛ ᴄᴏᴍᴍᴀɴᴅꜱ",
                                                          "description": Lang.CONVERT_CMD ,
                                                          "rowId": `${prefix}niluconvertmenu`
                                                          },
                                                          {
-                                                             "title": "▷ RANDOM ANIME MENU ◁",
+                                                             "title": "💍 ᴀɴɪᴍᴇ ᴄᴏᴍᴍᴍᴀɴᴅꜱ",
                                                          "description": Lang.RANDOM_ANIME ,
                                                          "rowId": `${prefix}niluranimemenu`
                                                          },
                                                          {
-                                                         "title": "▷ MISC MENU ◁",
+                                                         "title": "🍻 ᴍɪꜱᴄ ᴍᴇɴᴜ",
                                                          "description": Lang.MISC_CMD ,
                                                          "rowId": `${prefix}nilunocategorymenu`
                                                          },
                                                          {
-                                                             "title": "▷ TEXT TO LOGO ◁",
+                                                             "title": "🔤 ᴛᴇxᴛ ᴛᴏ ʟᴏɢᴏ ᴄᴏᴍᴍᴀɴᴅꜱ",
                                                          "description": Lang.LOGO_CMD ,
                                                          "rowId": `${prefix}textlogo`
                                                          },
                                                          {
-                                                             "title": "▷ LOGO PACK MENU ◁",
+                                                             "title": "💟 ʟᴏɢᴏ  ᴄᴏᴍᴍᴀɴᴅꜱ",
                                                          "description": Lang.LOGO_CMD ,
                                                          "rowId": `${prefix}logomenu`
                                                          },
                                                          {
-                                                             "title": "▷ VOICE MENU ◁",
+                                                             "title": "🎤 ᴠᴏɪᴄᴇ ᴄᴏᴍᴍᴀɴᴅꜱ",
                                                          "description": Lang.VOICE_CMD ,
                                                          "rowId": `${prefix}niluvoicemenu`
                                                          }
@@ -8273,17 +8273,17 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
                                                  "title": "● ᴏᴡɴᴇʀ ᴢᴏɴᴇ ●",
                                                  "rows": [
                                                      {
-                                                         "title": "🗣️ 𝚘𝚠𝚗𝚎𝚛 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜",
+                                                         "title": "🗣️ ᴏᴡɴᴇʀ ᴄᴏᴍᴍᴀɴᴅꜱ",
                                                          "description": Lang.OWNER_CMD ,
                                                          "rowId": `${prefix}ownermenu`
                                                      }
                                                  ]
                                              },
                                              {
-                                                 "title": "▷ CREDITS BOT ◁",
+                                                 "title": "● Qᴜᴇᴇɴ ɴɪʟᴜ ʙᴏᴛ ᴍᴅ ᴠ2 ●",
                                                  "rows": [
                                                      {
-                                                         "title": "▷ ABOUT ◁",
+                                                         "title": "💃 ᴀʙᴏᴜᴛ  Qᴜᴇᴇɴ ɴɪʟᴜ",
                                                          "description": Lang.ABOUT_CMD ,
                                                          "rowId": `${prefix}about`
                                                      }
