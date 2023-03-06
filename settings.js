@@ -2,7 +2,17 @@
 const fs = require('fs')
 const chalk = require('chalk')
 
-//lng
+/*
+⚙️ BOT SETTINGS  ⚙️
+*/
+
+//Owner Number & Name 
+global.owner = ['94767438882'] //ur owner number
+global.ownername = "Janith sadanuwan" //ur owner name
+
+
+
+
 global.LANG = 'EN'
 
 
@@ -28,8 +38,7 @@ global.location = "colombo, India, Aizawl" //ur location
 global.TIME_ZONE = 'Asia/Colombo'
 global.alivelogo = process.env.ALIVE_LOGO || `https://te.legra.ph/file/a9293226a7c660ecbfffb.jpg`
 
-global.ownernomer = "94767438882" //ur number
-global.premium = ['94767438882'] //ur premium number
+
 global.botname = 'Qᴜᴇᴇɴ ɴɪʟᴜ ꜱᴛᴀʙʟᴇ' //ur bot name
 global.linkz = "https://chat.whatsapp.com/" //your theme url which will be displayed on whatsapp
 global.websitex = "https://youtu.be/c/janithsadanuwan" //ur website to be displayed
