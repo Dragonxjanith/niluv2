@@ -34,7 +34,7 @@ const textpro = require('./lib/textpro')
 const { fetchBuffer } = require("./lib/myfunc2")
 const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom, getGroupAdmins } = require('./lib/myfunc')
 const ini_mark = `0@s.whatsapp.net`
-const ownernya = ownernomer + '@s.whatsapp.net'
+const ownernya = owner + '@s.whatsapp.net'
 const Language = require('./language')
 const Lang = Language.getString('elisabot')
 const TIME_ZONE = global.TIME_ZONE
@@ -1964,7 +1964,7 @@ break
             break
             case 'report': case 'bug': {
             	if (!text) throw `Example : ${prefix + command} Report an error feature`
-               let ownernya = ownernomer + '@s.whatsapp.net'
+               let ownernya = owner + '@s.whatsapp.net'
                let me = m.sender
                let pjtxt = `Message From : @${me.split('@')[0]} \nFor : @${ownernya.split('@')[0]}\n\n${text}`
                let ments = [ownernya, me]
@@ -5304,7 +5304,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             
 case 'req': case 'request': {
             	if (!text) throw `Example : ${prefix + command} Fitur Min`
-               let ownernya = ownernomer + '@s.whatsapp.net'
+               let ownernya = owner + '@s.whatsapp.net'
                let me = m.sender
                let pjtxt = `Message From : @${me.split('@')[0]} \nFor : @${ownernya.split('@')[0]}\n\n${command} ${text}`
                let ments = [ownernya, me]
@@ -5316,7 +5316,7 @@ case 'req': case 'request': {
             break
 case 'report': case 'bug': {
             	if (!text) throw `Example : ${prefix + command} Report an error feature`
-               let ownernya = ownernomer + '@s.whatsapp.net'
+               let ownernya = owner + '@s.whatsapp.net'
                let me = m.sender
                let pjtxt = `Message From : @${me.split('@')[0]} \nFor : @${ownernya.split('@')[0]}\n\n${text}`
                let ments = [ownernya, me]
@@ -8410,7 +8410,7 @@ case 'menu': {
   ${biography}
   
   ➮ 𝙱𝙾𝚃 𝙽𝙰𝙼𝙴 - ${global.botname}
-  ➮ 𝙱𝙾𝚃 𝙾𝚆𝙽𝙴𝚁 - 
+  ➮ 𝙱𝙾𝚃 𝙾𝚆𝙽𝙴𝚁 -  ${global.ownername}
   ➮ 𝙽𝚄𝙼𝙱𝙴𝚁 - ${global.owner}
   ➮ 𝚁𝙴𝚂𝙿𝙾𝙽𝙳 𝚂𝙿𝙴𝙴𝙳 - ${(end - start)} Ms
   ➮ 𝚁𝙰𝙼 𝚄𝚂𝙰𝙶𝙴 - ${ram0}

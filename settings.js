@@ -20,7 +20,7 @@ global.doc6 = 'application/vnd.android.package-archive'
 //👇 Menu imoji 
 global.MENU_IMOJI = '👸|ℹ️'
 global.owner = ['916909137213'] //ur owner number
-global.ownername = "🦄Dream Guy Xeon" //ur owner name
+global.ownername = "Janith sadanuwan" //ur owner name
 global.ytname = "YT: janithsadanuwan" //ur yt chanel name
 global.socialm = "GitHub: janithsadanuwan" //ur github or insta name
 global.location = "colombo, India, Aizawl" //ur location
