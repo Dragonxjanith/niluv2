@@ -8596,7 +8596,7 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
 //----------------------------------------------------------LIST MENU --------------------------------------------
 
             case 'command':case 'listmenu': case 'list': case 'panel':{
-await ElisaBotMd.sendMessage(from, { react: { text: `🗒️`, key: m.key }})
+await QueenNilu.sendMessage(from, { react: { text: `🗒️`, key: m.key }})
 	const sections =[{
 
         "title": "● ʙᴏᴛ ʟɪsᴛ ᴍᴇɴᴜ ᴄʟɪᴄᴋ ᴀɴᴅ sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴏᴡɴ ●",
