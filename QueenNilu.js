@@ -1069,7 +1069,7 @@ case 'apk':{
                 const buttonMessage = {
                         image: { url: janiya.hasil[0].icon },
                         caption: caption,
-                        footer: global.botnma,
+                        footer: global.botname,
                         buttons: buttons,
                         headerType: 4
                     }
@@ -1118,7 +1118,7 @@ case 'apk':{
           m.chat, 
           {
            text: `${m.pushName} This is matching apk\n\n➮ ʀᴇǫᴜᴇsᴛ ${text}`,
-           footer: `${global.botnma}`,
+           footer: `${global.botname}`,
            title: "*💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴀᴘᴋ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 💃*",
            buttonText: "DOWNLOAD MOD APK",
            sections
@@ -1394,7 +1394,7 @@ Cieeee, What's Going On❤️💖👀`
          const templateMessage = {
              image: {url: news.img },
              caption: '     ⫷ 💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ⫸\n\n'+cap,
-             footer: global.botnma,
+             footer: global.botname,
              templateButtons: templateButtons,
              headerType: 4
          }
@@ -1428,7 +1428,7 @@ Cieeee, What's Going On❤️💖👀`
          const templateMessage = {
              image: {url: img },
              caption: '     ⫷ 💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ⫸\n\n'+cap,
-             footer: global.botnma+'\n ᴛʜᴀɴᴋs ᴛᴏ sɪsᴜʟʏᴀ',
+             footer: global.botname+'\n ᴛʜᴀɴᴋs ᴛᴏ sɪsᴜʟʏᴀ',
              templateButtons: templateButtons,
              headerType: 4
          }
@@ -1497,7 +1497,7 @@ Cieeee, What's Going On❤️💖👀`
                m.chat, 
                {
                 text: NEWSSS,
-                footer: global.botnma+'\n get on helakuru.com' ,
+                footer: global.botname+'\n get on helakuru.com' ,
                 title: "*⫷  💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ⫸*",
                 buttonText: "GET NEWS",
                 sections
@@ -1532,7 +1532,7 @@ Cieeee, What's Going On❤️💖👀`
          const templateMessage = {
              image: {url: img },
              caption: '     ⫷ 👸 *𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙽𝙴𝚆𝚂* 👸 ⫸\n\n'+cap,
-             footer: `${global.botnma}` ,
+             footer: `${global.botname}` ,
              templateButtons: templateButtons,
              headerType: 4
          }
@@ -2350,7 +2350,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                  ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - ${search.all[1].ago}
                 
                  ➥ ᴜʀʟ - ${search.all[1].url}` ,
-                                    footer: global.botnma,
+                                    footer: global.botname,
                                     buttons: buttons,
                                     headerType: 4
                                 }
@@ -2378,7 +2378,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                  ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - ${search.all[0].ago}
                 
                  ➥ ᴜʀʟ - ${search.all[0].url}` ,
-                                    footer: global.botnma,
+                                    footer: global.botname,
                                     buttons: buttons,
                                     headerType: 4
                                 }
@@ -2427,7 +2427,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 
                 const listMessage = {
                   text: ngen,
-                  footer: global.botnma,
+                  footer: global.botname,
                   buttonText: "ＳＥＬＥＣＴ ＶＩＤＥＯ",
                   sections
                 }
@@ -2458,7 +2458,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   if(search.all.length < 1) throw Lang.NOT_FOUND 
                                                      
                                               
-                                const footer = global.botnma
+                                const footer = global.botname
                                 const buttons = [
                                     {buttonId: `${docidd} ${search.all[0].url}`, buttonText: {displayText: '📁 DOCUMENT 📁'}, type: 1},
                                     {buttonId: `${audidd}  ${search.all[0].url}`, buttonText: {displayText: '🎧 AUDIO 🎧'}, type: 1}
@@ -2528,7 +2528,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                  ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - ${search.all[1].ago}
                 
                  ➥ ᴜʀʟ - ${search.all[1].url}` ,
-                                    footer: global.botnma,
+                                    footer: global.botname,
                                     buttons: buttons,
                                     headerType: 4
                                 }
@@ -2561,7 +2561,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                  ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - ${search.all[0].ago}
                 
                  ➥ ᴜʀʟ - ${search.all[0].url}` ,
-                                    footer: global.botnma,
+                                    footer: global.botname,
                                     buttons: buttons,
                                     headerType: 4
                                 }
@@ -2754,7 +2754,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                       m.chat, 
                       {
                        text: `${text} *Here is the list of videos, click the button below to choose*\n\n${m.pushName}`,
-                       footer: `${global.botnma}`,
+                       footer: `${global.botname}`,
                        title: `*👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*\n\n Search from ${text}`,
                        buttonText: "ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ",
                        sections
@@ -2772,7 +2772,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   //const load = await QueenNilu.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
                                                   //yts(text).then(async (search) => {  
                    //buf = await getBuffer(thub.SF_THUB)
-                  // const download = await QueenNilu.sendText(m.chat, ` *Please Wait ${global.botnma} Prosesing Your  ${m.pushName} Video ... 🔄*`)
+                  // const download = await QueenNilu.sendText(m.chat, ` *Please Wait ${global.botname} Prosesing Your  ${m.pushName} Video ... 🔄*`)
                 
                                 let bicil = require('@bochilteam/scraper')
                 
@@ -2802,7 +2802,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                       m.chat, 
                       {
                        text: `${text} *Here is the list of videos, click the button below to choose*\n\n${m.pushName}`,
-                       footer: `${global.botnma}`,
+                       footer: `${global.botname}`,
                        title: `*👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 👸*\n\n Search from ${text}`,
                        buttonText: "ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ",
                        sections
@@ -3075,7 +3075,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 ◯ ʀᴇǫᴜsᴛᴇʀ : ${m.pushName}
                 │
                 ╰────────────◯`,
-                    footer: global.botnma,
+                    footer: global.botname,
                     buttons: buttons,
                     headerType: 4
                 }
@@ -3472,7 +3472,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 
                                                   const templateMessage = {
                                                   text: msg,
-                                                  footer: global.botnma,
+                                                  footer: global.botname,
                                                   templateButtons: templateButtons
                                                   }
                 
@@ -3525,7 +3525,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 
                                                   const templateMessage = {
                                                   text: msg,
-                                                  footer: global.botnma,
+                                                  footer: global.botname,
                                                   templateButtons: templateButtons
                                                   }
                 
@@ -3564,7 +3564,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 
                                                   const templateMessage = {
                                                   text: msg,
-                                                  footer: global.botnma,
+                                                  footer: global.botname,
                                                   templateButtons: templateButtons
                                                   }
                 
@@ -3599,7 +3599,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 
                                                   const templateMessage = {
                                                   text: msg,
-                                                  footer: global.botnma,
+                                                  footer: global.botname,
                                                   templateButtons: templateButtons
                                                   }
                 
@@ -8158,7 +8158,7 @@ ${runtime(process.uptime())}
 
 ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
 `,
-       footer: global.botnma,
+       footer: global.botname,
        buttons: buttons,
        headerType: 4
    }
@@ -8193,7 +8193,7 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
  
 💗 THANKS FOR USING QUEEN NILU 💗
  `,
- footer: global.botnma,
+ footer: global.botname,
  templateButtons: templateButtons,
  image: { url: global.alivelogo }
  }
@@ -8213,14 +8213,14 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
         "title": "ʙᴏᴛ ʟɪsᴛ ᴍᴇɴᴜ ᴄʟɪᴄᴋ ᴀɴᴅ sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴏᴡɴ",
                                                  "rows": [
                                                      {
-                                                         "title": "▷ GROUP MENU ◁",
+                                                         "title": "👥 ɢʀᴏᴜᴘ ᴄᴏᴍᴍᴀɴᴅꜱ",
                                                          "description": Lang.GROUP_CMD_DESC ,
                                                          "rowId": `${prefix}grpmenu`
                                                      }
                                                  ]
                                              },
                                              {
-                                                 "title": `${global.botnma} *ᗰᗴᑎᑌ* `,
+                                                 "title": `${global.botname} ● Qᴜᴇᴇɴ ɴɪʟᴜ ᴍᴇɴᴜ ● `,
                                                  "rows": [
                                                      {
                                                          "title": "▷ DOWNLOAD MENU ◁",
@@ -8563,7 +8563,7 @@ case 'menu': {
   let buttonMessage = {
                       image: { url: result },
                       caption: MENUMSG ,
-                      footer: global.botnma,
+                      footer: global.botname,
                       buttons: templateButtons,
                       headerType: 4
                   }
@@ -8666,7 +8666,7 @@ case 'grpmenu': {
   next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
   
-  footer = global.botnma
+  footer = global.botname
                    buttons = [
                       {buttonId: `list`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `niludownloadmenu`, buttonText: {displayText: next}, type: 1}
@@ -8687,7 +8687,7 @@ case 'grpmenu': {
                                             hydratedTemplate: {
                                                 imageMessage: message.imageMessage,
                                                 hydratedContentText: anu ,
-                                                hydratedFooterText: global.botnma ,
+                                                hydratedFooterText: global.botname ,
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
@@ -8831,7 +8831,7 @@ case 'grpmenu': {
   next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
   
-        footer = global.botnma
+        footer = global.botname
                    buttons = [
                       {buttonId: `grpmenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `nilusearchmenu`, buttonText: {displayText: next}, type: 1}
@@ -8852,7 +8852,7 @@ case 'grpmenu': {
                                             hydratedTemplate: {
                                                 imageMessage: message.imageMessage,
                                                 hydratedContentText: anu ,
-                                                hydratedFooterText: global.botnma ,
+                                                hydratedFooterText: global.botname ,
                                                 hydratedButtons: [{
                                                 
                                                     quickReplyButton: {
@@ -8930,7 +8930,7 @@ case 'grpmenu': {
    next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
                       
-                      footer = global.botnma
+                      footer = global.botname
                    buttons = [
                       {buttonId: `niludownloadmenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `randommenu`, buttonText: {displayText: next}, type: 1}
@@ -8951,7 +8951,7 @@ case 'grpmenu': {
                                             hydratedTemplate: {
                                                 imageMessage: message.imageMessage,
                                                 hydratedContentText: anu ,
-                                                hydratedFooterText: global.botnma ,
+                                                hydratedFooterText: global.botname ,
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
@@ -9006,7 +9006,7 @@ case 'grpmenu': {
   next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
   
-  footer = global.botnma
+  footer = global.botname
                    buttons = [
                       {buttonId: `nilusearchmenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `funmenu`, buttonText: {displayText: next}, type: 1}
@@ -9028,7 +9028,7 @@ case 'grpmenu': {
                                             hydratedTemplate: {
                                                 imageMessage: message.imageMessage,
                                                 hydratedContentText: anu ,
-                                                hydratedFooterText: global.botnma ,
+                                                hydratedFooterText: global.botname ,
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
@@ -9089,7 +9089,7 @@ case 'grpmenu': {
   next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
                      
-                     footer = global.botnma
+                     footer = global.botname
                    buttons = [
                       {buttonId: `randommenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `niluvoicemenu`, buttonText: {displayText: next}, type: 1}
@@ -9110,7 +9110,7 @@ case 'grpmenu': {
                                             hydratedTemplate: {
                                                 imageMessage: message.imageMessage,
                                                 hydratedContentText: anu ,
-                                                hydratedFooterText: global.botnma ,
+                                                hydratedFooterText: global.botname ,
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
@@ -9172,7 +9172,7 @@ case 'grpmenu': {
                     next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
   
-  footer = global.botnma
+  footer = global.botname
                    buttons = [
                       {buttonId: `funmenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `niluconvertmenu`, buttonText: {displayText: next}, type: 1}
@@ -9194,7 +9194,7 @@ case 'grpmenu': {
                                             hydratedTemplate: {
                                                 imageMessage: message.imageMessage,
                                                 hydratedContentText: anu ,
-                                                hydratedFooterText: global.botnma ,
+                                                hydratedFooterText: global.botname ,
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
@@ -9371,7 +9371,7 @@ case 'grpmenu': {
                       next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
   
-      footer = global.botnma
+      footer = global.botname
                    buttons = [
                       {buttonId: `niluvoicemenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `niluranimemenu`, buttonText: {displayText: next}, type: 1}
@@ -9392,7 +9392,7 @@ case 'grpmenu': {
                                             hydratedTemplate: {
                                                 imageMessage: message.imageMessage,
                                                 hydratedContentText: anu ,
-                                                hydratedFooterText: global.botnma ,
+                                                hydratedFooterText: global.botname ,
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
@@ -9492,7 +9492,7 @@ case 'grpmenu': {
   *──────────◯*
   `
   
-  footer = global.botnma
+  footer = global.botname
                    buttons = [
                       {buttonId: `niluconvertmenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `nilunocategorymenu`, buttonText: {displayText: next}, type: 1}
@@ -9513,7 +9513,7 @@ case 'grpmenu': {
                                             hydratedTemplate: {
                                                 imageMessage: message.imageMessage,
                                                 hydratedContentText: anu ,
-                                                hydratedFooterText: global.botnma ,
+                                                hydratedFooterText: global.botname ,
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
@@ -9611,7 +9611,7 @@ case 'grpmenu': {
       
   *──────────◯*
   `
-                      footer = global.botnma
+                      footer = global.botname
                    buttons = [
                       {buttonId: `niluranimemenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `textlogo`, buttonText: {displayText: next}, type: 1}
@@ -9632,7 +9632,7 @@ case 'grpmenu': {
                                             hydratedTemplate: {
                                                 imageMessage: message.imageMessage,
                                                 hydratedContentText: anu ,
-                                                hydratedFooterText: global.botnma ,
+                                                hydratedFooterText: global.botname ,
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
@@ -9694,7 +9694,7 @@ case 'grpmenu': {
   next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
   
-  footer = global.botnma
+  footer = global.botname
                    buttons = [
                       {buttonId: `nilunocategorymenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `logomenu`, buttonText: {displayText: next}, type: 1}
@@ -9715,7 +9715,7 @@ case 'grpmenu': {
                                             hydratedTemplate: {
                                                 imageMessage: message.imageMessage,
                                                 hydratedContentText: anu ,
-                                                hydratedFooterText: global.botnma ,
+                                                hydratedFooterText: global.botname ,
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
@@ -9748,7 +9748,7 @@ case 'grpmenu': {
   👤 ${prefix}next
   👤 ${prefix}stop
                         `
-                        footer = global.botnma
+                        footer = global.botname
                    buttons = [
                       {buttonId: `niludatabasemenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `logomenu`, buttonText: {displayText: next}, type: 1}
@@ -9805,7 +9805,7 @@ case 'grpmenu': {
   next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
   
-  footer = global.botnma
+  footer = global.botname
                    buttons = [
                       {buttonId: `nilunocategorymenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `nilusistemmenu`, buttonText: {displayText: next}, type: 1}
@@ -9826,7 +9826,7 @@ case 'grpmenu': {
                                             hydratedTemplate: {
                                                 imageMessage: message.imageMessage,
                                                 hydratedContentText: anu ,
-                                                hydratedFooterText: global.botnma ,
+                                                hydratedFooterText: global.botname ,
                                                 hydratedButtons: [{
                                                     urlButton: {
                                                         displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
@@ -9868,7 +9868,7 @@ case 'grpmenu': {
   
   *──────────◯*
   `
-                    footer = global.botnma
+                    footer = global.botname
                    buttons = [
                       {buttonId: `logomenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `ownermenu`, buttonText: {displayText: next}, type: 1}
@@ -9964,7 +9964,7 @@ case 'grpmenu': {
                         next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
      
-     footer = global.botnma
+     footer = global.botname
                    buttons = [
                       {buttonId: `nilusistemmenu`, buttonText: {displayText: back}, type: 1},
                       {buttonId: `about `, buttonText: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ'}, type: 1}
