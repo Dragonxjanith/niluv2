@@ -8315,11 +8315,6 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
                                                          "title": "▷ ABOUT ◁",
                                                          "description": Lang.ABOUT_CMD ,
                                                          "rowId": `${prefix}about`
-                                                     },
-                                                     {
-                                                         "title": "▷ HELPERS ◁",
-                                                         "description": Lang.ABOUT_CMD ,
-                                                        "rowId": `${prefix}helpers`
                                                      }
                                                    ]
                            }
@@ -8621,925 +8616,1400 @@ case 'botstetus' : case 'stetus' : {
     m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ Run Time :* ```'+runtime(process.uptime())+'``` \n*📶 Ram Usage :*``` '+ramusage+'```\n')
     }
     break
+////////////////////////////////--------------------menu start
 
-      case 'ownermenu':{
-	   var unicorn = await getBuffer(picak+'Owner Menu')
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ OWNER 	
-╠ ${prefix}self
-╠ ${prefix}public
-╠ ${prefix}join [link]
-╠ ${prefix}leavegc
-╠ ${prefix}setbio
-╠ ${prefix}hijack
-╠ ${prefix}creategroup [name]
-╠ ${prefix}block [user]
-╠ ${prefix}unblock [user]
-╠ ${prefix}broadcast [text]
-╠ ${prefix}setppbot [image]
-╠ ${prefix}setthumb [reply img]
-╠ ${prefix}setexif
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-            case 'groupmenu':{
-var unicorn = await getBuffer(picak+'Group Menu')
+case 'grpmenu': {  
+    const start = new Date().getTime()
+    await QueenNilu.sendMessage(from, { react: { text: `♥️`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + ' *_ᴍs_*' 
+    const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+  
+                            await QueenNilu.sendMessage(from, { react: { text: `📜`, key: m.key }})
+  
+  var GRPDES = ''
+  if (global.LANG == 'EN') GRPDES = '```Get Group link```'
+  if (global.LANG == 'SI') GRPDES = '```ඔබ සිටින සමූහයේ ලින්කුව ගැනීමට```'
+  var GRPPP = ''
+  if (global.LANG == 'EN') GRPPP = '```Change Group Profile photo [ reply photo ]```'
+  if (global.LANG == 'SI') GRPPP = '```සමූහයේ ප්‍රොෆයිල් චායාරූපය වෙනස් කරයි [ ජායාරූපයකට රිප්ලයි ලබාදෙන්න ]```'
+  var SETNAME = ''
+  if (global.LANG == 'EN') SETNAME = '```Change Group Name```'
+  if (global.LANG == 'SI') SETNAME = '```සමූහයේ නම වෙනස් කරයි```'
+  var GROUDES = ''
+  if (global.LANG == 'EN') GROUDES = '```Change send massage type (only admin/allparticipate)```'
+  if (global.LANG == 'SI') GROUDES = '```සමූහයේ මැස්ස්සේජ් යවන ආකාරය වෙනස් කරයි ( ඇඩ්මින්ලට පමණක් / සියලු දෙනාට )```'
+  var EDITINFO = ''
+  if (global.LANG == 'EN') EDITINFO = '```Change Group Edit info```'
+  if (global.LANG == 'SI') EDITINFO = '```සමූහයේ එඩිට් ඉන්ෆො වෙනස් කරයි```'
+  var GRPINFO = ''
+  if (global.LANG == 'EN') GRPINFO ='```Send Group details```'
+  if (global.LANG == 'SI') GRPINFO = '```සමූහයේ තොරතුරු ලබාගැනීමට```'
+  var ADDDES =''
+  if (global.LANG == 'EN') ADDDES = '```Add new member```'
+  if (global.LANG == 'SI') ADDDES = '```සමූහයට අයෙකු එකතු කිරීමට```'
+  var KICKDES = ''
+  if (global.LANG == 'EN') KICKDES = '```Remove member from group```'
+  if (global.LANG == 'SI') KICKDES = '```සමූහයේ අයෙකු ඉවත් කිරීමට```'
+  var PROMOTEDES = ''
+  if (global.LANG == 'EN') PROMOTEDES = '```give admin on group```'
+  if (global.LANG == 'SI') PROMOTEDES = '```සමූහයේ ඇඩ්මින් තනතුර ලබාදීම```'
+  var DEMOTEDES = ''
+  if (global.LANG == 'EN') DEMOTEDES = '```Demote From group admin```'
+  if (global.LANG == 'SI') DEMOTEDES = '```ගෲප් එකේ ඇඩ්මින් වරයෙකුගේ ඇඩ්මින් ඉවත්කිරීමට```'
+  var DELX = ''
+  if (global.LANG == 'EN') DELX = '```Delete massage for everyone```'
+  if (global.LANG == 'SI') DELX = '```පනිවිඩයක් සියලු දෙනාගෙන් මකාදැමීමට [ delete for everyone ]```'
+  
+  prefix = '.'
+  
+                                  anu = `
+  *◯───────[ GROUP MENU ]───────◯*
+  
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+  ╰⛒  *ᴛɪᴍᴇ* ${time}
+  
+  ${M_E} *${prefix}grouplink* 
+     ${D_E} ${GRPDES}
+  ${M_E} *${prefix}setgrouppp* 
+     ${D_E} ${GRPPP}
+  ${M_E} *${prefix}setname* 
+     ${D_E} ${SETNAME}
+  ${M_E} *${prefix}group* 
+     ${D_E} ${GROUDES}
+  ${M_E} *${prefix}editinfo* 
+     ${D_E} ${EDITINFO}
+  ${M_E} *${prefix}grupinfo* 
+     ${D_E} ${GRPINFO}
+  ${M_E} *${prefix}add* 
+     ${D_E} ${ADDDES}
+  ${M_E} *${prefix}kick* 
+     ${D_E} ${KICKDES}
+  ${M_E} *${prefix}promote* 
+     ${D_E} ${PROMOTEDES}
+  ${M_E} *${prefix}demote* 
+     ${D_E} ${DEMOTEDES}
+  
+  *───────────◯* `,
+  next = Lang.NEXT_BUTTON
+  back = Lang.BACK_BUTTON
+  
+  footer = global.botnma
+                   buttons = [
+                      {buttonId: `list`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `elisadownloadmenu`, buttonText: {displayText: next}, type: 1}
+                      
+                  ]
+                  let buttonMessage = {
+                      image: { url: 'https://telegra.ph/file/6e6e5387b5ff163765bb1.jpg'},
+                      caption:anu ,
+                      footer: footer,
+                      buttons: buttons,
+                      headerType: 4
+                  }
+                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+            
+                     /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/6e6e5387b5ff163765bb1.jpg' } }, { upload:   QueenNilu.waUploadToServer })
+                                    template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                                        templateMessage: {
+                                            hydratedTemplate: {
+                                                imageMessage: message.imageMessage,
+                                                hydratedContentText: anu ,
+                                                hydratedFooterText: global.botnma ,
+                                                hydratedButtons: [{
+                                                    urlButton: {
+                                                        displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
+                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                    }
+                                                }, {
+                                                    quickReplyButton: {
+                                                        displayText: `${back}` ,
+                                                        id: 'list'
+                                                        }
+                                                    },  {
+                                                    quickReplyButton: {
+                                                        displayText: `${next}` ,
+                                                        id: 'elisadownloadmenu'
+                                                        }
+                                                }]
+                                            }
+                                        }
+                                    }), { userJid: m.chat, quoted: m })
+                                      QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                               */
+  }
+                    break
 
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ GROUP 	
-╠${prefix}grouplink
-╠${prefix}ephemeral [option]
-╠${prefix}setgcpp [image]
-╠${prefix}setname [text]
-╠${prefix}setdesc [text]
-╠${prefix}group
-╠${prefix}botgroups
-╠${prefix}resetgrouplink
-╠${prefix}editinfo [option]
-╠${prefix}add [user]
-╠${prefix}menfess [number]
-╠${prefix}kick [reply/tag]
-╠${prefix}hidetag [text]
-╠${prefix}tagall [text]
-╠${prefix}autosticker [on/off]
-╠${prefix}autostickerpc [on/off]
-╠${prefix}leveling [on/off]
-╠${prefix}antilinkgc [on/off] 
-╠${prefix}antilinktg [on/off]
-╠${prefix}antilinktt [on/off]
-╠${prefix}antilinkytch [on/off]
-╠${prefix}antilinkytvid [on/off]
-╠${prefix}antilinkig [on/off]
-╠${prefix}antilinkfb [on/off]
-╠${prefix}antilinktwit [on/off]
-╠${prefix}antilinkall [on/off]
-╠${prefix}antivirus [on/off]
-╠${prefix}antitoxic [on/off]
-╠${prefix}antiwame [on/off]
-╠${prefix}nsfw [on/off]
-╠${prefix}promote [reply/tag]
-╠${prefix}demote [reply/tag]
-╠${prefix}react [reply emoji]
-╠${prefix}getpp [reply user]
-╠${prefix}vote
-╠${prefix}devote
-╠${prefix}upvote
-╠${prefix}checkvote
-╠${prefix}delvote
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-case 'makermenu':{
-var unicorn = await getBuffer(picak+'Maker Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ MAKER 	
-╠${prefix}candy
-╠${prefix}8bit
-╠${prefix}horror
-╠${prefix}hoorror
-╠${prefix}retro
-╠${prefix}blackpinkneon
-╠${prefix}deepsea
-╠${prefix}scifi
-╠${prefix}fiction
-╠${prefix}berry
-╠${prefix}fruitjuice
-╠${prefix}biscuit
-╠${prefix}wood
-╠${prefix}chocolate
-╠${prefix}matrix
-╠${prefix}blood
-╠${prefix}halloween
-╠${prefix}wicker
-╠${prefix}darkgold
-╠${prefix}firework
-╠${prefix}skeleton
-╠${prefix}sand
-╠${prefix}glue
-╠${prefix}leaves
-╠${prefix}magma
-╠${prefix}lava
-╠${prefix}rockart
-╠${prefix}bloodglas
-╠${prefix}underwater
-╠${prefix}textmaker
-╠${prefix}honey
-╠${prefix}ice
-╠${prefix}watercolor
-╠${prefix}multicolor
-╠${prefix}snow
-╠${prefix}harrypot
-╠${prefix}harrypotter
-╠${prefix}brokenglass
-╠${prefix}waterpipe
-╠${prefix}spooky
-╠${prefix}circuit
-╠${prefix}metallic
-╠${prefix}demon
-╠${prefix}sparklechristmas
-╠${prefix}christmas
-╠${prefix}3dchristmas
-╠${prefix}3dbox
-╠${prefix}waterdrop
-╠${prefix}lion2
-╠${prefix}papercut
-╠${prefix}transformer
-╠${prefix}neondevil
-╠${prefix}3davengers
-╠${prefix}3dstone
-╠${prefix}3dstone2
-╠${prefix}summertime
-╠${prefix}thunder
-╠${prefix}window
-╠${prefix}graffiti
-╠${prefix}graffitibike
-╠${prefix}pornhub
-╠${prefix}glitch
-╠${prefix}blackpinkart
-╠${prefix}glitch2
-╠${prefix}glitch3
-╠${prefix}3dspace
-╠${prefix}lion
-╠${prefix}3dneon
-╠${prefix}greenneon
-╠${prefix}bokeh
-╠${prefix}holographic
-╠${prefix}bear
-╠${prefix}wolf
-╠${prefix}joker
-╠${prefix}dropwater
-╠${prefix}dropwater2
-╠${prefix}thewall
-╠${prefix}neonlight
-╠${prefix}natural
-╠${prefix}carbon
-╠${prefix}pencil
-╠${prefix}blackpink2
-╠${prefix}neon
-╠${prefix}neonlight2
-╠${prefix}toxic
-╠${prefix}strawberry
-╠${prefix}discovery
-╠${prefix}1917
-╠ ${prefix}sci_fi
-╠ ${prefix}ancient
-╠ ${prefix}fabric
-╠ ${prefix}hoorror
-╠ ${prefix}whitebear
-╠ ${prefix}juice
-╠ ${prefix}batman
-╠ ${prefix}multicolor
-╠ ${prefix}wonderful
-╠ ${prefix}sketch
-╠ ${prefix}marvel
-╠ ${prefix}foggy
-╠ ${prefix}writing
-╠ ${prefix}halloweenfire
-╠ ${prefix}halloween
-╠ ${prefix}watercolor
-╠ ${prefix}classic
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-            case 'downloadmenu':{
-var unicorn = await getBuffer(picak+'Download Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ DOWNLOAD 	
-╠${prefix}tiktok [url]
-╠${prefix}tiktokaudio [url]
-╠${prefix}instagram [url]
-╠${prefix}spotify [url]
-╠${prefix}mediafire [url]
-╠${prefix}ytmp3 [url|quality]
-╠${prefix}ytmp4 [url|quality]
-╠${prefix}gitclone [repo link]
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-            case 'searchmenu':{
-var unicorn = await getBuffer(picak+'Search Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ SEARCH 	
-╠${prefix}play [query]
-╠${prefix}song [query]
-╠${prefix}yts [query]
-╠${prefix}lyrics [query]
-╠${prefix}google [query]
-╠${prefix}google [query]
-╠${prefix}anime [query]
-╠${prefix}pinterest [query]
-╠${prefix}image [query]
-╠${prefix}wallpaper [query]
-╠${prefix}searchno [number]
-╠${prefix}horoscope [query]
-╠${prefix}imdb [movie name]
-╠${prefix}weather [loc name]
-╠${prefix}genshin [char name]
-╠${prefix}wikimedia [query]
-╠${prefix}ytsearch [query]
-╠${prefix}ringtone [query]
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-            case 'convertmenu':{
-var unicorn = await getBuffer(picak+'Convert Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ CONVERT 	
-╠ ${prefix}toimage [reply stick]
-╠ ${prefix}sticker [reply img|gif]
-╠ ${prefix}take [reply img|gif|stik]
-╠ ${prefix}smeme [reply img]
-╠ ${prefix}emoji [emoji]
-╠ ${prefix}tovideo [reply img]
-╠ ${prefix}togif [reply stick]
-╠ ${prefix}tovn [reply aud]
-╠ ${prefix}tomp3 [reply vn]
-╠ ${prefix}toaudio [reply vid]
-╠ ${prefix}ebinary [reply txt]
-╠ ${prefix}dbinary [reply txt]
-╠ ${prefix}tinyurl [link]
-╠ ${prefix}styletext [text]
-╠${prefix}volume [reply aud]
-╠${prefix}bass [reply aud]
-╠${prefix}blown [reply aud]
-╠${prefix}deep [reply aud]
-╠${prefix}earrape [reply aud]
-╠${prefix}fast [reply aud]
-╠${prefix}fat [reply aud]
-╠${prefix}nightcore [reply aud]
-╠${prefix}reverse [reply aud]
-╠${prefix}robot [reply aud]
-╠${prefix}slow [reply aud]
-╠${prefix}smooth [reply aud]
-╠${prefix}squirrel [reply aud]
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-case 'randomimagemenu':{
-var unicorn = await getBuffer(picak+'Random Image Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ RANDOM IMG 	
-╠${prefix}coffee
-╠${prefix}woof
-╠${prefix}meow
-╠${prefix}lizard
-╠${prefix}chinese
-╠${prefix}japanese
-╠${prefix}korean
-╠${prefix}indo
-╠${prefix}thai
-╠${prefix}vietnamese
-╠${prefix}malay
-╠${prefix}hijab
-╠${prefix}randomgirl
-╠${prefix}randomboy
-╠${prefix}aesthetic
-╠${prefix}antiwork
-╠${prefix}cosplay
-╠${prefix}car
-╠${prefix}bike
-╠${prefix}doggo
-╠${prefix}cat
-╠${prefix}notnot
-╠${prefix}kayes
-╠${prefix}justina
-╠${prefix}ryujin
-╠${prefix}boneka
-╠${prefix}rose
-╠${prefix}kpop
-╠${prefix}blackpink
-╠${prefix}ulzzangboy
-╠${prefix}ulzzanggirl
-╠${prefix}pubg
-╠${prefix}hacking
-╠${prefix}profilepicture
-╠${prefix}couplepicture
-╠${prefix}wallphone
-╠${prefix}wallml
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-case 'randomvideomenu':{
-var unicorn = await getBuffer(picak+'Random Video Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ RANDOM VIDEO
-╠${prefix}tiktokgirl	
-╠${prefix}tiktoknukhty
-╠${prefix}tiktokpanrika
-╠${prefix}tiktokkayes
-╠${prefix}tiktoknotnot
-╠${prefix}tiktokghea
-╠${prefix}tiktoksantuy
-╠${prefix}tiktokbocil
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-           case 'emotemenu':{
-var unicorn = await getBuffer(picak+'Emote Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ EMOTE 	
-╠${prefix}instagramemoji
-╠${prefix}facebookemoji
-╠${prefix}iphoneemoji
-╠${prefix}samsungemoji
-╠${prefix}joyemoji
-╠${prefix}skypeemoji
-╠${prefix}twitteremoji
-╠${prefix}whatsappemoji
-╠${prefix}microsoftemoji
-╠${prefix}googleemoji
-╠${prefix}pediaemoji
-╠${prefix}microsoftemoji
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-            case 'imageeffectmenu':{
-var unicorn = await getBuffer(picak+'Image Effect Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═════✪ IMG EFFECT 	
-╠${prefix}removebg [reply img]
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-case 'animemenu':{
-var unicorn = await getBuffer(picak+'Anime Menu')
-
-const buttons = [
-  {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-  {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ ANIME 	
-╠${prefix}animeneko
-╠${prefix}waifu
-╠${prefix}shinobu
-╠${prefix}animeawoo
-╠${prefix}animewaifu
-╠${prefix}foxgirl
-╠${prefix}animenom
-╠${prefix}goose
-╠${prefix}8ball
-╠${prefix}avatar
-╠${prefix}tickle
-╠${prefix}gecg
-╠${prefix}feed
-╠${prefix}husbu
-╠${prefix}neko2
-╠${prefix}randomanime
-╠${prefix}shota
-╠${prefix}waifu2
-╠${prefix}animeslap
-╠${prefix}animepat
-╠${prefix}animeneko
-╠${prefix}animekiss
-╠${prefix}animewlp
-╠${prefix}animecuddle
-╠${prefix}animecry
-╠${prefix}animekill
-╠${prefix}animelick
-╠${prefix}animebite
-╠${prefix}animeyeet
-╠${prefix}animebully
-╠${prefix}animebonk
-╠${prefix}animewink
-╠${prefix}animepoke
-╠${prefix}animesmile
-╠${prefix}animewave
-╠${prefix}animeawoo
-╠${prefix}animeblush
-╠${prefix}animesmug
-╠${prefix}animeglomp
-╠${prefix}animehappy
-╠${prefix}animedance
-╠${prefix}animecringe
-╠${prefix}animehighfive
-╠${prefix}animehandhold
-╠${prefix}animemegumin
-╠${prefix}animemegumin
-╠${prefix}animesmug
-╠${prefix}loli-waifu
-╠${prefix}couplepp
-╠${prefix}animewall [query]
-╠${prefix}animewall2 [query]
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-            case 'stickermenu':{
-var unicorn = await getBuffer(picak+'Sticker Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ STICKER 	
-╠ ${prefix}patrick
-╠ ${prefix}emoji
-╠ ${prefix}emojimix
-╠ ${prefix}doge
-╠ ${prefix}lovesticker
-╠ ${prefix}animestick
-╠ ${prefix}spongebob
-╠ ${prefix}gojosatoru
-╠ ${prefix}nicholas
-╠ ${prefix}cartoon
-╠ ${prefix}stickman
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-case 'animestickermenu':{
-var unicorn = await getBuffer(picak+'Anime Sticker Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ ANIME STICKER 	
-╠${prefix}loli
-╠${prefix}bully
-╠${prefix}cuddle
-╠${prefix}cry
-╠${prefix}hug
-╠${prefix}awoo
-╠${prefix}kiss
-╠${prefix}lick
-╠${prefix}pat
-╠${prefix}smug
-╠${prefix}bonk
-╠${prefix}yeet
-╠${prefix}blush
-╠${prefix}smile
-╠${prefix}wave
-╠${prefix}highfive
-╠${prefix}handhold
-╠${prefix}nom
-╠${prefix}glomp
-╠${prefix}bite
-╠${prefix}slap
-╠${prefix}kill
-╠${prefix}happy
-╠${prefix}wink
-╠${prefix}poke
-╠${prefix}dance
-╠${prefix}cringe
-╠${prefix}neko
-╠${prefix}gura
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break 
-case 'nsfwmenu':{
-var unicorn = await getBuffer(picak+'Nsfw Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ NSFW 	
-╠${prefix}gifhentai
-╠${prefix}gifblowjob
-╠${prefix}hentaivideo
-╠${prefix}hneko
-╠${prefix}nwaifu
-╠${prefix}animespank
-╠${prefix}trap
-╠${prefix}gasm
-╠${prefix}ahegao
-╠${prefix}ass
-╠${prefix}bdsm
-╠${prefix}blowjob
-╠${prefix}cuckold
-╠${prefix}cum
-╠${prefix}milf
-╠${prefix}eba
-╠${prefix}ero
-╠${prefix}femdom
-╠${prefix}foot
-╠${prefix}gangbang
-╠${prefix}glasses
-╠${prefix}hentai
-╠${prefix}jahy
-╠${prefix}manga
-╠${prefix}masturbation
-╠${prefix}neko-hentai
-╠${prefix}neko-hentai2
-╠${prefix}nsfwloli
-╠${prefix}orgy
-╠${prefix}panties
-╠${prefix}pussy
-╠${prefix}tentacles
-╠${prefix}thights
-╠${prefix}yuri
-╠${prefix}zettai
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-case 'funmenu':{
-var unicorn = await getBuffer(picak+'Fun Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ Fun 
-╠ ${prefix}say [text]	
-╠ ${prefix}define [text]
-╠ ${prefix}how [text]
-╠ ${prefix}when [text]
-╠ ${prefix}where [text]
-╠ ${prefix}is [text]
-╠ ${prefix}what [text]
-╠ ${prefix}can [text]
-╠ ${prefix}rate [text]
-╠ ${prefix}coolcheck [tag]
-╠ ${prefix}stupidcheck [tag]
-╠ ${prefix}waifucheck [tag]
-╠ ${prefix}evilcheck [tag]
-╠ ${prefix}dogcheck [tag]
-╠ ${prefix}hotcheck [tag]
-╠ ${prefix}smartcheck [tag]
-╠ ${prefix}uncleancheck [tag]
-╠ ${prefix}greatcheck [tag]
-╠ ${prefix}beautifulcheck [tag]
-╠ ${prefix}awesomecheck [tag]
-╠ ${prefix}prettycheck [tag]
-╠ ${prefix}lesbiancheck [tag]
-╠ ${prefix}gaycheck [tag]
-╠ ${prefix}cutecheck [tag]
-╠ ${prefix}uglycheck [tag]
-╠ ${prefix}hornycheck [tag]
-╠ ${prefix}charactercheck [tag]
-╠ ${prefix}lovelycheck [tag]
-╠ ${prefix}couple
-╠ ${prefix}soulmate
-╠ ${prefix}hot
-╠ ${prefix}sexy
-╠ ${prefix}kind
-╠ ${prefix}idiot
-╠ ${prefix}handsome
-╠ ${prefix}beautiful
-╠ ${prefix}cute
-╠ ${prefix}pretty
-╠ ${prefix}lesbian
-╠ ${prefix}noob
-╠ ${prefix}bastard
-╠ ${prefix}foolish
-╠ ${prefix}nerd
-╠ ${prefix}asshole
-╠ ${prefix}gay
-╠ ${prefix}smart
-╠ ${prefix}stubble
-╠ ${prefix}dog
-╠ ${prefix}horny
-╠ ${prefix}cunt
-╠ ${prefix}wibu
-╠ ${prefix}noobra
-╠ ${prefix}nibba
-╠ ${prefix}nibbi
-╠ ${prefix}comrade
-╠ ${prefix}mumu
-╠ ${prefix}rascal
-╠ ${prefix}scumbag
-╠ ${prefix}nuts
-╠ ${prefix}fagot
-╠ ${prefix}scoundrel
-╠ ${prefix}ditch
-╠ ${prefix}dope
-╠ ${prefix}gucci
-╠ ${prefix}lit
-╠ ${prefix}dumbass
-╠ ${prefix}crackhead
-╠ ${prefix}mf
-╠ ${prefix}motherfucker
-╠ ${prefix}sucker
-╠ ${prefix}fuckboy
-╠ ${prefix}playboy
-╠ ${prefix}fuckgirl
-╠ ${prefix}playgirl
-╠ ${prefix}quotes
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-
-case 'gamemenu':{
-var unicorn = await getBuffer(picak+'Game Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ GAME 	
-╠ ${prefix}truth
-╠ ${prefix}dare
-╠ ${prefix}tictactoe
-╠ ${prefix}delttt
-╠ ${prefix}guess [option]
-╠ ${prefix}math [mode]
-╠ ${prefix}suitpvp [tag]
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-            case 'anonymousmenu':{
-var unicorn = await getBuffer(picak+'Anonymous Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══✪ ANONYMOUS 	
-╠${prefix}anonymous
-╠${prefix}start
-╠${prefix}next
-╠${prefix}leave
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-case 'databasemenu':{
-var unicorn = await getBuffer(picak+'Database Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══✪ DATABASE 	
-╠ ${prefix}setcmd
-╠ ${prefix}listcmd
-╠ ${prefix}delcmd
-╠ ${prefix}lockcmd
-╠ ${prefix}addmsg
-╠ ${prefix}listmsg
-╠ ${prefix}getmsg
-╠ ${prefix}delmsg
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-case 'othermenu':{
-var unicorn = await getBuffer(picak+'Other Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪ OTHER 	
-╠ ${prefix}afk
-╠ ${prefix}id
-╠ ${prefix}toqr [link]
-╠ ${prefix}repeat
-╠ ${prefix}readmore [text]
-╠ ${prefix}toviewonce
-╠ ${prefix}fliptext [text]] 
-╠ ${prefix}alive
-╠ ${prefix}script
-╠ ${prefix}ping
-╠ ${prefix}owner
-╠ ${prefix}menu
-╠ ${prefix}delete
-╠ ${prefix}chatinfo
-╠ ${prefix}quoted
-╠ ${prefix}listpc
-╠ ${prefix}listgc
-╠ ${prefix}donate
-╠ ${prefix}request
-╠ ${prefix}report [bug]
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
-case 'warmenu':{
-var unicorn = await getBuffer(picak+'War Menu')
-
-const buttons = [
-    {buttonId: 'about', buttonText: {displayText: '🗣️ ᴀʙᴏᴜᴛ'}, type: 1},
-    {buttonId: 'owner', buttonText: {displayText: '🙈 ᴏᴡɴᴇʀ'}, type: 1},
-    {buttonId: 'command', buttonText: {displayText: '🍻ᴀʟʟ ᴍᴇɴᴜ'}, type: 1}
-]
-const buttonMessage = {
-    image: unicorn,
-    caption: `╔═══════✪「 BUG MENU 」	
-╠════☾pc attack☽
-╠${prefix}pcbut [number]
-╠${prefix}pcvn [number]
-╠${prefix}pcstick [number]
-╠${prefix}pcfast [number]
-╠${prefix}pcslow [number]
-╠${prefix}pcbunny [number]
-╠${prefix}xcrasher [amount]
-╠${prefix}pccontact [amount]
-╠${prefix}virtex5 [amount]
-╠${prefix}flower [amount]
-╠${prefix}pollbug [amount]
-╠${prefix}catalogbug [amount]
-╠${prefix}trollybug [amount]
-╠${prefix}trollybug2 [amount]
-╠════☾gc attack☽
-╠${prefix}gcslow
-╠${prefix}gcfast
-╠${prefix}gcbunny
-╠${prefix}tagallbug
-╠════☾pc & gc attack☽
-╠${prefix}vnbug [amount]
-╠${prefix}docbug [amount]
-╠${prefix}pcgcslow [number]
-╠${prefix}pcgcfast [number]
-╠${prefix}pcgcbunny [number]
-╠${prefix}textshot
-╠${prefix}docfuck [amount]
-╠${prefix}docsoft [amount]
-╠${prefix}docsoft2 [amount]
-╚═════════════✪`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await QueenNilu.sendMessage(m.chat, buttonMessage)
-}
-break
+                    case 'elisadownloadmenu': {  
+  const start = new Date().getTime()
+    await QueenNilu.sendMessage(from, { react: { text: `♥️`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + ' *_ᴍs_*' 
+    const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+  
+  await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+  var TIKTOK = ''
+  if (global.LANG == 'EN') TIKTOK = '```Download Your Tiktok Link video```'
+  if (global.LANG == 'SI') TIKTOK = '```ඔබගේ ටික්ටොක් වීඩියෝ ලින්කුව බාගතකරයි```'
+  var INSTA = ''
+  if (global.LANG == 'EN') INSTA = '```Download your instagram link Video```'
+  if (global.LANG == 'SI') INSTA = '```ඔබගේ ඉන්ස්ටාග්‍රෑම් වීඩියෝ ලින්ක් බාගත කරයි```'
+  var IG2 = ''
+  if (global.LANG == 'EN') IG2 = '```Download your instagram link Video type ( ii )```'
+  if (global.LANG == 'SI') IG2 = '```ඔබගේ ඉන්ස්ටාග්‍රෑම් වීඩියෝ ලින්ක් බාගත කරයි ආකාරය ( ii )```'
+  var YTMP3 = ''
+  if (global.LANG == 'EN') YTMP3 = '```Download your youtube link song```'
+  if (global.LANG == 'SI') YTMP3 = '```ඔබගේ යූටියුබ් ලින්කුවේ සින්දුව බාගත කරයි```'
+  var YTMP4 = ''
+  if (global.LANG == 'EN') YTMP4  = '```Download your youtube link video```'
+  if (global.LANG == 'SI') YTMP4  = '```ඔබගේ යූටියුබ් ලින්කුවේ වීඩියෝව බාගත කරය```'
+  var GETMUSIC = ''
+  if (global.LANG == 'EN') GETMUSIC = '```Get your song```'
+  if (global.LANG == 'SI') GETMUSIC  = '```ඔබගේ සින්දුව එවයි```'
+  var GETVIDEO = ''
+  if (global.LANG == 'EN') GETVIDEO  = '```get your video```'
+   if (global.LANG == 'SI') GETVIDEO  = '```ඔබගේ විඩියෝව එවයි```'
+  var SONG = ''
+  var YTV = ''
+  if (global.LANG == 'EN') YTV = '```Download videos [ 144p / 240p / 360p / 480p / 720p / 1080p ] Qualitys``` Can not Download up to 100mb videos ❗'
+  if (global.LANG == 'SI') YTV = '```වීඩියෝ බාගතකිරීම [ 144p / 240p / 360p / 480p / 720p / 1080p ]``` 100mb වඩා වීඩීයෝ බාගතකළ නොහැක ❗'
+  if (global.LANG == 'EN') SONG  = '```The song you name will download```'
+  if (global.LANG == 'SI') SONG  = '```ඔබ නම් යෙදූ ගීතය බාගත කරයි```'
+  var VIDEO = ''
+  if (global.LANG == 'EN') VIDEO = '```The video you name will download```'
+  if (global.LANG == 'SI') VIDEO  = '```ඔබ නම් යෙදූ ගීතය බාගත කරයි```'
+  var YT = ''
+  if (global.LANG == 'EN') YT  = '```Your song or video will be searched on YouTube and downloaded```'
+  if (global.LANG == 'SI') YT  = '```ඔබගේ සින්දුව හෝ වීඩියෝව යූටියුබ් හී සර්ච් කර බාගත කරයි```'
+  var FB  = ''
+  if (global.LANG == 'EN') FB  =' ```Download your facebook video link```'
+  if (global.LANG == 'SI') FB  = '```ඔබගේ ෆේස් බූක් වීඩියෝ ලින්කුව බාගත කරයි```'
+  var FB2 = '' 
+  if (global.LANG == 'EN') FB2  = '```Download your facebook video link type ( ii )```'
+  if (global.LANG == 'SI') FB2  = '```ඔබගේ ෆේස් බූක් වීඩියෝ ලින්කුව බාගත කරය ආකාරය ( ii )```'
+  var SONG2 = ''
+  var VIDEO2 = ''
+  if (global.LANG == 'EN') SONG2  = '```The song you name will download [ none button ]```'
+  if (global.LANG == 'SI') SONG2  = '```ඔබ නම් යෙදූ ගීතය බාගත කරයි [ බටන් මැස්ස්සේජ් නොමැතිව ]```'
+  if (global.LANG == 'EN') VIDEO2  = '```The video you name will download [ none button ]```'
+  if (global.LANG == 'SI') VIDEO2  = '```ඔබ නම් යෙදූ වීඩියෝව බාගත කරයි [ බටන් මැස්ස්සේජ් නොමැතිව ]```'
+  var APK = ''
+  var MOD_APK = ''
+  var TELE = ''
+  var XNXX = ''
+  if (global.LANG == 'EN') APK = '```Download Plastore apk```'
+  if (global.LANG == 'SI') APK = '```Plastore Apk බාගත කිරීමට```'
+  if (global.LANG == 'EN') MOD_APK = '```Mod Apk Download```'
+  if (global.LANG == 'SI') MOD_APK = '```මොඩ් Apk බාගත කිරීම```'
+  if (global.LANG == 'EN') TELE = '```Telegram Sticker Download```'
+  if (global.LANG == 'SI') TELE = '```Telegram ස්ටිකර් බාගත කිරීමට```'
+  if (global.LANG == 'EN') XNXX = '```Xnxx Video Download ( only main Group )```'
+  if (global.LANG == 'SI') XNXX = '```Xnxx වීඩියෝ බාගත කිරීම ( ප්‍රදාන ශාපයේ පමණක් වලංගු විදානයකි )```'
+  
+   prefix = '.'
+  anu = `*◯───────[ DOWNLOAD MENU ]───────◯*
+  
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+  ╰⛒  *ᴛɪᴍᴇ* ${time}
+  
+  ${M_E} *${prefix}tiktok* 
+     ${D_E} ${TIKTOK}    
+  ${M_E} *${prefix}tiktok2*  
+     ${D_E}  ${TIKTOK} _type ( ii )_   
+  ${M_E} *${prefix}insta*  
+     ${D_E}  ${INSTA}   
+  ${M_E} *${prefix}ig2*  
+     ${D_E}  ${IG2}   
+  ${M_E} *${prefix}fb*  
+     ${D_E}  ${FB}   
+  ${M_E} *${prefix}fb2*  
+     ${D_E}  ${FB2}   
+  ${M_E} *${prefix}ytmp3*  
+     ${D_E}  ${YTMP3}   
+  ${M_E} *${prefix}ytmp4*  
+     ${D_E}  ${YTMP4}   
+  ${M_E} *${prefix}getmusic*  
+     ${D_E}  ${GETMUSIC}   
+  ${M_E} *${prefix}getvideo*  
+     ${D_E}  ${GETVIDEO}   
+  ${M_E} *${prefix}song*  
+     ${D_E}  ${SONG}   
+  ${M_E} *${prefix}song2*  
+     ${D_E}  ${SONG2}   
+  ${M_E} *${prefix}video*  
+     ${D_E}  ${VIDEO}   
+  ${M_E} *${prefix}video2*  
+     ${D_E}  ${VIDEO2}   
+  ${M_E} *${prefix}ytv*  
+     ${D_E}  ${YTV}   
+  ${M_E} *${prefix}yt*  
+     ${D_E}  ${YT}    
+  ${M_E} *${prefix}apk*  
+     ${D_E}  ${APK}    
+  ${M_E} *${prefix}modapk*  
+     ${D_E}  ${MOD_APK}    
+  ${M_E} *${prefix}stelegram*  
+     ${D_E}  ${TELE}    
+  ${M_E} *${prefix}xnxxsh*  
+     ${D_E}  ${XNXX} 
+  
+  *────────◯*`,
+  
+  next = Lang.NEXT_BUTTON
+  back = Lang.BACK_BUTTON
+  
+        footer = global.botnma
+                   buttons = [
+                      {buttonId: `grpmenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `elisasearchmenu`, buttonText: {displayText: next}, type: 1}
+                      
+                  ]
+                  let buttonMessage = {
+                      image: { url: 'https://telegra.ph/file/e0aa108673b5059695677.jpg' },
+                      caption:anu ,
+                      footer: footer,
+                      buttons: buttons,
+                      headerType: 4
+                  }
+                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+            
+                     /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/e0aa108673b5059695677.jpg' } }, { upload:   QueenNilu.waUploadToServer })
+                                    template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                                        templateMessage: {
+                                            hydratedTemplate: {
+                                                imageMessage: message.imageMessage,
+                                                hydratedContentText: anu ,
+                                                hydratedFooterText: global.botnma ,
+                                                hydratedButtons: [{
+                                                
+                                                    quickReplyButton: {
+                                                        displayText: `${back}` ,
+                                                        id: 'grpmenu'
+                                                        }
+                                                    },  {
+                                                    quickReplyButton: {
+                                                        displayText: `${next}` ,
+                                                        id: 'elisasearchmenu'
+                                                        }
+                                                }]
+                                            }
+                                        }
+                                    }), { userJid: m.chat, quoted: m })
+                                      QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                               */
+  }
+                                break 
+                                case 'elisasearchmenu': { 
+  const start = new Date().getTime()
+    await QueenNilu.sendMessage(from, { react: { text: `♥️`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + ' *_ᴍs_*' 
+    const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+  
+                            await QueenNilu.sendMessage(from, { react: { text: `🔍`, key: m.key }})
+  var PLAY = ''
+  if (global.LANG == 'EN') PLAY = '```Search youtube and download```'
+  if (global.LANG == 'SI') PLAY = '```යූටියුබ් හි සර්ච් කර Download කරයි```'
+  var YTS = ''
+  if (global.LANG == 'EN') YTS = '```search your text on youtube```'
+  if (global.LANG == 'SI') YTS =  '```ඔබගේ වචනය යූටියුබ් හී සොයයි```'
+  var GOOGLE = ''
+  if (global.LANG == 'EN') GOOGLE = '```search your word on google```'
+  if (global.LANG == 'SI') GOOGLE = '```ඔබගේ වචනය ගූහල් හී සොයයි```'
+  var IMG = ''
+  if (global.LANG == 'EN') IMG = '```search google image```'
+  if (global.LANG == 'SI') IMG = '```ගූගල්හී ජායාරූප සොයයි```'
+  var PINSA = ''
+  if (global.LANG == 'EN') PINSA = '```search image from pinterest```'
+  if (global.LANG == 'SI') PINSA = '```pinterest හී ජාඅයාරූප සොයයි```'
+  var WALLPAPER  = ''
+  if (global.LANG == 'EN') WALLPAPER = '```search wallpapers```'
+  if (global.LANG == 'SI') WALLPAPER = '```වෝල්පේපර්ස් සොයයි```'
+  var WIKI = ''
+  if (global.LANG == 'EN') WIKI = '```search on wikipidia```'
+  if (global.LANG == 'SI') WIKI = '```විකිපීඩියා හී සර්ච් කරයි```'
+  prefix = '.'
+                                    anu = `*◯───────[ SEARCH MENU ]───────◯*
+  
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+  ╰⛒  *ᴛɪᴍᴇ* ${time}
+  
+  ${M_E} *${prefix}play*   
+     ${D_E}  ${PLAY}
+  ${M_E} *${prefix}yts*   
+     ${D_E}  ${YTS}
+  ${M_E} *${prefix}google*   
+     ${D_E}  ${GOOGLE}
+  ${M_E} *${prefix}img*   
+     ${D_E}  ${IMG}
+  ${M_E} *${prefix}pinterest*   
+     ${D_E}  ${PINSA}
+  ${M_E} *${prefix}wallpaper*   
+     ${D_E}  ${WALLPAPER}
+  ${M_E} *${prefix}wikimedia*   
+     ${D_E}  ${WIKI}
+  ${M_E} *${prefix}ytsearch*   
+     ${D_E}  ${YTS}
+        
+  *──────────◯*
+  `
+   next = Lang.NEXT_BUTTON
+  back = Lang.BACK_BUTTON
+                      
+                      footer = global.botnma
+                   buttons = [
+                      {buttonId: `elisadownloadmenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `randommenu`, buttonText: {displayText: next}, type: 1}
+                      
+                  ]
+                  let buttonMessage = {
+                      image: { url: 'https://telegra.ph/file/422f47351a4ba19070837.jpg' },
+                      caption: anu,
+                      footer: footer,
+                      buttons: buttons,
+                      headerType: 4
+                  }
+                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+            
+                      /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/422f47351a4ba19070837.jpg' } }, { upload:   QueenNilu.waUploadToServer })
+                                    template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                                        templateMessage: {
+                                            hydratedTemplate: {
+                                                imageMessage: message.imageMessage,
+                                                hydratedContentText: anu ,
+                                                hydratedFooterText: global.botnma ,
+                                                hydratedButtons: [{
+                                                    urlButton: {
+                                                        displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
+                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                    }
+                                                }, {
+                                                    quickReplyButton: {
+                                                        displayText: `${back}` ,
+                                                        id: 'elisadownloadmenu'
+                                                        }
+                                                    },  {
+                                                    quickReplyButton: {
+                                                        displayText: `${next}` ,
+                                                        id: 'randommenu'
+                                                        }
+                                                }]
+                                            }
+                                        }
+                                    }), { userJid: m.chat, quoted: m })
+                                      QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                */
+  }
+                    break
+                    case 'randommenu': { 
+  const start = new Date().getTime()
+    await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + ' *_ᴍs_*' 
+    const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+  
+                            await QueenNilu.sendMessage(from, { react: { text: `🗳️`, key: m.key }})
+  var COFFY = ''
+  if (global.LANG == 'EN') COFFY = '```Send random coffee image```'
+  if (global.LANG == 'SI') COFFY = '```අහබු ලෙස coffee ජායාරූප එවයි.```'
+  var COUPP = ''
+  if (global.LANG == 'EN') COUPP = '```send copple profile photo randomly```'
+  if (global.LANG == 'SI') COUPP = '_අහබු ලෙස copple profile photo එවයි```'
+  prefix = '.'
+                        anu = `*◯───────[ RANDOM MENU ]───────◯*
+  
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+  ╰⛒  *ᴛɪᴍᴇ* ${time}
+  
+  ${M_E} *${prefix}coffee*   
+     ${D_E}  ${COFFY}
+  ${M_E} *${prefix}couplepp*   
+     ${D_E}  ${COUPP}
+     
+  *──────────◯*
+  `
+  next = Lang.NEXT_BUTTON
+  back = Lang.BACK_BUTTON
+  
+  footer = global.botnma
+                   buttons = [
+                      {buttonId: `elisasearchmenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `funmenu`, buttonText: {displayText: next}, type: 1}
+                      
+                  ]
+                  let buttonMessage = {
+                      image: { url: 'https://telegra.ph/file/60f9d53af312a48e619ad.jpg' },
+                      caption:anu ,
+                      footer: footer,
+                      buttons: buttons,
+                      headerType: 4
+                  }
+                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+            
+            
+                     /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/60f9d53af312a48e619ad.jpg' } }, { upload:   QueenNilu.waUploadToServer })
+                                    template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                                        templateMessage: {
+                                            hydratedTemplate: {
+                                                imageMessage: message.imageMessage,
+                                                hydratedContentText: anu ,
+                                                hydratedFooterText: global.botnma ,
+                                                hydratedButtons: [{
+                                                    urlButton: {
+                                                        displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
+                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                    }
+                                                }, {
+                                                    quickReplyButton: {
+                                                        displayText: `${back}` ,
+                                                        id: 'elisasearchmenu'
+                                                        }
+                                                    },  {
+                                                    quickReplyButton: {
+                                                        displayText: `${next}` ,
+                                                        id: 'funmenu'
+                                                        }
+                                                }]
+                                            }
+                                        }
+                                    }), { userJid: m.chat, quoted: m })
+                                      QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                               */
+  }
+                    break
+                    case 'funmenu': {  
+  const start = new Date().getTime()
+    await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + ' *_ᴍs_*' 
+    const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+  
+                            await QueenNilu.sendMessage(from, { react: { text: `🤪`, key: m.key }})
+                        
+  var COPLE = ''
+  if (global.LANG == 'EN') COPLE = '```Choose two members from the group.```'
+  if (global.LANG == 'SI') COPLE = '```ගෲප් එකේ සිටින දෙදෙනෙකු තෝරයි.```'
+  var MYSOLO = ''
+  if (global.LANG == 'EN') MYSOLO = '```Choose your soulmate```.' 
+  if (global.LANG == 'SI') MYSOLO ='```ඔබගේ ආත්මීය මිතුරා තෝරයි```.'
+  var MATH = ''
+  if (global.LANG == 'EN') MATH = '```Counting with Bot```.'
+  if (global.LANG == 'SI') MATH = '```බොට් සමග ගණන් සෑදීමට.```'
+  prefix = '.'
+  anu = `*◯───────[ FUN MENU ]───────◯*
+  
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+  ╰⛒  *ᴛɪᴍᴇ* ${time}
+  
+  ${M_E} *${prefix}couple*   
+     ${D_E}  ${COPLE}
+  ${M_E} *${prefix}mysoulmate*   
+     ${D_E}  ${MYSOLO}
+  ${M_E} *${prefix}math*   
+     ${D_E}  ${MATH}
+     
+  *──────────◯*
+  `
+  next = Lang.NEXT_BUTTON
+  back = Lang.BACK_BUTTON
+                     
+                     footer = global.botnma
+                   buttons = [
+                      {buttonId: `randommenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `elisavoicemenu`, buttonText: {displayText: next}, type: 1}
+                      
+                  ]
+                  let buttonMessage = {
+                      image: { url: 'https://telegra.ph/file/f2bb8d4fbd8fc9ca5a496.jpg'},
+                      caption: anu,
+                      footer: footer,
+                      buttons: buttons,
+                      headerType: 4
+                  }
+                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+            
+                      /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/f2bb8d4fbd8fc9ca5a496.jpg' } }, { upload:   QueenNilu.waUploadToServer })
+                                    template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                                        templateMessage: {
+                                            hydratedTemplate: {
+                                                imageMessage: message.imageMessage,
+                                                hydratedContentText: anu ,
+                                                hydratedFooterText: global.botnma ,
+                                                hydratedButtons: [{
+                                                    urlButton: {
+                                                        displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
+                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                    }
+                                                }, {
+                                                    quickReplyButton: {
+                                                        displayText: `${back}` ,
+                                                        id: 'randommenu'
+                                                        }
+                                                    },  {
+                                                    quickReplyButton: {
+                                                        displayText: `${next}` ,
+                                                        id: 'elisavoicemenu'
+                                                        }
+                                                }]
+                                            }
+                                        }
+                                    }), { userJid: m.chat, quoted: m })
+                                      QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                               */
+  }
+                    break
+                    case 'elisavoicemenu': {  
+  const start = new Date().getTime()
+    await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + ' *_ᴍs_*' 
+    const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+                    
+                            await QueenNilu.sendMessage(from, { react: { text: `🎙️`, key: m.key }})
+                    
+  var VOICEDESC = ''
+  if (global.LANG == 'EN') VOICEDESC= '*💬 About Voice changer cmd*\n ```When you reply to one of your voice messages and use the following command, the corresponding voice has been changed.```'
+  if (global.LANG == 'SI') VOICEDESC= '*💬 වොයිස් විධාන පිලිබද* \n ```ඔබගේ වොයිස් මැස්ස්සේජ් එකක් සදහා රිප්ලයි කර පහත කමාන්ඩ් බාවිතකරවිට ඒවාට අදාල voice වෙනස් වී ලැබෙයි```'
+  prefix = '.'
+                        anu = `*◯───────[ VOICE MENU ]───────◯*
+  
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+  ╰⛒  *ᴛɪᴍᴇ* ${time}
+  
+  ${M_E} *${prefix}bass*
+  ${M_E} *${prefix}blown*
+  ${M_E} *${prefix}deep*
+  ${M_E} *${prefix}earrape*
+  ${M_E} *${prefix}fast*
+  ${M_E} *${prefix}fat*
+  ${M_E} *${prefix}nightcore*
+  ${M_E} *${prefix}reverse*
+  ${M_E} *${prefix}robot*
+  ${M_E} *${prefix}slow*
+  ${M_E} *${prefix}squirrel*
+  
+  ${VOICEDESC}
+  
+  *──────────◯*
+  `
+                    next = Lang.NEXT_BUTTON
+  back = Lang.BACK_BUTTON
+  
+  footer = global.botnma
+                   buttons = [
+                      {buttonId: `funmenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `elisaconvertmenu`, buttonText: {displayText: next}, type: 1}
+                      
+                  ]
+                  let buttonMessage = {
+                      image: { url: 'https://telegra.ph/file/5178ff96358a9e33cf7da.jpg'},
+                      caption:anu ,
+                      footer: footer,
+                      buttons: buttons,
+                      headerType: 4
+                  }
+                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+            
+            
+                     /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/5178ff96358a9e33cf7da.jpg' } }, { upload:   QueenNilu.waUploadToServer })
+                                    template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                                        templateMessage: {
+                                            hydratedTemplate: {
+                                                imageMessage: message.imageMessage,
+                                                hydratedContentText: anu ,
+                                                hydratedFooterText: global.botnma ,
+                                                hydratedButtons: [{
+                                                    urlButton: {
+                                                        displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
+                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                    }
+                                                }, {
+                                                    quickReplyButton: {
+                                                        displayText: `${back}` ,
+                                                        id: 'funmenu'
+                                                        }
+                                                    },  {
+                                                    quickReplyButton: {
+                                                        displayText: `${next}` ,
+                                                        id: 'elisaconvertmenu'
+                                                        }
+                                                }]
+                                            }
+                                        }
+                                    }), { userJid: m.chat, quoted: m })
+                                      QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                               */
+  }
+                    break
+                    case 'religionmenukdksoejdjj': {
+                        anu = `
+  *𝗥𝗘𝗟𝗜𝗚𝗜𝗢𝗡 𝗠𝗘𝗡𝗨*
+   Islamic
+  🔵 ${prefix}iqra
+  🔵 ${prefix}hadith
+  🔵 ${prefix}alquran
+  🔵 ${prefix}juzamma
+  🔵 ${prefix}tafsirsurah`
+                    const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                                        templateMessage: {
+                                            hydratedTemplate: {
+                                                hydratedContentText: anu,
+                                                locationMessage: {
+                                                jpegThumbnail: fs.readFileSync('./image/Elisa.jpg')},
+                                                hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
+                                                hydratedButtons: [{
+                                                    urlButton: {
+                                                        displayText: 'SUBSCRIBE',
+                                                        url: 'https://www.youtube.com/c/MRNIMAOFC'
+                                                    }
+                                                }, {
+                                                    quickReplyButton: {
+                                                        displayText: 'OWNER',
+                                                        id: `${prefix}owner`
+                                                    }
+                                                }]
+                                            }
+                                        }
+                                    }), { userJid: m.chat })
+                                    QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                }
+                    break
+                    case 'horoscopemenuxxxxxxx': {
+                        anu = `
+   *𝗛𝗢𝗥𝗢𝗦𝗖𝗢𝗣𝗘 𝗠𝗘𝗡𝗨*
+  
+  🔵 ${prefix}hockeynumber
+  🔵 ${prefix}dreammeaning
+  🔵 ${prefix}namemeaning
+  🔵 ${prefix}fortunetelling
+  🔵 ${prefix}marriageprediction
+  🔵 ${prefix}wife&husband
+  🔵 ${prefix}fortunetelling2
+  🔵 ${prefix}matchname
+  🔵 ${prefix}couplematch
+  🔵 ${prefix}married
+  🔵 ${prefix}businessnature
+  🔵 ${prefix}sustenance
+  🔵 ${prefix}profession
+  🔵 ${prefix}fate
+  🔵 ${prefix}potentialdisease
+  🔵 ${prefix}tarot
+  🔵 ${prefix}fengshui
+  🔵 ${prefix}goodday
+  🔵 ${prefix}badday
+  🔵 ${prefix}unluckyday
+  🔵 ${prefix}dragonday
+  🔵 ${prefix}sustenance2
+  🔵 ${prefix}luck
+  🔵 ${prefix}weton
+  🔵 ${prefix}character
+  🔵 ${prefix}luck2
+  🔵 ${prefix}fishing
+  🔵 ${prefix}fertiletime
+  🔵 ${prefix}zodiac
+  🔵 ${prefix}shio`
+                      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                                        templateMessage: {
+                                            hydratedTemplate: {
+                                                hydratedContentText: anu,
+                                                locationMessage: {
+                                                jpegThumbnail: fs.readFileSync('./image/Elisa.jpg')},
+                                                hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
+                                                hydratedButtons: [{
+                                                    urlButton: {
+                                                        displayText: 'SUBSCRIBE',
+                                                        url: 'https://www.youtube.com/c/MRNIMAOFC'
+                                                    }
+                                                }, {
+                                                    quickReplyButton: {
+                                                        displayText: 'OWNER',
+                                                        id: `${prefix}owner`
+                                                    }
+                                                }]
+                                            }
+                                        }
+                                    }), { userJid: m.chat })
+                                    QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                }
+                    break
+                    case 'elisaconvertmenu': {  
+  const start = new Date().getTime()
+    await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + ' *_ᴍs_*' 
+    const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+  
+                            await QueenNilu.sendMessage(from, { react: { text: `🛠️`, key: m.key }})
+                    prefix = '.'
+  var IMG = ''
+  if (global.LANG == 'EN' ) IMG= '```Sticker convert to photo.```'
+  if (global.LANG == 'SI' ) IMG= '```ස්ටිකර් 1ක් ෆොටෝ 1ක් බවට හැරවීම.```'
+  var RBG = ''
+  if (global.LANG == 'EN' ) RBG= '```Remove photo background.```'
+  if (global.LANG == 'SI' ) RBG= '```ජායාරූප වල පසුබිම ඉවත්කරයි```'
+  var STICKER = ''
+  if (global.LANG == 'EN' ) STICKER= '```image / small video convert to sticker```'
+  if (global.LANG == 'SI' ) STICKER= '```ජායාරූපයක් හෝ කුඩා වීඩීයෝවක් ස්ටිකර් බවට පත්කිරීම```'
+  var EMOJIMIX = ''
+  if (global.LANG == 'EN' ) EMOJIMIX= '```Mix 2 imoji and make sticker```'
+  if (global.LANG == 'SI' ) EMOJIMIX= '```ඉමෝජි 2ක් එකතු කර ස්ටිකර් සාදයි```'
+  var TOVIDEO = ''
+  if (global.LANG == 'EN' ) TOVIDEO= '```Animation sticker convert to video```'
+  if (global.LANG == 'SI' ) TOVIDEO= '```ඇනිමේශන් ස්ටිකර් වීඩියෝ බවට හැරවීම```'
+  var GIF = ''
+  if (global.LANG == 'EN' ) GIF= '```Animation Sticker Convert to Gif```'
+  if (global.LANG == 'SI' ) GIF= '```ඇනිමේශන් ස්ටිකර් GIF බවට පත්කිරීම```'
+  var URL = ''
+  if (global.LANG == 'EN' ) URL= '```Get url your image / video```'
+  if (global.LANG == 'SI' ) URL= '```ඔබගේ ජායාරූපයට හෝ වීඩියෝවට ලින්කුවක් ලබාදෙයි```'
+  var FANCY = ''
+  if (global.LANG == 'EN' ) FANCY = '```Make fancy text```'
+  if (global.LANG == 'SI' ) FANCY = '```විවිද හැඩවලින් අකුරු සෑදීම [ only english ]```'
+  
+                    anu = `*◯───────[ CONVERT MENU ]───────◯*
+  
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+  ╰⛒  *ᴛɪᴍᴇ* ${time}
+  
+  ${M_E} *${prefix}toimage*   
+     ${D_E}  ${IMG}
+  ${M_E} *${prefix}removebg*   
+     ${D_E}  ${RBG}
+  ${M_E} *${prefix}sticker*   
+     ${D_E} ${STICKER}
+  ${M_E} *${prefix}emojimix*   
+     ${D_E}  ${EMOJIMIX}
+  ${M_E} *${prefix}tovideo*   
+     ${D_E}  ${TOVIDEO}
+  ${M_E} *${prefix}togif*   
+     ${D_E}  ${GIF}
+  ${M_E} *${prefix}tourl*   
+     ${D_E}  ${URL} 
+  ${M_E} *${prefix}fancy*   
+     ${D_E}  ${FANCY} 
+     
+  *──────────◯*
+  `
+                      next = Lang.NEXT_BUTTON
+  back = Lang.BACK_BUTTON
+  
+      footer = global.botnma
+                   buttons = [
+                      {buttonId: `elisavoicemenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `elisaranimemenu`, buttonText: {displayText: next}, type: 1}
+                      
+                  ]
+                  let buttonMessage = {
+                      image: { url: 'https://telegra.ph/file/b6077fd339af273d1ec4e.jpg'},
+                      caption:anu ,
+                      footer: footer,
+                      buttons: buttons,
+                      headerType: 4
+                  }
+                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+            
+                      /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/b6077fd339af273d1ec4e.jpg' } }, { upload:   QueenNilu.waUploadToServer })
+                                    template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                                        templateMessage: {
+                                            hydratedTemplate: {
+                                                imageMessage: message.imageMessage,
+                                                hydratedContentText: anu ,
+                                                hydratedFooterText: global.botnma ,
+                                                hydratedButtons: [{
+                                                    urlButton: {
+                                                        displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
+                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                    }
+                                                }, {
+                                                    quickReplyButton: {
+                                                        displayText: `${back}` ,
+                                                        id: 'elisavoicemenu'
+                                                        }
+                                                    },  {
+                                                    quickReplyButton: {
+                                                        displayText: `${next}` ,
+                                                        id: 'elisaranimemenu'
+                                                        }
+                                                }]
+                                            }
+                                        }
+                                    }), { userJid: m.chat, quoted: m })
+                                      QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                               */
+  }
+                    break
+                    case 'elisaranimemenu': {  
+  const start = new Date().getTime()
+    await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + ' *_ᴍs_*' 
+    const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+  
+                            await QueenNilu.sendMessage(from, { react: { text: `🌝`, key: m.key }})
+  
+  next = Lang.NEXT_BUTTON
+  back = Lang.BACK_BUTTON
+  
+  
+                        anu = `*◯───────[ DOWNLOAD MENU ]───────◯*
+  
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+  ╰⛒  *ᴛɪᴍᴇ* ${time}
+  
+  ${M_E} ${prefix}akira  
+  ${M_E} ${prefix}ana
+  ${M_E} ${prefix}asuna 
+  ${M_E} ${prefix}ayuzawa 
+  ${M_E} ${prefix}boruto
+  ${M_E} ${prefix}elaina 
+  ${M_E} ${prefix}emilia 
+  ${M_E} ${prefix}erza  
+  ${M_E} ${prefix}gremory  
+  ${M_E} ${prefix}inori  
+  ${M_E} ${prefix}kaga  
+  ${M_E} ${prefix}kaori  
+  ${M_E} ${prefix}kurumi  
+  ${M_E} ${prefix}loli  
+  ${M_E} ${prefix}madara  
+  ${M_E} ${prefix}mikasa  
+  ${M_E} ${prefix}miku  
+  ${M_E} ${prefix}naruto  
+  ${M_E} ${prefix}nezuko  
+  ${M_E} ${prefix}rize  
+  ${M_E} ${prefix}sakura  
+  ${M_E} ${prefix}sasuke  
+  ${M_E} ${prefix}shina  
+  ${M_E} ${prefix}shinka  
+  ${M_E} ${prefix}shota  
+  ${M_E} ${prefix}waifu  
+  ${M_E} ${prefix}yuki  
+  ${M_E} ${prefix}bully
+  ${M_E} ${prefix}cuddle
+  ${M_E} ${prefix}cry
+  ${M_E} ${prefix}hug
+  ${M_E} ${prefix}awoo
+  ${M_E} ${prefix}kiss
+  ${M_E} ${prefix}lick
+  ${M_E} ${prefix}pat
+  ${M_E} ${prefix}smug
+  ${M_E} ${prefix}bonk
+  ${M_E} ${prefix}yeet
+  ${M_E} ${prefix}blush
+  ${M_E} ${prefix}smile
+  ${M_E} ${prefix}wave
+  ${M_E} ${prefix}highfive
+  ${M_E} ${prefix}handhold
+  ${M_E} ${prefix}nom
+  ${M_E} ${prefix}bite
+  ${M_E} ${prefix}glomp
+  ${M_E} ${prefix}slap
+  ${M_E} ${prefix}kill
+  ${M_E} ${prefix}happy
+  ${M_E} ${prefix}wink
+  ${M_E} ${prefix}poke
+  ${M_E} ${prefix}dance
+  ${M_E} ${prefix}cringe
+  
+  *──────────◯*
+  `
+  
+  footer = global.botnma
+                   buttons = [
+                      {buttonId: `elisaconvertmenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `elisanocategorymenu`, buttonText: {displayText: next}, type: 1}
+                      
+                  ]
+                  let buttonMessage = {
+                      image: { url: 'https://telegra.ph/file/a41e3b88d1676fa98dd00.jpg'},
+                      caption: anu,
+                      footer: footer,
+                      buttons: buttons,
+                      headerType: 4
+                  }
+                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+            
+                   /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/a41e3b88d1676fa98dd00.jpg' } }, { upload:   QueenNilu.waUploadToServer })
+                                    template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                                        templateMessage: {
+                                            hydratedTemplate: {
+                                                imageMessage: message.imageMessage,
+                                                hydratedContentText: anu ,
+                                                hydratedFooterText: global.botnma ,
+                                                hydratedButtons: [{
+                                                    urlButton: {
+                                                        displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
+                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                    }
+                                                }, {
+                                                    quickReplyButton: {
+                                                        displayText: `${back}` ,
+                                                        id: 'elisaconvertmenu'
+                                                        }
+                                                    },  {
+                                                    quickReplyButton: {
+                                                        displayText: `${next}` ,
+                                                        id: 'elisanocategorymenu'
+                                                        }
+                                                }]
+                                            }
+                                        }
+                                    }), { userJid: m.chat, quoted: m })
+                                      QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                               */
+  }
+                    break
+                    case 'elisanocategorymenu': {  
+  const start = new Date().getTime()
+    await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + ' *_ᴍs_*' 
+    const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+  
+                            await QueenNilu.sendMessage(from, { react: { text: `⚙️`, key: m.key }})
+                    prefix = '.'
+  
+  next = Lang.NEXT_BUTTON
+  back = Lang.BACK_BUTTON
+  
+  var SPEED = ''
+  if (global.LANG == 'EN' ) SPEED = '```Test Bot Speed```'
+  if (global.LANG == 'SI') SPEED = '```බොට්ගේ වේගය මැනීමට```'
+  var PING = ''
+  if (global.LANG == 'EN' ) PING= '```Test Bot ping.```'
+  if (global.LANG == 'SI') PING= '```බොට්ගේ පින්ග් පරීක්ශාකිරීමට```'
+  var OWNER = ''
+  if (global.LANG == 'EN' ) OWNER = '```Send Bot Owner Contact```'
+  if (global.LANG == 'SI') OWNER = '```බොට් අයිතිකරුගේ නම්බර් එක එවයි```'
+  var DONA = ''
+  if (global.LANG == 'EN' ) DONA = '```Donate fro bot```'
+  if (global.LANG == 'SI') DONA = '```බොට් සදහා ආදාරයක් කිරීමට```'
+  var MENU = ''
+  if (global.LANG == 'EN' ) MENU = '```Send Bot Menu```'
+  if (global.LANG == 'SI') MENU= '```බොට් මෙනුව එවයි```'
+  var DELETE = ''
+  if (global.LANG == 'EN' ) DELETE= '```Delete massage if bot send```'
+  if (global.LANG == 'SI') DELETE= '```බොට් යැවූ මැස්ස්සේජ් මකාදමයි```'
+  var QUO = ''
+  if (global.LANG == 'EN' ) QUO = '```Send Quoted Massage```'
+  if (global.LANG == 'SI') QUO = '```ඔබ විමසූ පනිවුඩය රිප්ලයි කර ඇති මැස්ස්සේජ් එක එවයි```'
+  var LIP = ''
+  if (global.LANG == 'EN' ) LIP = '```Send personal massage list```'
+  if (global.LANG == 'SI') LIP= '```ඉන්බොක්ස් ඇති චැට් පෙන්වයි```'
+  var LPO = ''
+  if (global.LANG == 'EN' ) LPO= '```Show online List```'
+  if (global.LANG == 'SI') LPO= '```ඔන්ලයින් සිටින අය පෙන්වයි```'
+  var REPORT = ''
+  if (global.LANG == 'EN' ) REPORT= '```report from bot owner```'
+  if (global.LANG == 'SI') REPORT = '```බොට් අයිතිකරුට වාර්තාකරන්න```'
+  
+  
+  anu = `*◯───────[ MISC MENU ]───────◯*
+  
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+  ╰⛒  *ᴛɪᴍᴇ* ${time}
+  
+  ${M_E} *${prefix}speedtest*   
+      ${D_E}  ${SPEED}
+  ${M_E} *${prefix}ping*   
+      ${D_E}  ${PING}
+  ${M_E} *${prefix}owner*   
+      ${D_E}  ${OWNER}
+  ${M_E} *${prefix}donate*   
+      ${D_E}  ${DONA}
+  ${M_E} *${prefix}menu*   
+      ${D_E}  ${MENU}
+  ${M_E} *${prefix}delete*   
+      ${D_E}  ${DELETE}
+  ${M_E} *${prefix}quoted*   
+      ${D_E}  ${QUO}
+  ${M_E} *${prefix}listpc*   
+      ${D_E}  ${LIP}
+  ${M_E} *${prefix}listonline*   
+      ${D_E}  ${LPO}
+  ${M_E} *${prefix}report*   
+      ${D_E}  ${REPORT}
+      
+  *──────────◯*
+  `
+                      footer = global.botnma
+                   buttons = [
+                      {buttonId: `elisaranimemenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `textlogo`, buttonText: {displayText: next}, type: 1}
+                      
+                  ]
+                  let buttonMessage = {
+                      image: { url: 'https://telegra.ph/file/be3ca9a3bdac2fbe47f10.jpg' },
+                      caption:anu ,
+                      footer: footer,
+                      buttons: buttons,
+                      headerType: 4
+                  }
+                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+            
+                      /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/be3ca9a3bdac2fbe47f10.jpg' } }, { upload:   QueenNilu.waUploadToServer })
+                                    template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                                        templateMessage: {
+                                            hydratedTemplate: {
+                                                imageMessage: message.imageMessage,
+                                                hydratedContentText: anu ,
+                                                hydratedFooterText: global.botnma ,
+                                                hydratedButtons: [{
+                                                    urlButton: {
+                                                        displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
+                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                    }
+                                                }, {
+                                                    quickReplyButton: {
+                                                        displayText: `${back}` ,
+                                                        id: 'elisaranimemenu'
+                                                        }
+                                                    },  {
+                                                    quickReplyButton: {
+                                                        displayText: `${next}` ,
+                                                        id: 'elisadatabasemenu'
+                                                        }
+                                                }]
+                                            }
+                                        }
+                                    }), { userJid: m.chat, quoted: m })
+                                      QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                */
+  }
+                    break
+                    case 'textlogo': { 
+  const start = new Date().getTime()
+    await QueenNilu.sendMessage(from, { react: { text: `👻`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + ' *_ᴍs_*' 
+    const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+  
+                            await QueenNilu.sendMessage(from, { react: { text: `⚧️️`, key: m.key }})
+  prefix = '.'
+                        anu = `*◯───────[ TEXT TO LOGO MENU ]───────◯*
+  
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+  ╰⛒  *ᴛɪᴍᴇ* ${time}
+  
+  ${M_E} *${prefix}eglitch*
+  ${M_E} *${prefix}eberry*
+  ${M_E} *${prefix}eneon*
+  ${M_E} *${prefix}ecrismas*
+  ${M_E} *${prefix}ethunder*
+  ${M_E} *${prefix}eninja*
+  ${M_E} *${prefix}eorange*
+  ${M_E} *${prefix}ecake*
+  ${M_E} *${prefix}estrowberry*
+  ${M_E} *${prefix}eflaming*
+  ${M_E} *${prefix}eshadow*
+  ${M_E} *${prefix}eongrass*
+  ${M_E} *${prefix}eloveu*
+  ${M_E} *${prefix}ecoffee*
+  ${M_E} *${prefix}eilluminati*
+  
+     ${D_E} ${prefix}eberry MR NIMA
+   
+  *──────────◯*
+  `
+  next = Lang.NEXT_BUTTON
+  back = Lang.BACK_BUTTON
+  
+  footer = global.botnma
+                   buttons = [
+                      {buttonId: `elisanocategorymenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `logomenu`, buttonText: {displayText: next}, type: 1}
+                      
+                  ]
+                  let buttonMessage = {
+                      image: { url: 'https://telegra.ph/file/43fb12ef3bb693973d756.jpg' },
+                      caption:anu ,
+                      footer: footer,
+                      buttons: buttons,
+                      headerType: 4
+                  }
+                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+            
+                      /*message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/15c3205613be1d0bd1f1b.jpg' } }, { upload:   QueenNilu.waUploadToServer })
+                                    template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                                        templateMessage: {
+                                            hydratedTemplate: {
+                                                imageMessage: message.imageMessage,
+                                                hydratedContentText: anu ,
+                                                hydratedFooterText: global.botnma ,
+                                                hydratedButtons: [{
+                                                    urlButton: {
+                                                        displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
+                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                    }
+                                                }, {
+                                                    quickReplyButton: {
+                                                        displayText: `${back}` ,
+                                                        id: 'elisanocategorymenu'
+                                                        }
+                                                    },  {
+                                                    quickReplyButton: {
+                                                        displayText: `${next}` ,
+                                                        id: 'elisaanonymouschatmenu'
+                                                        }
+                                                }]
+                                            }
+                                        }
+                                    }), { userJid: m.chat, quoted: m })
+                                      QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                                */
+  }
+                    break
+                    case 'elisaanonymouschatmenu': {
+  next = Lang.NEXT_BUTTON
+  back = Lang.BACK_BUTTON
+                        anu = `
+  *𝗔𝗡𝗢𝗡𝗬𝗠𝗢𝗨𝗦 𝗠𝗘𝗡𝗨*
+  👤 ${prefix}start
+  👤 ${prefix}next
+  👤 ${prefix}stop
+                        `
+                        footer = global.botnma
+                   buttons = [
+                      {buttonId: `elisadatabasemenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `logomenu`, buttonText: {displayText: next}, type: 1}
+                      
+                  ]
+                  let buttonMessage = {
+                      image: { url: 'https://telegra.ph/file/4c48b566ce23dd180d1be.jpg'},
+                      caption: anu,
+                      footer: footer,
+                      buttons: buttons,
+                      headerType: 4
+                  }
+                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+           
+  }
+                    break
+                    case 'logomenu': {  
+  const start = new Date().getTime()
+    await QueenNilu.sendMessage(from, { react: { text: `♥️`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + ' *_ᴍs_*' 
+    const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+  
+                            await QueenNilu.sendMessage(from, { react: { text: `🌸`, key: m.key }})
+  
+  prefix = '.'
+  var LOGODESC = ''
+  if (global.LANG == 'EN') LOGODESC = '```Make logos on logo pack -1```'
+  if (global.LANG == 'SI') LOGODESC = '```ලෝගෝ සෑදීම ආකාරය - 1```'
+  var LOGODESC_2 = ''
+  if (global.LANG == 'EN') LOGODESC_2 = '```Make logos on logo pack -2```'
+  if (global.LANG == 'SI') LOGODESC_2 = '```ලෝගෝ සෑදීම ආකාරය - 2```'
+  var LOGODESC_3 = ''
+  if (global.LANG == 'EN') LOGODESC_3 = '```Make logos on logo pack -3```'
+  if (global.LANG == 'SI') LOGODESC_3 = '```ලෝගෝ සෑදීම ආකාරය - 3```'
+   
+                        anu = `*◯───────[ LOGO MENU ]───────◯*
+  
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+  ╰⛒  *ᴛɪᴍᴇ* ${time}
+  
+  ${M_E} *.logo*   
+      ${D_E}  ${LOGODESC}
+  ${M_E} *.logo2*   
+      ${D_E}  ${LOGODESC_2}
+  ${M_E} *.logo3*
+      ${D_E}  ${LOGODESC_3}
+  
+   *_Example : .logo1 MR NIMA_*
+   
+   *──────────◯*
+   `,
+  next = Lang.NEXT_BUTTON
+  back = Lang.BACK_BUTTON
+  
+  footer = global.botnma
+                   buttons = [
+                      {buttonId: `elisanocategorymenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `elisasistemmenu`, buttonText: {displayText: next}, type: 1}
+                      
+                  ]
+                  let buttonMessage = {
+                      image: { url: 'https://telegra.ph/file/fe4955fa5a37e91f0ce85.jpg'},
+                      caption: anu,
+                      footer: footer,
+                      buttons: buttons,
+                      headerType: 4
+                  }
+                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+            
+                     /* message = await prepareWAMessageMedia({ image : { url: 'https://telegra.ph/file/fe4955fa5a37e91f0ce85.jpg' } }, { upload:   QueenNilu.waUploadToServer })
+                                    template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                                        templateMessage: {
+                                            hydratedTemplate: {
+                                                imageMessage: message.imageMessage,
+                                                hydratedContentText: anu ,
+                                                hydratedFooterText: global.botnma ,
+                                                hydratedButtons: [{
+                                                    urlButton: {
+                                                        displayText: '❰ ʏᴏᴜᴛᴜʙᴇ ❱' ,
+                                                        url: 'https://youtube.com/c/MRNIMAOFC'
+                                                    }
+                                                }, {
+                                                    quickReplyButton: {
+                                                        displayText: `${back}` ,
+                                                        id: 'elisadatabasemenu'
+                                                        }
+                                                    },  {
+                                                    quickReplyButton: {
+                                                        displayText: `${next}` ,
+                                                        id: 'ownermenu'
+                                                        }
+                                                }]
+                                            }
+                                        }
+                                    }), { userJid: m.chat, quoted: m })
+                                      QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                              */
+                                }
+                    break
+                    case 'elisasistemmenu': {
+  const start = new Date().getTime()
+    await QueenNilu.sendMessage(from, { react: { text: `♥️`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + ' *_ᴍs_*' 
+    const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+  
+                        anu = `*◯───────[ SYSTEM MENU ]───────◯*
+  
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+  ╰⛒  *ᴛɪᴍᴇ* ${time}
+  
+  ${M_E} ${prefix}mute
+  ${M_E} ${prefix}antiwame
+  
+  *──────────◯*
+  `
+                    footer = global.botnma
+                   buttons = [
+                      {buttonId: `logomenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `ownermenu`, buttonText: {displayText: next}, type: 1}
+                      
+                  ]
+                  let buttonMessage = {
+                      image: { url: 'https://telegra.ph/file/5e9592ed3d63a4ecc2ae6.jpg'},
+                      caption: anu,
+                      footer: footer,
+                      buttons: buttons,
+                      headerType: 4
+                  }
+                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+            
+                   /* const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                                        templateMessage: {
+                                            hydratedTemplate: {
+                                                hydratedContentText: anu,
+                                                locationMessage: {
+                                                jpegThumbnail: fs.readFileSync('./image/Elisa.jpg')},
+                                                hydratedFooterText: `𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙿𝚞𝚋𝚕𝚒𝚌 𝙴𝚍𝚒𝚝𝚒𝚘𝚗 `,
+                                                hydratedButtons: [{
+                                                    urlButton: {
+                                                        displayText: 'SUBSCRIBE',
+                                                        url: 'https://www.youtube.com/c/MRNIMAOFC'
+                                                    }
+                                                }, {
+                                                    quickReplyButton: {
+                                                        displayText: 'OWNER',
+                                                        id: `${prefix}owner`
+                                                    }
+                                                }]
+                                            }
+                                        }
+                                    }), { userJid: m.chat })
+                                    QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                               */ }
+                    break
+                      case 'ownermenu': {  
+  const start = new Date().getTime()
+    await QueenNilu.sendMessage(from, { react: { text: `♥️`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + ' *_ᴍs_*' 
+    const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+  
+                            await QueenNilu.sendMessage(from, { react: { text: `🎭`, key: m.key }})
+  
+  var JOIN = ''
+  if (global.LANG == 'EN') JOIN= '```Join yousing invite link```'
+  if (global.LANG == 'SI') JOIN= '```ගෲප් ලින්ක් බාවිතාකරමින් ඒයට join වීමට```'
+  var LEAVE = ''
+  if (global.LANG == 'EN') LEAVE= '```Leave from group```'
+  if (global.LANG == 'SI') LEAVE= '```ගෲප් එකකින් බොට්ව ඉවත් කිරීමට```'
+  var SETPP = ''
+  if (global.LANG == 'EN') SETPP= '```Change bit profile photo```'
+  if (global.LANG == 'SI') SETPP= '```බොට්ගේ ෆ්‍රොෆයිල් ජායාරූපය වෙනස් කිරීම```'
+  var BLOCK = ''
+  if (global.LANG == 'EN') BLOCK= '```Block user```'
+  if (global.LANG == 'SI') BLOCK= '```අයෙකු අවහිර කිරීමට```'
+  var UNBLOCK = ''
+  if (global.LANG == 'EN') UNBLOCK= '```unblock user```'
+  if (global.LANG == 'SI') UNBLOCK= '```අවහිර කර අයෙකුගේ අවහිරතාවය ඉවත් කිරීම```'
+  var BCGRP = ''
+  if (global.LANG == 'EN') BCGRP= '```send broadcast All groups```'
+  if (global.LANG == 'SI') BCGRP= '```සමූහ වලට පමනක් බ්‍රෝඩ්කාස්ට් යැවීමට```'
+  var BCALL = ''
+  if (global.LANG == 'EN') BCALL= '```Send broadcast all chats```'
+  if (global.LANG == 'SI') BCALL= '```සියලුම චැට් සදහා බ්‍රෝඩ්කාස්ට් යැවීම```'
+  prefix = '.'
+  anu = `*◯───────[ DOWNLOAD MENU ]───────◯*
+  
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+  ╰⛒  *ᴛɪᴍᴇ* ${time}
+  
+  ${M_E} *${prefix}join*   
+      ${D_E}  ${JOIN}
+  ${M_E} *${prefix}leave*   
+      ${D_E}  ${LEAVE}
+  ${M_E} *${prefix}setbotpp*   
+      ${D_E}  ${SETPP}
+  ${M_E} *${prefix}block*   
+      ${D_E}  ${BLOCK}
+  ${M_E} *${prefix}unblock*   
+      ${D_E}  ${UNBLOCK}
+  ${M_E} *${prefix}bcgroup*   
+      ${D_E}  ${BCGRP}
+  ${M_E} *${prefix}bcall*   
+      ${D_E}  ${BCALL}
+  
+  *──────────◯*
+  `
+                        next = Lang.NEXT_BUTTON
+  back = Lang.BACK_BUTTON
+     
+     footer = global.botnma
+                   buttons = [
+                      {buttonId: `elisasistemmenu`, buttonText: {displayText: back}, type: 1},
+                      {buttonId: `about `, buttonText: {displayText: 'ǫᴜᴇᴇɴ ᴇʟɪsᴀ'}, type: 1}
+                      
+                  ]
+                  let buttonMessage = {
+                      image: { url: 'https://telegra.ph/file/f9ef7247406e4a86c3a77.jpg' },
+                      caption: anu,
+                      footer: footer,
+                      buttons: buttons,
+                      headerType: 4
+                  }
+                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+                      }
+                 break
+/////////////////////////////////////Menu End-------------------------
 
 case 'attp' :{
     if (!text) return reply ('Need some word \n ex - attp Mr janiya')
@@ -9585,34 +10055,7 @@ case 'attp' :{
    }
    break
 
- /*  case 'ringtone' :{
-     if (!text) return reply('*👸💬 Please Enter ringtone name*\n_Example - ringtone iphone_')
-     const anu = fetchJson(`https://my-shinz.herokuapp.com/api/search/ringtone?text=${text}`)
-     const search = anu.result
-     let sections = []   
-for (let i of anu.result) {
-const list = {title: `👸💬 sᴇʟᴇᴄᴛ ʏᴏᴜʀ ʀɪɴɢᴛᴏɴᴇ`,
-rows: [
-{
-title: i.title, 
-rowId: `dltone ${i.audio}`    
-}, 
-]
-}
-sections.push(list)   
-}
-//.catch((err) => reply('*👸💬 Error*'))
-const sendm =  QueenNilu.sendMessage(
-m.chat, 
-{
-text: `Queen Elisa Ring Tone Downloader`,
-footer: `${global.botnma}`,
-title: "RINGTONS",
-buttonText: "sᴇʟᴇᴄᴛ",
-sections
-}, { quoted : m })    
-   }
-   break*/
+ 
    case 'dltone' : {
    //await QueenNilu.sendText(m.chat, `\n*🔄 Please wait ${m.pushName}...*\n`, m, )
    await QueenNilu.sendMessage(m.chat, { audio: { url: text } , mimetype: 'audio/mpeg' }, { quoted: m })
