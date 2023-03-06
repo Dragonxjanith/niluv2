@@ -30,7 +30,7 @@ global.alivelogo = process.env.ALIVE_LOGO || `https://te.legra.ph/file/a9293226a
 
 global.ownernomer = "94767438882" //ur number
 global.premium = ['94767438882'] //ur premium number
-global.botname = '*Qᴜᴇᴇɴ ɴɪʟᴜ ᴠ2 ꜱᴛᴀʙʟᴇ*' //ur bot name
+global.botname = 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴠ2 ꜱᴛᴀʙʟᴇ' //ur bot name
 global.linkz = "https://chat.whatsapp.com/" //your theme url which will be displayed on whatsapp
 global.websitex = "https://youtu.be/c/janithsadanuwan" //ur website to be displayed
 global.botscript = 'https://github.com/' //script link
