@@ -8201,7 +8201,7 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
                     const templateButtons = [
 { quickReplyButton: {displayText: ' 𝙻𝙸𝚂𝚃 𝙼𝙴𝙽𝚄 ', id: 'list' }} , 
 { quickReplyButton: {displayText: ' 𝙼𝙴𝙽𝚄 ', id: 'allmenu' }}  ,
-{ quickReplyButton: {displayText: ' 𝙿𝙸𝙽𝙶 ️', id: 'ping' }}  
+{ quickReplyButton: {displayText: ' 𝙿𝙸𝙽𝙶 ️', id: 'p' }}  
                         ]
  const buttonMessage = {
  caption: `◈ Queen Nilu Bot is Online ◈
