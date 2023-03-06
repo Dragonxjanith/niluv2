@@ -5213,15 +5213,15 @@ case 'keluar': case 'leave': {
             break 
             case 'ping' : case 'ping2' : {
                 const start = new Date().getTime()
-await niluBotMd.sendText(m.chat, '*📡  ʀᴜɴɪɴɢ ʀᴇsᴘᴏɴᴅ...*')
+await QueenNilu.sendText(m.chat, '*📡  ʀᴜɴɪɴɢ ʀᴇsᴘᴏɴᴅ...*')
 const end = new Date().getTime()
-const poonn = await niluBotMd.sendText(m.chat, '*ᴘᴏɴɢ* ' + (end - start) + ' *_ᴍs_*' )
-await niluBotMd.sendMessage(from, { react: { text: `✅`, key: poonn.key }})
+const poonn = await QueenNilu.sendText(m.chat, '*ᴘᴏɴɢ* ' + (end - start) + ' *_ᴍs_*' )
+await QueenNilu.sendMessage(from, { react: { text: `✅`, key: poonn.key }})
 }
 break
 case 'botstetus' : case 'stetus' : {
 const start = new Date().getTime()
-await niluBotMd.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
+await QueenNilu.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
 const end = new Date().getTime()
 const ping = (end - start) + 'ms' 
 // const runtime = 
