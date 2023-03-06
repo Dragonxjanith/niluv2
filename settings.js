@@ -16,7 +16,7 @@ global.doc3 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.do
 global.doc4 = 'application/zip'
 global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
-
+global.AUTO_REACT = 'true'
 //👇 Menu imoji 
 global.MENU_IMOJI = '💃|💍'
 global.owner = ['94767438882'] //ur owner number
