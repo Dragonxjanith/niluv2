@@ -7920,9 +7920,9 @@ const reply = `
     }
     break
 case 'About': case 'script': case 'bot': case 'donate': case 'about': case 'updatebot': case 'cekbot': case 'sourcecode': {
-    anu = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json')
+    anu = await fetchJson('https://github.com/Dragonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
     G_LINK = anu.PUBLIC_GROUP
- //const anu2 = await axios.get(`https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json`)
+ 
  
  
 const msg = `*💃 𝙌𝙐𝙀𝙀𝙉 𝙉𝙄𝙇𝙐 𝙑2 💃*
@@ -7949,7 +7949,7 @@ const templateButtons = [
 ]
 
 const templateMessage = {
-image: {url: 'https://telegra.ph/file/7390dd698fa45dacbdba8.jpg'},
+image: {url: 'https://te.legra.ph/file/3e57249993356ba15109f.jpg'},
 caption: msg,
 footer: 'ǫᴜᴇᴇɴ ɴɪʟᴜ ᴡᴀ ʙᴏᴛ ᴍᴅ',
 templateButtons: templateButtons,
