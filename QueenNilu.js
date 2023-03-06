@@ -8397,6 +8397,101 @@ if (!text) return m.reply(`_Name a Series or movie`)
                 quoted: m,
             })
             break
+            // AUTO MASSAGE REPLY REACT🐣
+
+     if (global.AUTO_REACT == 'true' ) {
+		//const sudoo = HELPERS.split(',')
+		const Sudooo = [HELPERS].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+		if (Sudooo){
+		await ElisaBotMd.sendMessage(from, { react: { text: `👻`, key: m.key }})
+         
+		}
+		if (m.sender == `${global.owner}@s.whatsapp.net`) {
+				  await ElisaBotMd.sendMessage(from, { react: { text: global.OWNER_REACT , key: m.key }})
+				 }		 
+         if (budy.match(`🥲`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `😙`, key: m.key }})
+         }
+           if (budy.match(`😹`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `😹`, key: m.key }})
+         }
+           if (budy.match(`😂`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `😹`, key: m.key }})
+         }
+           if (budy.match(`🤣`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `😂`, key: m.key }})
+         }
+           if (budy.match(`🥰`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `😍`, key: m.key }})
+         }
+           if (budy.match(`😍`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `😇`, key: m.key }})
+         }
+           if (budy.match(`🤗`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `🤗`, key: m.key }})
+         }
+           if (budy.match(`🙂`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `😔`, key: m.key }})
+         }
+           if (budy.match(`😇`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `😇`, key: m.key }})
+         }
+           if (budy.match(`😙`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `🌝`, key: m.key }})
+         }
+           if (budy.match(`😪`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `😪`, key: m.key }})
+         }
+           if (budy.match(`😔`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `😔`, key: m.key }})
+         }
+           if (budy.match(`paka`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `🍆`, key: m.key }})
+         }
+           if (budy.match(`nima`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `👻`, key: m.key }})
+         }
+           if (budy.match(`❤`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `💞`, key: m.key }})
+         }
+           if (budy.match(`🌝`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `🌚`, key: m.key }})
+         }
+           if (budy.match(`🌚`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `🌝`, key: m.key }})
+         }
+           if (budy.match(`🤨`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `😮‍💨`, key: m.key }})
+         }
+           if (budy.match(`😒`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `🙄`, key: m.key }})
+         }
+           if (budy.match(`🤗`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `👀`, key: m.key }})
+         }
+         if (budy.match(`sex`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `🧐`, key: m.key }})
+         }
+         if (budy.match(`janiya`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `🐼`, key: m.key }})
+         }
+         if (budy.match(`rash`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `🦄`, key: m.key }})
+         }
+         if (budy.match(`vish`)) {
+         await ElisaBotMd.sendMessage(from, { react: { text: `🦚`, key: m.key }})
+         }
+         const reactimoji = ["🌍","🐼","😎","🥺","😳","😲","😯","😥","😱","😭","😖","😈","📥","😀","😃","😄","😁","😆","🥹","😅","☺","️😊","🙃","😉","😌","🤓","💦","🥸","🤩","🥳","😕","😖","😩","🥺","🖤","💔","❤️‍🔥","❤️‍🩹","💋","😤","🤬","🥵","🥶","😶","🤡","😐","😯","😮","🥱","😪","😵","😵‍💫","🙈","👺","💩","👻","💀","☠️","👾","😺","😸","😹","😻","😼","😽","🙀","😾","🫶","🤲","🫵","👍","🫳","👉","🐶","🐱","🐭","🐹","🐰","🦊","🐻","🐼","🐻‍❄","🐨","🐯","🦁","🐮","🐷","🐽","🐸","🌙","🍆","🍊","🥎","🧡","💟","💘","🇱🇰","🫂","👀","🪀","⚽","🧘‍♀️","✈️","🎡","⛲","🎠","⛱️","Hi","morning","night","gm","gn","😘","🤤","💪","🙏","👋","😊","🖕","🌼","🌸","🍑","ok","elisa","Elisa" ]
+         const repkyreact = ["🌍","🐼","😎","🥺","😳","😲","😯","😥","😱","🤧","😖","😈","😶‍🌫️","😀","😃","😄","😁","😆","🥹","😅","☺","️😊","🙃","😉","😌","🦁","💥","🥸","🤩","🥳","😕","😖","😩","🥺","🤍","💔","❤️‍🔥","❤️‍🩹","💋","😤","🤬","🥵","🥶","😶","🤡","😐","😯","😮","🥱","😪","😵","😵‍💫","🙊","👺","💩","👻","💀","☠️","👾","😺","😸","😹","😻","😼","😽","🙀","😾","🫶","🤲","🫵","👍","🫳","👉","🐶","🐱","🐭","🐹","🐰","🦊","🐻","🐼","🐻‍❄","🐨","🐯","🦁","🐮","🐷","🐽","🐸","🌙","🍆","🍊","🥎","🧡","💟","💘","🇱🇰","🫂","👀","🪀","⚽","🧘‍♀️","✈️","🎡","⛲","🎠","⛱️","👋","⛅","🌌","🌄","🌙","😘","🤤","💪","🙏","👋","😊","🖕","🌼","🌸","🍑","✌️","👸","👸"]
+         for (any in reactimoji){
+         if (budy.toLowerCase().includes(reactimoji[any])) {
+         imoji = repkyreact[any]
+//await ElisaBotMd.sendText(m.chat, imoji )
+         await ElisaBotMd.sendMessage(from, { react: { text: imoji, key: m.key }})
+}
+}
+     }
+break
 case 'weather':
 if (!text) return m.reply('What location?')
             let wdata = await axios.get(
