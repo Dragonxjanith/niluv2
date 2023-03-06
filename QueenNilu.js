@@ -8326,7 +8326,7 @@ const templateMessage = {
 image: {url: 'https://te.legra.ph/file/3e57249993356ba15109f.jpg'},
 caption: msg,
 footer: 'ǫᴜᴇᴇɴ ɴɪʟᴜ ᴡᴀ ʙᴏᴛ ᴍᴅ',
-templateButtons: templateButtons,
+buttons: templateButtons,
 headerType: 4
 }
 
