@@ -19,7 +19,7 @@ global.LANG = 'EN'
 global.autoTyping = false //auto tying in gc (true to on, false to off)
 global.autoRecord = false //auto recording (true to on, false to off)
 
-
+global.OWNER_REACT = '🥀'
 global.doc1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
 global.doc2 = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
 global.doc3 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
