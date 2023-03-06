@@ -8204,7 +8204,7 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
 { quickReplyButton: {displayText: ' 𝙿𝙸𝙽𝙶 ️', id: 'ping' }}  
                         ]
  const buttonMessage = {
- caption: `${ita}◈ Queen Nilu Bot is Online ◈${ita}
+ caption: `◈ Queen Nilu Bot is Online ◈
 
  *( ᴅᴇᴘʟᴏʏ ) ▽* 
  _http://github.com/janithsadanuwan_
@@ -8220,7 +8220,7 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
  *[ ⏱️ ʀᴜɴ ᴛɪᴍᴇ ⏱️] ▽*
  ${runtime(process.uptime())}
  
- ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
+💗 THANKS FOR USING QUEEN NILU 💗
  `,
  footer: global.botnma,
  templateButtons: templateButtons,
