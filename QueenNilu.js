@@ -1045,10 +1045,10 @@ Type *surrender* to surrender and admit defeat`
 
 case 'apk':{
     /*var P_LINK = ''
-    if (global.LANG == 'EN') P_LINK = return reply('*👸💬 Please give me a correct link*\n _.apk https://play.google.com/store/apps/details?id=com.whatsapp_')
+    if (global.LANG == 'EN') P_LINK = return reply('*💃 Please give me a correct link*\n _.apk https://play.google.com/store/apps/details?id=com.whatsapp_')
     if (global.LANG == 'EN') P_LINK = */
     
-               if (!text) return reply('*👸💬 Please give plastore app name*')
+               if (!text) return reply('*💃 Please give plastore app name*')
                 await QueenNilu.sendText(m.chat,mess.wait)
                await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}`)
                 .then(async (janiya) => {  
@@ -1080,7 +1080,7 @@ case 'apk':{
            break    
            
            case 'getapk' : {
-                if (!text.includes('https://play.google.com/')) return reply('*👸💬 Please give me a correct link*\n _.apk https://play.google.com/store/apps/details?id=com.whatsapp_')
+                if (!text.includes('https://play.google.com/')) return reply('*💃 Please give me a correct link*\n _.apk https://play.google.com/store/apps/details?id=com.whatsapp_')
                await QueenNilu.sendMessage(from, { text: `*📥 Downloading Playstore apk...*` }, { quoted: m })
                    //  await getBuffer(`https://apk-dl2.herokuapp.com/api/apk-dl?url=${text}`)
                   //  const name = janiya.hasil[0].title || text
@@ -1470,8 +1470,8 @@ Cieeee, What's Going On❤️💖👀`
             const load = await QueenNilu.sendText(m.chat, mess.wait , m, )
          
             var NEWSSS = ''
-           if (global.LANG == 'EN') NEWSSS = '```👸💬 Click And Get Your news```'
-           if (global.LANG == 'SI') NEWSSS = '```👸💬 ඔබට අවශ්‍ය පුවත පහත බටන බාවිතයෙන් ලබාගන්න```'
+           if (global.LANG == 'EN') NEWSSS = '```💃 Click And Get Your news```'
+           if (global.LANG == 'SI') NEWSSS = '```💃 ඔබට අවශ්‍ය පුවත පහත බටන බාවිතයෙන් ලබාගන්න```'
          
             const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
             const all_news = await esana_scrape({ fetch: 'all' , passcode: 'uakdmin_sr_2064'}) // Enter Your Passcode or Contact Admin (+94766239744)
@@ -2319,8 +2319,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
         
             case 'play': case 'yt': { 
                 var GIVEME = ''
-                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක හෝ ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen nilu bot*"
-                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make queen nilu bot*"
+                if (global.LANG == 'SI') GIVEME = "```💃 කරුනාකර මට වීඩියෝවක හෝ ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen nilu bot*"
+                if (global.LANG == 'EN') GIVEME ="```💃 Please give me a video or song name.```\n *Example - .yt how to make queen nilu bot*"
                                                   await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                                   if (!text) return reply (GIVEME)
                                                   await QueenNilu.sendText(m.chat,mess.wait, m, )
@@ -2443,8 +2443,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 
                                               case 'song' : {
                 var GIVEME = ''
-                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song rosa male natuwe katu*"
-                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song rosa male natuwe katu*"
+                if (global.LANG == 'SI') GIVEME = "```💃 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song rosa male natuwe katu*"
+                if (global.LANG == 'EN') GIVEME ="```💃 Please give me a song name.```\n *Example - .song rosa male natuwe katu*"
                 const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
                 const audidd = rash.audcmd
                 const docidd = rash.doccmd
@@ -2495,8 +2495,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 const hdpid = rash.hddlid
                 
                 var GIVEME = ''
-                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen nilu bot*"
-                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video name.```\n *Example - .video how to make queen nilu bot*"
+                if (global.LANG == 'SI') GIVEME = "```💃 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen nilu bot*"
+                if (global.LANG == 'EN') GIVEME ="```💃 Please give me a video name.```\n *Example - .video how to make queen nilu bot*"
                 
                                           await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                                   if (!text) return reply (GIVEME)
@@ -2575,8 +2575,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           break
                                           case 'song2' : {
                 var GIVEME = ''
-                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song2 lelena*"
-                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song2 lelena*"
+                if (global.LANG == 'SI') GIVEME = "```💃 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song2 lelena*"
+                if (global.LANG == 'EN') GIVEME ="```💃 Please give me a song name.```\n *Example - .song2 lelena*"
                 text1 = q.split(";")[0]
                 text2 = q.split(";")[1]
                 await QueenNilu.sendMessage(from, { react: { text: `⌛`, key: m.key }})
@@ -2611,8 +2611,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           break  
                                           case 'audiosong2' : {
                 var GIVEME = ''
-                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song2 lelena*"
-                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song2 lelena*"
+                if (global.LANG == 'SI') GIVEME = "```💃 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song2 lelena*"
+                if (global.LANG == 'EN') GIVEME ="```💃 Please give me a song name.```\n *Example - .song2 lelena*"
                 
                 await QueenNilu.sendMessage(from, { react: { text: `⌛`, key: m.key }})
                 
@@ -2646,8 +2646,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           break  
                                           case 'song4' : {
                                           var GIVEME = ''
-                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song3 lelena*"
-                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a song name.```\n *Example - .song3 lelena*"
+                if (global.LANG == 'SI') GIVEME = "```💃 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song3 lelena*"
+                if (global.LANG == 'EN') GIVEME ="```💃 Please give me a song name.```\n *Example - .song3 lelena*"
                 text1 = q.split(";")[0]
                 text2 = q.split(";")[1]
                                           await QueenNilu.sendMessage(from, { react: { text: `🎧`, key: m.key }})
@@ -2678,8 +2678,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           break
                                           case 'video3' :{
                 var GIVEME = ''
-                if (global.LANG == 'SI') GIVEME = "```👸💬 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen nilu bot*"
-                if (global.LANG == 'EN') GIVEME ="```👸💬 Please give me a video or song name.```\n *Example - .yt how to make queen nilu bot*"
+                if (global.LANG == 'SI') GIVEME = "```💃 කරුනාකර මට වීඩියෝවක නමක් ලබාදෙන්න.```\n*උදාහරණ - .yt how to make queen nilu bot*"
+                if (global.LANG == 'EN') GIVEME ="```💃 Please give me a video or song name.```\n *Example - .yt how to make queen nilu bot*"
                 text1 = q.split(";")[0]
                 text2 = q.split(";")[1]
                                           if (!text) return reply(GIVEME)
@@ -2716,9 +2716,9 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           case 'video2' :{
                                           const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
                                           buf = await getBuffer(thub.YT_THUB)
-                                          if (!text) return reply('*👸💬 Need video name or url*')
+                                          if (!text) return reply('*💃 Need video name or url*')
                                           if (text.includes('https://youtu')){
-                                         // if (!text.includes('-')) return reply('*👸💬 Please give me a correct type*\n_example .video2 https://youtube.com/watch?v=on3sJ8OlH8M - 360p')
+                                         // if (!text.includes('-')) return reply('*💃 Please give me a correct type*\n_example .video2 https://youtube.com/watch?v=on3sJ8OlH8M - 360p')
                                           const quality = args[1] ? args[1] : '360'
                                           const load = await QueenNilu.sendText(m.chat, `*📥 Downloading ${m.pushName} your video...*`, m, )
                                           const nima = await fetchJson(`https://api.akuari.my.id/downloader/youtube3?link=${args[0]}&type=${quality}`)
@@ -3158,7 +3158,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           case 'ytmp3': case 'ytaudio': {  
                                           //await QueenNilu.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                                                   
-                                                  if (!text && text.includes("https://youtu")) return m.reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp3 https://youtube.com/watch?v=WoWlWb6vbzA```')
+                                                  if (!text && text.includes("https://youtu")) return m.reply('*💃 Need youtube url* \n'+'```ℹ️ Example .ytmp3 https://youtube.com/watch?v=WoWlWb6vbzA```')
                                                  const load = await QueenNilu.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your song...*\n`, m, )
                                                  //const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
                                                   await fetchJson(`https://queen-nilu-api-1-2-3.herokuapp.com/api/dowloader/yt?url=${text}`)
@@ -3267,8 +3267,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   case 'ytmp4' : {
                                                   const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
-                                          if(!text) return m.reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
-                                          if (!text.includes('https://youtu')) return m.reply('*👸💬 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
+                                          if(!text) return m.reply('*💃 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
+                                          if (!text.includes('https://youtu')) return m.reply('*💃 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
                                           await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
                                           await QueenNilu.sendText(m.chat,mess.wait)
                                           let quality = args[1] ? args[1] : '360p'
@@ -3710,6 +3710,395 @@ case 'pinterest': {
   })
   }
  break
+ /////////////////----------------Logo Menu-----------------
+ case 'logo' :{ 
+    var MAX = ''
+    if (global.LANG == 'SI') MAX= '```💃 කරුනාකර වචනයක් ලබාදෙන්න ...```\n_උදාහරණ .logo Janiya_'
+    if (global.LANG == 'EN') MAX= '```💃 Please give me a some words ...```\n_example .logo Janiya_'
+    if (!text) return reply (MAX)
+                                  
+     await QueenNilu.sendMessage(from, { react: { text: `1️⃣`, key: m.key }})     
+      
+             const desmsg = `╔═════════════════════☐
+    
+          *_𝚀𝚞𝚎𝚎𝚗 𝙴𝚕𝚒𝚜𝚊 𝙻𝚘𝚐𝚘 𝙻𝚒𝚜𝚝_*
+    
+    *▣ ʀᴇǫᴜᴇsᴛᴇʀ -*  ${m.pushName}
+    *▣ ʟᴏɢᴏ ᴛᴇxᴛ -* ${text}
+    
+    ☐═════════════════════╝`
+         let sections = [{
+    
+             "title": "ʙᴏᴛ ʟɪsᴛ ᴍᴇɴᴜ ᴄʟɪᴄᴋ ᴀɴᴅ sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴏᴡɴ",
+                                                      "rows": [
+                                                      {
+                "title": "CANDY STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `candy ${text}`
+                },
+            {
+                "title": "CHRISTMAS STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `christmas ${text}`
+                },
+            {
+                "title": "DEEPSEA STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `deepsea ${text}`
+            },
+            {
+                "title": "SCIFI STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `scifi ${text}`
+            },
+            {
+                "title": "RAINBOW STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `rainbow ${text}`
+            },
+            {
+                    "title": "WATERPIPE STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `waterpipe ${text}`
+                },
+                                             {
+                    "title": "SPOOKEY STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `spooky ${text}`
+                },
+                {
+                    "title": "PENCIL STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `pencil ${text}`
+                },		
+                {
+                    "title": "CIRCUITE STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `circuit ${text}`
+                },
+                {
+                    "title": "DESCOVERY STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `discovery ${text}`
+                },	
+                {
+                    "title": "FICTION STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `fiction ${text}`
+                },
+                {
+                    "title": "DEMON STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `demon ${text}`
+                },
+                {
+                    "title": "TRANSFORMER STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `transformer ${text}`
+                },
+                {
+                    "title": "BERRY STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `berry ${text}`
+                },
+                {
+                    "title": "THUNDER  STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `thunder ${text}`
+                },
+                {
+                    "title": "MAGMA STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `magma ${text}`
+                },
+                {
+                    "title": "3-D STONE STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `3dstone ${text}`
+                },
+                {
+                    "title": "NEONLIGHT STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `neonlight ${text}`
+                },
+                {
+                    "title": "GLITCH STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `glitch ${text}`
+                },
+                {
+                    "title": "HARRYPOTTER STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `harrypotter ${text}`
+                },
+                {
+                    "title": "BROKENGLASS STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `brokenglass ${text}`
+                },
+                {
+                    "title": "PAPERCUT STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `papercut ${text}`
+                },
+                {
+                    "title": "WATERCOLOR STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `watercolor ${text}`
+                },
+                {
+                    "title": "MULTICOLOR STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `multicolor ${text}`
+                },
+                {
+                    "title": "NEON DEVIL STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `neondevil ${text}`
+                },
+                {
+                    "title": "UNDERWATER STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `underwater ${text}`
+                },
+                {
+                    "title": "GRAFFITIBIKE STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `graffitibike ${text}`
+                },
+                {
+                    "title": "SNOW STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `snow ${text}`
+                },
+                {
+                    "title": "CLOUD STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `cloud ${text}`
+                },
+                {
+                    "title": "HONEY STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `honey ${text}`
+                },
+                {
+                    "title": "ICE STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `ice ${text}`
+                },
+                {
+                    "title": "BISCUIT STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `biscuit ${text}`
+                },
+                {
+                    "title": "WOOD STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `wood ${text}`
+                },
+                {
+                    "title": "CHOCOLATE STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `chocolate ${text}`
+                },
+                {
+                    "title": "STRAWBERRY STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `strawberry ${text}`
+                },
+                {
+                    "title": "MATRIXS STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `matrix ${text}`
+                },
+                {
+                    "title": "BLOOD STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `blood ${text}`
+                },
+                {
+                    "title": "DROPWATER STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `dropwater ${text}`
+                },
+                {
+                    "title": "TOXIC STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `toxic ${text}`
+                },
+                {
+                    "title": "LAVA STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `lava ${text}`
+                },
+                {
+                    "title": "ROCK STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `rock ${text}`
+                },
+                {
+                    "title": "BLOODGLAS STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `bloodglas ${text}`
+                },
+                {
+                    "title": "HALLOWEN STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `hallowen ${text}`
+                },
+                {
+                    "title": "DARKGOLD STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `darkgold ${text}`
+                },
+                {
+                    "title": "JOKER STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `joker ${text}`
+                },
+                {
+                    "title": "WICKER STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `wicker ${text}`
+                },
+                {
+                    "title": "FIREWORK STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `firework ${text}`
+                },
+                {
+                    "title": "SKELETON STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `skeleton ${text}`
+                },
+                {
+                    "title": "BLACKPINK STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `blackpink ${text}`
+                },
+                {
+                    "title": "SAND STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `sand ${text}`
+                },
+                {
+                    "title": "GLUE STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `glue ${text}`
+                }, ///
+                {
+                    "title": "3D BOX STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `3dbox ${text}`
+                },
+                {
+                    "title": "GLITCH STYLE - 2",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `glitch2 ${text}`
+                },
+                {
+                    "title": "GLITCH STYLE - 3",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `glitch3 ${text}`
+                },
+                {
+                    "title": "GREEN NEON STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `greenneon ${text}`
+                },
+                {
+                    "title": "3D NEON STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `3dneon ${text}`
+                },
+                {
+                    "title": "BOKEH STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `bokeh ${text}`
+                },
+                {
+                    "title": "BEAR STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `bear ${text}`
+                },
+                {
+                    "title": "CHRISTMAS STYLE - 2",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `sparklechristmas ${text}`
+                },
+                {
+                    "title": "CHRISTMAS STYLE - 3",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `3dchristmas ${text}`
+                },
+                {
+                    "title": "RAINBOW STYLE - 3",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `rainbow2 ${text}`
+                },
+                {
+                    "title": "FRUIT JUICE STYLE",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `fruitjuice ${text}`
+                },
+                
+                ///
+                {
+                    "title": "1917 STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `1917 ${text}`
+                },
+                {
+                    "title": "LEAVES STYLE ",
+                "description": `\nMr ${m.pushName} ${global.botname} is Ready to make your logo`,
+                "rowId": `leaves ${text}`
+                }
+             ]
+          }
+       ]
+                
+         await QueenNilu.sendListMsg(m.chat, `${desmsg}`, `${global.botname}`, `*🎨 LOGO PACK 1*`, `MAKE LOGO`, sections, m)
+                                    
+      }
+                break
+                case 'eglitch' : case 'eberry': case 'eneon' : case 'ecrismas' : case 'ethunder' : case 'eninja' :
+                case 'eorange' : case 'ecake' : case 'estrowberry' : case 'eflaming' : case 'eshadow' : case 'eongrass' : 
+                case 'eloveu' : case 'ecoffee' : case 'eilluminati' : {
+                
+                var GIVEE = ''
+      if (global.LANG == 'EN') GIVEE = `*💃 Please give me a some words* \n_ℹ️ example ${prefix + command} Janiya_`
+      if (global.LANG == 'SI') GIVEE = `*💃 කරුනාකර වචනයක් ලබාදෙන්න* \n _ℹ️ උදාහරණ ${prefix + command} Janiya_`
+         if(!text) return reply(GIVEE)
+         const logomaking = await QueenNilu.sendText(m.chat,LOGO_MAKING)
+              
+           let link      
+           if (/eglitch/.test(command)) link = 'https://my-shinz.herokuapp.com/api/textpro/glitch?text='+text
+           if (/eberry/.test(command)) link = 'https://my-shinz.herokuapp.com/api/textpro/berry?text='+text
+           if (/eneon/.test(command)) link = 'https://my-shinz.herokuapp.com/api/textpro/neon?text='+text
+           if (/ecrismas/.test(command)) link = 'https://my-shinz.herokuapp.com/api/textpro/3dchristmas?text='+text
+           if (/ethunder/.test(command)) link = 'https://my-shinz.herokuapp.com/api/textpro/thunder?text='+text
+           if (/eninja/.test(command)) link = 'https://my-shinz.herokuapp.com/api/textpro/ninja-logo?text='+text+'&text2=QueenNilu BOT'
+           if (/eorange/.test(command)) link = 'https://my-shinz.herokuapp.com/api/textpro/3d-orange-juice?text='+text
+           if (/ecake/.test(command)) link = 'https://my-shinz.herokuapp.com/api/textpro/chocolate-cake?text='+text
+           if (/estrowberry/.test(command)) link = 'https://my-shinz.herokuapp.com/api/textpro/strawberry?text='+text
+           if (/eflaming/.test(command)) link = 'https://my-shinz.herokuapp.com/api/photooxy/flaming?text='+text
+           if (/eshadow/.test(command)) link = 'https://my-shinz.herokuapp.com/api/photooxy/shadow-sky?text='+text
+           if (/eongrass/.test(command)) link = 'https://my-shinz.herokuapp.com/api/photooxy/under-grass?text='+text
+           if (/eloveu/.test(command)) link = 'https://my-shinz.herokuapp.com/api/photooxy/picture-of-love?text='+text
+           if (/ecoffee/.test(command)) link = 'https://my-shinz.herokuapp.com/api/photooxy/coffee-cup?text='+text
+           if (/eilluminati/.test(command)) link = 'https://my-shinz.herokuapp.com/api/photooxy/illuminated-metallic?text='+text
+           
+        const img = await getBuffer(link)
+        await QueenNilu.sendMessage(m.chat, { image: img, caption: `${global.cap}\n\n*🗳️ ʀᴇǫᴜᴇsᴛᴇʀ -* ${m.pushName}` }, { quoted: m })
+        await QueenNilu.sendMessage(m.chat,{delete : logomaking.key })  
+               
+    }
+    break
+
+
+
+
+
 case 'candy': case 'christmas': case '3dchristmas': case 'sparklechristmas':
 case 'deepsea': case 'scifi': case 'rainbow2': case 'waterpipe': case 'spooky': 
 case 'pencil': case 'circuit': case 'discovery': case 'metalic': case 'fiction': case 'demon': 
@@ -9687,7 +10076,7 @@ case 'grpmenu': {
   ${M_E} *${prefix}ecoffee*
   ${M_E} *${prefix}eilluminati*
   
-     ${D_E} ${prefix}eberry MR NIMA
+     ${D_E} ${prefix}eberry Janiya
    
   *──────────◯*
   `
@@ -9798,7 +10187,7 @@ case 'grpmenu': {
   ${M_E} *.logo3*
       ${D_E}  ${LOGODESC_3}
   
-   *_Example : .logo1 MR NIMA_*
+   *_Example : .logo1 Janiya_*
    
    *──────────◯*
    `,
@@ -10004,20 +10393,20 @@ case 'attp' :{
    }
    break
    case 'short' :{
-   if (!isUrl(args[0])) return reply('*👸💬 Please Give Me a Correct Link*\n_Example - .short https://youtube.com/c/NIMAOFC')
+   if (!isUrl(args[0])) return reply('*💃 Please Give Me a Correct Link*\n_Example - .short https://youtube.com/c/NIMAOFC')
    const janiya = await fetchJson(`https://my-shinz.herokuapp.com/api/linkshort/cuttly?link=${text}`)
    m.reply(janiya.result)
    }
    break
    //https://my-shinz.herokuapp.com/api/linkshort/cuttly?link=https://api-alpis.herokuapp.com
    case 'short2' :{
-   if (!isUrl(args[0])) return reply('*👸💬 Please Give Me a Correct Link*\n_Example - .short2 https://youtu.be/hbwvPcnuTlY_')
+   if (!isUrl(args[0])) return reply('*💃 Please Give Me a Correct Link*\n_Example - .short2 https://youtu.be/hbwvPcnuTlY_')
    const janiya = await fetchJson(`https://my-shinz.herokuapp.com/api/linkshort/tinyurlwithalias?link=${args[0]}&alias=${args[1]}`)
    m.reply(janiya.result)
    }
    break
    case 'triggered' :{
-   if (!quoted) return reply('*👸💬 Please reply sticker.*')
+   if (!quoted) return reply('*💃 Please reply sticker.*')
    let media = await QueenNilu.downloadAndSaveMediaMessage(quoted)
    const img = `https://api.violetics.pw/api/converter/webp-to-image?apikey=b5cd-368b-055f&image=${media}`
    const stick = 'https://api.akuari.my.id/canvas/triggered2?link='+img
