@@ -3,51 +3,55 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 /*
-⚙️ BOT SETTINGS  ⚙️
+⚙️ Owner SETTINGS  ⚙️
 */
 
 //Owner Number & Name 
 global.owner = ['94767438882'] //ur owner number
 global.ownername = "Janith sadanuwan" //ur owner name
 
+//Bot Name 
+global.botname = 'Qᴜᴇᴇɴ ɴɪʟᴜ ꜱᴛᴀʙʟᴇ' //ur bot name
+global.wm = "QueenNilu" //ur watermark
 
-
-
+//Language English = 'EN' , Sinhala = 'SI' , Tamil= 'TL'
 global.LANG = 'EN'
 
+//React Messages 
+global.OWNER_REACT = '🥀' //Owner's Messages react emoji
+global.AUTO_REACT = 'true' // React Messags auto
 
+//👇 Menu imoji 
+global.MENU_IMOJI = '💃|💍'
+//Time & Location
+global.TIME_ZONE = 'Asia/Colombo'
+global.location = "colombo, India, Aizawl" //ur location
+
+//Links (URLS)
+global.ytname = "YT: janithsadanuwan" //ur yt chanel name
+global.socialm = "GitHub: janithsadanuwan" //ur github or insta name
+global.linkz = "https://chat.whatsapp.com/" //your theme url which will be displayed on whatsapp
+global.websitex = "https://youtu.be/c/janithsadanuwan" //ur website to be displayed
+global.botscript = 'https://github.com/janithsadanuwan/QueenNilu' //script link
+
+//Alive 
+global.alivelogo = process.env.ALIVE_LOGO || `https://te.legra.ph/file/a9293226a7c660ecbfffb.jpg`
+global.alive = process.env.ALIVE_MESSAGE 
+
+
+//OTHERS  
 global.autoTyping = false //auto tying in gc (true to on, false to off)
 global.autoRecord = false //auto recording (true to on, false to off)
 
-global.OWNER_REACT = '🥀'
+
 global.doc1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
 global.doc2 = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
 global.doc3 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 global.doc4 = 'application/zip'
 global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
-global.AUTO_REACT = 'true'
-//👇 Menu imoji 
-global.MENU_IMOJI = '💃|💍'
-global.owner = ['94767438882'] //ur owner number
-global.ownername = "Janith sadanuwan" //ur owner name
-global.ytname = "YT: janithsadanuwan" //ur yt chanel name
-global.socialm = "GitHub: janithsadanuwan" //ur github or insta name
-global.location = "colombo, India, Aizawl" //ur location
-//time
-global.TIME_ZONE = 'Asia/Colombo'
-global.alivelogo = process.env.ALIVE_LOGO || `https://te.legra.ph/file/a9293226a7c660ecbfffb.jpg`
 
 
-global.botname = 'Qᴜᴇᴇɴ ɴɪʟᴜ ꜱᴛᴀʙʟᴇ' //ur bot name
-global.linkz = "https://chat.whatsapp.com/" //your theme url which will be displayed on whatsapp
-global.websitex = "https://youtu.be/c/janithsadanuwan" //ur website to be displayed
-global.botscript = 'https://github.com/' //script link
-global.themeemoji = "🥀" //ur theme emoji
-global.packname = "Sticker By" //ur sticker watermark packname
-global.author = "QueenNilu By janiya" //ur sticker watermark author
-global.wm = "QueenNilu" //ur watermark
-global.alive = process.env.ALIVE_MESSAGE
 // Other
 global.sessionName = 'session'
 global.prefa = ['','!','.','#','&']
@@ -63,7 +67,7 @@ global.mess = {
     group: 'Features Used Only For Groups!',
     private: 'Features Used Only For Private Chat!',
     bot: 'This feature could be used by bot only',
-    wait: 'In process...',
+    wait: 'Queen Nilu In process...',
     linkm: 'Where is the link?',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
     nsfw: 'The nsfw feature has not been activated, please contact the admin to activate',
