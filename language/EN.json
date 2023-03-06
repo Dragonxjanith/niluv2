@@ -1,5 +1,5 @@
 {
-    "_ELISAJSON_": true,
+    "_NILUJSON_": true,
      "LANGUAGE": "English",
      "LANGCODE": "EN",
      "AUTHOR": "janiya",
@@ -28,7 +28,7 @@
              "VOICE_CMD" : "Show Voice Commands",
              "ANONIMUS_CMD" :"Show Chat Command ",
              "OWNER_CMD" :"Show Owner Commands",
-             "ABOUT_CMD" :"About Queen Elisa WA Bot",
+             "ABOUT_CMD" :"About Queen Nilu WA Bot",
              "NOT_FOUND" : "*CAN/'T FINE ANYTHING* ❗",
              "CONVER_TING" : "```Converting... 🤹‍♀️```",
              "GET_PHOTO" : "```Your link is taking the photo...```",
