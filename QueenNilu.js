@@ -8570,7 +8570,7 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
  
  *🧑🏻‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ : 𝙹𝙰𝙽𝙸𝚈𝙰*
  *🔮ᴠᴇʀꜱɪᴏɴ : ${BOT_VERSION}*
- *🤹‍♂️ ᴏᴡɴᴇʀ : ${global.owner}* 
+ *🤹‍♂️ ᴏᴡɴᴇʀ : ${global.ownername}* 
  *👸ʀᴜɴᴛɪᴍᴇ : ${runtime(process.uptime())}*
 
  💃ᴅᴇᴘʟᴏʏ Qᴜᴇᴇɴɴɪʟᴜ💃
