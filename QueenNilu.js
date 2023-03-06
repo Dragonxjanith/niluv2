@@ -1205,7 +1205,7 @@ case 'apk':{
                               mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
                               jpegThumbnail:buffer,
                               mentions: [m.sender],
-                              fileName: `${global.ownernma}`,
+                              fileName: `${global.ownername}`,
                               fileLength: 99999999999999,
                               caption: AGAINTRY,
                               footer: `_© JANIYA_`,
@@ -8637,7 +8637,7 @@ case 'grpmenu': {
                                   anu = `
   *◯───────[ GROUP MENU ]───────◯*
   
-  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownername}
   ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⛒  *ᴛɪᴍᴇ* ${time}
   
@@ -8781,7 +8781,7 @@ case 'grpmenu': {
    prefix = '.'
   anu = `*◯───────[ DOWNLOAD MENU ]───────◯*
   
-  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownername}
   ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⛒  *ᴛɪᴍᴇ* ${time}
   
@@ -8904,7 +8904,7 @@ case 'grpmenu': {
   prefix = '.'
                                     anu = `*◯───────[ SEARCH MENU ]───────◯*
   
-  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownername}
   ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⛒  *ᴛɪᴍᴇ* ${time}
   
@@ -8992,7 +8992,7 @@ case 'grpmenu': {
   prefix = '.'
                         anu = `*◯───────[ RANDOM MENU ]───────◯*
   
-  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownername}
   ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⛒  *ᴛɪᴍᴇ* ${time}
   
@@ -9073,7 +9073,7 @@ case 'grpmenu': {
   prefix = '.'
   anu = `*◯───────[ FUN MENU ]───────◯*
   
-  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownername}
   ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⛒  *ᴛɪᴍᴇ* ${time}
   
@@ -9149,7 +9149,7 @@ case 'grpmenu': {
   prefix = '.'
                         anu = `*◯───────[ VOICE MENU ]───────◯*
   
-  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownername}
   ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⛒  *ᴛɪᴍᴇ* ${time}
   
@@ -9345,7 +9345,7 @@ case 'grpmenu': {
   
                     anu = `*◯───────[ CONVERT MENU ]───────◯*
   
-  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownername}
   ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⛒  *ᴛɪᴍᴇ* ${time}
   
@@ -9431,7 +9431,7 @@ case 'grpmenu': {
   
                         anu = `*◯───────[ DOWNLOAD MENU ]───────◯*
   
-  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownername}
   ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⛒  *ᴛɪᴍᴇ* ${time}
   
@@ -9584,7 +9584,7 @@ case 'grpmenu': {
   
   anu = `*◯───────[ MISC MENU ]───────◯*
   
-  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownername}
   ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⛒  *ᴛɪᴍᴇ* ${time}
   
@@ -9667,7 +9667,7 @@ case 'grpmenu': {
   prefix = '.'
                         anu = `*◯───────[ TEXT TO LOGO MENU ]───────◯*
   
-  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownername}
   ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⛒  *ᴛɪᴍᴇ* ${time}
   
@@ -9787,7 +9787,7 @@ case 'grpmenu': {
    
                         anu = `*◯───────[ LOGO MENU ]───────◯*
   
-  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownername}
   ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⛒  *ᴛɪᴍᴇ* ${time}
   
@@ -9859,7 +9859,7 @@ case 'grpmenu': {
   
                         anu = `*◯───────[ SYSTEM MENU ]───────◯*
   
-  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownername}
   ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⛒  *ᴛɪᴍᴇ* ${time}
   
@@ -9940,7 +9940,7 @@ case 'grpmenu': {
   prefix = '.'
   anu = `*◯───────[ DOWNLOAD MENU ]───────◯*
   
-  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownernma}
+  ╭⛒  *ᴏᴡɴᴇʀ* ${global.ownername}
   ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⛒  *ᴛɪᴍᴇ* ${time}
   
