@@ -8564,23 +8564,22 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
 { quickReplyButton: {displayText: ' 𝙿𝙸𝙽𝙶 ️', id: 'botstetus' }}  
                         ]
  const buttonMessage = {
- caption: `◈ Queen Nilu Bot is Online ◈
+ caption: `◈𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝙸𝚂 𝙰𝙻𝙸𝚅𝙴◈
 
- *( ᴅᴇᴘʟᴏʏ ) ▽* 
- _http://github.com/janithsadanuwan_
- *( ᴏᴡɴᴇʀ ) ▽* 
- _${global.owner}_
- *( ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ ) ▽*
- _https://chat.whatsapp.com/
- *( ᴠᴇʀsɪᴏɴ ) ▽*
- _${BOT_VERSION}_
- *( ʏᴏᴜᴛᴜʙᴇ ) ▽*
- _https://youtube.com/janithsadanuwan
+ 💃ᴀʙᴏᴜᴛ ʙᴏᴛ💃
  
- *[ ⏱️ ʀᴜɴ ᴛɪᴍᴇ ⏱️] ▽*
- ${runtime(process.uptime())}
+ *🧑🏻‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ : 𝙹𝙰𝙽𝙸𝚈𝙰*
+ *🔮ᴠᴇʀꜱɪᴏɴ : ${BOT_VERSION}*
+ *🤹‍♂️ ᴏᴡɴᴇʀ : ${global.owner}* 
+ *👸ʀᴜɴᴛɪᴍᴇ : ${runtime(process.uptime())}*
+
+ 💃ᴅᴇᴘʟᴏʏ Qᴜᴇᴇɴɴɪʟᴜ💃
  
-💗 THANKS FOR USING QUEEN NILU 💗
+ •ᴡᴇʙꜱɪᴛᴇ - https://janithsadanuwan.tech/QueenNilu
+ •ɢɪᴛʜᴜʙ- https://github.com/Janithsadanuwan
+ •Qʀ -https://bit.ly/QueenNiluQR
+ 
+ 💞𝚃𝙷𝙰𝙽𝙺𝚂 𝙵𝙾𝚁 𝚄𝚂𝙸𝙽𝙶 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💞
  `,
  footer: global.botname,
  templateButtons: templateButtons,
