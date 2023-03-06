@@ -8270,10 +8270,10 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
                                                  ]
                                              },
                                              {
-                                                 "title": "▷ OWNER ◁",
+                                                 "title": "● ᴏᴡɴᴇʀ ᴢᴏɴᴇ ●",
                                                  "rows": [
                                                      {
-                                                         "title": "▷ OWNER MENU◁",
+                                                         "title": "🗣️ 𝚘𝚠𝚗𝚎𝚛 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜",
                                                          "description": Lang.OWNER_CMD ,
                                                          "rowId": `${prefix}ownermenu`
                                                      }
