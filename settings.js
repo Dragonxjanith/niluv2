@@ -38,6 +38,8 @@ global.botscript = 'https://github.com/janithsadanuwan/QueenNilu' //script link
 global.alivelogo = process.env.ALIVE_LOGO || `https://te.legra.ph/file/a9293226a7c660ecbfffb.jpg`
 global.alive = process.env.ALIVE_MESSAGE 
 
+//Sticker Making 
+global.packname = "Qᴜᴇᴇɴ ɴɪʟᴜ 💃" 
 
 //OTHERS  
 global.autoTyping = false //auto tying in gc (true to on, false to off)
