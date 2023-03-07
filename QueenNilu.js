@@ -111,8 +111,8 @@ let bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'));
 //warrrrrrrrr
 
 //Database\\
-let sticker = JSON.parse(fs.readFileSync('./database/sticker.json'));
-let audio = JSON.parse(fs.readFileSync('./database/voice.json'));
+let sticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
+let audio = JSON.parse(fs.readFileSync('./database/AUTO/voice.json'));
 //database auto reply
 let janiyasticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
 let janiyaaudio = JSON.parse(fs.readFileSync('./database/AUTO/audio.json'));
