@@ -11,7 +11,7 @@ global.owner = ['94767438882'] //ur owner number
 global.ownername = "Janith sadanuwan" //ur owner name
 
 //Bot Name 
-global.botname = 'Qᴜᴇᴇɴ ɴɪʟᴜ ꜱᴛᴀʙʟᴇ' //ur bot name
+global.botname = 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ꜱᴛᴀʙʟᴇ' //ur bot name
 global.wm = "QueenNilu" //ur watermark
 
 //Language English = 'EN' , Sinhala = 'SI' , Tamil= 'TL'

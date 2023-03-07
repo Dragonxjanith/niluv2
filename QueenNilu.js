@@ -3742,14 +3742,20 @@ case 'pinterest': {
                                   
      await QueenNilu.sendMessage(from, { react: { text: `1️⃣`, key: m.key }})     
       
-             const desmsg = `╔═════════════════════☐
+             const desmsg = `◉═════════════◉
     
-          *_𝚀𝚞𝚎𝚎𝚗 𝙽𝚒𝚕𝚞 𝙻𝚘𝚐𝚘 𝙻𝚒𝚜𝚝_*
-    
-    *▣ ʀᴇǫᴜᴇsᴛᴇʀ -*  ${m.pushName}
-    *▣ ʟᴏɢᴏ ᴛᴇxᴛ -* ${text}
-    
-    ☐═════════════════════╝`
+             💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 💃
+          
+              🎨𝗟𝗢𝗚𝗢 𝗣𝗔𝗖𝗞 02 🖌️
+          
+             𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝚕𝚘𝚐𝚘 𝚖𝚎𝚗𝚞 
+          
+              
+              *● ʀᴇǫᴜᴇsᴛᴇʀ -*  _${m.pushName}_
+              *● ʟᴏɢᴏ ᴛᴇxᴛ -* _${text}_
+              *● ᴀᴠᴀʟᴀʙʟᴇ ʟᴏɢᴏᴇs -* _44_
+              
+              ◉═════════════◉`
          let sections = [{
     
              "title": "ʙᴏᴛ ʟɪsᴛ ᴍᴇɴᴜ ᴄʟɪᴄᴋ ᴀɴᴅ sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴏᴡɴ",
@@ -4083,7 +4089,263 @@ case 'pinterest': {
          await QueenNilu.sendListMsg(m.chat, `${desmsg}`, `${global.botname}`, `*🎨 LOGO PACK 1*`, `MAKE LOGO`, sections, m)
                                     
       }
+
+      break
+      /// TEXT LOGO 2
+case 'logo2' :{
+
+    if (global.LANG == 'SI') MAX= '```👸💬 කරුනාකර වචනයක් ලබාදෙන්න ...```\n_උදාහරණ .logo MR NIMA_'
+    if (global.LANG == 'EN') MAX= '```👸💬 Please give me a some words ...```\n_example .logo MR NIMA_'
+    if (!text) return reply (MAX)
+    
+    await QueenNilu.sendMessage(from, { react: { text: `2️⃣️`, key: m.key }})             	
+                   
+                   let sections = [{ 
+                        "title": `𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝚅2 𝙻𝙾𝙶𝙾 𝙻𝙸𝚂𝚃 - 2 𝚂𝙴𝙻𝙴𝙲𝚃 𝚈𝙾𝚄𝚁 𝙻𝙾𝙶𝙾 `,
+                                       "rows": [
+                                       {
+                                            "title": "LEAGUE OF KING STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `lofg3 ${text}`
+                                            },
+                                        {
+                                            "title": "YASHO STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `gamin ${text}`
+                                            },
+                                        {
+                                            "title": "HORROR STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `horr ${text}`
+                                        },
+                                        {
+                                            "title": "ARENA OF VALOR STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `lofg2 ${text}`
+                                        },
+                                        {
+                                            "title": "LEAGUE OF LEGENDS STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `lofg1 ${text}`
+                                        },
+                                        {
+                                                "title": "LIGHT STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `light ${text}`
+                                            },
+                                             {
+                                                "title": "NINJA STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `ninja ${text}`
+                                            },
+                                            {
+                                                "title": "NEON-BRIGHT BLUE STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `neon5 ${text}`
+                                            },		
+                                            {
+                                                "title": "NEON-DEVIL WING STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `neon4 ${text}`
+                                            },
+                                            {
+                                                "title": "NEON SATIN STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `neon3 ${text}`
+                                            },
+                                            {
+                                                "title": "NEON-VALANTINE STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `neon2 ${text}`
+                                            },
+                                            {
+                                                "title": "NEON-GALAXY STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `neon1 ${text}`
+                                            },
+                                            {
+                                                "title": "TEXT TO STETUS STYLE (life)- 1",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `status8 ${text}`
+                                            },
+                                            {
+                                                "title": "TEXT TO STETUS STYLE (life)- 2",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `status7 ${text}`
+                                            },
+                                            {
+                                                "title": "TEXT TO STETUS STYLE (life)- 3",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `status6 ${text}`
+                                            },
+                                            {
+                                                "title": "TEXT TO STETUS  STYLE (lovely)- 4",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `status5 ${text}`
+                                            },
+                                            {
+                                                "title": "TEXT TO STETUS STYLE (lovely)- 5",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `status4 ${text}`
+                                            },
+                                            {
+                                                "title": "TEXT TO STETUS STYLE (mood)- 6",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `status3 ${text}`
+                                            },
+                                            {
+                                                "title": "TEXT TO STETUS STYLE (mood)- 7",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `status2 ${text}`
+                                            },
+                                            {
+                                                "title": "TEXT TO STETUS STYLE (mood)- 8",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `status ${text}`
+                                            },
+                                            {
+                                                "title": "TATOO ON HAND STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `tattoo ${text}`
+                                            },
+                                            {
+                                                "title": "LEAVES STYLE - 1",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `leaves4 ${text}`
+                                            },
+                                            {
+                                                "title": "LEAVES STYLE - 2",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `leaves3 ${text}`
+                                            },
+                                            {
+                                                "title": "LEAVES STYLE - 3",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `leaves2 ${text}`
+                                            },
+                                            {
+                                                "title": "LEAVES STYLE - 4",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `leaves1 ${text}`
+                                            },
+                                            {
+                                                "title": "LEAVES STYLE - 5",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `leaves ${text}`
+                                            },
+                                            {
+                                                "title": "LEAVES STYLE - 6",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `leaves5 ${text}`
+                                            },
+                                            {
+                                                "title": "VALANTINE STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `valentine ${text}`
+                                            },
+                                            {
+                                                "title": "LEND STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `lende ${text}`
+                                            },
+                                            {
+                                                "title": "GALAXY-ANGAL-WINGS STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `gaw ${text}`
+                                            },
+                                            {
+                                                "title": "CAKE STYLE - 1",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `cake-text ${text}`
+                                            },
+                                            {
+                                                "title": "CAKE STYLE - 2",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `cake-text2 ${text}`
+                                            },
+                                            {
+                                                "title": "CAKE STYLE - 3",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `cake-text3 ${text}`
+                                            },
+                                            {
+                                                "title": "BLOOD STYLE - 1",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `blood-frosted ${text}`
+                                            },
+                                            {
+                                                "title": "BLOOD STYLE - 2",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `blood-steel ${text}`
+                                            },
+                                            {
+                                                "title": "BLOOD STYLE - 3",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `Blood-Text2 ${text}`
+                                            },
+                                            {
+                                                "title": "BIRTHDAY CAKE STYLE - 1",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `birthday-cake7 ${text}`
+                                            },
+                                            {
+                                                "title": "BIRTHDAY CAKE STYLE - 2",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `birthday-cake6 ${text}`
+                                            },
+                                            {
+                                                "title": "BIRTHDAY CAKE STYLE - 3",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `birthday-cake5 ${text}`
+                                            },
+                                            {
+                                                "title": "BIRTHDAY CAKE STYLE - 4",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `birthday-cake4 ${text}`
+                                            },
+                                            {
+                                                "title": "BIRTHDAY CAKE STYLE - 5",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `birthday-cake3 ${text}`
+                                            },
+                                            {
+                                                "title": "BIRTHDAY CAKE STYLE - 6",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `birthday-cake2 ${text}`
+                                            },
+                                            {
+                                                "title": "BIRTHDAY CAKE STYLE - 7",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `birthday-cake ${text}`
+                                            },
+                                            {
+                                                "title": "QUITE STYLE ",
+                                            "description": `Mr ${m.pushName} ${global.botnma} is Ready to make your logo`,
+                                            "rowId": `darkgold ${text}`
+                                            }		
+                                          ]
+                                    
+                                    }
+                                ]
+         await QueenNilu.sendListMsg(m.chat, `◉═════════════◉
+    
+   💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 💃
+
+    🎨𝗟𝗢𝗚𝗢 𝗣𝗔𝗖𝗞 02 🖌️
+
+   𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝚕𝚘𝚐𝚘 𝚖𝚎𝚗𝚞 
+
+    
+    *● ʀᴇǫᴜᴇsᴛᴇʀ -*  _${m.pushName}_
+    *● ʟᴏɢᴏ ᴛᴇxᴛ -* _${text}_
+    *● ᴀᴠᴀʟᴀʙʟᴇ ʟᴏɢᴏᴇs -* _44_
+    
+    ◉═════════════◉`, `${global.botnma}`, `*🎨 LOGO PACK 2*`, `MAKE LOGO`, sections, m)
+     
+                }
                 break
+
+
                 case 'eglitch' : case 'eberry': case 'eneon' : case 'ecrismas' : case 'ethunder' : case 'eninja' :
                 case 'eorange' : case 'ecake' : case 'estrowberry' : case 'eflaming' : case 'eshadow' : case 'eongrass' : 
                 case 'eloveu' : case 'ecoffee' : case 'eilluminati' : {
