@@ -110,10 +110,10 @@ let bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'));
 //database virus and whatsapp bugs
 //warrrrrrrrr
 //database auto reply
-let janiyasticker = JSON.parse(fs.readFileSync('./database/janiya/sticker.json'));
-let janiyaaudio = JSON.parse(fs.readFileSync('./database/janiya/audio.json'));
-let janiyaimage = JSON.parse(fs.readFileSync('./database/janiya/image.json'));
-let janiyavideo = JSON.parse(fs.readFileSync('./database/janiya/video.json'));
+let janiyasticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
+let janiyaaudio = JSON.parse(fs.readFileSync('./database/AUTO/audio.json'));
+let janiyaimage = JSON.parse(fs.readFileSync('./database/AUTO/image.json'));
+let janiyavideo = JSON.parse(fs.readFileSync('./database/AUTO/video.json'));
 
 module.exports = QueenNilu = async (QueenNilu, m, chatUpdate, store) => {
     try {
