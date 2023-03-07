@@ -1860,38 +1860,61 @@ break
             m.reply('Successfully Deleted Vote Session In This Group')
 	    }
             break
-case 'group': case 'grup': {
+            case 'group': case 'grup': {
                 if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
                 if (args[0] === 'close'){
-                    await QueenNilu.groupSettingUpdate(m.chat, 'announcement').then((res) => m.reply(`*Successfully Closed The Group*`)).catch((err) => m.reply(jsonformat(err)))
+                    await QueenNilu.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(Lang.G_MUTE)).catch((err) => reply(jsonformat(err)))
                 } else if (args[0] === 'open'){
-                    await QueenNilu.groupSettingUpdate(m.chat, 'not_announcement').then((res) => m.reply(`*Successfully Opened The Group*`)).catch((err) => m.reply(jsonformat(err)))
+                    await QueenNilu.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
                 } else {
                 let buttons = [
                         { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
                         { buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
                     ]
-                    await QueenNilu.sendButtonText(m.chat, buttons, `Mode Group`, botname, m)
+                    await QueenNilu.sendButtonText(m.chat, buttons, `Group Mode`, QueenNilu.user.name, m)
 
              }
             }
             break
+            case 'mute':{
+                if (!m.isGroup) throw mess.group
+                if (!isBotAdmins) throw mess.botAdmin
+                if (!isAdmins) throw mess.admin
+                
+                await QueenNilu.sendMessage(from, { react: { text: `🔐`, key: m.key }})
+                await QueenNilu.groupSettingUpdate(m.chat, 'announcement')
+                const sendmsg = await QueenNilu.sendText(m.chat,Lang.G_MUTE)
+                await QueenNilu.sendMessage(from, { react: { text: `🔇`, key: sendmsg.key }})
+                
+               }
+               break
+            case 'unmute':{
+                if (!m.isGroup) throw mess.group
+                if (!isBotAdmins) throw mess.botAdmin
+                if (!isAdmins) throw mess.admin
+                await QueenNilu.sendMessage(from, { react: { text: `🔓`, key: m.key }})
+                await QueenNilu.groupSettingUpdate(m.chat, 'not_announcement')
+                const sendmsg = await QueenNilu.sendText(m.chat,Lang.G_UNMUTE)
+                await QueenNilu.sendMessage(from, { react: { text: `🔊`, key: sendmsg.key }})
+                
+             }
+             break
             case 'editinfo': {
                 if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
              if (args[0] === 'open'){
-                await QueenNilu.groupSettingUpdate(m.chat, 'unlocked').then((res) => m.reply(`*Successfully Opened Edit Group Info*`)).catch((err) => m.reply(jsonformat(err)))
+                await QueenNilu.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(Lang.G_INFOON)).catch((err) => reply(jsonformat(err)))
              } else if (args[0] === 'close'){
-                await QueenNilu.groupSettingUpdate(m.chat, 'locked').then((res) => m.reply(`*Successfully Close Edit Group Info*`)).catch((err) => m.reply(jsonformat(err)))
+                await QueenNilu.groupSettingUpdate(m.chat, 'locked').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
              } else {
              let buttons = [
-                        { buttonId: 'editinfo open', buttonText: { displayText: 'Open' }, type: 1 },
-                        { buttonId: 'editinfo close', buttonText: { displayText: 'Close' }, type: 1 }
+                        { buttonId: 'editinfo open', buttonText: { displayText: 'OPEN' }, type: 1 },
+                        { buttonId: 'editinfo close', buttonText: { displayText: 'CLOSE' }, type: 1 }
                     ]
-                    await QueenNilu.sendButtonText(m.chat, buttons, `Mode Edit Info`, botname, m)
+                    await QueenNilu.sendButtonText(m.chat, buttons, `Mode Edit Info`, QueenNilu.user.name, m)
 
             }
             }
