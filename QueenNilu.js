@@ -8932,6 +8932,22 @@ if (!text) return m.reply(`_Name a Series or movie`)
 }
      }
 break
+///  ANTI BAD WORDS
+if (global.ANTI_BADWORD == 'true' && m.isGroup && !isAdmins && !isCreator) {
+         
+    const bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'))
+    //await fetchJson(`https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/BADWORD.json`)
+    for (any in bad){
+    if (budy.toLowerCase().includes(bad[any])){
+    if (!isBotAdmins) return 
+   // if (isCreator) return
+    //await QueenNilu.sendMessage(from, { react: { text: `🤬`, key: m.key }})
+    await QueenNilu.sendMessage(m.chat, { delete: m.key })
+    await QueenNilu.sendText(m.chat,`*@${m.sender.split("@")[0]} Bot Owner is Activated Anti Bad Words*`)
+    //await QueenNilu.groupParticipantsUpdate(m.chat,[m.sender], 'remove')
+    }}}
+
+break
 case 'weather':
 if (!text) return m.reply('What location?')
             let wdata = await axios.get(

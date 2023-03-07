@@ -41,6 +41,9 @@ global.alive = process.env.ALIVE_MESSAGE
 //Sticker Making 
 global.packname = "Qᴜᴇᴇɴ ɴɪʟᴜ 💃" 
 
+//Anti Bad Word
+global.ANTI_BADWORD == 'true'
+
 //OTHERS  
 global.autoTyping = false //auto tying in gc (true to on, false to off)
 global.autoRecord = false //auto recording (true to on, false to off)
