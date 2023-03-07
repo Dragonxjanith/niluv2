@@ -3742,11 +3742,12 @@ case 'pinterest': {
                                   
      await QueenNilu.sendMessage(from, { react: { text: `1️⃣`, key: m.key }})     
       
-             const desmsg = `◉═════════════◉
+             const desmsg = 
+             `◉═════════════◉
     
              💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 💃
           
-              🎨𝗟𝗢𝗚𝗢 𝗣𝗔𝗖𝗞 02 🖌️
+              🎨𝗟𝗢𝗚𝗢 𝗣𝗔𝗖𝗞 01 🖌️
           
              𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝚕𝚘𝚐𝚘 𝚖𝚎𝚗𝚞 
           
@@ -4086,7 +4087,7 @@ case 'pinterest': {
           }
        ]
                 
-         await QueenNilu.sendListMsg(m.chat, `${desmsg}`, `${global.botname}`, `*🎨 LOGO PACK 1*`, `MAKE LOGO`, sections, m)
+         await QueenNilu.sendListMsg(m.chat, `${desmsg}`, `${global.botname}`, `*  🎨𝗟𝗢𝗚𝗢 𝗣𝗔𝗖𝗞 01 🖌️*`, `MAKE LOGO`, sections, m)
                                     
       }
 
@@ -4327,11 +4328,11 @@ case 'logo2' :{
                                     
                                     }
                                 ]
-         await QueenNilu.sendListMsg(m.chat, `◉═════════════◉
+         await QueenNilu.sendListMsg(m.chat, 
+   `◉═════════════◉
     
    💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 💃
 
-    🎨𝗟𝗢𝗚𝗢 𝗣𝗔𝗖𝗞 02 🖌️
 
    𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝚕𝚘𝚐𝚘 𝚖𝚎𝚗𝚞 
 
@@ -4340,7 +4341,7 @@ case 'logo2' :{
     *● ʟᴏɢᴏ ᴛᴇxᴛ -* _${text}_
     *● ᴀᴠᴀʟᴀʙʟᴇ ʟᴏɢᴏᴇs -* _44_
     
-    ◉═════════════◉`, `${global.botname}`, `*🎨 LOGO PACK 2*`, `MAKE LOGO`, sections, m)
+    ◉═════════════◉`, `${global.botname}`, `*  🎨𝗟𝗢𝗚𝗢 𝗣𝗔𝗖𝗞 02 🖌️*`, `MAKE LOGO`, sections, m)
      
                 }
                 break
@@ -4353,20 +4354,18 @@ case 'logo2' :{
                                                   
                      await QueenNilu.sendMessage(from, { react: { text: `3️⃣`, key: m.key }})     
                       
-                             const desmsg = `◉═════════════◉
+                             const desmsg = 
+  `◉═════════════◉
     
-                             💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 💃
+  💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 💃
                           
-                              🎨𝗟𝗢𝗚𝗢 𝗣𝗔𝗖𝗞 02 🖌️
+    𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝚕𝚘𝚐𝚘 𝚖𝚎𝚗𝚞 
                           
-                             𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝚕𝚘𝚐𝚘 𝚖𝚎𝚗𝚞 
-                          
+  *● ʀᴇǫᴜᴇsᴛᴇʀ -*  _${m.pushName}_
+  *● ʟᴏɢᴏ ᴛᴇxᴛ -* _${text}_
+  *● ᴀᴠᴀʟᴀʙʟᴇ ʟᴏɢᴏᴇs -* _30_
                               
-                              *● ʀᴇǫᴜᴇsᴛᴇʀ -*  _${m.pushName}_
-                              *● ʟᴏɢᴏ ᴛᴇxᴛ -* _${text}_
-                              *● ᴀᴠᴀʟᴀʙʟᴇ ʟᴏɢᴏᴇs -* _30_
-                              
-                              ◉═════════════◉`    
+  ◉═════════════◉`    
                          
                          let sections = [{
                     
@@ -4497,7 +4496,7 @@ case 'logo2' :{
                               ]
                             }
                          ]
-                         await QueenNilu.sendListMsg(m.chat, `${desmsg}`, `${global.botname}`, `*🎨 LOGO PACK 3*`, `MAKE LOGO`, sections, m)
+                         await QueenNilu.sendListMsg(m.chat, `${desmsg}`, `${global.botname}`, `*  🎨𝗟𝗢𝗚𝗢 𝗣𝗔𝗖𝗞 03 🖌️*`, `MAKE LOGO`, sections, m)
                      
                     }
                     break
