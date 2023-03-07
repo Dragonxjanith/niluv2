@@ -112,7 +112,7 @@ let bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'));
 
 //Database\\
 let sticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
-let audio = JSON.parse(fs.readFileSync('./database/AUTO/voice.json'));
+let audio = JSON.parse(fs.readFileSync('./database/AUTO/audio.json'));
 //database auto reply
 let janiyasticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
 let janiyaaudio = JSON.parse(fs.readFileSync('./database/AUTO/audio.json'));
