@@ -2053,14 +2053,14 @@ await QueenNilu.sendMessage(i, { video:media,  caption: txt, mentions:participan
              }
              break
              case 'sticker': case 'st': case 'stickergif2': case 'sgif2': case 's': {
-                if (!quoted) return reply(`👸💬 Reply Video/Image With Caption ${prefix + command}`)
+                if (!quoted) return reply(`💃 Reply Video/Image With Caption ${prefix + command}`)
               
                 var MAX = ''
                 if (global.LANG == 'EN') MAX= '*Maximum 10 seconds videos only!*'
                 if (global.LANG == 'SI') MAX= '*උපරිම තත්පර 10ක වීඩියෝ පමණයි !*'
                 var MA2X = ''
-                if (global.LANG == 'SI') MA2X= '*👸💬 වීඩියෝවකට හෝ ජායාරූපයකට රිප්ලයි ලබාදෙන්න !*'
-                if (global.LANG == 'EN') MA2X= '*👸💬 Please reply video or photo !*'
+                if (global.LANG == 'SI') MA2X= '*💃 වීඩියෝවකට හෝ ජායාරූපයකට රිප්ලයි ලබාදෙන්න !*'
+                if (global.LANG == 'EN') MA2X= '*💃 Please reply video or photo !*'
                 
                  QueenNilu.sendText(m.chat, Lang.STICKER_MAKING )
                         if (/image/.test(mime)) {
@@ -4095,8 +4095,8 @@ case 'pinterest': {
       /// TEXT LOGO 2
 case 'logo2' :{
 
-    if (global.LANG == 'SI') MAX= '```👸💬 කරුනාකර වචනයක් ලබාදෙන්න ...```\n_උදාහරණ .logo MR NIMA_'
-    if (global.LANG == 'EN') MAX= '```👸💬 Please give me a some words ...```\n_example .logo MR NIMA_'
+    if (global.LANG == 'SI') MAX= '```💃 කරුනාකර වචනයක් ලබාදෙන්න ...```\n_උදාහරණ .logo MR NIMA_'
+    if (global.LANG == 'EN') MAX= '```💃 Please give me a some words ...```\n_example .logo MR NIMA_'
     if (!text) return reply (MAX)
     
     await QueenNilu.sendMessage(from, { react: { text: `2️⃣️`, key: m.key }})             	
@@ -4348,8 +4348,8 @@ case 'logo2' :{
 
                 case 'logo3' :{
                     var MAX = ''
-                    if (global.LANG == 'SI') MAX= '```👸💬 කරුනාකර වචනයක් ලබාදෙන්න ...```\n_උදාහරණ .logo3 Janiya_'
-                    if (global.LANG == 'EN') MAX= '```👸💬 Please give me a some words ...```\n_example .logo3 Janiya_'
+                    if (global.LANG == 'SI') MAX= '```💃 කරුනාකර වචනයක් ලබාදෙන්න ...```\n_උදාහරණ .logo3 Janiya_'
+                    if (global.LANG == 'EN') MAX= '```💃 Please give me a some words ...```\n_example .logo3 Janiya_'
                     if (!text && !text.includes('|')) return reply (MAX)
                                                   
                      await QueenNilu.sendMessage(from, { react: { text: `3️⃣`, key: m.key }})     
