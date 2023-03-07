@@ -109,6 +109,10 @@ let bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'));
  
 //database virus and whatsapp bugs
 //warrrrrrrrr
+
+//Database\\
+let sticker = JSON.parse(fs.readFileSync('./database/sticker.json'));
+let audio = JSON.parse(fs.readFileSync('./database/voice.json'));
 //database auto reply
 let janiyasticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
 let janiyaaudio = JSON.parse(fs.readFileSync('./database/AUTO/audio.json'));
@@ -681,6 +685,22 @@ if (isCreator) return m.reply(bvl)
 QueenNilu.sendMessage(from, {text:`\`\`\`「 Tiktok Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending twitter link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
 } else {
 }
+
+/// AUTO STICKER COSTEM SEND \\\
+
+for (let anji of sticker){
+    if (budy.toLowerCase() === anji){
+        result = fs.readFileSync(`./Media/sticker/${anji}.webp`)
+        ElisaBotMd.sendMessage(m.chat, { sticker: result }, { quoted: m })
+        }
+}
+for (let anju of audio){
+    if (budy.toLowerCase() === anju){
+        result = fs.readFileSync(`./Media/audio/${anju}.mp3`)
+        ElisaBotMd.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+        }
+}
+
 //antilink all by xeon
 if (AntiLinkAll)
    if (budy.includes("https://")){
