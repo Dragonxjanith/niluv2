@@ -518,27 +518,6 @@ if (isCreator) return m.reply(bvl)
 			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 QueenNilu.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} was kicked because of using bad words in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})}
 }
-//antilink youtube video by xeon
-if (AntiLinkYoutubeVid)
-if (budy.includes("https://youtu.be/")){
-if (!isBotAdmins) return
-bvl = `\`\`\`「 YoutTube Video Link Detected 」\`\`\`\n\nAdmin has sent a youtube video link, admin is free to send any link😇`
-if (isAdmins) return m.reply(bvl)
-if (m.key.fromMe) return m.reply(bvl)
-if (isCreator) return m.reply(bvl)
-        await QueenNilu.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
-			        }
-			    })
-			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-QueenNilu.sendMessage(from, {text:`\`\`\`「 YouTube Video Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending youtube video link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
-} else {
-}
 
 
 /// AUTO STICKER COSTEM SEND \\\
