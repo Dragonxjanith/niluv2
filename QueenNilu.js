@@ -8319,7 +8319,7 @@ const msg = `*💃 𝙌𝙐𝙀𝙀𝙉 𝙉𝙄𝙇𝙐 𝙑2 💃*
 `
 const templateButtons = [
     {buttonId: `publicgroup`, buttonText: {displayText: 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ'}, type: 1},
-    {buttonId: `botstatus`, buttonText: {displayText: 'sᴛᴇᴛᴜs'}, type: 1}
+    {buttonId: `botstetus`, buttonText: {displayText: 'sᴛᴇᴛᴜs'}, type: 1}
 ]
 
 const templateMessage = {
@@ -9073,6 +9073,39 @@ case 'menu': {
                                 break
 
 //----------Status-------------------------------------
+
+case 'Stts' :{
+    const start = new Date().getTime()
+    await QueenNilu.sendMessage(from, { react: { text: `💠`, key: m.key }})
+    const end = new Date().getTime()
+    const ping = (end - start) + 'ms' 
+    // const runtime = 
+    const ramusage = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
+ 
+ 
+ 
+const msg = '```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ Run Time :* ```'+runtime(process.uptime())+'``` \n*📶 Ram Usage :*``` '+ramusage+'```\n'
+const templateButtons = [
+    {buttonId: `publicgroup`, buttonText: {displayText: 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ'}, type: 1},
+    {buttonId: `botstetus`, buttonText: {displayText: 'sᴛᴇᴛᴜs'}, type: 1}
+]
+
+const templateMessage = {
+caption: msg,
+footer: 'ǫᴜᴇᴇɴ ɴɪʟᴜ ᴡᴀ ʙᴏᴛ ᴍᴅ',
+buttons: templateButtons,
+headerType: 4
+}
+
+await QueenNilu.sendMessage(m.chat, templateMessage, { quoted: m })   
+
+
+}
+break
+
+
+
+
 
 case 'botstetus' : case 'stetus' : {
     const start = new Date().getTime()
