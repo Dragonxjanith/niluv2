@@ -91,11 +91,20 @@ let vote = db.data.others.vote = []
 //read database jid
 let premium = JSON.parse(fs.readFileSync('./database/user/premium.json'));
 let banned = JSON.parse(fs.readFileSync('./database/user/banned.json'));
-let autosticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
+let autosticker = JSON.parse(fs.readFileSync('./database/autosticker.json'));
 let ntnsfw = JSON.parse(fs.readFileSync('./database/nsfw.json'));
 let ntvirtex = JSON.parse(fs.readFileSync('./database/antivirus.json'));
 let nttoxic = JSON.parse(fs.readFileSync('./database/antitoxic.json'));
 let ntwame = JSON.parse(fs.readFileSync('./database/antiwame.json'));
+let ntlinkgc =JSON.parse(fs.readFileSync('./database/antilinkgc.json'));
+let ntilinkall =JSON.parse(fs.readFileSync('./database/antilinkall.json'));
+let ntilinktwt =JSON.parse(fs.readFileSync('./database/antilinktwitter.json'));
+let ntilinktt =JSON.parse(fs.readFileSync('./database/antilinktiktok.json'));
+let ntilinktg =JSON.parse(fs.readFileSync('./database/antilinktelegram.json'));
+let ntilinkfb =JSON.parse(fs.readFileSync('./database/antilinkfacebook.json'));
+let ntilinkig =JSON.parse(fs.readFileSync('./database/antilinkinstagram.json'));
+let ntilinkytch =JSON.parse(fs.readFileSync('./database/antilinkytchannel.json'));
+let ntilinkytvid =JSON.parse(fs.readFileSync('./database/antilinkytvideo.json'));
 let bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'));
  
 //database virus and whatsapp bugs
@@ -187,6 +196,15 @@ if (cek == null) return null
         const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
         const isAutoSticker = m.isGroup ? autosticker.includes(from) : false
         const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
+        const Antilinkgc = m.isGroup ? ntlinkgc.includes(m.chat) : false
+        const AntiLinkYoutubeVid = m.isGroup ? ntilinkytvid.includes(from) : false
+        const AntiLinkYoutubeChannel = m.isGroup ? ntilinkytch.includes(from) : false
+        const AntiLinkInstagram = m.isGroup ? ntilinkig.includes(from) : false
+        const AntiLinkFacebook = m.isGroup ? ntilinkfb.includes(from) : false
+        const AntiLinkTiktok = m.isGroup ? ntilinktt.includes(from) : false
+        const AntiLinkTelegram = m.isGroup ? ntilinktg.includes(from) : false
+        const AntiLinkTwitter = m.isGroup ? ntilinktwt.includes(from) : false
+        const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
         const antiWame = m.isGroup ? ntwame.includes(from) : false
         const antiToxic = m.isGroup ? nttoxic.includes(from) : false
         const solot = [
@@ -411,29 +429,30 @@ let buttonMessage = {
                 await QueenNilu.sendVideoAsSticker(from, mediac, m, { packname: global.packname, author: global.author })
             }
         }
-        //antilink\\
-        if (global.antilink == 'true' && m.isGroup ) {
-            if (budy.match(`chat.whatsapp.com`)) {
-           // reply(`「 ANTI LINK 」\n\nYou have been detected sending a group link, sorry you will be kicked !`)
-            if (!isBotAdmins) return 
-            let gclink = (`https://chat.whatsapp.com/`+await QueenNilu.groupInviteCode(m.chat))
-            let isLinkThisGc = new RegExp(gclink, 'i')
-            let isgclink = isLinkThisGc.test(m.text)
-            if (isgclink) return
-            if (isAdmins) return 
-            if (isCreator) return 
-            await QueenNilu.sendText(m.chat,` 
-          *『  ʟ ɪ ɴ ᴋ   ᴅ ᴇ ᴛ ᴇ ᴄ ᴛ ᴇ ᴅ  』*
-    `)
-           await QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-           await QueenNilu.sendMessage(m.chat, { delete: m.key })
-            }
-            }
-    
-      if (global.DEL_RASH == 'true'){
-      if (m.sender == '94702695534@s.whatsapp.net') await QueenNilu.sendMessage(m.chat, { delete: m.key })
-      }
-            
+        
+        // Anti Link
+        if (Antilinkgc) {
+        if (budy.match(`chat.whatsapp.com`)) {
+        if (!isBotAdmins) return m.reply(`${mess.botAdmin}, to kick the person who send link`)
+        let gclink = (`https://chat.whatsapp.com/`+await QueenNilu.groupInviteCode(m.chat))
+        let isLinkThisGc = new RegExp(gclink, 'i')
+        let isgclink = isLinkThisGc.test(m.text)
+        if (isgclink) return QueenNilu.sendMessage(m.chat, {text: `\`\`\`「 Group Link Detected 」\`\`\`\n\nYou won't be kicked by a bot because what you send is a link to this group`})
+        if (isAdmins) return QueenNilu.sendMessage(m.chat, {text: `\`\`\`「 Group Link Detected 」\`\`\`\n\nAdmin has sent a link, admin is free to post any link`})
+        if (isCreator) return QueenNilu.sendMessage(m.chat, {text: `\`\`\`「 Group Link Detected 」\`\`\`\n\nOwner has sent a link, owner is free to post any link`})
+        await QueenNilu.sendMessage(m.chat,
+			    {
+			        delete: {
+			            remoteJid: m.chat,
+			            fromMe: false,
+			            id: m.key.id,
+			            participant: m.key.participant
+			        }
+			    })
+			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+			QueenNilu.sendMessage(from, {text:`\`\`\`「 Group Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending group link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+            }            
+        }
         
           // Antiwame by xeon
   if (antiWame)
@@ -518,20 +537,167 @@ if (isCreator) return m.reply(bvl)
 			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 QueenNilu.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} was kicked because of using bad words in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})}
 }
-
+//antilink youtube video by xeon
+if (AntiLinkYoutubeVid)
+if (budy.includes("https://youtu.be/")){
+if (!isBotAdmins) return
+bvl = `\`\`\`「 YoutTube Video Link Detected 」\`\`\`\n\nAdmin has sent a youtube video link, admin is free to send any link😇`
+if (isAdmins) return m.reply(bvl)
+if (m.key.fromMe) return m.reply(bvl)
+if (isCreator) return m.reply(bvl)
+        await QueenNilu.sendMessage(m.chat,
+			    {
+			        delete: {
+			            remoteJid: m.chat,
+			            fromMe: false,
+			            id: m.key.id,
+			            participant: m.key.participant
+			        }
+			    })
+			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+QueenNilu.sendMessage(from, {text:`\`\`\`「 YouTube Video Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending youtube video link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
+} else {
+}
+//antilink youtube channel by xeon
+if (AntiLinkYoutubeChannel)
+   if (budy.includes("https://youtube.com/")){
+if (!isBotAdmins) return
+bvl = `\`\`\`「 YoutTube Channel Link Detected 」\`\`\`\n\nAdmin has sent a youtube channel link, admin is free to send any link😇`
+if (isAdmins) return m.reply(bvl)
+if (m.key.fromMe) return m.reply(bvl)
+if (isCreator) return m.reply(bvl)
+        await QueenNilu.sendMessage(m.chat,
+			    {
+			        delete: {
+			            remoteJid: m.chat,
+			            fromMe: false,
+			            id: m.key.id,
+			            participant: m.key.participant
+			        }
+			    })
+			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+QueenNilu.sendMessage(from, {text:`\`\`\`「 YouTube Channel Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending youtube channel link in this group`, contextInfo:{mentionedJid:[m.sendet]}}, {quoted:m})
+} else {
+}
+//antilink instagram by xeon
+if (AntiLinkInstagram)
+   if (budy.includes("https://www.instagram.com/")){
+if (!isBotAdmins) return
+bvl = `\`\`\`「 Instagram Link Detected 」\`\`\`\n\nAdmin has sent a instagram link, admin is free to send any link😇`
+if (isAdmins) return m.reply(bvl)
+if (m.key.fromMe) return m.reply(bvl)
+if (isCreator) return m.reply(bvl)
+        await QueenNilu.sendMessage(m.chat,
+			    {
+			        delete: {
+			            remoteJid: m.chat,
+			            fromMe: false,
+			            id: m.key.id,
+			            participant: m.key.participant
+			        }
+			    })
+			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+QueenNilu.sendMessage(from, {text:`\`\`\`「 Instagram Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending instagram link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
+} else {
+}
+//antilink facebook by xeon
+if (AntiLinkFacebook)
+   if (budy.includes("https://facebook.com/")){
+if (!isBotAdmins) return
+bvl = `\`\`\`「 Facebook Link Detected 」\`\`\`\n\nAdmin has sent a facebook link, admin is free to send any link😇`
+if (isAdmins) return m.reply(bvl)
+if (m.key.fromMe) return m.reply(bvl)
+if (isCreator) return m.reply(bvl)
+        await QueenNilu.sendMessage(m.chat,
+			    {
+			        delete: {
+			            remoteJid: m.chat,
+			            fromMe: false,
+			            id: m.key.id,
+			            participant: m.key.participant
+			        }
+			    })
+			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+QueenNilu.sendMessage(from, {text:`\`\`\`「 Facebook Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending facebook link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
+} else {
+}
+//antilink telegram by xeon
+if (AntiLinkTelegram)
+   if (budy.includes("https://t.me/")){
+if (AntiLinkTelegram)
+if (!isBotAdmins) return
+bvl = `\`\`\`「 Telegram Link Detected 」\`\`\`\n\nAdmin has sent a telegram link, admin is free to send any link😇`
+if (isAdmins) return m.reply(bvl)
+if (m.key.fromMe) return m.reply(bvl)
+if (isCreator) return m.reply(bvl)
+        await QueenNilu.sendMessage(m.chat,
+			    {
+			        delete: {
+			            remoteJid: m.chat,
+			            fromMe: false,
+			            id: m.key.id,
+			            participant: m.key.participant
+			        }
+			    })
+			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+QueenNilu.sendMessage(from, {text:`\`\`\`「 Telegram Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending telegram link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
+} else {
+}
+//antilink tiktok by xeon
+if (AntiLinkTiktok)
+   if (budy.includes("https://www.tiktok.com/")){
+if (!isBotAdmins) return
+bvl = `\`\`\`「 Tiktok Link Detected 」\`\`\`\n\nAdmin has sent a tiktok link, admin is free to send any link😇`
+if (isAdmins) return m.reply(bvl)
+if (m.key.fromMe) return m.reply(bvl)
+if (isCreator) return m.reply(bvl)
+        await QueenNilu.sendMessage(m.chat,
+			    {
+			        delete: {
+			            remoteJid: m.chat,
+			            fromMe: false,
+			            id: m.key.id,
+			            participant: m.key.participant
+			        }
+			    })
+			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+QueenNilu.sendMessage(from, {text:`\`\`\`「 Tiktok Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending tiktok link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
+} else {
+}
+//antilink twitter by xeon
+if (AntiLinkTwitter)
+   if (budy.includes("https://twitter.com/")){
+if (!isBotAdmins) return
+bvl = `\`\`\`「 Twitter Link Detected 」\`\`\`\n\nAdmin has sent a twitter link, admin is free to send any link😇`
+if (isAdmins) return m.reply(bvl)
+if (m.key.fromMe) return m.reply(bvl)
+if (isCreator) return m.reply(bvl)
+        await QueenNilu.sendMessage(m.chat,
+			    {
+			        delete: {
+			            remoteJid: m.chat,
+			            fromMe: false,
+			            id: m.key.id,
+			            participant: m.key.participant
+			        }
+			    })
+			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+QueenNilu.sendMessage(from, {text:`\`\`\`「 Tiktok Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending twitter link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
+} else {
+}
 
 /// AUTO STICKER COSTEM SEND \\\
 
 for (let anji of sticker){
     if (budy.toLowerCase() === anji){
         result = fs.readFileSync(`./Media/sticker/${anji}.webp`)
-        QueenNilu.sendMessage(m.chat, { sticker: result }, { quoted: m })
+        ElisaBotMd.sendMessage(m.chat, { sticker: result }, { quoted: m })
         }
 }
 for (let anju of audio){
     if (budy.toLowerCase() === anju){
         result = fs.readFileSync(`./Media/audio/${anju}.mp3`)
-        QueenNilu.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+        ElisaBotMd.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
         }
 }
 
@@ -1694,61 +1860,38 @@ break
             m.reply('Successfully Deleted Vote Session In This Group')
 	    }
             break
-            case 'group': case 'grup': {
+case 'group': case 'grup': {
                 if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
                 if (args[0] === 'close'){
-                    await QueenNilu.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(Lang.G_MUTE)).catch((err) => reply(jsonformat(err)))
+                    await QueenNilu.groupSettingUpdate(m.chat, 'announcement').then((res) => m.reply(`*Successfully Closed The Group*`)).catch((err) => m.reply(jsonformat(err)))
                 } else if (args[0] === 'open'){
-                    await QueenNilu.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
+                    await QueenNilu.groupSettingUpdate(m.chat, 'not_announcement').then((res) => m.reply(`*Successfully Opened The Group*`)).catch((err) => m.reply(jsonformat(err)))
                 } else {
                 let buttons = [
                         { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
                         { buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
                     ]
-                    await QueenNilu.sendButtonText(m.chat, buttons, `Group Mode`, QueenNilu.user.name, m)
+                    await QueenNilu.sendButtonText(m.chat, buttons, `Mode Group`, botname, m)
 
              }
             }
             break
-            case 'mute':{
-                if (!m.isGroup) throw mess.group
-                if (!isBotAdmins) throw mess.botAdmin
-                if (!isAdmins) throw mess.admin
-                
-                await QueenNilu.sendMessage(from, { react: { text: `🔐`, key: m.key }})
-                await QueenNilu.groupSettingUpdate(m.chat, 'announcement')
-                const sendmsg = await QueenNilu.sendText(m.chat,Lang.G_MUTE)
-                await QueenNilu.sendMessage(from, { react: { text: `🔇`, key: sendmsg.key }})
-                
-               }
-               break
-            case 'unmute':{
-                if (!m.isGroup) throw mess.group
-                if (!isBotAdmins) throw mess.botAdmin
-                if (!isAdmins) throw mess.admin
-                await QueenNilu.sendMessage(from, { react: { text: `🔓`, key: m.key }})
-                await QueenNilu.groupSettingUpdate(m.chat, 'not_announcement')
-                const sendmsg = await QueenNilu.sendText(m.chat,Lang.G_UNMUTE)
-                await QueenNilu.sendMessage(from, { react: { text: `🔊`, key: sendmsg.key }})
-                
-             }
-             break
             case 'editinfo': {
                 if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
              if (args[0] === 'open'){
-                await QueenNilu.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(Lang.G_INFOON)).catch((err) => reply(jsonformat(err)))
+                await QueenNilu.groupSettingUpdate(m.chat, 'unlocked').then((res) => m.reply(`*Successfully Opened Edit Group Info*`)).catch((err) => m.reply(jsonformat(err)))
              } else if (args[0] === 'close'){
-                await QueenNilu.groupSettingUpdate(m.chat, 'locked').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
+                await QueenNilu.groupSettingUpdate(m.chat, 'locked').then((res) => m.reply(`*Successfully Close Edit Group Info*`)).catch((err) => m.reply(jsonformat(err)))
              } else {
              let buttons = [
-                        { buttonId: 'editinfo open', buttonText: { displayText: 'OPEN' }, type: 1 },
-                        { buttonId: 'editinfo close', buttonText: { displayText: 'CLOSE' }, type: 1 }
+                        { buttonId: 'editinfo open', buttonText: { displayText: 'Open' }, type: 1 },
+                        { buttonId: 'editinfo close', buttonText: { displayText: 'Close' }, type: 1 }
                     ]
-                    await QueenNilu.sendButtonText(m.chat, buttons, `Mode Edit Info`, QueenNilu.user.name, m)
+                    await QueenNilu.sendButtonText(m.chat, buttons, `Mode Edit Info`, botname, m)
 
             }
             }
@@ -1764,7 +1907,7 @@ const okebnh1 =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15
 const xeonkak = okebnh1[Math.floor(Math.random() * okebnh1.length)]
 QueenNilu.sendMessage(m.chat, { text: xeonkak }, { quoted: m })
 break
-case 'mutebot': {
+case 'mute': {
                 if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
@@ -6445,7 +6588,37 @@ m.reply('Success in turning off antitoxic in this group')
   }
   }
   break
-
+case 'autoreply': {
+if (!m.isGroup) return m.reply(mess.group)
+if (!isBotAdmins) return m.reply(mess.botAdmin)
+if (!isAdmins && !isCreator) return m.reply(mess.admin)
+if (args[0] === "on") {
+if (Autoreply) return m.reply('Already activated')
+autorep.push(from)
+fs.writeFileSync('./database/autoreply.json', JSON.stringify(autorep))
+m.reply('Success in turning on auto reply in this group')
+var groupe = await QueenNilu.groupMetadata(from)
+var members = groupe['participants']
+var mems = []
+members.map(async adm => {
+mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
+})
+QueenNilu.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nAuto reply has been enabled in this group, means bot may send unnecessary voice note!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+} else if (args[0] === "off") {
+if (!Autoreply) return m.reply('Already deactivated')
+let off = autorep.indexOf(from)
+autorep.splice(off, 1)
+fs.writeFileSync('./database/autoreply.json', JSON.stringify(autorep))
+m.reply('Success in turning off auto reply in this group')
+} else {
+  let buttonsnttoxic= [
+  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
+  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+  ]
+  await QueenNilu.sendButtonText(m.chat, buttonsnttoxic, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
+  }
+  }
+  break
 case 'antiwame': {
 if (!m.isGroup) return m.reply(mess.group)
 if (!isBotAdmins) return m.reply(mess.botAdmin)
@@ -6720,12 +6893,12 @@ if (args.length < 1) return m.reply('type auto sticker on to enable\ntype auto s
 if (args[0]  === 'on'){
 if (isAutoSticker) return m.reply(`Already activated`)
 autosticker.push(from)
-fs.writeFileSync('./database/AUTO/sticker.json', JSON.stringify(autosticker))
+fs.writeFileSync('./database/autosticker.json', JSON.stringify(autosticker))
 m.reply('autosticker activated')
 } else if (args[0] === 'off'){
 let anuticker1 = autosticker.indexOf(from)
 autosticker.splice(anuticker1, 1)
-fs.writeFileSync('./database/AUTO/sticker.json', JSON.stringify(autosticker))
+fs.writeFileSync('./database/autosticker.json', JSON.stringify(autosticker))
 m.reply('auto sticker deactivated')
 }
 break
@@ -7774,7 +7947,7 @@ break
 
 case 'sendme' : {
     if (!isNilu) throw ('*This is only main owner command ☺*️')
-    QueenNilu.sendText(m.chat,text)
+    ElisaBotMd.sendText(m.chat,text)
     }
     break
 case 'animebonk':
