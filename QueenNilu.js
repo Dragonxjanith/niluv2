@@ -105,7 +105,7 @@ let ntilinkfb =JSON.parse(fs.readFileSync('./database/antilinkfacebook.json'));
 let ntilinkig =JSON.parse(fs.readFileSync('./database/antilinkinstagram.json'));
 let ntilinkytch =JSON.parse(fs.readFileSync('./database/antilinkytchannel.json'));
 let ntilinkytvid =JSON.parse(fs.readFileSync('./database/antilinkytvideo.json'));
-let bad = JSON.parse(fs.readFileSync('./src/toxic/bad.json'));
+let bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'));
 let autorep =JSON.parse(fs.readFileSync('./database/autoreply.json'));
  
 //database virus and whatsapp bugs
