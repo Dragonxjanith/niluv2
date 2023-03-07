@@ -8931,6 +8931,18 @@ if (!text) return m.reply(`_Name a Series or movie`)
 }
 }
      }
+
+     break
+     /// AUTO REPLY MASSAGE \\\
+const auto_reply_msg = JSON.parse(fs.readFileSync('./database/autoreply.json'))
+const resevmsg = auto_reply_msg.massage
+const sendmsg = auto_reply_msg.reply_massage
+         for (any in resevmsg){
+         if (budy.toLowerCase().startsWith(resevmsg[any])) {
+         imoji = sendmsg[any]
+m.reply(imoji)
+}
+}
 break
 ///  ANTI BAD WORDS
 if (global.ANTI_BADWORD == 'true' && m.isGroup && !isAdmins && !isCreator) {
