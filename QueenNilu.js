@@ -1386,7 +1386,7 @@ Cieeee, What's Going On❤️💖👀`
             await QueenNilu.sendButtonText(m.chat, buttons, jawab, `${text.split("|")[1]}`, m)
             }
             break
-            //////////////////////////////////////////////  News 
+            //////////////////////////////////////////////  News start \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
             case 'news' : {
                 const load = await QueenNilu.sendText(m.chat, mess.wait , m, ) 
@@ -1558,6 +1558,7 @@ Cieeee, What's Going On❤️💖👀`
             
             }
             break
+            //////////////////////news End \\\\\\\\\\\\\\\\\\\\\\\\\\
             case 'react': {
                 if (!isCreator) throw mess.owner
                 reactionMessage = {
