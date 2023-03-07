@@ -5377,287 +5377,287 @@ break
 case 'tiktokgirl':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var asupan = JSON.parse(fs.readFileSync('./HostMedia/tiktokvids/tiktokgirl.json'))
+var asupan = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokvids/tiktokgirl.json'))
 var hasil = pickRandom(asupan)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'tiktokghea':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var gheayubi = JSON.parse(fs.readFileSync('./HostMedia/tiktokvids/gheayubi.json'))
+var gheayubi = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokvids/gheayubi.json'))
 var hasil = pickRandom(gheayubi)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'tiktokbocil':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var bocil = JSON.parse(fs.readFileSync('./HostMedia/tiktokvids/bocil.json'))
+var bocil = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokvids/bocil.json'))
 var hasil = pickRandom(bocil)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'tiktoknukhty':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ukhty = JSON.parse(fs.readFileSync('./HostMedia/tiktokvids/ukhty.json'))
+var ukhty = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokvids/ukhty.json'))
 var hasil = pickRandom(ukhty)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'tiktoksantuy':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var santuy = JSON.parse(fs.readFileSync('./HostMedia/tiktokvids/santuy.json'))
+var santuy = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokvids/santuy.json'))
 var hasil = pickRandom(santuy)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'tiktokkayes':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var kayes = JSON.parse(fs.readFileSync('./HostMedia/tiktokvids/kayes.json'))
+var kayes = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokvids/kayes.json'))
 var hasil = pickRandom(kayes)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'tiktokpanrika':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var rikagusriani = JSON.parse(fs.readFileSync('./HostMedia/tiktokvids/panrika.json'))
+var rikagusriani = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokvids/panrika.json'))
 var hasil = pickRandom(rikagusriani)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'tiktoknotnot':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/tiktokvids/notnot.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokvids/notnot.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, video: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'chinese':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/tiktokpics/china.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokpics/china.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'hijab':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/tiktokpics/hijab.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokpics/hijab.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'indo':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/tiktokpics/indonesia.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokpics/indonesia.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'japanese':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/tiktokpics/japan.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokpics/japan.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'korean':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/tiktokpics/korea.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokpics/korea.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'malay':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/tiktokpics/malaysia.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokpics/malaysia.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'randomgirl':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/tiktokpics/random.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokpics/random.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'randomboy':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/tiktokpics/random2.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokpics/random2.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'thai':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/tiktokpics/thailand.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokpics/thailand.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'vietnamese':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/tiktokpics/vietnam.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/tiktokpics/vietnam.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'aesthetic':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/aesthetic.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/aesthetic.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'antiwork':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/antiwork.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/antiwork.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'blackpink':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/blackpink.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/blackpink.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'bike':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/bike.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/bike.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'boneka':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/boneka.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/boneka.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'cosplay':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/cosplay.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/cosplay.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'cat':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/cat.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/cat.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'doggo':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/doggo.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/doggo.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'hacking':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/hacking.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/hacking.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'justina':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/justina.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/justina.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'kayes':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/kayes.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/kayes.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'kpop':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/kpop.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/kpop.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'notnot':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/notnot.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/notnot.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'car':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/car.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/car.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'couplepic':case 'couplepicture':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/ppcouple.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/ppcouple.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'profilepic':  case 'profilepicture':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/profile.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/profile.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'pubg':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/pubg.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/pubg.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'rose':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/rose.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/rose.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'ryujin':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/ryujin.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/ryujin.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'ulzzangboy':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/ulzzangboy.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/ulzzangboy.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'ulzzanggirl':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/ulzzanggirl.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/ulzzanggirl.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'wallml': case 'wallpaperml':case 'mobilelegend':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/wallml.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/wallml.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
 case 'wallpaperphone': case 'wallphone':
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var notnot = JSON.parse(fs.readFileSync('./HostMedia/randompics/wallhp.json'))
+var notnot = JSON.parse(fs.readFileSync('./Media/HostMedia/randompics/wallhp.json'))
 var hasil = pickRandom(notnot)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: hasil.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7334,7 +7334,7 @@ case 'milf':
 if (!m.isGroup) return m.reply(mess.group)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/milf.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/milf.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break 
@@ -7343,7 +7343,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/ahegao.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/ahegao.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7352,7 +7352,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/ass.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/ass.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7361,7 +7361,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/bdsm.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/bdsm.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7370,7 +7370,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/blowjob.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/blowjob.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7379,7 +7379,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/cuckold.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/cuckold.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7388,7 +7388,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/cum.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/cum.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7397,7 +7397,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/eba.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/eba.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7406,7 +7406,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/ero.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/ero.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7415,7 +7415,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/femdom.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/femdom.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7424,7 +7424,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/foot.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/foot.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7433,7 +7433,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/gangbang.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/gangbang.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7442,7 +7442,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/glasses.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/glasses.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7451,7 +7451,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/hentai.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/hentai.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7460,7 +7460,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/jahy.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/jahy.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7469,7 +7469,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/manga.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/manga.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7478,7 +7478,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/masturbation.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/masturbation.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7487,7 +7487,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/neko.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/neko.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7496,7 +7496,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/neko2.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/neko2.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7505,7 +7505,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/nsfwloli.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/nsfwloli.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7514,7 +7514,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/orgy.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/orgy.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7523,7 +7523,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/panties.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/panties.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7532,7 +7532,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/pussy.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/pussy.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7541,7 +7541,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/tentacles.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/tentacles.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7550,7 +7550,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/thights.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/thights.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7559,7 +7559,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/yuri.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/yuri.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7568,7 +7568,7 @@ if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/zettai.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/zettai.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -7586,7 +7586,7 @@ case 'gifhentai':
 if (!m.isGroup) return m.reply(mess.group)
 if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/gifs.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/gifs.json'))
 var janiyaresultx = pickRandom(ahegaonsfw)
     await QueenNilu.sendMessage(m.chat,{video:janiyaresultx, gifPlayback:true },{quoted:m}).catch(err => {
     })
@@ -8262,7 +8262,7 @@ case 'loli':
 if (!m.isGroup) return m.reply(mess.group)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/anime/loli.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/anime/loli.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -8270,7 +8270,7 @@ case 'husbu':
 if (!m.isGroup) return m.reply(mess.group)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/anime/husbu.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/anime/husbu.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -8278,7 +8278,7 @@ case 'neko2':
 if (!m.isGroup) return m.reply(mess.group)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/anime/neko.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/anime/neko.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -8286,7 +8286,7 @@ case 'randomanime':
 if (!m.isGroup) return m.reply(mess.group)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/anime/random.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/anime/random.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -8294,7 +8294,7 @@ case 'shota':
 if (!m.isGroup) return m.reply(mess.group)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/anime/shota.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/anime/shota.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
@@ -8302,7 +8302,7 @@ case 'waifu2':
 if (!m.isGroup) return m.reply(mess.group)
 m.reply(mess.wait)
 var but = [{buttonId: `${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/anime/waifu.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/anime/waifu.json'))
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
