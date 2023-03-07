@@ -91,7 +91,7 @@ let vote = db.data.others.vote = []
 //read database jid
 let premium = JSON.parse(fs.readFileSync('./database/user/premium.json'));
 let banned = JSON.parse(fs.readFileSync('./database/user/banned.json'));
-let autosticker = JSON.parse(fs.readFileSync('./database/AUTO/autosticker.json'));
+let autosticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
 let ntnsfw = JSON.parse(fs.readFileSync('./database/nsfw.json'));
 let ntvirtex = JSON.parse(fs.readFileSync('./database/antivirus.json'));
 let nttoxic = JSON.parse(fs.readFileSync('./database/antitoxic.json'));
@@ -6886,12 +6886,12 @@ if (args.length < 1) return m.reply('type auto sticker on to enable\ntype auto s
 if (args[0]  === 'on'){
 if (isAutoSticker) return m.reply(`Already activated`)
 autosticker.push(from)
-fs.writeFileSync('./database/AUTO/autosticker.json', JSON.stringify(autosticker))
+fs.writeFileSync('./database/AUTO/sticker.json', JSON.stringify(autosticker))
 m.reply('autosticker activated')
 } else if (args[0] === 'off'){
 let anuticker1 = autosticker.indexOf(from)
 autosticker.splice(anuticker1, 1)
-fs.writeFileSync('./database/AUTO/autosticker.json', JSON.stringify(autosticker))
+fs.writeFileSync('./database/AUTO/sticker.json', JSON.stringify(autosticker))
 m.reply('auto sticker deactivated')
 }
 break
