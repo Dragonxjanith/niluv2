@@ -91,7 +91,7 @@ let vote = db.data.others.vote = []
 //read database jid
 let premium = JSON.parse(fs.readFileSync('./database/user/premium.json'));
 let banned = JSON.parse(fs.readFileSync('./database/user/banned.json'));
-let autosticker = JSON.parse(fs.readFileSync('./database//AUTO/autosticker.json'));
+let autosticker = JSON.parse(fs.readFileSync('./database/AUTO/autosticker.json'));
 let ntnsfw = JSON.parse(fs.readFileSync('./database/nsfw.json'));
 let ntvirtex = JSON.parse(fs.readFileSync('./database/antivirus.json'));
 let nttoxic = JSON.parse(fs.readFileSync('./database/antitoxic.json'));
