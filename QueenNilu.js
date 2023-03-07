@@ -1391,8 +1391,7 @@ Cieeee, What's Going On❤️💖👀`
             case 'news' : {
                 const load = await QueenNilu.sendText(m.chat, mess.wait , m, ) 
                 const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
-                const cap = `*💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃*
-                
+                const cap = `
          *🏷️ මාතෘකාව :* ${news.title}
          *⏰ අලුත් කරන වේලාව :* _${news.date}_
          
@@ -1443,7 +1442,7 @@ Cieeee, What's Going On❤️💖👀`
          const templateMessage = {
              image: {url: img },
              caption: '     ◉ 💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ◉\n\n'+cap,
-             footer: global.botname+'\n ᴛʜᴀɴᴋs ᴛᴏ sɪsᴜʟʏᴀ',
+             footer: global.botname,
              templateButtons: templateButtons,
              headerType: 4
          }
