@@ -1878,7 +1878,7 @@ break
           }
          }
          break
-         case 'mutebot':{
+         case 'mute':{
              if (!m.isGroup) throw mess.group
              if (!isBotAdmins) throw mess.botAdmin
              if (!isAdmins) throw mess.admin
@@ -1930,7 +1930,7 @@ const okebnh1 =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15
 const xeonkak = okebnh1[Math.floor(Math.random() * okebnh1.length)]
 QueenNilu.sendMessage(m.chat, { text: xeonkak }, { quoted: m })
 break
-case 'mute': {
+case 'mutebot': {
                 if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
                 if (!isAdmins) throw mess.admin
