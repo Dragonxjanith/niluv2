@@ -703,35 +703,7 @@ QueenNilu.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.sen
 } else {
 }
 
-        //auto reply by xeon
-  if (Autoreply)
-        for (let anji of janiyasticker){
-				if (budy === anji){
-					result = fs.readFileSync(`./Media/sticker/${anji}.webp`)
-					QueenNilu.sendMessage(m.chat, { sticker: result }, { quoted: m })
-					}
-			}
-			  if (Autoreply)
-			for (let anju of janiyaaudio){
-				if (budy === anju){
-					result = fs.readFileSync(`./Media/audio/${anju}.mp3`)
-					QueenNilu.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-					}
-			}
-			  if (Autoreply)
-			for (let anjh of janiyaimage){
-				if (budy === anjh){
-					result = fs.readFileSync(`./Media/image/${anjh}.jpg`)
-					QueenNilu.sendMessage(m.chat, { image: result }, { quoted: m })
-					}
-			}
-			  if (Autoreply) 
-					for (let anjh of janiyavideo){
-				if (budy === anjh){
-					result = fs.readFileSync(`./Media/video/${anjh}.mp4`)
-					QueenNilu.sendMessage(m.chat, { video: result }, { quoted: m })
-					}
-				  }
+
 
       // Mute Chat
       if (db.data.chats[m.chat].mute && !isAdmins && !isCreator) {
