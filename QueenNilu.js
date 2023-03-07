@@ -691,13 +691,13 @@ QueenNilu.sendMessage(from, {text:`\`\`\`「 Tiktok Link Detected 」\`\`\`\n\n@
 for (let anji of sticker){
     if (budy.toLowerCase() === anji){
         result = fs.readFileSync(`./Media/sticker/${anji}.webp`)
-        ElisaBotMd.sendMessage(m.chat, { sticker: result }, { quoted: m })
+        QueenNilu.sendMessage(m.chat, { sticker: result }, { quoted: m })
         }
 }
 for (let anju of audio){
     if (budy.toLowerCase() === anju){
         result = fs.readFileSync(`./Media/audio/${anju}.mp3`)
-        ElisaBotMd.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+        QueenNilu.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
         }
 }
 
@@ -7917,7 +7917,7 @@ break
 
 case 'sendme' : {
     if (!isNilu) throw ('*This is only main owner command ☺*️')
-    ElisaBotMd.sendText(m.chat,text)
+    QueenNilu.sendText(m.chat,text)
     }
     break
 case 'animebonk':
