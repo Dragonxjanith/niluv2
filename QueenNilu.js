@@ -187,7 +187,6 @@ if (cek == null) return null
         const isGroupOwner = m.isGroup ? (groupOwner ? groupOwner : groupAdmins).includes(m.sender) : false
 	    const isBan = banned.includes(m.sender)
         const isPremium = premium.includes(m.sender)
-        const Autoreply = m.isGroup ? autorep.includes(from) : false
         const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
         const isAutoSticker = m.isGroup ? autosticker.includes(from) : false
         const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
