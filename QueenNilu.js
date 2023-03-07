@@ -4348,8 +4348,8 @@ case 'logo2' :{
 
                 case 'logo3' :{
                     var MAX = ''
-                    if (global.LANG == 'SI') MAX= '```👸💬 කරුනාකර වචනයක් ලබාදෙන්න ...```\n_උදාහරණ .logo3 MR | NIMA_'
-                    if (global.LANG == 'EN') MAX= '```👸💬 Please give me a some words ...```\n_example .logo3 MR | NIMA_'
+                    if (global.LANG == 'SI') MAX= '```👸💬 කරුනාකර වචනයක් ලබාදෙන්න ...```\n_උදාහරණ .logo3 Janiya_'
+                    if (global.LANG == 'EN') MAX= '```👸💬 Please give me a some words ...```\n_example .logo3 Janiya_'
                     if (!text && !text.includes('|')) return reply (MAX)
                                                   
                      await QueenNilu.sendMessage(from, { react: { text: `3️⃣`, key: m.key }})     
