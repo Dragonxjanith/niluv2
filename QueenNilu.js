@@ -2052,22 +2052,30 @@ await QueenNilu.sendMessage(i, { video:media,  caption: txt, mentions:participan
                     QueenNilu.sendText(m.chat, 'Online Member:\n\n' + online.map(v => '🌝 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
              }
              break
-case 'sticker': case 's': case 'stickergif': case 'sgif': {
-            if (!quoted) throw `*Reply Video/Image With Caption* ${prefix + command}`
-            m.reply(mess.wait)
-                    if (/image/.test(mime)) {
-                let media = await quoted.download()
-                let encmedia = await QueenNilu.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-                await fs.unlinkSync(encmedia)
-            } else if (/video/.test(mime)) {
-                if ((quoted.msg || quoted).seconds > 11) return m.reply('*Maximum 10 seconds!*')
-                let media = await quoted.download()
-                let encmedia = await QueenNilu.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-                await fs.unlinkSync(encmedia)
-            } else {
-                throw `*Send Image/Video With Caption* ${prefix + command}\nDuration *Video 1-9 Seconds*`
+             case 'sticker': case 'st': case 'stickergif2': case 'sgif2': case 's': {
+                if (!quoted) return reply(`👸💬 Reply Video/Image With Caption ${prefix + command}`)
+              
+                var MAX = ''
+                if (global.LANG == 'EN') MAX= '*Maximum 10 seconds videos only!*'
+                if (global.LANG == 'SI') MAX= '*උපරිම තත්පර 10ක වීඩියෝ පමණයි !*'
+                var MA2X = ''
+                if (global.LANG == 'SI') MA2X= '*👸💬 වීඩියෝවකට හෝ ජායාරූපයකට රිප්ලයි ලබාදෙන්න !*'
+                if (global.LANG == 'EN') MA2X= '*👸💬 Please reply video or photo !*'
+                
+                 QueenNilu.sendText(m.chat, Lang.STICKER_MAKING )
+                        if (/image/.test(mime)) {
+                    let media = await quoted.download()
+                    let encmedia = await QueenNilu.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: m.pushName })
+                    await fs.unlinkSync(encmedia)
+                } else if (/video/.test(mime)) {
+                    if ((quoted.msg || quoted).seconds > 11) return reply(MAX)
+                    let media = await quoted.download()
+                    let encmedia = await QueenNilu.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: m.pushName })
+                    await fs.unlinkSync(encmedia)
+                } else {
+                    throw MA2X
+                    }
                 }
-            }
             break
             case 'ebinary': {
             if (!text) throw `Example : ${prefix + command} text`
