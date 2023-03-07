@@ -58,7 +58,7 @@ global.doc6 = 'application/vnd.android.package-archive'
 global.sessionName = 'session'
 global.prefa = ['','!','.','#','&']
 global.sp = ''
-
+global.themeemoji ='💃'
 //messages
 global.mess = {
     success: 'Here you go!',
