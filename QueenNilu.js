@@ -4345,6 +4345,163 @@ case 'logo2' :{
                 }
                 break
 
+                case 'logo3' :{
+                    var MAX = ''
+                    if (global.LANG == 'SI') MAX= '```👸💬 කරුනාකර වචනයක් ලබාදෙන්න ...```\n_උදාහරණ .logo3 MR | NIMA_'
+                    if (global.LANG == 'EN') MAX= '```👸💬 Please give me a some words ...```\n_example .logo3 MR | NIMA_'
+                    if (!text && !text.includes('|')) return reply (MAX)
+                                                  
+                     await QueenNilu.sendMessage(from, { react: { text: `3️⃣`, key: m.key }})     
+                      
+                             const desmsg = `◉═════════════◉
+    
+                             💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 💃
+                          
+                              🎨𝗟𝗢𝗚𝗢 𝗣𝗔𝗖𝗞 02 🖌️
+                          
+                             𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝚕𝚘𝚐𝚘 𝚖𝚎𝚗𝚞 
+                          
+                              
+                              *● ʀᴇǫᴜᴇsᴛᴇʀ -*  _${m.pushName}_
+                              *● ʟᴏɢᴏ ᴛᴇxᴛ -* _${text}_
+                              *● ᴀᴠᴀʟᴀʙʟᴇ ʟᴏɢᴏᴇs -* _30_
+                              
+                              ◉═════════════◉`    
+                         
+                         let sections = [{
+                    
+                                "rows": [{
+                                "title": "Steel style",
+                                    "rowId": `qsteel ${text}`
+                                },
+                                 {
+                                "title": "avenger style",
+                                "rowId": `qavenger ${text}`
+                                },
+                                {
+                                "title": "polygon style ",
+                                "rowId": `qpolugon ${text}`
+                                },
+                                {
+                                "title": "fire steel style ",
+                                "rowId": `qhsteel ${text}`
+                                },
+                                {
+                                "title": "wood style ",
+                                "rowId": `qwood ${text}`
+                                },
+                                {
+                                "title": "ornamental style ",
+                                "rowId": `qlovely ${text}`
+                                },
+                                {
+                                "title": "matalic style ",
+                                "rowId": `qmetalic ${text}`
+                                },
+                                {
+                                "title": "neon style ",
+                                "rowId": `qneon ${text}`
+                                },
+                                {
+                                "title": "pubg style ",
+                                "rowId": `qpubg ${text}`
+                                },
+                                {
+                                "title": "fire game style ",
+                                "rowId": `qfire ${text}`
+                                },
+                                {
+                                "title": "horror style ",
+                                "rowId": `qhorr ${text}`
+                                },
+                                {
+                                "title": "haloween style",
+                                "rowId": `qhalowin ${text}`
+                                },
+                                {
+                                "title": "video game style",
+                                "rowId": `qvideogame ${text}`
+                                },
+                                {
+                                "title": "wolf style ",
+                                "rowId": `qwolf ${text}`
+                                },
+                                {
+                                "title": "ninja style ",
+                                "rowId": `qninja ${text}`
+                                },
+                                {
+                                "title": "3d reto style ",
+                                "rowId": `qreto ${text}`
+                                },
+                                {
+                                "title": "bear style",
+                                "rowId": `bear ${text}`
+                                },
+                                {
+                                "title": "lion style ",
+                                "rowId": `lion ${text}`
+                                },
+                                {
+                                "title": "3dspace style ",
+                                "rowId": `3dspace ${text}`
+                                },
+                                {
+                                "title": "glitch style ",
+                                "rowId": `glitch3 ${text}`
+                                },
+                                {
+                                "title": "glitch style - 2 ",
+                                "rowId": `glitch2 ${text}`
+                                },
+                                {
+                                "title": "pron hub style ",
+                                "rowId": `pornhub2 ${text}`
+                                },
+                                {
+                                "title": "grafiti style ",
+                                "rowId": `grafiti ${text}`
+                                },
+                                {
+                                "title": "giltch style 3 ",
+                                "rowId": `glitch3 ${text}`
+                                },
+                                {
+                                "title": "team logo style - 1 ",
+                                "rowId": `tlc ${text}`
+                                },
+                                {
+                                "title": "team logo style - 2 ",
+                                "rowId": `tls ${text}`
+                                },
+                                {
+                                "title": "team logo style - 3 ",
+                                "rowId": `tlm ${text}`
+                                },
+                                {
+                                "title": "team logo style - 4 ",
+                                "rowId": `tle ${text}`
+                                },
+                                {
+                                "title": "team logo style - 5 ",
+                                "rowId": `tlb ${text}`
+                                },
+                                {
+                                "title": "mountain style ",
+                                "rowId": `mountain ${text}`
+                                },
+                                {
+                                "title": "✨ ǫᴜᴇᴇɴ ᴇʟɪsᴀ ✨",
+                                "rowId": `about`
+                                }
+                              ]
+                            }
+                         ]
+                         await QueenNilu.sendListMsg(m.chat, `${desmsg}`, `${global.botnma}`, `*🎨 LOGO PACK 3*`, `MAKE LOGO`, sections, m)
+                     
+                    }
+                    break
+
 
                 case 'eglitch' : case 'eberry': case 'eneon' : case 'ecrismas' : case 'ethunder' : case 'eninja' :
                 case 'eorange' : case 'ecake' : case 'estrowberry' : case 'eflaming' : case 'eshadow' : case 'eongrass' : 
