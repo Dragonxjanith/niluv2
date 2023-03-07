@@ -9081,17 +9081,35 @@ case 'Stts' :{
     const ping = (end - start) + 'ms' 
     // const runtime = 
     const ramusage = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
- 
- 
- 
-const msg = '```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ Run Time :* ```'+runtime(process.uptime())+'``` \n*📶 Ram Usage :*``` '+ramusage+'```\n'
+    const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+    var date = new Date().toLocaleDateString( get_localized_date)
+    var time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
+    ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
+    
+
+desmsg = `╭╌┄┄『 *USER DETAILS* 』
+┊ ▢ 𝙽𝚄𝙼𝙱𝙴𝚁 :  ${m.sender.split('@')[0]}
+┊ ▢ 𝙽𝙰𝙼𝙴 :  ${m.pushName}
+╰ ┄┬┄┄┄◯
+╭┄ ┴┄『 *BOT DETAILS* 』
+┊ ▢  𝙽𝙰𝙼𝙴 : ${global.botname}
+┊ ▢  𝙽𝚄𝙼𝙱𝙴𝚁 : ${botNumber.split('@')[0]}
+┊ ▢  𝙷𝙾𝚂𝚃 𝙾𝙽 : heroku 
+┊ ▢  𝚆𝙴𝙱 : opera
+╰┄┬┄╌╌╌┄◯
+╭┄┴┄┄『 *ABOUT SYSTEM* 』
+┊ ▢  𝙿𝚁𝙴𝙵𝙸𝚇 : ${prefix}
+┊ ▢  𝚃𝙸𝙼𝙴 : ${time}
+┊ ▢  𝙳𝙰𝚃𝙴 : ${date}
+┊ ▢  𝚁𝙰𝙼 𝚄𝚂𝙰𝙶𝙴 : ${ram0}
+╰┄┄┄┄┄┄┄┄┄◯`
 const templateButtons = [
     {buttonId: `publicgroup`, buttonText: {displayText: 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ'}, type: 1},
     {buttonId: `botstetus`, buttonText: {displayText: 'sᴛᴇᴛᴜs'}, type: 1}
 ]
 
 const templateMessage = {
-caption: msg,
+caption: desmsg,
 footer: 'ǫᴜᴇᴇɴ ɴɪʟᴜ ᴡᴀ ʙᴏᴛ ᴍᴅ',
 buttons: templateButtons,
 headerType: 4
