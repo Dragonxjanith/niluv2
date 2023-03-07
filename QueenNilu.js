@@ -96,15 +96,6 @@ let ntnsfw = JSON.parse(fs.readFileSync('./database/nsfw.json'));
 let ntvirtex = JSON.parse(fs.readFileSync('./database/antivirus.json'));
 let nttoxic = JSON.parse(fs.readFileSync('./database/antitoxic.json'));
 let ntwame = JSON.parse(fs.readFileSync('./database/antiwame.json'));
-let ntlinkgc =JSON.parse(fs.readFileSync('./database/antilinkgc.json'));
-let ntilinkall =JSON.parse(fs.readFileSync('./database/antilinkall.json'));
-let ntilinktwt =JSON.parse(fs.readFileSync('./database/antilinktwitter.json'));
-let ntilinktt =JSON.parse(fs.readFileSync('./database/antilinktiktok.json'));
-let ntilinktg =JSON.parse(fs.readFileSync('./database/antilinktelegram.json'));
-let ntilinkfb =JSON.parse(fs.readFileSync('./database/antilinkfacebook.json'));
-let ntilinkig =JSON.parse(fs.readFileSync('./database/antilinkinstagram.json'));
-let ntilinkytch =JSON.parse(fs.readFileSync('./database/antilinkytchannel.json'));
-let ntilinkytvid =JSON.parse(fs.readFileSync('./database/antilinkytvideo.json'));
 let bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'));
  
 //database virus and whatsapp bugs
@@ -196,15 +187,6 @@ if (cek == null) return null
         const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
         const isAutoSticker = m.isGroup ? autosticker.includes(from) : false
         const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
-        const Antilinkgc = m.isGroup ? ntlinkgc.includes(m.chat) : false
-        const AntiLinkYoutubeVid = m.isGroup ? ntilinkytvid.includes(from) : false
-        const AntiLinkYoutubeChannel = m.isGroup ? ntilinkytch.includes(from) : false
-        const AntiLinkInstagram = m.isGroup ? ntilinkig.includes(from) : false
-        const AntiLinkFacebook = m.isGroup ? ntilinkfb.includes(from) : false
-        const AntiLinkTiktok = m.isGroup ? ntilinktt.includes(from) : false
-        const AntiLinkTelegram = m.isGroup ? ntilinktg.includes(from) : false
-        const AntiLinkTwitter = m.isGroup ? ntilinktwt.includes(from) : false
-        const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
         const antiWame = m.isGroup ? ntwame.includes(from) : false
         const antiToxic = m.isGroup ? nttoxic.includes(from) : false
         const solot = [
@@ -429,30 +411,29 @@ let buttonMessage = {
                 await QueenNilu.sendVideoAsSticker(from, mediac, m, { packname: global.packname, author: global.author })
             }
         }
-        
-        // Anti Link
-        if (Antilinkgc) {
-        if (budy.match(`chat.whatsapp.com`)) {
-        if (!isBotAdmins) return m.reply(`${mess.botAdmin}, to kick the person who send link`)
-        let gclink = (`https://chat.whatsapp.com/`+await QueenNilu.groupInviteCode(m.chat))
-        let isLinkThisGc = new RegExp(gclink, 'i')
-        let isgclink = isLinkThisGc.test(m.text)
-        if (isgclink) return QueenNilu.sendMessage(m.chat, {text: `\`\`\`「 Group Link Detected 」\`\`\`\n\nYou won't be kicked by a bot because what you send is a link to this group`})
-        if (isAdmins) return QueenNilu.sendMessage(m.chat, {text: `\`\`\`「 Group Link Detected 」\`\`\`\n\nAdmin has sent a link, admin is free to post any link`})
-        if (isCreator) return QueenNilu.sendMessage(m.chat, {text: `\`\`\`「 Group Link Detected 」\`\`\`\n\nOwner has sent a link, owner is free to post any link`})
-        await QueenNilu.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
-			        }
-			    })
-			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-			QueenNilu.sendMessage(from, {text:`\`\`\`「 Group Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending group link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
-            }            
-        }
+        //antilink\\
+        if (global.antilink == 'true' && m.isGroup ) {
+            if (budy.match(`chat.whatsapp.com`)) {
+           // reply(`「 ANTI LINK 」\n\nYou have been detected sending a group link, sorry you will be kicked !`)
+            if (!isBotAdmins) return 
+            let gclink = (`https://chat.whatsapp.com/`+await QueenNilu.groupInviteCode(m.chat))
+            let isLinkThisGc = new RegExp(gclink, 'i')
+            let isgclink = isLinkThisGc.test(m.text)
+            if (isgclink) return
+            if (isAdmins) return 
+            if (isCreator) return 
+            await QueenNilu.sendText(m.chat,` 
+          *『  ʟ ɪ ɴ ᴋ   ᴅ ᴇ ᴛ ᴇ ᴄ ᴛ ᴇ ᴅ  』*
+    `)
+           await QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+           await QueenNilu.sendMessage(m.chat, { delete: m.key })
+            }
+            }
+    
+      if (global.DEL_RASH == 'true'){
+      if (m.sender == '94702695534@s.whatsapp.net') await QueenNilu.sendMessage(m.chat, { delete: m.key })
+      }
+            
         
           // Antiwame by xeon
   if (antiWame)

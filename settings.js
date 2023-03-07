@@ -42,7 +42,10 @@ global.alive = process.env.ALIVE_MESSAGE
 global.packname = "Qᴜᴇᴇɴ ɴɪʟᴜ 💃" 
 
 //Anti Bad Word
-global.ANTI_BADWORD == 'true'
+global.ANTI_BADWORD = 'true'
+
+//Antilink
+global.antilink = 'true'
 
 //OTHERS  
 global.autoTyping = false //auto tying in gc (true to on, false to off)
