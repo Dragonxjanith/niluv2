@@ -15,7 +15,7 @@ global.botname = 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ꜱᴛᴀʙʟᴇ' //ur 
 global.wm = "QueenNilu" //ur watermark
 
 //Language English = 'EN' , Sinhala = 'SI' , Tamil= 'TL'
-global.LANG = 'SI'
+global.LANG = 'EN'
 
 //React Messages 
 global.OWNER_REACT = '🥀' //Owner's Messages react emoji
