@@ -9215,7 +9215,47 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
 
 
             break
+//////////////////////////////////////////////////////All------------------------
 
+
+case 'twiter' : case 'insta': case 'igvid' : case 'fb': case 'get': {  
+    const thub = await fetchJson('https://github.com/Dragonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
+                          await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+    
+    if (!text) throw '*Please Give me a link*'
+   buf = await getBuffer(thub.SF_THUB)
+   const download = await QueenNilu.sendText(m.chat, mess.wait)
+
+                let bicil = require('@bochilteam/scraper')
+
+                let urlnya = text
+
+	            bicil.savefrom(urlnya)
+
+	            .then(async(result) => {	  	                                	                      	            
+
+		        for(let i of result.url) {		
+
+		        if(i.url.includes('mp4')){		           			    				
+
+				let link = await getBuffer(i.url)
+			 await QueenNilu.sendMessage(m.chat, { delete: download.key })	
+             const uplode = await QueenNilu.sendText(m.chat, ` *Please Wait ${global.botnma} Trying upload Your  ${m.pushName} Video ... 🔄*`)
+             await QueenNilu.sendMessage(from, { react: { text: `📤`, key: m.key }})
+
+                QueenNilu.sendMessage(m.chat, { video: link, jpegThumbnail:buf,caption: `${global.cap}\n\n*⦁ quality ${i.subname}*` }, { quoted: m }) 
+                await QueenNilu.sendMessage(m.chat, { delete: uplode.key })    
+                          await QueenNilu.sendMessage(from, { react: { text: `✅`, key: m.key }})          
+
+               }
+
+              }
+
+            }).catch((err) => m.reply('```Can\'t Download your Video... ☹️```'))
+
+            }		
+
+			break
 //----------------------------------------------------------LIST MENU --------------------------------------------
 
             case 'command':case 'listmenu': case 'list': case 'panel':{
