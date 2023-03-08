@@ -145,6 +145,7 @@ const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
 const type = Object.keys(mek.message)[0]  
 const from = mek.key.remoteJid      
 const content = JSON.stringify(mek.message)
+const isXnxxGrp = m.chat == "120363048967527187@g.us" ? true : false 
 
 	    const cekUser = (users, id) => {     
 var cek = null
