@@ -1645,7 +1645,7 @@ Cieeee, What's Going On❤️💖👀`
                 await QueenNilu.groupUpdateDescription(m.chat, text).then((res) => m.reply(mess.success)).catch((err) => m.reply(jsonformat(err)))
             }
             break
-          case 'setbotpp': {
+          case 'setbotpp': case 'setbotpp': {
                 if (!isCreator) throw mess.owner
                 if (!quoted) throw `Send/Reply Image With Caption ${prefix + command}`
                 if (!/image/.test(mime)) throw `Send/Reply Image With Caption ${prefix + command}`
@@ -1666,26 +1666,109 @@ Cieeee, What's Going On❤️💖👀`
                 m.reply(mess.success)
                 }
                 break
-            case 'tagall': {
-                if (!m.isGroup) throw mess.group
-                if (!isBotAdmins) throw mess.botAdmin
-                if (!isAdmins) throw mess.admin
-let teks = `╚»˙·٠💙💍♥ Tag All ♥💙💍٠·˙«╝ 
- 
- 🌿 *Message : ${q ? q : 'empty'}*\n\n`
-                for (let mem of participants) {
-                teks += `🧚‍♀️ @${mem.id.split('@')[0]}\n`
-                }
-                QueenNilu.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
-                }
-                break
-                case 'hidetag': {
-            if (!m.isGroup) throw mess.group
-            if (!isBotAdmins) throw mess.botAdmin
-            if (!isAdmins) throw mess.admin
-            QueenNilu.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
-            }
-            break
+                case 'setexif': {
+                    if (!isCreator) return replay(`${mess.owner}`)
+                    if (!text) return replay(`${Lang.EXAMPLE}\n : ${prefix + command} packname|author`)
+               global.packname = text.split("|")[0]
+               global.author = text.split("|")[1]
+               reply(`Exif Has Been Successfully Changed to\n\n🔮 Packname : ${global.packname}\n🔮 Author : ${global.author}`)
+                 }
+                 break
+                 
+                 case 'setalive': {
+                    if (!isCreator) return replay(`${mess.owner}`)
+                    if (!text) return replay(`.setalive hello \n  i am alive now \n how can i help you`)
+               global.alive = text
+               reply('*✅ ALIVE MASSAGE HAS CHANGE*\n '+'```'+global.alive+ '```')
+                 }
+                 break
+                 case 'setbadwords' : {
+                 global.ANTI_BADWORD = text
+                 }
+                 break
+                 case 'setlang': {
+                    if (!isCreator) return replay(`${mess.owner}`)
+                    if (!text) return replay(`.setalive hello \n  i am alive now \n how can i help you`)
+               global.LANG = text
+               reply('*✅ ALIVE MASSAGE HAS CHANGE*\n '+'```'+global.LANG+ '```')
+                 }
+                 break
+                 case 'setwelcome': {
+                    if (!isCreator) return replay(`${mess.owner}`)
+                    if (!text) return replay(`.setalive hello \n  i am alive now \n how can i help you`)
+               global.WELCOME_MSG = text
+               reply('*✅ WELCOME MSG*\n '+'```'+global.WELCOME_MSG+ '```')
+                 }
+                 break
+                 case 'setzenzapi': {
+                    if (!isCreator) return replay(`${mess.owner}`)
+                    if (!text) return replay(`.setalive hello \n  i am alive now \n how can i help you`)
+               global.zenzapi = text
+               reply('*✅ ZENZ API HAS CHANGE*\n '+'```'+global.zenzapi+ '```')
+                 }
+                 break
+                 case 'setalivelogo': {
+                    if (!isCreator) return replay(`${mess.owner}`)
+                    if (!text) return replay(`${Lang.EXAMPLE}\n : .setalivelogo `)
+               global.alivelogo = text
+               reply('*✅ ALIVE LOGO MASSAGE HAS CHANGE*\n '+'```'+global.alive+ '```')
+                 }
+                 break
+                 case 'settiktokthub': {
+                    if (!isCreator) return replay(`${mess.owner}`)
+                    if (!text) return replay(`Example : .setalivelogo `)
+               global.tiktokthub = text
+               reply('*✅ _*\n '+'```'+global.tiktokthub+ '```')
+                 }
+                 break
+                       case 'grupinfo': case 'groupinfo':
+                       try{
+                        var pic = await QueenNilu.getProfilePicture(m.chat)
+                         } catch {
+                        var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
+                         }
+                       let ingfo = `*𝗚𝗥𝗢𝗨𝗣 𝗜𝗡𝗙𝗢*\n\n*𝗡𝗔𝗠𝗘 :* ${groupName}\n*𝗜𝗗 𝗚𝗥𝗢𝗨𝗣:* ${m.chat}\n*𝗠𝗔𝗗𝗘 :* ${moment(`${groupMetadata.creation}` * 1000).tz('Africa/Harare').format('DD/MM/YYYY HH:mm:ss')}\n*𝗚𝗥𝗢𝗨𝗣 𝗢𝗪𝗡𝗘𝗥:* @${groupMetadata.owner.split('@')[0]}\n*𝗔𝗗𝗠𝗜𝗡𝗦 :* ${groupAdmins.length}\n*𝗠𝗘𝗠𝗕𝗘𝗥𝗦 :* ${participants.length}\n*𝗗𝗘𝗦𝗖 :* \n${groupMetadata.desc}`
+                       ds = await getBuffer(pic)
+                       QueenNilu.sendMessage(m.chat, { image: ds,caption: ingfo, mentions: [groupMetadata.owner] }, { quoted: m})
+                       break
+                       case 'tagadmin' : {
+                       if (!m.isGroup) throw mess.group
+                       let teks = ` _❗ ${groupName}Admins ❗_
+                       
+     *MASSAGE :* ${q ? q : 'blank'}\n\n`
+                       for (let mem of groupAdmins) {
+                                       teks += `    `
+                                       }
+                       QueenNilu.sendMessage(m.chat, { text: teks, mentions: groupAdmins.map(a => a.id) }, { quoted: m })
+                                       
+                       }
+                       break
+                                   case 'tagall': case 'tag': {
+                                       if (!m.isGroup) throw mess.group
+                                       if (!isBotAdmins) throw mess.botAdmin
+                                       if (!isAdmins) throw mess.admin
+                       let teks = ` *ＧＲＯＵＰ  ＮＯＴＩＦＹ*
+                        
+                         *𝐌𝐄𝐒𝐒𝐀𝐆𝐄 : ${q ? q : 'blank'}*\n\n`
+                                       for (let mem of participants) {
+                                       teks += `🔵 @${mem.id.split('@')[0]}\n`
+                                       }
+                                       QueenNilu.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
+                                       }
+                                       break
+                                       case 'hidetag': {
+                                   if (!m.isGroup) throw mess.group
+                                   if (!isAdmins) throw mess.admin
+                                   QueenNilu.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
+                                   }
+                                   break
+                                   case '####taggrp': {
+                                   for (let mem of participants) {
+                                      await QueenNilu.sendText(m.chat,mem.id) 
+                                       }
+                                   
+        }
+                                   break
 	    case 'style': case 'styletext': {
 	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // response when limit runs out
 		db.data.users[m.sender].limit -= 1 // -1 limit
