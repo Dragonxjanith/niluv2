@@ -2171,20 +2171,28 @@ memek = await QueenNilu.sendImageAsSticker(m.chat, meme, m, { packname: global.p
 await fs.unlinkSync(memek)
 }
 break
-case 'toimage': case 'toimg': {
-                if (!quoted) throw 'Reply Image'
-                if (!/webp/.test(mime)) throw `Reply sticker with caption *${prefix + command}*`
-                m.reply(mess.wait)
-                let media = await QueenNilu.downloadAndSaveMediaMessage(quoted)
-                let ran = await getRandom('.png')
-                exec(`ffmpeg -i ${media} ${ran}`, (err) => {
-                    fs.unlinkSync(media)
-                    if (err) throw err
-                    let bufferimg13x = fs.readFileSync(ran)
-                    QueenNilu.sendMessage(m.chat, { image: bufferimg13x }, { quoted: m })
-                    fs.unlinkSync(ran)
-                })
-            }
+case 'photo': case 'toimg': {
+    var REPLY 
+    if (global.LANG == 'EN') REPLY = '*Please reply sticker*'
+    if (global.LANG == 'SI') REPLY ='*කරුනාකර ස්ටිකර් එකකට රිප්ලයි කරන්න*'
+    var STICKER
+    if (global.LANG == 'EN') STICKER = '*This is not Sticker please reply correct sticker'
+    if (global.LANG == 'SI') STICKER = '*ඔබ රිප්ලයි කරන ලද්දේ ස්ටිකර් එකකට නොවේ කරුනාකර ස්ටිකර් එකකට රිප්ලයි කරන්න*'
+        if (!quoted) throw '*photo එකකට රිප්ලයි කරන්න !*'
+        if (!/webp/.test(mime)) throw `${REPLY} *${prefix + command}*`
+        const load = await ElisaBotMd.sendText(m.chat, Lang.CONVER_TING )
+        let media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
+        await ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+        let ran = await getRandom('.png')
+        exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+            fs.unlinkSync(media)
+            if (err) throw err
+            let buffer = fs.readFileSync(ran)
+            ElisaBotMd.sendMessage(m.chat, { image: buffer , caption : global.cap  }, { quoted: m })
+            fs.unlinkSync(ran)
+        })
+    }
+
             break
 case 'tomp4': case 'tovideo': {
                 if (!quoted) throw 'Reply Image'
@@ -5395,7 +5403,7 @@ case 'tiktok': {
                    
                     ]
                     let buttonMessage = {
-                        image: { url: 'https://telegra.ph/file/069d0640963b888ab6c4e.jpg' },
+                        image: { url: 'https://telegra.ph/file/c2a78bd76db155addef24.jpg' },
                         caption: anu,
                         footer: footer,
                         buttons: buttons,
