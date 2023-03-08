@@ -10161,7 +10161,7 @@ case 'grpmenu': {
     const ping = (end - start) + ' *_ᴍs_*' 
     const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
   
-                            await QueenNilu.sendMessage(from, { react: { text: `🤪`, key: m.key }})
+                            await QueenNilu.sendMessage(from, { react: { text: `🤹‍♂️`, key: m.key }})
                         
   var COPLE = ''
   if (global.LANG == 'EN') COPLE = '```Choose two members from the group.```'
