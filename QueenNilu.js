@@ -106,6 +106,7 @@ let ntilinkig =JSON.parse(fs.readFileSync('./database/antilinkinstagram.json'));
 let ntilinkytch =JSON.parse(fs.readFileSync('./database/antilinkytchannel.json'));
 let ntilinkytvid =JSON.parse(fs.readFileSync('./database/antilinkytvideo.json'));
 let bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'));
+let autorep =JSON.parse(fs.readFileSync('./database/autoreply.json'));
  
 //database virus and whatsapp bugs
 //warrrrrrrrr
@@ -207,6 +208,7 @@ if (cek == null) return null
         const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
         const antiWame = m.isGroup ? ntwame.includes(from) : false
         const antiToxic = m.isGroup ? nttoxic.includes(from) : false
+        const Autoreply = m.isGroup ? autorep.includes(from) : false
         const solot = [
 		'🍊 : 🍒 : 🍐',
 		'🍒 : 🔔 : 🍊',
