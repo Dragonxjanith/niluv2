@@ -1093,17 +1093,16 @@ case 'apk':{
            case 'getapk' : {
                 if (!text.includes('https://play.google.com/')) return reply('*💃 Please give me a correct link*\n _.apk https://play.google.com/store/apps/details?id=com.whatsapp_')
                await QueenNilu.sendMessage(from, { text: `*📥 Downloading Playstore apk...*` }, { quoted: m })
-                   //  await getBuffer(`https://apk-dl2.herokuapp.com/api/apk-dl?url=${text}`)
-                  //  const name = janiya.hasil[0].title || text
+                     await getBuffer(`https://api.akuari.my.id/downloader/apkdownloader2?package=${text}`)
                     //const kkkkh = await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}
-                    //const name = `${args[0].split('https://play.google.com/store/apps/details?id=')[1]}`
-                  // .then(async (janiya) => {  
+                //const name = `${args[0].split('https://play.google.com/store/apps/details?id=')[1]}`
+                   .then(async (janiya) => {  
                     const apk = 'https://api.akuari.my.id/downloader/apkdownloader2?package='+text
                     await QueenNilu.sendMessage(from, { text: `*📤 Uploading playstore apk...*` }, { quoted: m })
                     //https://telegra.ph/file/5c59cd0f4c3e3fa79ee77.jpg
-                    //const buffer = await getBuffer(janiya.respon.download)
+                    const buffer = await getBuffer(janiya.respon.downloadapk)
                    await QueenNilu.sendMessage(m.chat, { document: {url : apk } , mimetype: 'application/vnd.android.package-archive', fileName: `${text}`}, { quoted: m })
-                    //}).catch((err) => m.reply(NOT_FOUND))
+                    }).catch((err) => m.reply(NOT_FOUND))
                
                              }
                 break
