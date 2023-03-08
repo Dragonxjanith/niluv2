@@ -1172,7 +1172,7 @@ case 'apk':{
            text: `${m.pushName} This is matching apk\n\n➮ ʀᴇǫᴜᴇsᴛ ${text}`,
            footer: `${global.botname}`,
            title: "*💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴀᴘᴋ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 💃*",
-           buttonText: "DOWNLOAD MOD APK",
+           buttonText: "DOWNLOAD APP FROM PLAYSTORE",
            sections
           }, { quoted : m })    
                 }).catch((err) => m.reply(NOT_FOUND))
