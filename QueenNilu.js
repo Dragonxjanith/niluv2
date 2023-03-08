@@ -1197,7 +1197,7 @@ case 'film' :{
     const search = janiya.hasil
     let sections = []   
 for (let i of search) {
-const list = {title: `SELECT YOUR MOD APP`,
+const list = {title: `SELECT YOUR Movie`,
 rows: [
 {
  title: `${i.judul}`, 
@@ -1221,7 +1221,7 @@ sections
     }
     break
     case 'films' : {
-    await QueenNilu.sendMessage(m.chat,janiya.hasil.link , { quoted: m })
+    await QueenNilu.sendMessage(m.chat,{ link : janiya.hasil.link }, { quoted: m })
 
    
     }
