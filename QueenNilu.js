@@ -1203,7 +1203,7 @@ rows: [
 {
  title: `${i.judul}`, 
  rowId: `films ${i.link} ${i.judul}`,
-description: `➮ upload ${i.version}`	     
+description: `➮ upload ${i.upload}`	     
 }, 
 ]
 }
