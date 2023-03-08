@@ -1100,7 +1100,7 @@ case 'apk':{
                     const apk = 'https://api.akuari.my.id/downloader/apkdownloader2?package='+text
                     await QueenNilu.sendMessage(from, { text: `*📤 Uploading playstore apk...*` }, { quoted: m })
                     //https://telegra.ph/file/5c59cd0f4c3e3fa79ee77.jpg
-                    const buffer = await getBuffer(janiya.respon.downloadapk)
+                  const buffer = await getBuffer(janiya.respon.downloadapk)
                    await QueenNilu.sendMessage(m.chat, { document: {url : apk } , mimetype: 'application/vnd.android.package-archive', fileName: `${text}`}, { quoted: m })
                     }).catch((err) => m.reply(NOT_FOUND))
                
@@ -1151,15 +1151,15 @@ case 'apk':{
                 await QueenNilu.sendText(m.chat,mess.wait) 
                 await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}`)
                 .then(async (janiya) => {  
-                const search = janiya.respon
+                const search = janiya.hasil
                 let sections = []   
       for (let i of search) {
       const list = {title: `SELECT YOUR  APP`,
       rows: [
             {
              title: `${i.title}`, 
-             rowId: `apk22 ${i.link} ${i.title}`,
-          description: `➮ 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ${i.version}`	     
+             rowId: `apk22 ${i.url} ${i.title}`,
+          description: `➮ 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 `	     
             }, 
             ]
          }
@@ -1179,7 +1179,7 @@ case 'apk':{
                 break
                 case 'apk22' : {
                 const down = await QueenNilu.sendMessage(from, { text: `*📥 Downloding mod apk...*` }, { quoted: m })
-                const janiya = await fetchJson(`https://api.akuari.my.id/downloader/dlmod?link=${args[0]}`)
+                const janiya = await fetchJson(`https://api.akuari.my.id/downloader/apkdownloader2?package=${args[0]}`)
                 const upload = await QueenNilu.sendMessage(from, { text: `*📤 Uploading mod apk...*` }, { quoted: m })
                 await QueenNilu.sendMessage(m.chat,{delete : down.key })  
                 await QueenNilu.sendMessage(m.chat, { document: { url : janiya.respon.linkdl } , mimetype: 'application/vnd.android.package-archive', fileName: `${args[1]}.apk`}, { quoted: m })
