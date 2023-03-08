@@ -5409,128 +5409,39 @@ case 'tiktok': {
     
     }
     break
-
-    case 'tiktok2': case 'ttk': {
-        if (!text) throw `Use ${Lang.EXAMPLE}\n ${prefix + command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
-        if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'
-        const load = await QueenNilu.sendText(m.chat, ` ʟᴏᴀᴅɪɴɢ ʏᴏᴜʀ ${m.pushName} ᴛɪᴋᴛᴏᴋ ᴠɪᴅᴇᴏ... 🔄`)
-
-        anu = await fetchJson(`https://ravindumanoj-sew-api.herokuapp.com/main/download/tiktok?url=${text}&apikey=RavinduManoj`)
-
-       let listmn = `┌───[💃 *𝙴𝚕𝚒𝚜𝚊 𝙱𝚘𝚝* 💃]───●
-│
-│        🧚‍♀ 𝚃𝚒𝚔𝚃𝚘𝚔 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚛 🧚‍♀
-│ *ᴛʜɪs ɪs ${m.pushName} ᴠɪᴅᴇᴏ*
-│
-└───────● `
-        buf = await getBuffer(`https://i.ibb.co/MhqzZj8/Darkmekcersilverownerfrofilepgoto.jpg`)
-        buf2 = await getBuffer(anu.result.nowm)
-        let message = await prepareWAMessageMedia({ video: buf2, gifPlayback:false }, { upload: QueenNilu.waUploadToServer })
-        const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-        templateMessage: {
-        hydratedTemplate: {
-        videoMessage: message.videoMessage,
-        hydratedContentText: listmn,
-        hydratedFooterText: global.botnma,
-        hydratedButtons: [{
-
-
-        quickReplyButton: {
-        displayText: '💃 𝙸 𝙶𝙾𝚃 𝙸𝚃 💃',
-        id: `Gytt`
-        }
-        }]
-        }
-        }
-        }), { userJid: m.chat, quoted: m })
-        QueenNilu.relayMessage(m.chat, template.message, { messageId: template.key.id })
-        }
-        break
-    case 'tiktokwm' : {
-        if (!text) return reply('Need tiktok url')
-        const down = await QueenNilu.sendText(m.chat, '*📥 DOWNLOADING YOUR TIKTOK VIDEO ...*')
-        await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/elisadetails.json').then(async (thub) => { 
-        buf = await getBuffer(thub.TIKTOK_THUB)
-           //  await QueenNilu.sendMessage(m.chat,{delete : down.key })
-             const viddd = await getBuffer(`https://api.akuari.my.id/downloader/tiktokwithwm?link=${text}`)
-             await QueenNilu.sendMessage(m.chat,{delete : down.key })
-             const up = await QueenNilu.sendText(m.chat, '*📤 UPLOADING YOUR TIKTOK VIDEO ...*')
-             await QueenNilu.sendMessage(m.chat, { video: viddd , jpegThumbnail:buf,caption: `${global.cap}\n`}, { quoted: m })
-             //await QueenNilu.sendMessage(m.chat, { video: { url: video.video.no_watermark }, jpegThumbnail:buf, caption: `${global.cap}` }, { quoted: m })   
-             await QueenNilu.sendMessage(m.chat,{delete : up.key })  
-             }).catch((err) => {
-               QueenNilu.sendText(m.chat, NOT_FOUND)})
-        
-        }
-        break
-        case 'findsticker' : case 'searchsticker' : {
-         if (!text) return reply('*👸💬 Please give me sticker pack name*')
-         await fetchJson(`https://api.akuari.my.id/search/stickertelegram?query=${text}`)
-         
-        
-        }
-        case 'stelegram' :{
-        
-             if (!text) return reply('👸💬 Please give me a telegram sticker pack link')
-             if (!text.includes('https://t.me/addstickers')) return reply('*👸💬 Please give me a correct link*\n _.stelegram https://t.me/addstickers/ViniProduction_by_MekathKalawak_')
-             //if (!isUrl(args[0]) && !args[0].includes('https://t.me/addstickers')) throw '*The link you provided is not valid*'                
-            await QueenNilu.sendText(m.chat , '*Loading...*' )
-            await fetchJson(`https://my-shinz.herokuapp.com/api/dowloader/telesticker?url=${text}`)
-              .then(async (sticker) => {  
-          //  await QueenNilu.sendText(m.chat, util.format(sticker))
-            const stik = sticker.result
-            const img = stik[1].url
-            const img2 = stik[2].url
-            const img3 = stik[3].url
-            const img4 = stik[4].url
-            const img5 = stik[5].url
-            const img6 = stik[6].url
-            const img7 = stik[7].url
-            const img8 = stik[8].url
-            const img9 = stik[9].url
-            const img10 = stik[10].url
-            const img11 = stik[11].url
-            const img12 = stik[12].url
-            const img13 = stik[13].url
-            const img14 = stik[14].url
-            const img15 = stik[15].url
-            
-            //await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-            await QueenNilu.sendImageAsSticker(m.chat, img, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            await QueenNilu.sendImageAsSticker(m.chat, img2, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            await QueenNilu.sendImageAsSticker(m.chat, img3, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            await QueenNilu.sendImageAsSticker(m.chat, img4, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            await QueenNilu.sendImageAsSticker(m.chat, img5, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            await QueenNilu.sendImageAsSticker(m.chat, img6, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            await QueenNilu.sendImageAsSticker(m.chat, img7, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            await QueenNilu.sendImageAsSticker(m.chat, img8, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            await QueenNilu.sendImageAsSticker(m.chat, img9, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            await QueenNilu.sendImageAsSticker(m.chat, img10, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            await QueenNilu.sendImageAsSticker(m.chat, img11, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            await QueenNilu.sendImageAsSticker(m.chat, img12, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            await QueenNilu.sendImageAsSticker(m.chat, img13, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            await QueenNilu.sendImageAsSticker(m.chat, img14, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            await QueenNilu.sendImageAsSticker(m.chat, img15, m, { packname: global.packname, author: '『© ǫᴜᴇᴇɴ ɴɪʟᴜ』' })
-            }).catch((err) => m.reply('*මෙම telegram sticker Download කල නොහැක !!!*'))
-            /*await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img2 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-             await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img3 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-            await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img4 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-            await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img5 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-            await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img6 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-            await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img7 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-            await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img8 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-            await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img9 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-            await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img10 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-            await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img11 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-            await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img12 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-            await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img13 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-            await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img14 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-            await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img15 }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
-            */
-        // https://fatiharridho.herokuapp.com/api/downloader/telesticker?url=
-          
-        }
-        break
+    case 'getlink' : case 'geturl': {
+                                  const load = QueenNilu.sendText(m.chat, Lang.CONVER_TING )
+                                  await  QueenNilu.sendMessage(m.chat, { delete: load.key })
+                          let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
+                                  let media = await QueenNilu.downloadAndSaveMediaMessage(quoted)
+                                  if (/image/.test(mime)) {
+                                      let anu = await TelegraPh(media)
+                                      reply(util.format(anu))
+                                  } else if (!/image/.test(mime)) {
+                                      let anu = await UploadFileUgu(media)
+                                      reply('*ʏᴏᴜʀ ᴅɪʀᴇᴄᴛ ʟɪɴᴋ*\n\n'+util.format(anu))
+                                  }
+                                  await fs.unlinkSync(media)
+                              }
+                              break
+                           case 'hurl' : case 'tourl': {
+                                   const msg = `*👸 Queen Nilu WA Uploader 👸* \n\n_👸💬 your link -_`
+                                  const load = QueenNilu.sendText(m.chat, Lang.CONVER_TING )
+                                  //await  QueenNilu.sendMessage(m.chat, { delete: load.key })
+                          let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
+                                  let media = await QueenNilu.downloadAndSaveMediaMessage(quoted)
+                                  if (/image/.test(mime)) {
+                                      //let anu = await TelegraPh(media)
+                                      const anu = await fetchJson(`https://api.akuari.my.id/uploader/telegraph?link=${media}`)
+                                      reply(msg+ anu.respon.link)
+                                  } else if (!/image/.test(mime)) {
+                                      let anu = await UploadFileUgu(media)
+                                      reply('*ʏᴏᴜʀ ᴅɪʀᴇᴄᴛ ʟɪɴᴋ*\n\n'+util.format(anu))
+                                  }
+                                  await fs.unlinkSync(media)
+                              }
+                              break
+break
 case 'tiktokaudio':{
 if (!text) return m.reply( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return m.reply(`Link Invalid!!`)
