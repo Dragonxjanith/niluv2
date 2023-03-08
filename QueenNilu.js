@@ -1071,11 +1071,10 @@ case 'apk':{
      ☛ 𝚁𝙰𝚃𝙴 : ${janiya.hasil[0].scoreText}
      ☛ 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽 : ${janiya.hasil[0].summary}
      ☛ 𝚄𝚁𝙻 : ${janiya.hasil[0].url} 
-     downloadapk :${janiya.hasil[0].downloadapk} 
     `
        
        const buttons = [
-                        {buttonId: `getapk ${janiya.hasil[0].downloadapk}`, buttonText: {displayText: '🗳️ ᴅᴏᴡɴʟᴏᴀᴅ ᴀᴘᴋ 🗳️'}, type: 1},
+                        {buttonId: `getapk ${janiya.hasil[0].url}`, buttonText: {displayText: '🗳️ ᴅᴏᴡɴʟᴏᴀᴅ ᴀᴘᴋ 🗳️'}, type: 1},
                          
                     ]
                 const buttonMessage = {
