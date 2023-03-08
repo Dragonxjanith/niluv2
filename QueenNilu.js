@@ -1074,7 +1074,7 @@ case 'apk':{
     `
        
        const buttons = [
-                        {buttonId: `findapk ${janiya.hasil[0].url}`, buttonText: {displayText: '🗳️ ᴅᴏᴡɴʟᴏᴀᴅ ᴀᴘᴋ 🗳️'}, type: 1},
+                        {buttonId: `getapk ${janiya.hasil[0].url}`, buttonText: {displayText: '🗳️ ᴅᴏᴡɴʟᴏᴀᴅ ᴀᴘᴋ 🗳️'}, type: 1},
                          
                     ]
                 const buttonMessage = {
@@ -1093,16 +1093,16 @@ case 'apk':{
            case 'getapk' : {
                 if (!text.includes('https://play.google.com/')) return reply('*💃 Please give me a correct link*\n _.apk https://play.google.com/store/apps/details?id=com.whatsapp_')
                await QueenNilu.sendMessage(from, { text: `*📥 Downloading Playstore apk...*` }, { quoted: m })
-                     await getBuffer(`https://api.akuari.my.id/downloader/apkdownloader2?package=${text}`)
+                     //await getBuffer(`https://api.akuari.my.id/downloader/apkdownloader2?package=${text}`)
                     //const kkkkh = await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}
                 //const name = `${args[0].split('https://play.google.com/store/apps/details?id=')[1]}`
-                   .then(async (janiya) => {  
+                  // .then(async (janiya) => {  
                     const apk = 'https://api.akuari.my.id/downloader/apkdownloader2?package='+text
                     await QueenNilu.sendMessage(from, { text: `*📤 Uploading playstore apk...*` }, { quoted: m })
                     //https://telegra.ph/file/5c59cd0f4c3e3fa79ee77.jpg
-                  const buffer = await getBuffer(janiya.respon.downloadapk)
-                   await QueenNilu.sendMessage(m.chat, { document: {url : janiya.hasil.downloadapk} , mimetype: 'application/vnd.android.package-archive', fileName: `${text}`}, { quoted: m })
-                    }).catch((err) => m.reply(NOT_FOUND))
+                 // const buffer = await getBuffer(janiya.respon.downloadapk)
+                   await QueenNilu.sendMessage(m.chat, { document: {url : janiya.respon.downloadapk} , mimetype: 'application/vnd.android.package-archive', fileName: `${text}`}, { quoted: m })
+                   // }).catch((err) => m.reply(NOT_FOUND))
                
                              }
                 break
