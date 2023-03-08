@@ -1101,7 +1101,7 @@ case 'apk':{
                     await QueenNilu.sendMessage(from, { text: `*📤 Uploading playstore apk...*` }, { quoted: m })
                     //https://telegra.ph/file/5c59cd0f4c3e3fa79ee77.jpg
                   const buffer = await getBuffer(janiya.respon.downloadapk)
-                   await QueenNilu.sendMessage(m.chat, { document: {url : apk } , mimetype: 'application/vnd.android.package-archive', fileName: `${text}`}, { quoted: m })
+                   await QueenNilu.sendMessage(m.chat, { document: {url : janiya.hasil.downloadapk} , mimetype: 'application/vnd.android.package-archive', fileName: `${text}`}, { quoted: m })
                     }).catch((err) => m.reply(NOT_FOUND))
                
                              }
