@@ -1098,7 +1098,7 @@ case 'apk':{
                     //const kkkkh = await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}
                     //const name = `${args[0].split('https://play.google.com/store/apps/details?id=')[1]}`
                   // .then(async (janiya) => {  
-                    const apk = 'https://apk-dl2.herokuapp.com/api/apk-dl?url='+text
+                    const apk = 'https://api.akuari.my.id/downloader/apkdownloader?query='+text
                     await QueenNilu.sendMessage(from, { text: `*📤 Uploading playstore apk...*` }, { quoted: m })
                     //https://telegra.ph/file/5c59cd0f4c3e3fa79ee77.jpg
                     //const buffer = await getBuffer(janiya.respon.download)
@@ -1154,7 +1154,7 @@ case 'apk':{
 
               case 'niluehi': {
     
-                const ehinima = await fetchJson ('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/EHIJSON.json')
+                const ehinima = await fetchJson ('https://github.com/DragonxJanith/UPLOADS/raw/main/JSON/EHIJSON.json')
               ehi = ehinima.EHI_FILES[0].SG_FILE1
               ehi2 = ehinima.EHI_FILES[0].SG_FILE2
               ehi3 = ehinima.EHI_FILES[0].SG_FILE3
