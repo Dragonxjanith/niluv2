@@ -1188,6 +1188,47 @@ case 'apk':{
                 }
 
               break
+/////////////////movie
+
+case 'film' :{
+    await QueenNilu.sendText(m.chat,mess.wait) 
+    await fetchJson(`https://api.akuari.my.id/search/searchmod?query=${text}`)
+    .then(async (janiya) => {  
+    const search = janiya.hasil
+    let sections = []   
+for (let i of search) {
+const list = {title: `SELECT YOUR MOD APP`,
+rows: [
+{
+ title: `${i.judul}`, 
+ rowId: `films ${i.link} ${i.judul}`,
+description: `➮ upload ${i.version}`	     
+}, 
+]
+}
+sections.push(list)   
+}
+const sendm =  QueenNilu.sendMessage(
+m.chat, 
+{
+text: `${m.pushName} This is matching apk\n\n➮ ʀᴇǫᴜᴇsᴛ ${text}`,
+footer: `${global.botname}`,
+title: "*💃Qᴜᴇᴇɴ ɴɪʟᴜ  💃*",
+buttonText: "search",
+sections
+}, { quoted : m })    
+    }).catch((err) => m.reply(NOT_FOUND))
+    }
+    break
+    case 'films' : {
+    await QueenNilu.sendMessage(m.chat,janiya.hasil.link , { quoted: m })
+
+   
+    }
+
+
+
+              break
 
               ////----------------------------------------EHI STORE ----------------------------------\\\\\
 
