@@ -1222,6 +1222,7 @@ sections
     }
     break
     case 'films' : {
+      const janiya = await fetchJson(`https://api.akuari.my.id/search/film?query=${args[0]}`)
     await QueenNilu.sendMessage(m.chat,{ link : janiya.hasil.link }, { quoted: m })
 
    
