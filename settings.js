@@ -26,6 +26,10 @@ global.MENU_IMOJI = '💃|💍'
 //Time & Location
 global.TIME_ZONE = 'Asia/Colombo'
 global.location = "colombo, India, Aizawl" //ur location
+//Song Download Message
+global.SONG_DOWN = '```⬇️ Downloading Your Song...```' 
+// Song Uplode massage 
+global.SONG_UP = '```⬆️ Uploding Your Song...```'
 
 //Links (URLS)
 global.ytname = "YT: janithsadanuwan" //ur yt chanel name
