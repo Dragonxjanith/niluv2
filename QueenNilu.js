@@ -1071,10 +1071,11 @@ case 'apk':{
      ☛ 𝚁𝙰𝚃𝙴 : ${janiya.hasil[0].scoreText}
      ☛ 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽 : ${janiya.hasil[0].summary}
      ☛ 𝚄𝚁𝙻 : ${janiya.hasil[0].url} 
+     downloadapk :${janiya.hasil[0].downloadapk} 
     `
        
        const buttons = [
-                        {buttonId: `getapk ${janiya.hasil[0].url}`, buttonText: {displayText: '🗳️ ᴅᴏᴡɴʟᴏᴀᴅ ᴀᴘᴋ 🗳️'}, type: 1},
+                        {buttonId: `getapk ${janiya.hasil[0].downloadapk}`, buttonText: {displayText: '🗳️ ᴅᴏᴡɴʟᴏᴀᴅ ᴀᴘᴋ 🗳️'}, type: 1},
                          
                     ]
                 const buttonMessage = {
@@ -1148,14 +1149,14 @@ case 'apk':{
                 }
 
               break
-              case 'apk23' :{
+              case 'apk2' :{
                 await QueenNilu.sendText(m.chat,mess.wait) 
-                await fetchJson(`https://api.akuari.my.id/downloader/apkdownloader?query==${text}`)
+                await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}`)
                 .then(async (janiya) => {  
                 const search = janiya.respon
                 let sections = []   
       for (let i of search) {
-      const list = {title: `SELECT YOUR MOD APP`,
+      const list = {title: `SELECT YOUR  APP`,
       rows: [
             {
              title: `${i.title}`, 
