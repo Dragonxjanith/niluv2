@@ -692,13 +692,13 @@ QueenNilu.sendMessage(from, {text:`\`\`\`「 Tiktok Link Detected 」\`\`\`\n\n@
 for (let anji of sticker){
     if (budy.toLowerCase() === anji){
         result = fs.readFileSync(`./Media/sticker/${anji}.webp`)
-        ElisaBotMd.sendMessage(m.chat, { sticker: result }, { quoted: m })
+        QueenNilu.sendMessage(m.chat, { sticker: result }, { quoted: m })
         }
 }
 for (let anju of audio){
     if (budy.toLowerCase() === anju){
         result = fs.readFileSync(`./Media/audio/${anju}.mp3`)
-        ElisaBotMd.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+        QueenNilu.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
         }
 }
 
@@ -1866,15 +1866,15 @@ break
              if (!isBotAdmins) throw mess.botAdmin
              if (!isAdmins) throw mess.admin
              if (args[0] === 'close'){
-                 await ElisaBotMd.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(Lang.G_MUTE)).catch((err) => reply(jsonformat(err)))
+                 await QueenNilu.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(Lang.G_MUTE)).catch((err) => reply(jsonformat(err)))
              } else if (args[0] === 'open'){
-                 await ElisaBotMd.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
+                 await QueenNilu.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
              } else {
              let buttons = [
                      { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
                      { buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
                  ]
-                 await ElisaBotMd.sendButtonText(m.chat, buttons, `Group Mode`, ElisaBotMd.user.name, m)
+                 await QueenNilu.sendButtonText(m.chat, buttons, `Group Mode`, QueenNilu.user.name, m)
 
           }
          }
@@ -1884,10 +1884,10 @@ break
              if (!isBotAdmins) throw mess.botAdmin
              if (!isAdmins) throw mess.admin
              
-             await ElisaBotMd.sendMessage(from, { react: { text: `🔐`, key: m.key }})
-             await ElisaBotMd.groupSettingUpdate(m.chat, 'announcement')
-             const sendmsg = await ElisaBotMd.sendText(m.chat,Lang.G_MUTE)
-             await ElisaBotMd.sendMessage(from, { react: { text: `🔇`, key: sendmsg.key }})
+             await QueenNilu.sendMessage(from, { react: { text: `🔐`, key: m.key }})
+             await QueenNilu.groupSettingUpdate(m.chat, 'announcement')
+             const sendmsg = await QueenNilu.sendText(m.chat,Lang.G_MUTE)
+             await QueenNilu.sendMessage(from, { react: { text: `🔇`, key: sendmsg.key }})
              
             }
             break
@@ -1895,10 +1895,10 @@ break
              if (!m.isGroup) throw mess.group
              if (!isBotAdmins) throw mess.botAdmin
              if (!isAdmins) throw mess.admin
-             await ElisaBotMd.sendMessage(from, { react: { text: `🔓`, key: m.key }})
-             await ElisaBotMd.groupSettingUpdate(m.chat, 'not_announcement')
-             const sendmsg = await ElisaBotMd.sendText(m.chat,Lang.G_UNMUTE)
-             await ElisaBotMd.sendMessage(from, { react: { text: `🔊`, key: sendmsg.key }})
+             await QueenNilu.sendMessage(from, { react: { text: `🔓`, key: m.key }})
+             await QueenNilu.groupSettingUpdate(m.chat, 'not_announcement')
+             const sendmsg = await QueenNilu.sendText(m.chat,Lang.G_UNMUTE)
+             await QueenNilu.sendMessage(from, { react: { text: `🔊`, key: sendmsg.key }})
              
           }
           break
@@ -1907,15 +1907,15 @@ break
              if (!isBotAdmins) throw mess.botAdmin
              if (!isAdmins) throw mess.admin
           if (args[0] === 'open'){
-             await ElisaBotMd.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(Lang.G_INFOON)).catch((err) => reply(jsonformat(err)))
+             await QueenNilu.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(Lang.G_INFOON)).catch((err) => reply(jsonformat(err)))
           } else if (args[0] === 'close'){
-             await ElisaBotMd.groupSettingUpdate(m.chat, 'locked').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
+             await QueenNilu.groupSettingUpdate(m.chat, 'locked').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
           } else {
           let buttons = [
                      { buttonId: 'editinfo open', buttonText: { displayText: 'OPEN' }, type: 1 },
                      { buttonId: 'editinfo close', buttonText: { displayText: 'CLOSE' }, type: 1 }
                  ]
-                 await ElisaBotMd.sendButtonText(m.chat, buttons, `Mode Edit Info`, ElisaBotMd.user.name, m)
+                 await QueenNilu.sendButtonText(m.chat, buttons, `Mode Edit Info`, QueenNilu.user.name, m)
 
          }
          }
@@ -4118,7 +4118,7 @@ case 'logo2' :{
     await QueenNilu.sendMessage(from, { react: { text: `2️⃣️`, key: m.key }})             	
                    
                    let sections = [{ 
-                        "title": `𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝚅2 𝙻𝙾𝙶𝙾 𝙻𝙸𝚂𝚃 - 2 𝚂𝙴𝙻𝙴𝙲𝚃 𝚈𝙾𝚄𝚁 𝙻𝙾𝙶𝙾 `,
+                        "title": `𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝚅2 𝙻𝙾𝙶𝙾 𝙻𝙸𝚂𝚃 - 2 𝚂𝙴𝙻𝙴𝙲𝚃 𝚈𝙾𝚄𝚁 𝙻𝙾𝙶𝙾 `,
                                        "rows": [
                                        {
                                             "title": "LEAGUE OF KING STYLE ",
@@ -5371,15 +5371,44 @@ console.log(anubit8)
 QueenNilu.sendMessage(from,{image:{url:anubit8}, caption:"Here you go!"},{quoted:m})
 }
 break
-case 'tiktok':{ 
-if (!text) return m.reply( `Example : ${prefix + command} link`)
-if (!q.includes('tiktok')) return m.reply(`Link Invalid!!`)
-m.reply(mess.wait)
-require('./lib/tiktok').Tiktok(q).then( data => {
-    var button = [{ buttonId: `tiktokaudio ${q}`, buttonText: { displayText: `AUDIO‡` }, type: 1 }, { buttonId: `menu`, buttonText: { displayText: `Menu` }, type: 1 }]
-QueenNilu.sendMessage(m.chat, { caption: `Here you go!`, video: { url: data.watermark }, buttons: button, footer: botname, mentions: [sender] })
-})
-}
+case 'tiktok': {
+    if (!text) throw '*👸💬 Please give me tiktok link.*'
+    await QueenNilu.sendMessage(from, { react: { text: `🪄`, key: m.key }})
+     //let bocil = require('@bochilteam/scraper')    
+       if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'                
+       await fetchJson(`https://api.sdbots.tk/tiktok?url=${text}`).then(async (video) => {           
+    //const imga = video.author
+    //const musiccc = video.music
+    const anu = `   *✨👸 𝙽𝙸𝙻𝚄 𝚃𝙸𝙺𝚃𝙾𝙺 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 👸✨*
+    
+    *🕵 AUTHOR* : ${video.result.author}
+    
+    *ℹ️ DESC* : ${video.result.desc}
+    
+    *⏱️ DURATION :* ${video.result.duration} seconds
+    `                      
+                         footer = global.botnma
+                     buttons = [
+                        {buttonId: `tiktok2 ${text}`, buttonText: {displayText: '𝗡𝗢 𝗪𝗔𝗧𝗘𝗥𝗠𝗔𝗥𝗞'}, type: 1},
+                        {buttonId: `tiktokwm ${text}`, buttonText: {displayText: '𝗪𝗜𝗧𝗛 𝗪𝗔𝗧𝗘𝗥𝗠𝗔𝗥𝗞'}, type: 1},
+                        {buttonId: `directmp3 ${video.result.music}`, buttonText: {displayText: '𝗔𝗨𝗗𝗜𝗢'}, type: 1}
+                   
+                    ]
+                    let buttonMessage = {
+                        image: { url: 'https://telegra.ph/file/069d0640963b888ab6c4e.jpg' },
+                        caption: anu,
+                        footer: footer,
+                        buttons: buttons,
+                        headerType: 4
+                    }
+                   QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+             }).catch((err) => {
+             reply(err)
+           //QueenNilu.sendText(m.chat, err)
+           })
+    
+    }
+    break
 break
 case 'tiktokaudio':{
 if (!text) return m.reply( `Example : ${prefix + command} link`)
@@ -7940,7 +7969,7 @@ break
 
 case 'sendme' : {
     if (!isNilu) throw ('*This is only main owner command ☺*️')
-    ElisaBotMd.sendText(m.chat,text)
+    QueenNilu.sendText(m.chat,text)
     }
     break
 case 'animebonk':
