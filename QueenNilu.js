@@ -1182,7 +1182,7 @@ case 'apk':{
                 const janiya = await fetchJson(`https://api.akuari.my.id/downloader/apkdownloader2?package=${args[0]}`)
                 const upload = await QueenNilu.sendMessage(from, { text: `*📤 Uploading mod apk...*` }, { quoted: m })
                 await QueenNilu.sendMessage(m.chat,{delete : down.key })  
-                await QueenNilu.sendMessage(m.chat, { document: { url : janiya.hasil.downloadapk } , mimetype: 'application/vnd.android.package-archive', fileName: `${args[1]}.apk`}, { quoted: m })
+                await QueenNilu.sendMessage(m.chat, { document: { url : janiya.respon.downloadapk } , mimetype: 'application/vnd.android.package-archive', fileName: `${args[1]}.apk`}, { quoted: m })
                 await QueenNilu.sendMessage(m.chat,{delete : upload.key })  
                
                 }
