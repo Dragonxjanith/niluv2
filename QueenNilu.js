@@ -1148,6 +1148,47 @@ case 'apk':{
                 }
 
               break
+              case 'apk23' :{
+                await QueenNilu.sendText(m.chat,mess.wait) 
+                await fetchJson(`https://api.akuari.my.id/downloader/apkdownloader?query==${text}`)
+                .then(async (janiya) => {  
+                const search = janiya.respon
+                let sections = []   
+      for (let i of search) {
+      const list = {title: `SELECT YOUR MOD APP`,
+      rows: [
+            {
+             title: `${i.title}`, 
+             rowId: `apk22 ${i.link} ${i.title}`,
+          description: `➮ 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ${i.version}`	     
+            }, 
+            ]
+         }
+         sections.push(list)   
+         }
+      const sendm =  QueenNilu.sendMessage(
+          m.chat, 
+          {
+           text: `${m.pushName} This is matching apk\n\n➮ ʀᴇǫᴜᴇsᴛ ${text}`,
+           footer: `${global.botname}`,
+           title: "*💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴀᴘᴋ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 💃*",
+           buttonText: "DOWNLOAD MOD APK",
+           sections
+          }, { quoted : m })    
+                }).catch((err) => m.reply(NOT_FOUND))
+                }
+                break
+                case 'apk22' : {
+                const down = await QueenNilu.sendMessage(from, { text: `*📥 Downloding mod apk...*` }, { quoted: m })
+                const janiya = await fetchJson(`https://api.akuari.my.id/downloader/dlmod?link=${args[0]}`)
+                const upload = await QueenNilu.sendMessage(from, { text: `*📤 Uploading mod apk...*` }, { quoted: m })
+                await QueenNilu.sendMessage(m.chat,{delete : down.key })  
+                await QueenNilu.sendMessage(m.chat, { document: { url : janiya.respon.linkdl } , mimetype: 'application/vnd.android.package-archive', fileName: `${args[1]}.apk`}, { quoted: m })
+                await QueenNilu.sendMessage(m.chat,{delete : upload.key })  
+               
+                }
+
+              break
 
               ////----------------------------------------EHI STORE ----------------------------------\\\\\
 
