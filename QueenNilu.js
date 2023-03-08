@@ -1192,7 +1192,7 @@ case 'apk':{
 
 case 'film' :{
     await QueenNilu.sendText(m.chat,mess.wait) 
-    await fetchJson(`https://api.akuari.my.id/search/searchmod?query=${text}`)
+    await fetchJson(`https://api.akuari.my.id/search/film?query=${text}`)
     .then(async (janiya) => {  
     const search = janiya.hasil
     let sections = []   
