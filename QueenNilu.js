@@ -1074,7 +1074,7 @@ case 'apk':{
     `
        
        const buttons = [
-                        {buttonId: `getapk ${janiya.hasil[0].url}`, buttonText: {displayText: '🗳️ ᴅᴏᴡɴʟᴏᴀᴅ ᴀᴘᴋ 🗳️'}, type: 1},
+                        {buttonId: `findapk ${janiya.hasil[0].url}`, buttonText: {displayText: '🗳️ ᴅᴏᴡɴʟᴏᴀᴅ ᴀᴘᴋ 🗳️'}, type: 1},
                          
                     ]
                 const buttonMessage = {
