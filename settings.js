@@ -31,6 +31,12 @@ global.SONG_DOWN = '```⬇️ Downloading Your Song...```'
 // Song Uplode massage 
 global.SONG_UP = '```⬆️ Uploding Your Song...```'
 
+//SEX_VIDEO_DOWNLOAD
+global.SEX_VIDEO_DOWNLOAD ='true'
+
+//Kick Message 
+global.KICK_MSG = ' ' 
+
 //Links (URLS)
 global.ytname = "YT: janithsadanuwan" //ur yt chanel name
 global.socialm = "GitHub: janithsadanuwan" //ur github or insta name

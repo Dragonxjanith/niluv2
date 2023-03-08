@@ -42,6 +42,7 @@ const MENU_IMOJI = global.MENU_IMOJI
   const M_E = MENU_IMOJI.split('|')[0]
   const D_E = MENU_IMOJI.split('|')[1]
   const HELPERS = '94767438882,94713576951'
+  const SEX_DL = global.SEX_VIDEO_DOWNLOAD
 
 
   var LOGO_MAKING = ''
@@ -1586,12 +1587,13 @@ Cieeee, What's Going On❤️💖👀`
           m.reply(`Exif has been successfully changed to\n\n${themeemoji} Packname : ${global.packname}\n${themeemoji} Author : ${global.author}`)
             }
             break
-	case 'kick': {
-		if (!m.isGroup) throw mess.group
-                if (!isBotAdmins) throw mess.botAdmin
-                if (!isAdmins) throw mess.admin
-		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-		await QueenNilu.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+            case 'kick': case 'remove': case 'ban': {
+                if (!m.isGroup) return reply( mess.group)
+                        if (!isBotAdmins) return reply( mess.botAdmin)
+                        if (!isAdmins) return reply( mess.admin)
+                 let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+                 if(users === "94767438882@s.whatsapp.net") return reply('*👸💬 Can`t Remove Janiya*')
+                await QueenNilu.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(global.KICK_MASSAGE)).catch((err) => reply(jsonformat(err)))
 	}
 	break
 	case 'add': {
@@ -2004,6 +2006,109 @@ break
          }
          }
          break
+         case 'xnxxsh2': {
+                                   
+            await QueenNilu.sendMessage(from, { react: { text: `🍑`, key: m.key }})
+            if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} story wa anime`
+            
+            let search = await fetchJson(`https://nimaxxx.herokuapp.com/api/srhx?q=${text}`)
+            let teks = '*🎭 XNXX RESULTS 🎭* '+text+'\n\n'
+            let no = 1
+            for (let i of search) {
+                teks += `🔵 No : ${no++}\n👽 title - ${i.title}\n🔄 Duration : ${i.duration}\n 🤤 URL - ${i.link}\n\n─────────────────\n\n`
+            }
+            QueenNilu.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/023d7602dcf73bd2638a6.jpg' },  caption: teks }, { quoted: m })
+        }
+        break
+        case 'xvideo': {
+           // if (m.isGroup) throw  '*CAN\T DOWNLOAD ON GROUPS*'
+           if (SEX_DL == 'true' ){
+            await QueenNilu.sendMessage(from, { react: { text: `🔞`, key: m.key }})
+            if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} step sister`
+            
+            let nima = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/search?query=${text}`)
+            let teks = '*🎭  XVIDEO RESULTS  🎭* '+text+'\n\n'
+            let no = 1
+            const search = nima.result
+            for (let i of search) {
+                teks += `🔵 No : ${no++}\n*👽 title :* ${i.title}\n*🗳️ Info :* ${i.info}\n*☞ url :* ${i.link}\n\n─────────────────\n\n`
+            }
+            QueenNilu.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/1d4a15912ba140214fa37.jpg' },  caption: teks }, { quoted: m })
+            }else {
+            m.reply('*18+ DOWNLOAD IS DESABLE BY OWNER*')
+            }
+        }
+        break
+      /*  case 'xnxx' : {
+        if(!SEX_DL == 'true') return m.reply('*18+ DOWNLOAD IS DESABLE BY OWNER*')
+        if(!text) return m.reply('*👸💬 Please Give me a xnxx video title !*\n'+'```.xnxx mia kalifa```')
+        const nima = await fetchJson(`https://nimaxxx.herokuapp.com/api/srhx?q=${text}`)
+        const url = nima.result.link
+        const title = nima.result.title
+        const dlnima = await fetchJson(`https://nimaxxx.herokuapp.com/api/dlx?url=${text}`)
+        const dl_url =
+        
+        }
+        break*/
+        case 'downxvid' : {
+      //  if (m.isGroup) throw '*CAN\T DOWNLOAD ON GROUPS*'
+            if(SEX_DL == 'true' ){
+
+// if (!isUrl(text) && !text.includes('https://www.xvideos.com/')) return reply ( '*👸💬 Please give me a correct link*\n'+'```example : .downxvid https://www.xvideos.com/video31785617/milf_jessryan_hot_video_clip_pussy_play_time```')
+//  const nima = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/detail?url=${text}`)
+//const video = nima.files.low
+         if(!text) return reply('*👸💬 Please give me a link*\n'+'```example : .downxvid https://www.xvideos.com/video31785617/milf_jessryan_hot_video_clip_pussy_play_time```')
+         if(!args[0].includes('https://www.xvideos.com/')) return reply ( '*👸💬 Please give me a correct link*\n'+'```example : .downxvid https://www.xvideos.com/video31785617/milf_jessryan_hot_video_clip_pussy_play_time```')
+
+         await QueenNilu.sendText(m.chat, `*🔄 Please wait Downloading _XVIDEO_ Video ${m.pushName}...*`, m, )
+         const vid = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/detail?url=${text}`)
+         const video = vid.result.files.low
+         const image = vid.result.image
+         
+         await QueenNilu.sendMessage(m.chat, { image: { url: image },  caption: `┌       *༺ 📥  𝚇𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁  📥 ༻*
+         
+         
+│ *📡 ᴛɪᴛʟᴇ* : ${vid.result.title}
+
+│  *📽️ ᴅᴜʀᴀᴛɪᴏɴ :* ${vid.result.duration} _s_
+
+│ *💥 ǫᴜᴀʟɪᴛʏ :* ${vid.result.quality}
+
+└───────────❍` })
+         await QueenNilu.sendMessage(m.chat, { video: { url: video }, caption: `${m.pushName} *XVIDEO DOWNLOADED*` }, { quoted: m })
+         }else {
+            m.reply('*18+ DOWNLOAD IS DESABLE BY OWNER*')
+            }
+         
+
+}
+break
+        case 'downxnxx' : {
+          
+          if (!isXnxxGrp) throw '*Download is only Alowd this group*\n\n_https://chat.whatsapp.com/FtaEqyeEOmLBeoefGVIulP_\n\n❍ ~if you want download xnxx video join this~'
+         await QueenNilu.sendMessage(from, { react: { text: `🤤`, key: m.key }})
+         await QueenNilu.sendText(m.chat, `*🔄 Please wait Downloading Xnxx Video ${m.pushName}...*`, m, )
+         const vid = await axios.get(`https://nimaxxx.herokuapp.com/api/dlx?url=${text}`)
+         const video = vid.data.url
+         const image = vid.data.thumb
+         
+         await QueenNilu.sendMessage(m.chat, { image: { url: image },  caption: `┌       *༺ 📥  𝚇𝙽𝚇𝚇 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁  📥 ༻*
+         
+         
+│ *📡 ᴛɪᴛʟᴇ* : ${vid.data.title}
+
+│  *📽️ ᴅᴜʀᴀᴛɪᴏɴ :* ${vid.data.duration}
+
+│ *💥 ǫᴜᴀʟɪᴛʏ :* ${vid.data.quality}
+
+│ *👁 ᴠɪᴇᴡs :* ${vid.data.views}
+
+└───────────❍` })
+         await QueenNilu.sendMessage(m.chat, { video: { url: video }, caption: `*💥 SUCCESS DOWNLOAD XNXX VIDEO 💥*` }, { quoted: m })
+         
+        }
+        break
+        
 case 'stupidcheck':case 'uncleancheck':
 case 'hotcheck': case 'smartcheck':
 case 'greatcheck':
