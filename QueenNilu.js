@@ -1096,13 +1096,13 @@ case 'apk':{
                      //await getBuffer(`https://api.akuari.my.id/downloader/apkdownloader2?package=${text}`)
                     //const kkkkh = await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}
                 //const name = `${args[0].split('https://play.google.com/store/apps/details?id=')[1]}`
-                  // .then(async (janiya) => {  
+                   .then(async (janiya) => {  
                     const apk = 'https://api.akuari.my.id/downloader/apkdownloader2?package='+text
                     await QueenNilu.sendMessage(from, { text: `*📤 Uploading playstore apk...*` }, { quoted: m })
                     //https://telegra.ph/file/5c59cd0f4c3e3fa79ee77.jpg
                  // const buffer = await getBuffer(janiya.respon.downloadapk)
                    await QueenNilu.sendMessage(m.chat, { document: {url : janiya.respon.downloadapk} , mimetype: 'application/vnd.android.package-archive', fileName: `${text}`}, { quoted: m })
-                   // }).catch((err) => m.reply(NOT_FOUND))
+                    }).catch((err) => m.reply(NOT_FOUND))
                
                              }
                 break
