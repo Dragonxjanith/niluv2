@@ -1150,7 +1150,6 @@ case 'apk':{
               case 'apk2' :{
                 await QueenNilu.sendText(m.chat,mess.wait) 
                 await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}`)
-                await fetchJson(`https://api.akuari.my.id/downloader/apkdownloader2?package=${url}`)
                 .then(async (janiya) => {  
                 const search = janiya.hasil
                 let sections = []   
