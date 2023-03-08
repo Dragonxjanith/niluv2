@@ -2180,15 +2180,15 @@ case 'photo': case 'toimg': {
     if (global.LANG == 'SI') STICKER = '*ඔබ රිප්ලයි කරන ලද්දේ ස්ටිකර් එකකට නොවේ කරුනාකර ස්ටිකර් එකකට රිප්ලයි කරන්න*'
         if (!quoted) throw '*photo එකකට රිප්ලයි කරන්න !*'
         if (!/webp/.test(mime)) throw `${REPLY} *${prefix + command}*`
-        const load = await ElisaBotMd.sendText(m.chat, Lang.CONVER_TING )
-        let media = await ElisaBotMd.downloadAndSaveMediaMessage(quoted)
-        await ElisaBotMd.sendMessage(m.chat, { delete: load.key })
+        const load = await QueenNilu.sendText(m.chat, Lang.CONVER_TING )
+        let media = await QueenNilu.downloadAndSaveMediaMessage(quoted)
+        await QueenNilu.sendMessage(m.chat, { delete: load.key })
         let ran = await getRandom('.png')
         exec(`ffmpeg -i ${media} ${ran}`, (err) => {
             fs.unlinkSync(media)
             if (err) throw err
             let buffer = fs.readFileSync(ran)
-            ElisaBotMd.sendMessage(m.chat, { image: buffer , caption : global.cap  }, { quoted: m })
+            QueenNilu.sendMessage(m.chat, { image: buffer , caption : global.cap  }, { quoted: m })
             fs.unlinkSync(ran)
         })
     }
