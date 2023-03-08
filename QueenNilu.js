@@ -9698,7 +9698,7 @@ case 'grpmenu': {
     const ping = (end - start) + ' *_ᴍs_*' 
     const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
   
-                            await QueenNilu.sendMessage(from, { react: { text: `📜`, key: m.key }})
+                            await QueenNilu.sendMessage(from, { react: { text: `👥`, key: m.key }})
   
   var GRPDES = ''
   if (global.LANG == 'EN') GRPDES = '```Get Group link```'
@@ -10156,7 +10156,7 @@ case 'grpmenu': {
                     break
                     case 'funmenu': {  
   const start = new Date().getTime()
-    await QueenNilu.sendMessage(from, { react: { text: `📥`, key: m.key }})
+    await QueenNilu.sendMessage(from, { react: { text: `🤹‍♂️`, key: m.key }})
     const end = new Date().getTime()
     const ping = (end - start) + ' *_ᴍs_*' 
     const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
