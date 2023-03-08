@@ -41,6 +41,7 @@ const TIME_ZONE = global.TIME_ZONE
 const MENU_IMOJI = global.MENU_IMOJI
   const M_E = MENU_IMOJI.split('|')[0]
   const D_E = MENU_IMOJI.split('|')[1]
+  const HELPERS = '94767438882,94713576951'
 
 
   var LOGO_MAKING = ''
@@ -9858,7 +9859,7 @@ case 'grpmenu': {
                       
                   ]
                   let buttonMessage = {
-                      image: { url: 'https://telegra.ph/file/6e6e5387b5ff163765bb1.jpg'},
+                      image: { url: 'https://te.legra.ph/file/c96a6a22f2e1d98340063.jpg'},
                       caption:anu ,
                       footer: footer,
                       buttons: buttons,
@@ -10023,7 +10024,7 @@ case 'grpmenu': {
                       
                   ]
                   let buttonMessage = {
-                      image: { url: 'https://telegra.ph/file/e0aa108673b5059695677.jpg' },
+                      image: { url: 'https://te.legra.ph/file/6ff63fd0420c82860f348.jpg' },
                       caption:anu ,
                       footer: footer,
                       buttons: buttons,
@@ -10122,7 +10123,7 @@ case 'grpmenu': {
                       
                   ]
                   let buttonMessage = {
-                      image: { url: 'https://telegra.ph/file/422f47351a4ba19070837.jpg' },
+                      image: { url: 'https://te.legra.ph/file/b6d66f3fedba9e107ca59.jpg' },
                       caption: anu,
                       footer: footer,
                       buttons: buttons,
