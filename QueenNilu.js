@@ -2027,10 +2027,10 @@ break
             await QueenNilu.sendMessage(from, { react: { text: `🔞`, key: m.key }})
             if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} step sister`
             
-            let nima = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/search?query=${text}`)
+            let nilu = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/search?query=${text}`)
             let teks = '*🎭  XVIDEO RESULTS  🎭* '+text+'\n\n'
             let no = 1
-            const search = nima.result
+            const search = nilu.result
             for (let i of search) {
                 teks += `🔵 No : ${no++}\n*👽 title :* ${i.title}\n*🗳️ Info :* ${i.info}\n*☞ url :* ${i.link}\n\n─────────────────\n\n`
             }
@@ -2043,9 +2043,9 @@ break
       /*  case 'xnxx' : {
         if(!SEX_DL == 'true') return m.reply('*18+ DOWNLOAD IS DESABLE BY OWNER*')
         if(!text) return m.reply('*👸💬 Please Give me a xnxx video title !*\n'+'```.xnxx mia kalifa```')
-        const nima = await fetchJson(`https://nimaxxx.herokuapp.com/api/srhx?q=${text}`)
-        const url = nima.result.link
-        const title = nima.result.title
+        const nilu = await fetchJson(`https://nimaxxx.herokuapp.com/api/srhx?q=${text}`)
+        const url = nilu.result.link
+        const title = nilu.result.title
         const dlnima = await fetchJson(`https://nimaxxx.herokuapp.com/api/dlx?url=${text}`)
         const dl_url =
         
@@ -2056,8 +2056,8 @@ break
             if(SEX_DL == 'true' ){
 
 // if (!isUrl(text) && !text.includes('https://www.xvideos.com/')) return reply ( '*👸💬 Please give me a correct link*\n'+'```example : .downxvid https://www.xvideos.com/video31785617/milf_jessryan_hot_video_clip_pussy_play_time```')
-//  const nima = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/detail?url=${text}`)
-//const video = nima.files.low
+//  const nilu = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/detail?url=${text}`)
+//const video = nilu.files.low
          if(!text) return reply('*👸💬 Please give me a link*\n'+'```example : .downxvid https://www.xvideos.com/video31785617/milf_jessryan_hot_video_clip_pussy_play_time```')
          if(!args[0].includes('https://www.xvideos.com/')) return reply ( '*👸💬 Please give me a correct link*\n'+'```example : .downxvid https://www.xvideos.com/video31785617/milf_jessryan_hot_video_clip_pussy_play_time```')
 
@@ -2565,7 +2565,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   var svid = text.replace("shorts/","watch?v=")
                                                   var s2vid = svid.replace("?feature=share","")
                                                   yts(s2vid).then(async (search) => { 
-                                                  let nima = search.all     
+                                                  let nilu = search.all     
                 if (search.all[0].type == 'channel') {
                 
                                 const buttons = [
@@ -2595,7 +2595,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
                                  
                 } else if (search.all[0].type == 'video') {
-                                let nima = search.all           
+                                let nilu = search.all           
                                 const buttons = [
                                     {buttonId: `selecttypebutton ${search.all[0].url}`, buttonText: {displayText: '🎬 VIDEO 🎬'}, type: 1},
                                     {buttonId: `audioselecttypebutton  ${search.all[0].url} `, buttonText: {displayText: '🎧 AUDIO 🎧'}, type: 1},
@@ -2742,7 +2742,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   var svid = text.replace("shorts/","watch?v=")
                                                   var s2vid = svid.replace("?feature=share","")
                                                   yts(s2vid).then(async (search) => { 
-                                                  let nima = search.all     
+                                                  let nilu = search.all     
                 if (search.all[0].type == 'channel') {
                 
                                 const buttons = [
@@ -2777,7 +2777,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 const sdpid = rash.sddlid
                 const hdmidpid = rash.sdmiddlid
                 const hdpid = rash.hddlid
-                                let nima = search.all           
+                                let nilu = search.all           
                                 const buttons = [
                                     {buttonId: `${sdpid} ${search.all[1].url}`, buttonText: {displayText: '360p'}, type: 1},
                                     {buttonId: `${hdmidpid} ${search.all[1].url} 480p`, buttonText: {displayText: '480p'}, type: 1},
@@ -2825,8 +2825,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
                                                   yts(text).then(async (search) => {  
                                                   
-                                                  let nima = search.all
-                                                  let media = await fetchJson(`https://queen-nilu-api-1-2-3.herokuapp.com/api/dowloader/yt?url=${search.all[0].url}`)
+                                                  let nilu = search.all
+                                                  let media = await fetchJson(`https://queen-elisa-api-1-2-3.herokuapp.com/api/dowloader/yt?url=${search.all[0].url}`)
                                                   buf = await getBuffer(media.result.thumb)
                                                   await  QueenNilu.sendMessage(m.chat, { delete: load.key })
                                                   //const up = await QueenNilu.sendText(m.chat, `\n*📤 Uploading ${m.pushName} your song...*\n` )
@@ -2860,7 +2860,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
                                                   yts(text).then(async (search) => {  
                                                   
-                                                  let nima = search.all
+                                                  let nilu = search.all
                                                   let media = await fetchJson(`https://test-apiyaa.herokuapp.com/api/dowloader/yt?url=${search.all[0].url}`)
                                                   buf = await getBuffer(media.result.thumb)
                                                   await  QueenNilu.sendMessage(m.chat, { delete: load.key })
@@ -2893,7 +2893,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   //const load = await QueenNilu.sendText(m.chat, `\n*📥 Downloading ${m.pushName} your song...*\n` )
                                                   const laod = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
                                                   yts(text).then(async (search) => {  
-                                                  let nima = search.all
+                                                  let nilu = search.all
                                           
                                           const akur = await fetchJson(`https://a.api.akuari.my.id/downloader/youtube3?link=${search.all[0].url}&type=360`)
                                           const gettsong = akur.audio.audio
@@ -2958,16 +2958,16 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                          // if (!text.includes('-')) return reply('*💃 Please give me a correct type*\n_example .video2 https://youtube.com/watch?v=on3sJ8OlH8M - 360p')
                                           const quality = args[1] ? args[1] : '360'
                                           const load = await QueenNilu.sendText(m.chat, `*📥 Downloading ${m.pushName} your video...*`, m, )
-                                          const nima = await fetchJson(`https://api.akuari.my.id/downloader/youtube3?link=${args[0]}&type=${quality}`)
+                                          const nilu = await fetchJson(`https://api.akuari.my.id/downloader/youtube3?link=${args[0]}&type=${quality}`)
                                           const upload = await QueenNilu.sendText(m.chat, `*📤 Uploading ${m.pushName} your video...*`, m, )
-                                          if (nima.mp4.size.split('MB')[0] >= 110) return m.reply('*FILE SIZE IS BIG !!!*')
-                                          return await QueenNilu.sendMessage(m.chat, { video: { url: nima.mp4.download }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: `${global.cap}` }, { quoted: m })
+                                          if (nilu.mp4.size.split('MB')[0] >= 110) return m.reply('*FILE SIZE IS BIG !!!*')
+                                          return await QueenNilu.sendMessage(m.chat, { video: { url: nilu.mp4.download }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: `${global.cap}` }, { quoted: m })
                                          
                                           }
                                     m.reply(mess.wait)
                                     const yts = require("youtube-yts")
-                                    const nima = await yts(text)
-                                    const search = nima.all
+                                    const nilu = await yts(text)
+                                    const search = nilu.all
                                     
                                    let sections = []   
                   for (let i of search) {
@@ -3056,11 +3056,11 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           case 'ytdl4' : {
                                           let boltc = require('@bochilteam/scraper')
                                           await boltc.youtubedlv2(`${text}`)
-                                          .then(async(nima) => {
-                                          const dl_url = await nima.video['360p'].download()
-                                          const dl_url3 = await nima.video['240p'].download()
-                                          const dl_url2 = await nima.video['720p'].download()
-                                          const dl_url4 = await nima.audio['128kbps'].download()
+                                          .then(async(nilu) => {
+                                          const dl_url = await nilu.video['360p'].download()
+                                          const dl_url3 = await nilu.video['240p'].download()
+                                          const dl_url2 = await nilu.video['720p'].download()
+                                          const dl_url4 = await nilu.audio['128kbps'].download()
                                           await QueenNilu.sendText(m.chat,`
                 360 ${dl_url}
                 240 ${dl_url2}
@@ -3069,16 +3069,16 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                     
                                           
                                                                 
-                ${jsonformat(nima)}`)
+                ${jsonformat(nilu)}`)
                                           })
                                           }
                                           break
                                           case 'bolchidl' : {
                                           let boltc = require('@bochilteam/scraper')
-                                          const nima = await boltc.youtubedl(`${text}`)
+                                          const nilu = await boltc.youtubedl(`${text}`)
                                           const nima1 = await boltc.youtubedlv2(`${text}`)
                                           const nima2 = await boltc.youtubedl3(`${text}`)
-                                          reply(`${jsonformat(nima)}
+                                          reply(`${jsonformat(nilu)}
                 ▷▷▷
                 
                 ${jsonformat(nima1)}
@@ -3091,8 +3091,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           break
                                           case 'bolchiyt' : {
                                           let boltc = require('@bochilteam/scraper')
-                                          const nima = await boltc.youtubeSearch(`${text}`)
-                                          reply(`${jsonformat(nima)}`)
+                                          const nilu = await boltc.youtubeSearch(`${text}`)
+                                          reply(`${jsonformat(nilu)}`)
                                           }
                                           break
                                           case 'ytdl5' : {
@@ -3122,11 +3122,11 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           let boltc = require('@bochilteam/scraper')
                                           await boltc.youtubedlv2(search.all[0].url)
                                           
-                                          .then(async(nima) => {
-                                          const dl_url = await nima.video['144p'].download()
-                                          const size = nima.video['144p'].fileSize
+                                          .then(async(nilu) => {
+                                          const dl_url = await nilu.video['144p'].download()
+                                          const size = nilu.video['144p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                       //   if(nima.video.720p.fileSize >= 110000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                       //   if(nilu.video.720p.fileSize >= 110000) return m.reply('*FILE SIZE IS SO BIG !!!*')
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
                                           }).catch((err) => m.reply(NOT_FOUND))
                                       
@@ -3141,11 +3141,11 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           let boltc = require('@bochilteam/scraper')
                                           await boltc.youtubedlv2(search.all[0].url)
                                           
-                                          .then(async(nima) => {
-                                          const dl_url = await nima.video['240p'].download()
-                                          const size = nima.video['240p'].fileSize
+                                          .then(async(nilu) => {
+                                          const dl_url = await nilu.video['240p'].download()
+                                          const size = nilu.video['240p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                       //   if(nima.video.720p.fileSize >= 110000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                       //   if(nilu.video.720p.fileSize >= 110000) return m.reply('*FILE SIZE IS SO BIG !!!*')
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
                                           }).catch((err) => m.reply(NOT_FOUND))
                                       
@@ -3159,9 +3159,9 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const search = await yts(text)
                                           let boltc = require('@bochilteam/scraper')
                                           await boltc.youtubedlv2(search.all[0].url)
-                                          .then(async(nima) => {
-                                          const dl_url = await nima.video['360p'].download()
-                                          const size = nima.video['360p'].fileSize
+                                          .then(async(nilu) => {
+                                          const dl_url = await nilu.video['360p'].download()
+                                          const size = nilu.video['360p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           //await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: `${global.cap}` }, { quoted: m })
@@ -3177,9 +3177,9 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const search = await yts(text.split("480")[0])
                                           let boltc = require('@bochilteam/scraper')
                                           await boltc.youtubedlv2(search.all[0].url)
-                                          .then(async(nima) => {
-                                          const dl_url = await nima.video['480p'].download()
-                                          const size = nima.video['480p'].fileSize
+                                          .then(async(nilu) => {
+                                          const dl_url = await nilu.video['480p'].download()
+                                          const size = nilu.video['480p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
                                           }).catch((err) => m.reply(NOT_FOUND))
@@ -3195,11 +3195,11 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           let boltc = require('@bochilteam/scraper')
                                           await boltc.youtubedlv2(search.all[0].url)
                                           
-                                          .then(async(nima) => {
-                                          const dl_url = await nima.video['720p'].download()
-                                          const size = nima.video['720p'].fileSize
+                                          .then(async(nilu) => {
+                                          const dl_url = await nilu.video['720p'].download()
+                                          const size = nilu.video['720p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                       //   if(nima.video.720p.fileSize >= 110000) return m.reply('*FILE SIZE IS SO BIG !!!*')
+                                       //   if(nilu.video.720p.fileSize >= 110000) return m.reply('*FILE SIZE IS SO BIG !!!*')
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: global.cap }, { quoted: m })
                                           }).catch((err) => m.reply(NOT_FOUND))
                                       
@@ -3214,12 +3214,12 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const buf = await getBuffer(search.all[0].thumbnail)
                                           const boltc = require('@bochilteam/scraper')
                                           await boltc.youtubedlv2(search.all[0].url)
-                                          .then(async(nima) => {
-                                          const dl_url = await nima.audio['128kbps'].download()
+                                          .then(async(nilu) => {
+                                          const dl_url = await nilu.audio['128kbps'].download()
                                           await QueenNilu.sendMessage(m.chat,{delete : down.key }) 
                                           const up = await QueenNilu.sendText(m.chat,global.SONG_UP,m,)
-                                          const doc = await QueenNilu.sendMessage(m.chat, {document:{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${nima.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
-                                title:`${nima.title}`,
+                                          const doc = await QueenNilu.sendMessage(m.chat, {document:{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${nilu.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                title:`${nilu.title}`,
                                 body:"YOUTUBE MP3",
                                 mediaType:2,
                                 thumbnail:buf,
@@ -3243,8 +3243,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           //const buf = await getBuffer(search.all[0].thumbnail)
                                           const boltc = require('@bochilteam/scraper')
                                           await boltc.youtubedlv3(search.all[0].url)
-                                          .then(async(nima) => {
-                                          const dl_url = await nima.audio['131'].download()
+                                          .then(async(nilu) => {
+                                          const dl_url = await nilu.audio['131'].download()
                                           await QueenNilu.sendMessage(m.chat,{delete : down.key }) 
                                           const up = await QueenNilu.sendText(m.chat,global.SONG_UP,m,)
                                           await QueenNilu.sendMessage(m.chat, { audio : { url : dl_url }, mimetype: 'audio/mpeg', fileName: `${search.all[0].title}.mp3` }, { quoted: m })
@@ -3264,12 +3264,12 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const buf = await getBuffer(search.all[0].thumbnail)
                                           const boltc = require('@bochilteam/scraper')
                                           await boltc.youtubedlv2(search.all[0].url)
-                                          .then(async(nima) => {
-                                          const dl_url = await nima.audio['128kbps'].download()
+                                          .then(async(nilu) => {
+                                          const dl_url = await nilu.audio['128kbps'].download()
                                           await QueenNilu.sendMessage(m.chat,{delete : down.key }) 
                                           const up = await QueenNilu.sendText(m.chat,global.SONG_UP,m,)
-                                          const doc = await QueenNilu.sendMessage(m.chat, {audio :{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${nima.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
-                                title:`${nima.title}`,
+                                          const doc = await QueenNilu.sendMessage(m.chat, {audio :{ url: dl_url }, mimetype:"audio/mpeg", fileName: `${nilu.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
+                                title:`${nilu.title}`,
                                 body:"YOUTUBE MP3",
                                 mediaType:2,
                                 thumbnail:buf,
@@ -3289,11 +3289,11 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           await QueenNilu.sendText(m.chat,mess.wait)
                                           let boltc = require('@bochilteam/scraper')
                                           await boltc.youtubedlv2(`${text}`)
-                                          .then(async(nima) => {
-                                          const dl_url = await nima.video['480p'].download()
-                                          const dl_url3 = await nima.video['240p'].download()
-                                          const dl_url2 = await nima.video['720p'].download()
-                                          const dl_url4 = await nima.audio['128kbps'].download()
+                                          .then(async(nilu) => {
+                                          const dl_url = await nilu.video['480p'].download()
+                                          const dl_url3 = await nilu.video['240p'].download()
+                                          const dl_url2 = await nilu.video['720p'].download()
+                                          const dl_url4 = await nilu.audio['128kbps'].download()
                                          
                            const buttons = [
                   {buttonId: `directvideodown ${dl_url3}`, buttonText: {displayText: '240P'}, type: 1},
@@ -3302,12 +3302,12 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 ]
                 
                 const buttonMessage = {
-                    image: {url: nima.thubnail},
+                    image: {url: nilu.thubnail},
                     caption: `╭────[💃 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝙱𝙾𝚃 💃] 
                 │
-                ◯ ᴛɪᴛʟᴇ : ${nima.title}
+                ◯ ᴛɪᴛʟᴇ : ${nilu.title}
                 
-                ◯ ᴠɪᴅᴇᴏ ɪᴅ : ${nima.id}
+                ◯ ᴠɪᴅᴇᴏ ɪᴅ : ${nilu.id}
                 
                 ◯ ʀᴇǫᴜsᴛᴇʀ : ${m.pushName}
                 │
@@ -3398,7 +3398,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   if (!text && text.includes("https://youtu")) return m.reply('*💃 Need youtube url* \n'+'```ℹ️ Example .ytmp3 https://youtube.com/watch?v=WoWlWb6vbzA```')
                                                  const load = await QueenNilu.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your song...*\n`, m, )
                                                  //const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
-                                                  await fetchJson(`https://queen-nilu-api-1-2-3.herokuapp.com/api/dowloader/yt?url=${text}`)
+                                                  await fetchJson(`https://queen-elisa-api-1-2-3.herokuapp.com/api/dowloader/yt?url=${text}`)
                                                   .then(async (media) => { 
                                                   buf = await getBuffer(media.result.thumb)
                                                   if (media.result.song_size.split("MB")[0] >= 120) return m.reply('*FILE SIZE IS BIG !!!*')
@@ -3514,11 +3514,11 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           const dltext = args[0]
                                           let boltc = require('@bochilteam/scraper')
                                           await boltc.youtubedlv2(dltext)
-                                          .then(async(nima) => {
-                                          const dl_url = await nima.video[quality].download()
-                                          const size = nima.video[quality].fileSize
+                                          .then(async(nilu) => {
+                                          const dl_url = await nilu.video[quality].download()
+                                          const size = nilu.video[quality].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
-                                          const viddd = await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', fileName: `${nima.title}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
+                                          const viddd = await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', fileName: `${nilu.title}.mp4`,jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: viddd.key }})
                                           // await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           //await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', caption: `${global.cap}` }, { quoted: m })
@@ -3596,7 +3596,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               //const search = args[0]
                                               const yts = require("youtube-yts")
                                               const search = await yts(`${args[0]}`)
-                                              const nima = await boltc.youtubedlv2(search.all[0].url)
+                                              const nilu = await boltc.youtubedlv2(search.all[0].url)
                                               */
                                               if(qulity = '144p'){
                                               const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
@@ -3605,9 +3605,9 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               //const search = args[0]
                                               const yts = require("youtube-yts")
                                               const search = await yts(`${args[0]}`)
-                                              const nima = await boltc.youtubedlv2(search.all[0].url) 
-                                          const dl_url = await nima.video['144p'].download()
-                                          const size = nima.video['144p'].fileSize
+                                              const nilu = await boltc.youtubedlv2(search.all[0].url) 
+                                          const dl_url = await nilu.video['144p'].download()
+                                          const size = nilu.video['144p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
@@ -3618,9 +3618,9 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               //const search = args[0]
                                               const yts = require("youtube-yts")
                                               const search = await yts(`${args[0]}`)
-                                              const nima = await boltc.youtubedlv2(search.all[0].url)
-                                          const dl_url = await nima.video['240p'].download()
-                                          const size = nima.video['240p'].fileSize
+                                              const nilu = await boltc.youtubedlv2(search.all[0].url)
+                                          const dl_url = await nilu.video['240p'].download()
+                                          const size = nilu.video['240p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
@@ -3631,9 +3631,9 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               //const search = args[0]
                                               const yts = require("youtube-yts")
                                               const search = await yts(`${args[0]}`)
-                                              const nima = await boltc.youtubedlv2(search.all[0].url)
-                                          const dl_url = await nima.video['480p'].download()
-                                          const size = nima.video['480p'].fileSize
+                                              const nilu = await boltc.youtubedlv2(search.all[0].url)
+                                          const dl_url = await nilu.video['480p'].download()
+                                          const size = nilu.video['480p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
@@ -3645,9 +3645,9 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               //const search = args[0]
                                               const yts = require("youtube-yts")
                                               const search = await yts(`${args[0]}`)
-                                              const nima = await boltc.youtubedlv2(search.all[0].url)
-                                           const dl_url = await nima.video['720p'].download()
-                                          const size = nima.video['720p'].fileSize
+                                              const nilu = await boltc.youtubedlv2(search.all[0].url)
+                                           const dl_url = await nilu.video['720p'].download()
+                                          const size = nilu.video['720p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
@@ -3659,9 +3659,9 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               //const search = args[0]
                                               const yts = require("youtube-yts")
                                               const search = await yts(`${args[0]}`)
-                                              const nima = await boltc.youtubedlv2(search.all[0].url)
-                                          const dl_url = await nima.video['1080p'].download()
-                                          const size = nima.video['1080p'].fileSize
+                                              const nilu = await boltc.youtubedlv2(search.all[0].url)
+                                          const dl_url = await nilu.video['1080p'].download()
+                                          const size = nilu.video['1080p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
@@ -3672,9 +3672,9 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               //const search = args[0]
                                               const yts = require("youtube-yts")
                                               const search = await yts(`${args[0]}`)
-                                              const nima = await boltc.youtubedlv2(search.all[0].url)
-                                          const dl_url = await nima.video['360p'].download()
-                                          const size = nima.video['360p'].fileSize
+                                              const nilu = await boltc.youtubedlv2(search.all[0].url)
+                                          const dl_url = await nilu.video['360p'].download()
+                                          const size = nilu.video['360p'].fileSize
                                           if(size >= 120000) return m.reply('*FILE SIZE IS SO BIG !!!*')
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
@@ -7282,13 +7282,72 @@ console.log(lyrics)
                 QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
         }
         break
-case 'img':
-case 'image': {
-                m.reply(mess.wait)
-		let { pinterest } = require('./lib/scraperW')
-                anuxeonezy2 = await pinterest(text)
-                resultkkk3 = anuxeonezy2[Math.floor(Math.random() * anuxeonezy2.length)]
-                QueenNilu.sendMessage(m.chat, { image: { url: resultkkk3 }, caption: ` 🪄Media Url : `+resultkkk3 }, { quoted: m })
+        case 'img' :{
+            await QueenNilu.sendMessage(from, { react: { text: `💃`, key: m.key }})
+         
+            if (!text) return reply ('*💃💬 Please Give me a some words*\nExample - _.img2 car_')
+            const nilu = await fetchJson(`https://my-shinz.herokuapp.com/api/search/googleimage?text=${text}`)
+            img1 = nilu.result[0].url
+            img2 = nilu.result[1].url
+            img3 = nilu.result[2].url
+            img4 = nilu.result[3].url
+            img5 = nilu.result[4].url
+            img6 = nilu.result[5].url
+            img7 = nilu.result[6].url
+            img8 = nilu.result[7].url
+            img9 = nilu.result[8].url
+            img10 = nilu.result[9].url
+            
+            await QueenNilu.sendMessage(m.chat, { image: { url: img1 }})
+            await QueenNilu.sendMessage(m.chat, { image: { url: img2 }})
+            await QueenNilu.sendMessage(m.chat, { image: { url: img3 }})
+            await QueenNilu.sendMessage(m.chat, { image: { url: img4 }})
+            await QueenNilu.sendMessage(m.chat, { image: { url: img5 }})
+            //await QueenNilu.sendMessage(m.chat, { image: { url: img6 }})
+           // await QueenNilu.sendMessage(m.chat, { image: { url: img7 }})
+            //await QueenNilu.sendMessage(m.chat, { image: { url: img8 }})
+            //await QueenNilu.sendMessage(m.chat, { image: { url: img9 }})
+           // await QueenNilu.sendMessage(m.chat, { image: { url: img10 }})
+              
+            }
+            case 'gimage': case 'img2': {  
+            await QueenNilu.sendMessage(from, { react: { text: `🔍`, key: m.key }})
+            if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} ml nana`
+            let gis = require('g-i-s')
+            gis(text, async (error, result) => {
+            n = result
+            images = n[Math.floor(Math.random() * n.length)].url
+            /*let buttons = [
+                        {buttonId: `gimage ${text}`, buttonText: {displayText: 'NEXT IMG'}, type: 1}
+                    ]
+                    let buttonMessage = {
+                        image: { url: images },
+                        caption: `*𝗚𝗢𝗢𝗚𝗟𝗘 𝗜𝗠𝗔𝗚𝗘*
+💫 *𝗤𝗨𝗘𝗥𝗬* : ${text}
+🔗 *𝗠𝗘𝗗𝗜𝗔 𝗨𝗥𝗟* : ${images}`,
+                        footer: QueenNilu.user.name,
+                        buttons: buttons,
+                        headerType: 4
+                    }
+                    QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+            })*/
+            const buttons = [
+      {buttonId: `gimage ${text}`, buttonText: {displayText: '❯ NEXT IMAGE ❯'}, type: 1},
+       
+  ]
+const buttonMessage = {
+      image: { url: images },
+      caption: `*𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝙸𝙼𝙰𝙶𝙴 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁*
+⦁ *𝚁𝙴𝚀𝚄𝙴𝚂𝚃* : ${text}
+⦁ *𝙼𝙴𝙳𝙸𝙰 𝚄𝚁𝙻* : ${images}
+⦁ *𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝚁* :${m.pushName}`,
+      footer: footer,
+      buttons: buttons,
+      headerType: 4
+  }
+  
+ QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })})
+ 
             }
             break
 case 'swm': case 'stickerwm': case 'wm': case 'take': {  
@@ -9138,7 +9197,7 @@ if (!text) return m.reply(`_Name a Series or movie`)
            if (budy.match(`paka`)) {
          await QueenNilu.sendMessage(from, { react: { text: `🍆`, key: m.key }})
          }
-           if (budy.match(`nima`)) {
+           if (budy.match(`janiya`)) {
          await QueenNilu.sendMessage(from, { react: { text: `👻`, key: m.key }})
          }
            if (budy.match(`❤`)) {
