@@ -1147,7 +1147,7 @@ case 'apk':{
                 }
 
               break
-              case 'apk2' :{
+              case 'findapk' :{
                 await QueenNilu.sendText(m.chat,mess.wait) 
                 await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}`)
                 .then(async (janiya) => {  
@@ -1158,7 +1158,7 @@ case 'apk':{
       rows: [
             {
              title: `${i.title}`, 
-             rowId: `apk22 ${i.url} ${i.title}`,
+             rowId: `apk2 ${i.url} ${i.title}`,
           description: `➮ 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ${i.title} `	     
             }, 
             ]
@@ -1177,7 +1177,7 @@ case 'apk':{
                 }).catch((err) => m.reply(NOT_FOUND))
                 }
                 break
-                case 'apk22' : {
+                case 'apk2' : {
                 const down = await QueenNilu.sendMessage(from, { text: `*📥 Downloding mod apk...*` }, { quoted: m })
                 const janiya = await fetchJson(`https://api.akuari.my.id/downloader/apkdownloader2?package=${args[0]}`)
                 const upload = await QueenNilu.sendMessage(from, { text: `*📤 Uploading mod apk...*` }, { quoted: m })
