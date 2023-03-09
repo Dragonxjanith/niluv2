@@ -11,8 +11,8 @@ global.owner = ['94767438882'] //ur owner number
 global.ownername = "Janith sadanuwan" //ur owner name
 
 //Bot Name 
-global.botname = 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ꜱᴛᴀʙʟᴇ' //ur bot name
-global.wm = "QueenNilu" //ur watermark
+global.botname = 'ǫᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ꜱᴛᴀʙʟᴇ' //ur bot name
+global.wm = "ǫᴜᴇᴇɴ ɴɪʟᴜ" //ur watermark
 
 //Language English = 'EN' , Sinhala = 'SI' , Tamil= 'TL'
 global.LANG = 'EN'
@@ -49,7 +49,7 @@ global.alivelogo = process.env.ALIVE_LOGO || `https://te.legra.ph/file/a9293226a
 global.alive = process.env.ALIVE_MESSAGE 
 
 //Sticker Making 
-global.packname = "Qᴜᴇᴇɴ ɴɪʟᴜ 💃" 
+global.packname = "ǫᴜᴇᴇɴ ɴɪʟᴜ 💃" 
 
 //Anti Bad Word
 global.ANTI_BADWORD = 'true'

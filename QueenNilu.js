@@ -6426,8 +6426,8 @@ m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ 
                 // const runtime = 
                 const ramusage = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
                 let buttons = [
-                    { buttonId: 'about', buttonText: { displayText: 'about' }, type: 1 },
-                    { buttonId: 'ping', buttonText: { displayText: 'ping' }, type: 1 }
+                    { buttonId: 'about', buttonText: { displayText: 'ᴀʙᴏᴜᴛ' }, type: 1 },
+                    { buttonId: 'ping', buttonText: { displayText: 'ᴘɪɴɢ' }, type: 1 }
                 ]
                 await QueenNilu.sendButtonText(m.chat, buttons,('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ Run Time :* ```'+runtime(process.uptime())+'``` \n*📶 Ram Usage :*``` '+ramusage+'```\n'), botname, m)
                 }
@@ -9176,16 +9176,16 @@ const msg = `*💃 𝙌𝙐𝙀𝙀𝙉 𝙉𝙄𝙇𝙐 𝙑2 💃*
 *📡ᴡᴇʙ ᴀᴘɪ : 𝙱𝙰𝙸𝙻𝚈𝙴𝚂*
 *🪦ʙᴀꜱᴇ : 𝚡𝚎𝚘𝚗*
 
-*💃ᴅᴇᴘʟᴏʏ Qᴜᴇᴇɴ ɴɪʟᴜ💃*
+*💃ᴅᴇᴘʟᴏʏ ǫᴜᴇᴇɴ ɴɪʟᴜ💃*
 
 •ᴡᴇʙꜱɪᴛᴇ - https://janithsadanuwan.tech/QueenNilu
 •ɢɪᴛʜᴜʙ- https://github.com/Janithsadanuwan
 •Qʀ -https://bit.ly/QueenNiluQR
 
-*© Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ꜱᴛᴀʙʟᴇ*
+*© ǫᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ꜱᴛᴀʙʟᴇ*
 `
 const templateButtons = [
-    {buttonId: `publicgroup`, buttonText: {displayText: 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ'}, type: 1},
+    {buttonId: `publicgroup`, buttonText: {displayText: 'ǫᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ'}, type: 1},
     {buttonId: `botstetus`, buttonText: {displayText: 'sᴛᴇᴛᴜs'}, type: 1}
 ]
 
@@ -9219,7 +9219,7 @@ const templateButtons = [
 
 const templateMessage = {
 text: msg,
-footer: 'Qᴜᴇᴇɴ ɴɪʟᴜ',
+footer: 'ǫᴜᴇᴇɴ ɴɪʟᴜ',
 templateButtons: templateButtons
 }
 
@@ -9577,7 +9577,7 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
  *🤹‍♂️ ᴏᴡɴᴇʀ : ${global.ownername}* 
  *👸ʀᴜɴᴛɪᴍᴇ : ${runtime(process.uptime())}*
 
- 💃ᴅᴇᴘʟᴏʏ Qᴜᴇᴇɴ ɴɪʟᴜ💃
+ 💃ᴅᴇᴘʟᴏʏ ǫᴜᴇᴇɴ ɴɪʟᴜ💃
  
  •ᴡᴇʙꜱɪᴛᴇ - https://janithsadanuwan.tech/QueenNilu
  •ɢɪᴛʜᴜʙ- https://github.com/Janithsadanuwan
@@ -9653,7 +9653,7 @@ await QueenNilu.sendMessage(from, { react: { text: `🗒️`, key: m.key }})
                                                  ]
                                              },
                                              {
-                                                 "title": `● Qᴜᴇᴇɴ ɴɪʟᴜ ᴍᴇɴᴜ ● `,
+                                                 "title": `● ǫᴜᴇᴇɴ ɴɪʟᴜ ᴍᴇɴᴜ ● `,
                                                  "rows": [
                                                      {
                                                          "title": "📥 ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏᴍᴍᴀɴᴅꜱ",
@@ -9713,10 +9713,10 @@ await QueenNilu.sendMessage(from, { react: { text: `🗒️`, key: m.key }})
                                                  ]
                                              },
                                              {
-                                                 "title": "● Qᴜᴇᴇɴ ɴɪʟᴜ ʙᴏᴛ ᴍᴅ ᴠ2 ●",
+                                                 "title": "● ǫᴜᴇᴇɴ ɴɪʟᴜ ʙᴏᴛ ᴍᴅ ᴠ2 ●",
                                                  "rows": [
                                                      {
-                                                         "title": "💃 ᴀʙᴏᴜᴛ  Qᴜᴇᴇɴ ɴɪʟᴜ",
+                                                         "title": "💃 ᴀʙᴏᴜᴛ  ǫᴜᴇᴇɴ ɴɪʟᴜ",
                                                          "description": Lang.ABOUT_CMD ,
                                                          "rowId": `${prefix}about`
                                                      }
@@ -10039,7 +10039,7 @@ desmsg = `╭╌┄┄『 *USER DETAILS* 』
 ┊ ▢  𝚁𝙰𝙼 𝚄𝚂𝙰𝙶𝙴 : ${ram0}
 ╰┄┄┄┄┄┄┄┄┄◯`
 const templateButtons = [
-    {buttonId: `publicgroup`, buttonText: {displayText: 'Qᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ'}, type: 1},
+    {buttonId: `publicgroup`, buttonText: {displayText: 'ǫᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ'}, type: 1},
     {buttonId: `botstetus`, buttonText: {displayText: 'sᴛᴇᴛᴜs'}, type: 1}
 ]
 
