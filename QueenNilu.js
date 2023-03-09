@@ -10008,6 +10008,7 @@ case 'menu': {
   │ ${prefix}mountain
   │ ${prefix}programming
   │ ${prefix}technology
+  │ ${prefix}Uptime
   └─────────◉`
   const templateButtons = [
     {buttonId: `panel`, buttonText: {displayText: 'ʟɪsᴛ ᴍᴇɴᴜ'}, type: 1},
