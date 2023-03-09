@@ -6443,7 +6443,7 @@ m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ 
                      footer: global.botname,
                      templateButtons: templateButtons
                      }
-                                await QueenNilu.sendMessage(m.chat, buttonMessage ,{ quoted: m })
+                                await QueenNilu.sendMessage(m.chat, buttonMessage)
 
             }
 
