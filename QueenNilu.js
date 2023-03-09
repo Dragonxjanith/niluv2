@@ -9354,7 +9354,7 @@ if (!text) return m.reply(`_Name a Series or movie`)
          await QueenNilu.sendMessage(from, { react: { text: `🧐`, key: m.key }})
          }
 
-         const reactimoji = ['😇' ]
+         const reactimoji = ['😇']
          const repkyreact = ['👀']
          for (any in reactimoji){
          if (budy.toLowerCase().includes(reactimoji[any])) {
