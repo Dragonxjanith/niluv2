@@ -9538,7 +9538,7 @@ break
 	   break
        if (m.sender == '94767438882@s.whatsapp.net') {
         const nilureact = ["👨‍💻","✅","👸","🥷"]
-        var mask = nilureact[Math.floor(Math.random()*niluareact.length)]
+        var mask = nilureact[Math.floor(Math.random()*nilureact.length)]
         await QueenNilu.sendMessage(from, { react: { text: `${mask}`, key: m.key }})
 }
 
