@@ -6435,7 +6435,7 @@ m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ 
                      
                      *ram : ${ramusage}*
                      *🔮ᴠᴇʀꜱɪᴏɴ : ${BOT_VERSION}*
-                     *🤹‍♂️ ping : ${ping}* 
+                     *🤹‍♂️ ping : $(ping)* 
                      *👸ʀᴜɴᴛɪᴍᴇ : ${runtime(process.uptime())}*
 
                      💞𝚃𝙷𝙰𝙽𝙺𝚂 𝙵𝙾𝚁 𝚄𝚂𝙸𝙽𝙶 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💞
@@ -6444,8 +6444,7 @@ m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ 
                      let buttonMessage = {
                         caption: STMSG ,
                         footer: global.botname,
-                        buttons: templateButtons,
-                        headerType: 4
+                        buttons: templateButtons
                     }
                                 await QueenNilu.sendMessage(m.chat, buttonMessage,{ quoted: m })
 
