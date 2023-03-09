@@ -11469,6 +11469,7 @@ case 'grpmenu': {
   
   *──────────◯*
   `
+  
                         next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
      
@@ -11488,7 +11489,7 @@ case 'grpmenu': {
                  QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
                       }
                  break
-/////////////////////////////////////Menu End-------------------------
+
 
 case 'attp' :{
     if (!text) return reply ('Need some word \n ex - attp Mr janiya')
