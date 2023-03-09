@@ -6417,6 +6417,37 @@ const ramusage = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB
 m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ Run Time :* ```'+runtime(process.uptime())+'``` \n*📶 Ram Usage :*``` '+ramusage+'```\n')
 }
             break
+
+            case 'bots' :{
+                const start = new Date().getTime()
+                await QueenNilu.sendMessage(from,{react:{text:'🧬' , key:m.key}})
+                const end = new Date().getTime()
+                const ping = (end - start)+ 'ms'
+                const ramusage = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
+                const templateButtons = [
+                    { quickReplyButton: {displayText: ' about  ', id: 'about' }} , 
+                    { quickReplyButton: {displayText: ' 𝙿𝙸𝙽𝙶 ️', id: 'ping' }}  
+                                            ]
+                     const buttonMessage = {
+                     caption: `◈𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝙸𝚂 𝙰𝙻𝙸𝚅𝙴◈
+                    
+                     💃ᴀʙᴏᴜᴛ ʙᴏᴛ💃
+                     
+                     *ram : ${ramusage}*
+                     *🔮ᴠᴇʀꜱɪᴏɴ : ${BOT_VERSION}*
+                     *🤹‍♂️ ping : ${ping}* 
+                     *👸ʀᴜɴᴛɪᴍᴇ : ${runtime(process.uptime())}*
+
+                     💞𝚃𝙷𝙰𝙽𝙺𝚂 𝙵𝙾𝚁 𝚄𝚂𝙸𝙽𝙶 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💞
+                     `,
+                     footer: global.botname,
+                     templateButtons: templateButtons
+                     }
+                                await QueenNilu.sendMessage(m.chat, buttonMessage ,{ quoted: m })
+
+            }
+
+            break
             case 'setmenu': {
             if (!isCreator) throw mess.owner
             let setbot = db.data.settings[botNumber]
