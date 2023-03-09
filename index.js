@@ -101,8 +101,33 @@ async function startQueenNilu() {
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
         browser: ['QueenNilu','Safari','1.0.0'],
-        auth: state
-    })
+        patchMessageBeforeSending: (message) => {
+            const requiresPatch = !!(
+                message.buttonsMessage 
+                || message.templateMessage
+                || message.listMessage
+            );
+            if (requiresPatch) {
+                message = {
+                    viewOnceMessage: {
+                        message: {
+                            messageContextInfo: {
+                                deviceListMetadataVersion: 2,
+                                deviceListMetadata: {},
+                            },
+                            ...message,
+                        },
+                    },
+                };
+            }
+
+            return message;
+        },
+    getMessage: async key => {
+          return {
+          }
+      }
+})
 
 
     store.bind(QueenNilu.ev)
@@ -269,6 +294,9 @@ QueenNilu.sendContact = async (jid, kon, quoted = '', opts = {}) => {
     QueenNilu.serializeM = (m) => smsg(QueenNilu, m, store)
 
     QueenNilu.ev.on('connection.update', async (update) => {
+        if (global.qr !== update.qr) {
+            global.qr = update.qr
+            }
         const { connection, lastDisconnect } = update	    
         if (connection === 'close') {
         
