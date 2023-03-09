@@ -6418,7 +6418,22 @@ m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ 
 }
             break
 
-            case 'bots' :{
+            case 'bots' : case 'stet' : {
+                const start = new Date().getTime()
+                await QueenNilu.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
+                const end = new Date().getTime()
+                const ping = (end - start) + 'ms' 
+                // const runtime = 
+                const ramusage = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
+                let buttons = [
+                    { buttonId: 'about', buttonText: { displayText: 'about' }, type: 1 },
+                    { buttonId: 'ping', buttonText: { displayText: 'ping' }, type: 1 }
+                ]
+                await QueenNilu.sendButtonText(m.chat, buttons,('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ Run Time :* ```'+runtime(process.uptime())+'``` \n*📶 Ram Usage :*``` '+ramusage+'```\n'), botname, m)
+                }
+                            break
+
+            case 'botsss' :{
                 const start = new Date().getTime()
                 await QueenNilu.sendMessage(from,{react:{text:'🧬' , key:m.key}})
                 const end = new Date().getTime()
