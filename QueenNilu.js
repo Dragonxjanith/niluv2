@@ -6428,7 +6428,7 @@ m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ 
                     { quickReplyButton: {displayText: ' about  ', id: 'about' }} , 
                     { quickReplyButton: {displayText: ' 𝙿𝙸𝙽𝙶 ️', id: 'ping' }}  
                                             ]
-                     const buttonMessage = {
+                     const STMSG = {
                      caption: `◈𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝙸𝚂 𝙰𝙻𝙸𝚅𝙴◈
                     
                      💃ᴀʙᴏᴜᴛ ʙᴏᴛ💃
@@ -6440,9 +6440,13 @@ m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ 
 
                      💞𝚃𝙷𝙰𝙽𝙺𝚂 𝙵𝙾𝚁 𝚄𝚂𝙸𝙽𝙶 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💞
                      `,
-                     footer: global.botname,
-                     templateButtons: templateButtons
                      }
+                     let buttonMessage = {
+                        caption: STMSG ,
+                        footer: global.botname,
+                        buttons: templateButtons,
+                        headerType: 4
+                    }
                                 await QueenNilu.sendMessage(m.chat, buttonMessage)
 
             }
