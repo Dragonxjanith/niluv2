@@ -6407,7 +6407,7 @@ const poonn = await QueenNilu.sendText(m.chat, '*ᴘᴏɴɢ* ' + (end - start) +
 await QueenNilu.sendMessage(from, { react: { text: `✅`, key: poonn.key }})
 }
 break
-case 'botstetus' : case 'stetus' : {
+case 'bots' :  {
 const start = new Date().getTime()
 await QueenNilu.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
 const end = new Date().getTime()
@@ -6418,9 +6418,9 @@ m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ 
 }
             break
 
-            case 'bots' : case 'stet' : {
+            case 'botstetus' : case 'stetus' : {
                 const start = new Date().getTime()
-                await QueenNilu.sendMessage(from, { react: { text: `⚧️`, key: m.key }})
+                await QueenNilu.sendMessage(from, { react: { text: `📡`, key: m.key }})
                 const end = new Date().getTime()
                 const ping = (end - start) + 'ms' 
                 // const runtime = 
