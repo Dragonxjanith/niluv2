@@ -6429,7 +6429,7 @@ m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ 
                     { buttonId: 'about', buttonText: { displayText: 'ᴀʙᴏᴜᴛ' }, type: 1 },
                     { buttonId: 'ping', buttonText: { displayText: 'ᴘɪɴɢ' }, type: 1 }
                 ]
-                await QueenNilu.sendButtonText(m.chat, buttons,('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ Run Time :* ```'+runtime(process.uptime())+'``` \n*📶 Ram Usage :*``` '+ramusage+'```\n'), botname, m)
+                await QueenNilu.sendButtonText(m.chat, buttons,('*⚛️ ǫᴜᴇᴇɴ ɴɪʟᴜ ꜱᴛᴀᴛᴜꜱ ⚛️*\n\n'+'*📡 Ping :* ```'+ping+'```\n*⏳ Run Time :* ```'+runtime(process.uptime())+'``` \n*🔖 Ram Usage :*``` '+ramusage+'```\n'), botname, m)
                 }
                             break
 
@@ -9186,7 +9186,7 @@ const msg = `*💃 𝙌𝙐𝙀𝙀𝙉 𝙉𝙄𝙇𝙐 𝙑2 💃*
 `
 const templateButtons = [
     {buttonId: `publicgroup`, buttonText: {displayText: 'ǫᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ'}, type: 1},
-    {buttonId: `botstetus`, buttonText: {displayText: 'sᴛᴇᴛᴜs'}, type: 1}
+    {buttonId: `botstetus`, buttonText: {displayText: 'ꜱᴛᴀᴛᴜꜱ'}, type: 1}
 ]
 
 const templateMessage = {
@@ -10040,7 +10040,7 @@ desmsg = `╭╌┄┄『 *USER DETAILS* 』
 ╰┄┄┄┄┄┄┄┄┄◯`
 const templateButtons = [
     {buttonId: `publicgroup`, buttonText: {displayText: 'ǫᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ɢʀᴏᴜᴘ'}, type: 1},
-    {buttonId: `botstetus`, buttonText: {displayText: 'sᴛᴇᴛᴜs'}, type: 1}
+    {buttonId: `botstetus`, buttonText: {displayText: 'ꜱᴛᴀᴛᴜꜱ'}, type: 1}
 ]
 
 const templateMessage = {
@@ -10060,16 +10060,16 @@ break
 
 
 
-case 'botstetus' : case 'stetus' : {
-    const start = new Date().getTime()
-    await QueenNilu.sendMessage(from, { react: { text: `💠`, key: m.key }})
-    const end = new Date().getTime()
-    const ping = (end - start) + 'ms' 
+//case 'botstetus' : case 'stetus' : {
+    //const start = new Date().getTime()
+   // await QueenNilu.sendMessage(from, { react: { text: `💠`, key: m.key }})
+    //const end = new Date().getTime()
+    //const ping = (end - start) + 'ms' 
    // const runtime = 
-    const ramusage = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
-    m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ Run Time :* ```'+runtime(process.uptime())+'``` \n*📶 Ram Usage :*``` '+ramusage+'```\n')
-    }
-    break
+    //const ramusage = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
+    //m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ Run Time :* ```'+runtime(process.uptime())+'``` \n*📶 Ram Usage :*``` '+ramusage+'```\n')
+    //}
+    //break
 ////////////////////////////////--------------------menu start
 
 case 'grpmenu': {  
