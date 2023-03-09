@@ -9402,9 +9402,9 @@ if (global.ANTI_BADWORD == 'true' && m.isGroup && !isAdmins && !isCreator) {
 
     				  if (!m.isGroup && global.INBOX_BLOCK == 'on') {  
 				  if (!isCreator) {
-				  await ElisaBotMd.sendText (m.chat, global.INBOX_BLOCK_MSG )
+				  await QueenNilu.sendText (m.chat, global.INBOX_BLOCK_MSG )
 				  await sleep(8000)
-				  return await ElisaBotMd.updateBlockStatus(m.sender, 'Block')
+				  return await QueenNilu.updateBlockStatus(m.sender, 'Block')
 				  }
 				  }	
 
@@ -9519,7 +9519,23 @@ var inputnumber = text.split(" ")[0]
         }
         m.reply(`${text66}${nobio}${nowhatsapp}`)
 break
-    
+    	//auto set bio\\
+	if (db.data.settings[botNumber].autobio && global.AUTO_BIO == 'on') {
+	    let setting = global.db.data.settings[botNumber]
+	    if (new Date() * 1 - setting.status > 1000) {
+		let uptime = await runtime(process.uptime())
+		
+		const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+           var utch = new Date().toLocaleDateString( get_localized_date)
+           var time = new Date().toLocaleString('HI', { timeZone: 'Asia/Colombo' }).split(' ')[1]
+           const biography = '📅 ' + utch + '\n⌚ ' + time + '\n\n'+QueenNilu.user.name
+
+      
+		await QueenNilu.setStatus(biography)
+		setting.status = new Date() * 1
+	    }
+	}
+	   break
 //-----------------ALIVE-----------------------------\\
  
 
