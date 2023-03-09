@@ -9400,6 +9400,14 @@ if (global.ANTI_BADWORD == 'true' && m.isGroup && !isAdmins && !isCreator) {
     //await QueenNilu.groupParticipantsUpdate(m.chat,[m.sender], 'remove')
     }}}
 
+    				  if (!m.isGroup && global.INBOX_BLOCK == 'on') {  
+				  if (!isCreator) {
+				  await ElisaBotMd.sendText (m.chat, global.INBOX_BLOCK_MSG )
+				  await sleep(8000)
+				  return await ElisaBotMd.updateBlockStatus(m.sender, 'Block')
+				  }
+				  }	
+
 break
 case 'weather':
 if (!text) return m.reply('What location?')

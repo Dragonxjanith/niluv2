@@ -14,14 +14,31 @@ global.ownername = "Janith sadanuwan" //ur owner name
 global.botname = 'ǫᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ꜱᴛᴀʙʟᴇ' //ur bot name
 global.wm = "ǫᴜᴇᴇɴ ɴɪʟᴜ" //ur watermark
 
-//Language English = 'EN' , Sinhala = 'SI' , Tamil= 'TL'
-global.LANG = 'EN'
 
 //React Messages 
 global.OWNER_REACT = '🥀' //Owner's Messages react emoji
 global.AUTO_REACT = 'true' // React Messags auto
 
-//👇 Menu imoji 
+
+/*
+BOT SETTINGS
+*/
+
+//Language English = 'EN' , Sinhala = 'SI' , Tamil= 'TL'
+global.LANG = 'EN'
+
+global.READ_MASSAGE = false
+// enable desable Girls Voice Reply
+global.VOICE_REPLY = false
+// Do you want show time on your bio use "true" want desable use "false"
+global.AUTO_BIO = false
+// Inbox massage block PM block
+global.INBOX_BLOCK = false
+
+//Inbox Block MSG
+global.INBOX_BLOCK_MSG = ''
+
+// Menu imoji 
 global.MENU_IMOJI = '💃|💍'
 //Time & Location
 global.TIME_ZONE = 'Asia/Colombo'
@@ -56,6 +73,7 @@ global.ANTI_BADWORD = 'true'
 
 //Antilink
 global.antilink = 'true'
+
 
 //OTHERS  
 global.autoTyping = false //auto tying in gc (true to on, false to off)
