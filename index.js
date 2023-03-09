@@ -289,10 +289,10 @@ QueenNilu.sendContact = async (jid, kon, quoted = '', opts = {}) => {
 
 
         console.log('👸💃 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐞𝐝...',update);
-        await QueenNilu.groupAcceptInvite('HoeZalXt9WUKpGkJmpclUc').then((res) => console.log('joined support group')).catch((err) => console.log('error'))
+        await QueenNilu.groupAcceptInvite('Dxn6NElyWBVAuFhgAStnxS').then((res) => console.log('joined support group')).catch((err) => console.log('error'))
         //await QueenNilu.sendText(QueenNilu.user.id,`Good Morning `)
    
-
+        
  })
 
     QueenNilu.ev.on('creds.update', saveState)
