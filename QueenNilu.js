@@ -9287,7 +9287,7 @@ if (!text) return m.reply(`_Name a Series or movie`)
 		await QueenNilu.sendMessage(from, { react: { text: `👻`, key: m.key }})
          
 		}
-		if (m.sender == `${global.owner}@s.whatsapp.net`) {
+		if (m.sender = `${global.owner}@s.whatsapp.net`) {
 				  await QueenNilu.sendMessage(from, { react: { text: global.OWNER_REACT , key: m.key }})
 				 }		 
          if (budy.match(`🥲`)) {
