@@ -2712,7 +2712,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                  }
                                               break
                                               case 'ytv': {
-                const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+                const rash = await fetchJson(`https://github.com/Dragonxjanith/janiya--x/raw/main/SongVideo.jsons/songdl.json`)
                 const mp14 = rash.mp14
                 const mp24 = rash.mp24
                 const sdpid = rash.sddlid
@@ -2765,7 +2765,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 var GIVEME = ''
                 if (global.LANG == 'SI') GIVEME = "```💃 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song rosa male natuwe katu*"
                 if (global.LANG == 'EN') GIVEME ="```💃 Please give me a song name.```\n *Example - .song rosa male natuwe katu*"
-                const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+                const rash = await fetchJson(`https://github.com/Dragonxjanith/janiya--x/raw/main/SongVideo.jsons/songdl.json`)
                 const audidd = rash.audcmd
                 const docidd = rash.doccmd
                                               await QueenNilu.sendMessage(from, { react: { text: `🎵`, key: m.key }})
@@ -2809,7 +2809,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                              }
                                              break
                                               case 'video': { 
-                const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+                const rash = await fetchJson(`https://github.com/Dragonxjanith/janiya--x/raw/main/SongVideo.jsons/songdl.json`)
                 const sdpid = rash.sddlid
                 const hdmidpid = rash.sdmiddlid
                 const hdpid = rash.hddlid
@@ -2856,7 +2856,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
                                  
                 } else if (search.all[0].type == 'video') {
-                const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+                const rash = await fetchJson(`https://github.com/Dragonxjanith/janiya--x/raw/main/SongVideo.jsons/songdl.json`)
                 const sdpid = rash.sddlid
                 const hdmidpid = rash.sdmiddlid
                 const hdpid = rash.hddlid
@@ -3534,7 +3534,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               }
                                               break
                                               case 'selecttypebutton': {  
-                const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+                const rash = await fetchJson(`https://github.com/Dragonxjanith/janiya--x/raw/main/SongVideo.jsons/songdl.json`)
                 const sdpid = rash.sddlid
                 const hdmidpid = rash.sdmiddlid
                 const hdpid = rash.hddlid
@@ -3561,7 +3561,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   }
                                                   break
                                                   case 'audioselecttypebutton': {  
-                                                  const rash = await fetchJson(`https://github.com/Mrnimama/Mr-nima-/raw/main/SongVideo.jsons/songdl.json`)
+                                                  const rash = await fetchJson(`https://github.com/Dragonxjanith/janiya--x/raw/main/SongVideo.jsons/songdl.json`)
                 const audidd = rash.audcmd
                 const docidd = rash.doccmd
                                           await QueenNilu.sendMessage(from, { react: { text: `🎧`, key: m.key }})
@@ -3627,7 +3627,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               }
                                               break*/
                                              case 'audio': case 'seleytaudio': {  
-                                         // await QueenNilu.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                                          await QueenNilu.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                                                   let { yta } = require('./lib/y2mate')
                                                   if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtF6Tccag%27 320kbps`
                                                  // const load = await QueenNilu.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your Document type song...*\n`, m, )
