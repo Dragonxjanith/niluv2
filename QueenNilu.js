@@ -8963,7 +8963,7 @@ case 'rate': {
             await QueenNilu.sendButtonText(m.chat, buttons, jawab, botname, m)
             }
             break
-case 'runtime': {
+case 'runtime': case'uptime': {
             	let lowq = `*The Bot Has Been Online For:*\n*${runtime(process.uptime())}*`
                 let buttons = [{ buttonId: 'menu', buttonText: { displayText: 'Menu' }, type: 1 }]
                 await QueenNilu.sendButtonText(m.chat, buttons, lowq, botname, m, {quoted: fkontak})
