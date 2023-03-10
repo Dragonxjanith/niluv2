@@ -9683,7 +9683,14 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
 
 
             break
-//////////////////////////////////////////////////////All------------------------
+//ALL FETURES\\\\
+
+
+
+
+
+
+
 
 
 case 'twiter' : case 'insta': case 'igvid' : case 'fb': case 'get': {  
