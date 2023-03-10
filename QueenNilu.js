@@ -2862,7 +2862,8 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                 
                                                 await QueenNilu.sendMessage(from, { text: `*📤 Uploading  ...*` }, { quoted: m })
                                                 const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
-                                                QueenNilu.sendMessage(m.chat, {audio:{ song: audio.audio }, mimetype:"audio/mpeg", fileName: `${media.title}.mp3`,  quoted: m})
+                                                
+                                                QueenNilu.sendMessage(m.chat, {audio:{ song: audio.audio }, mimetype:"audio/mpeg", fileName: `${song.title}.mp3`,  quoted: m})
 
                                                 await QueenNilu.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
                                                 await QueenNilu.sendMessage(from, { react: { text: `✅`, key: m.key }}).catch((err) => m.reply(NOT_FOUND))
