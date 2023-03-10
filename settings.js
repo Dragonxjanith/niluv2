@@ -37,7 +37,7 @@ global.INBOX_BLOCK = false
 
 //Inbox Block MSG
 global.INBOX_BLOCK_MSG = ''
-global.ANTI_BADWORD = ''
+global.ANTI_BADWORD = 'true'
 
 // Menu imoji 
 global.MENU_IMOJI = '💃|💍'
