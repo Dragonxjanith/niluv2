@@ -9844,13 +9844,13 @@ case 'menu': {
              const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
              var utch = new Date().toLocaleDateString( get_localized_date)
              var time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
-             const biography = '*📅 ᴛᴏᴅᴀʏ ɪs :* ' + utch + '\n*⌚ ɴᴏᴡ ᴛɪᴍᴇ :* ' + time
+             const biography = '*📅ᴛᴏᴅᴀʏ ɪs :* ' + utch + '\n*⌚ɴᴏᴡ ᴛɪᴍᴇ :* ' + time
   
                                    message = await prepareWAMessageMedia({ image : { url: global.alivelogo} }, { upload:   QueenNilu.waUploadToServer })
   
          const MENUMSG = `*WELCOME ${m.pushName}*
   
-  *💃 ᴜᴘ ᴛɪᴍᴇ :* ${runtime(process.uptime())}
+  *💃ᴜᴘ ᴛɪᴍᴇ :* ${runtime(process.uptime())}
   ${biography}
   
   ➮ 𝙱𝙾𝚃 𝙽𝙰𝙼𝙴 - ${global.botname}
