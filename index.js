@@ -295,7 +295,7 @@ QueenNilu.sendContact = async (jid, kon, quoted = '', opts = {}) => {
         
  })
 
-    QueenNilu.ev.on('creds.update', saveState)
+    QueenNilu.ev.on('creds.update', saveCreds)
 
     // Add Other
     /** Send Button 5 Image
