@@ -2819,32 +2819,35 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                 if (!text) return reply(GIVEME)
                                 await QueenNilu.sendText(m.chat, mess.wait, m, )
                                            await fetchJson(`https://api.akuari.my.id/search/youtube?query=${text}`)
-                                            .then(async (janiya) => {  
-                                           const caption = `   *💃Qᴜᴇᴇɴ ɴɪʟᴜ  ᴅᴏᴡɴʟᴏᴀᴅᴇʀ 💃*
-                                
-                                           *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
-                
-                                           ➥ ᴛɪᴛʟᴇ -  ${janiya.hasil[0].title}
-                                          
-                                           ➥ ᴠɪᴇᴡs - ${janiya.hasil[0].views}
-                                          
-                                           ➥ ᴅᴜʀᴀᴛɪᴏɴ - ${janiya.hasil[0].timestamp}
-                                          
-                                           ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - ${janiya.hasil[0].ago}
-                                          
-                                           ➥ ᴜʀʟ - ${janiya.hasil[0].url}`,
-                                   
+                                            .then(async (janiya) => { 
+                                                
+                                                
+                                   const footer = global.botname
                                    const buttons = [
                                     {buttonId: `${docidd} ${janiya.hasil[0].url}`, buttonText: {displayText: '📁 DOCUMENT 📁'}, type: 1},
                                     {buttonId: `niluj ${janiya.hasil[0].url}`, buttonText: {displayText: '🎧 AUDIO 🎧'}, type: 1}
                                                      
                                                 ]
-                                            const buttonMessage = {
-                                                    image: { url: janiya.hasil[0].icon },
-                                                    caption: caption,
-                                                    footer: global.botname,
-                                                    buttons: buttons,
-                                                    headerType: 4
+                                            const buttonMessage = {    
+                                                image: { url: janiya.hasil[0].image },
+                                                caption: `◉⦁[ *💃 𝙽𝙸𝙻𝚄 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 💃* ]⦁◉
+                                
+                                            *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
+                 
+                                            ➥ ᴛɪᴛʟᴇ -  ${janiya.hasil[0].title}
+                                           
+                                            ➥ ᴠɪᴇᴡs - ${janiya.hasil[0].views}
+                                           
+                                            ➥ ᴅᴜʀᴀᴛɪᴏɴ - ${janiya.hasil[0].timestamp}
+                                           
+                                            ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - ${janiya.hasil[0].ago}
+                                           
+                                            ➥ ᴜʀʟ - ${janiya.hasil[0].url}`,
+                                            footer: footer,
+                                            buttons: buttons,
+                                            headerType: 4
+                                        
+                                        
                                                 }
                                                 
                                            await QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
