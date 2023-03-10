@@ -2732,7 +2732,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                 
                 const sections = [
                     {
-                    title: "ＱＵＥＥＮ  ＥＬＩＳＡ Ｖ2",
+                    title: "QUEEN NILU Ｖ2",
                     rows: [
                         {title: "144P 𝚀𝚞𝚊𝚕𝚒𝚝𝚢", rowId: `${mp14} ${search.all[0].url} 144p`, description: `${search.all[0].title}`},
                         {title: "240P 𝚀𝚞𝚊𝚕𝚒𝚝𝚢", rowId: `${mp24} ${search.all[0].url} 240p`, description: `${search.all[0].title}`},
