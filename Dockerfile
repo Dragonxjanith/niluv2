@@ -7,12 +7,12 @@ RUN apt-get update && \
   webp && \
   apt-get upgrade -y && \
   rm -rf /var/lib/apt/lists/*
-  npm install -g npm@9.6.1
-  
+  -g npm@9.6.1
+
 COPY package.json .
 
 RUN npm install 
 
 COPY . .
 
-CMD ["node", "."]
+CMD ["node", "index.js"]
