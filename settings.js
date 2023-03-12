@@ -31,7 +31,7 @@ global.READ_MASSAGE = false
 // enable desable Girls Voice Reply
 global.VOICE_REPLY = false
 // Do you want show time on your bio use "true" want desable use "false"
-global.AUTO_BIO = false
+global.AUTO_BIO = true
 // Inbox massage block PM block
 global.INBOX_BLOCK = false
 
