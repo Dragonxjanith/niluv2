@@ -9687,7 +9687,7 @@ var inputnumber = text.split(" ")[0]
         m.reply(`${text66}${nobio}${nowhatsapp}`)
 break
     	//auto set bio\\
-	if (db.data.settings[botNumber].autobio && global.AUTO_BIO == 'on') {
+	if (db.data.settings[botNumber].autobio && global.AUTO_BIO == 'true') {
 	    let setting = global.db.data.settings[botNumber]
 	    if (new Date() * 1 - setting.status > 1000) {
 		let uptime = await runtime(process.uptime())
