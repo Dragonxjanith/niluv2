@@ -11,7 +11,7 @@ global.owner = ['94767438882'] //ur owner number
 global.ownername = "Janith sadanuwan" //ur owner name
 
 //Bot Name 
-global.botname = 'ǫᴜᴇᴇɴ ɴɪʟᴜ ᴘᴜʙʟɪᴄ ꜱᴛᴀʙʟᴇ' //ur bot name
+global.botname = 'ǫᴜᴇᴇɴ ɴɪʟᴜ' //ur bot name
 global.wm = "ǫᴜᴇᴇɴ ɴɪʟᴜ" //ur watermark
 
 
