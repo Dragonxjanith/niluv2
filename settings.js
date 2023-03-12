@@ -39,6 +39,9 @@ global.INBOX_BLOCK = false
 global.INBOX_BLOCK_MSG = ''
 global.ANTI_BADWORD = 'true'
 
+
+global.cap = '© 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 QUEEN NILU ²⁰²³'
+
 // Menu imoji 
 global.MENU_IMOJI = '💃|💍'
 //Time & Location
