@@ -1231,6 +1231,48 @@ sections
 
 
               break
+              //////fb 
+
+              case 'jsk' :{
+                await QueenNilu.sendText(m.chat,mess.wait) 
+                await fetchJson(`https://api.akuari.my.id/downloader/fbdl3?link=${text}`)
+                .then(async (janiya) => {  
+                const search = janiya.hasil
+                let sections = []   
+            for (let i of search) {
+            const list = {title: `SELECT YOUR Video`,
+            rows: [
+            {
+             title: `HD`, 
+             rowId: `video ${i.url} ${i.title}`,
+            description: ` videoss`	     
+            }, 
+            ]
+            }
+ 
+            }
+            const sendm =  QueenNilu.sendMessage(
+            m.chat, 
+            {
+            text: `${m.pushName} This is matching apk\n\n➮ ʀᴇǫᴜᴇsᴛ ${text}`,
+            footer: `${global.botname}`,
+            title: "*💃Qᴜᴇᴇɴ ɴɪʟᴜ  💃*",
+            buttonText: "search",
+            sections
+            }, { quoted : m })    
+                }).catch((err) => m.reply(NOT_FOUND))
+                }
+                break
+                case 'jsk1' : {
+                  const janiya = await fetchJson(`https://api.akuari.my.id/search/film?query=${args[0]}`)
+                await QueenNilu.sendMessage(m.chat,{  video: janiya.hasil.link }, { quoted: m })
+            
+               
+                }
+            
+            
+            
+                          break
 
               ////----------------------------------------EHI STORE ----------------------------------\\\\\
 
@@ -2870,7 +2912,70 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                 await QueenNilu.sendMessage(m.chat,{delete : load.key })  
                                               }
                                             break
-                             
+
+                                             case 'nilus':{
+                                var GIVEME = ''
+                                if (global.LANG == 'SI') GIVEME = "```💃 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song rosa male natuwe katu*"
+                                if (global.LANG == 'EN') GIVEME ="```💃 Please give me a song name.```\n *Example - .song rosa male natuwe katu*"
+
+                                await QueenNilu.sendMessage(from, { react: { text: `🎵`, key: m.key }})
+                                if (!text) return reply(GIVEME)
+                                await QueenNilu.sendText(m.chat, mess.wait, m, )
+                                           await fetchJson(`https://api.akuari.my.id/search/youtube?query=${text}`)
+                                            .then(async (janiya) => { 
+                                                
+                                                
+                                   const footer = global.botname
+                                   const buttons = [
+                                    {buttonId: `${docidd} ${janiya.hasil[0].url}`, buttonText: {displayText: '📁 DOCUMENT 📁'}, type: 1},
+                                    {buttonId: `niluj ${janiya.hasil[0].url}`, buttonText: {displayText: '🎧 AUDIO 🎧'}, type: 1}
+                                                     
+                                                ]
+                                            const buttonMessage = {    
+                                                image: { url: janiya.hasil[0].image },
+                                                caption: `◉⦁[ *💃 𝙽𝙸𝙻𝚄 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 💃* ]⦁◉
+                                
+                                            *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
+                 
+                                            ➥ ᴛɪᴛʟᴇ -  ${janiya.hasil[0].title}
+                                           
+                                            ➥ ᴠɪᴇᴡs - ${janiya.hasil[0].views}
+                                           
+                                            ➥ ᴅᴜʀᴀᴛɪᴏɴ - ${janiya.hasil[0].timestamp}
+                                           
+                                            ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - ${janiya.hasil[0].ago}
+                                           
+                                            ➥ ᴜʀʟ - ${janiya.hasil[0].url}`,
+                                            footer: footer,
+                                            buttons: buttons,
+                                            headerType: 4
+                                        
+                                        
+                                                }
+                                                
+                                           await QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
+                                            }).catch((err) => m.reply(NOT_FOUND))
+                                       }
+                                       break    
+                                       
+                                       case 'niluj' : {
+                                            if (!text.includes('https://youtube.com')) return reply('*💃 Please give me a correct link*\n _.song https://youtube.com/watch?v=b_yvlcRn0cM_')
+                                            await QueenNilu.sendMessage(from, { react: { text: `🔄`, key: m.key }})
+                                                const song = await fetchJson(`https://api.akuari.my.id/downloader/youtube3?link=${text}`)
+                                                
+                                                await QueenNilu.sendMessage(from, { text: `*📤 Uploading  ...*` }, { quoted: m })
+                                                const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
+                                                
+                                                QueenNilu.sendMessage(m.chat, {audio:{ song: audio.audio }, mimetype:"audio/mpeg", fileName: `${song.title}.mp3`,  quoted: m})
+
+                                                await QueenNilu.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
+                                                await QueenNilu.sendMessage(from, { react: { text: `✅`, key: m.key }}).catch((err) => m.reply(NOT_FOUND))
+                                                await QueenNilu.sendMessage(m.chat,{delete : load.key })  
+                                              }
+                                            break
+
+                                            /////////////
+                                                                         
                                               case 'video': { 
                 const rash = await fetchJson(`https://github.com/Dragonxjanith/janiya--x/raw/main/SongVideo.jsons/songdl.json`)
                 const sdpid = rash.sddlid
@@ -9715,7 +9820,7 @@ case 'twiter' : case 'insta': case 'igvid' : case 'fb': case 'get': {
 
 				let link = await getBuffer(i.url)
 			 await QueenNilu.sendMessage(m.chat, { delete: download.key })	
-             const uplode = await QueenNilu.sendText(m.chat, ` *Please Wait ${global.botnma} Trying upload Your  ${m.pushName} Video ... 🔄*`)
+             const uplode = await QueenNilu.sendText(m.chat, ` *Please Wait ${global.botname} Trying upload Your  ${m.pushName} Video ... 🔄*`)
              await QueenNilu.sendMessage(from, { react: { text: `📤`, key: m.key }})
 
                 QueenNilu.sendMessage(m.chat, { video: link, jpegThumbnail:buf,caption: `${global.cap}\n\n*⦁ quality ${i.subname}*` }, { quoted: m }) 
