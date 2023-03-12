@@ -9954,7 +9954,7 @@ case 'menu': {
              const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
              var utch = new Date().toLocaleDateString( get_localized_date)
              var time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
-             const biography = '*📅 ᴛᴏᴅᴀʏ ɪs :* ' + utch + '\n*⌚ ɴᴏᴡ ᴛɪᴍᴇ :* ' + time
+             const biography = '*📅     ᴛᴏᴅᴀʏ ɪs :* ' + utch + '\n*⌚ ɴᴏᴡ ᴛɪᴍᴇ :* ' + time
   
                                    message = await prepareWAMessageMedia({ image : { url: global.alivelogo} }, { upload:   QueenNilu.waUploadToServer })
   

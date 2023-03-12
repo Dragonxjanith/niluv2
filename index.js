@@ -58,44 +58,7 @@ if (global.db) setInterval(async () => {
     if (global.db.data) await global.db.write()
   }, 30 * 1000)
 
-/*if(sendnews = 'true') setInterval(async () => {
-const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
-const latest_news = await esana_scrape({ fetch: 'latest' , passcode: 'uakdmin_sr_2064'})
 
-const newid = latest_news.news.helakuru.news_id
-
-if (global.newss_id === newid ){
-
-const title = latest_news.news.helakuru.title
-const news = latest_news.news.helakuru.description
-const img = latest_news.news.helakuru.thumb
-const url = latest_news.news.helakuru.url
-const date = latest_news.news.helakuru.data
-
-const cap = `*_🏷️ Title_ ${title}*\n\n*_📄 News_* ${news}\n`
-const templateButtons = [
-    {index: 1, urlButton: {displayText: `එසැන පුවත්`, url: url }},
-
-
-    ]
-
-const templateMessage = {
-    image: {url: img },
-    caption: '     ⫷ 👸 *𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙽𝙴𝚆𝚂* 👸 ⫸\n\n'+cap,
-    footer: global.botnma,
-    templateButtons: templateButtons,
-    headerType: 4
-}
-     
-      await QueenNilu.sendMessage('120363039428064381@g.us', templateMessage, { quoted: m })
-      await QueenNilu.sendMessage('120363039428064381@g.us',{delete : load.key })  
-     global.global.newss_id = newid 
-
-} else {
-return
-}
-},30 * 1000)
-*/
 async function startQueenNilu() {
     const QueenNilu = QueenNiluincConnect({
         logger: pino({ level: 'silent' }),
