@@ -2325,6 +2325,17 @@ break
             await QueenNilu.sendButtonText(m.chat, buttons, akhji, botname, m, {mentions: ments})
             }
             break
+            case 'clear' : {
+                await ElisaBotMd.chatModify({
+                            clear: {
+                                messages: [{
+                                    id: m.key,
+                                    fromMe: true
+                                }]
+                            }
+                        }, m.chat)
+                                              }
+                                              break
             
              case 'bctext' :{
                 if (!isCreator) return reply( mess.owner)
@@ -2374,7 +2385,7 @@ break
                     reply(`Successful Sending Broadcast To ${anu.length} Group(s)`)
                 }
                 break
-                case 'bc': case 'broadcast': case 'bcall': case ' ' {
+                case 'bc': case 'broadcast': case 'bcall': case 'bcast': {
                     if (!isCreator) throw mess.owner
                     if (!text) throw `${Lang.BC_GC}Example : ${prefix + command} 𝙴𝚕𝚒𝚜𝚊 𝙱𝚘𝚝 𝚒𝚜 𝚑𝚎𝚛𝚎 😼♥️`
                     let anu = await store.chats.all().map(v => v.id)
