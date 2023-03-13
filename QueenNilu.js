@@ -2326,42 +2326,68 @@ break
             }
             break
             
-            case 'bctext': case 'broadcasttext': case 'broadcast':
-			    if (!isCreator) throw mess.owner
-		            if (!text) throw `Enter text`
-		                            var data = await store.chats.all()
-                            for (let i of data) {
-                               QueenNilu.sendMessage(i.id, {text: `${ownername}'s Broadcast\n\nMessage : ${q}` })
-                               await sleep(1000)
-                            }
-                            break
-case 'broadcastimage': case 'bcimage': case 'broadcastvideo': case 'broadcastvid':
-if(!isCreator) throw mess.owner
-        if (!text) throw `enter text`
-        let getGroups = await QueenNilu.groupFetchAllParticipating()
-        let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
-        let xeoncast = groups.map(v => v.id)
-        m.reply(` Broadcasting in ${xeoncast.length} Group Chat, in ${xeoncast.length * 1.5} seconds`)
-        for (let i of xeoncast) {
-let txt = `${ownername}'s Broadcast\n\nMessage : ${text}`
-if(/image/.test(mime)) {
-let media = await quoted.download()
-await QueenNilu.sendMessage(i, { image:media,  caption: txt,mentions:participants.map(a => a.id) })
-}
-if(/video/.test(mime)){
-let media = await quoted.download()
-await QueenNilu.sendMessage(i, { video:media,  caption: txt, mentions:participants.map(a => a.id) })
-}
-            }
-        m.reply(`Successfuly Broadcasted in ${xeoncast.length} Groups`)      
-        break
-            case 'q': case 'quoted': {
-		if (!m.quoted) return m.reply('Reply Message!!')
-		let wokwol = await QueenNilu.serializeM(await m.getQuotedObj())
-		if (!wokwol.quoted) return m.reply('The message you replied to does not contain a reply')
-		await wokwol.quoted.copyNForward(m.chat, true)
-            }
-	    break
+             case 'bctext' :{
+                if (!isCreator) return reply( mess.owner)
+                if (!text) throw `${Lang.BC_GC}\n${Lang.EXAMPLE} ${prefix + command} *Hello i am using queen elisa 🤍*`
+                    let getGroups = await QueenNilu.groupFetchAllParticipating()
+                    let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
+                    let anu = groups.map(v => v.id)
+                    reply(`*Send Broadcast To ${anu.length} Group Chat, Finish Time ${anu.length * 1.5} second*`)
+                    for (let i of anu) {
+                        await sleep(1500)
+                    await QueenNilu.sendText(i,`❰ *ǫᴜᴇᴇɴ ɴɪʟᴜ ʙʀᴏᴀᴅᴄᴀsᴛ * ❱${text}`)
+                    //reply (`*Successful Sending Broadcast To ${anu.length} Group(s)*`)
+                    }
+                    reply (`*Successful Sending Broadcast To ${anu.length} Group(s)*`)
+                    
+                    
+                  }
+                break
+                case 'bcimg' : {
+                let media = await quoted.download()
+                let getGroups = await QueenNilu.groupFetchAllParticipating()
+                    let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
+                    let anu = groups.map(v => v.id)
+                    reply(`*Send Broadcast To ${anu.length} Group Chat, Finish Time ${anu.length * 1.5} second*`)
+                    for (let i of anu) {
+                        await sleep(1500)
+                    await QueenNilu.sendText(i,`${text}`)
+                    await QueenNilu.sendMessage(i, { image: { url: media } }, { quoted: m })
+                    reply (`*Successful Sending Broadcast To ${anu.length} Group(s)*`)
+                    
+                    }
+                  
+                }
+                break
+                case 'bcgc': case 'bcgroup': {
+                    if (!isCreator) throw mess.owner
+                    if (!text) throw `${Lang.BC_GC}${Lang.EXAMPLE}\n : ${prefix + command} hello guys, am back`
+                    let getGroups = await QueenNilu.groupFetchAllParticipating()
+                    let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
+                    let anu = groups.map(v => v.id)
+                    reply(`Send Broadcast To ${anu.length} Group Chat, Finish Time ${anu.length * 1.5} second`)
+                    for (let i of anu) {
+                        await sleep(1500)
+                        QueenNilu.sendText(i ,`*❰ *ǫᴜᴇᴇɴ ɴɪʟᴜ ʙʀᴏᴀᴅᴄᴀsᴛ * ❱*\n${text}`)
+                        
+                                }
+                    reply(`Successful Sending Broadcast To ${anu.length} Group(s)`)
+                }
+                break
+                case 'bc': case 'broadcast': case 'bcall': {
+                    if (!isCreator) throw mess.owner
+                    if (!text) throw `${Lang.BC_GC}Example : ${prefix + command} 𝙴𝚕𝚒𝚜𝚊 𝙱𝚘𝚝 𝚒𝚜 𝚑𝚎𝚛𝚎 😼♥️`
+                    let anu = await store.chats.all().map(v => v.id)
+                    reply(`Send Broadcast To ${anu.length} Chat\n ${anu.length * 1.5} second`)
+            for (let yoi of anu) {
+                await sleep(1500)
+                QueenNilu.sendText(yoi,`*❰ *ǫᴜᴇᴇɴ ɴɪʟᴜ ʙʀᴏᴀᴅᴄᴀsᴛ * ❱*\n${text}`)
+                  }
+            reply('Broadcast Success')
+                }
+
+                break
+
             case 'listpc': {
                  let anulistp = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v.id)
                  let teks = `💃*PERSONAL CHAT LIST*\n\nTotal Chat : ${anulistp.length} Chat\n\n`
