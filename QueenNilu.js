@@ -9998,6 +9998,7 @@ case 'menu': {
                                    message = await prepareWAMessageMedia({ image : { url: global.alivelogo} }, { upload:   QueenNilu.waUploadToServer })
   
          const MENUMSG = `*WELCOME ${m.pushName}*
+         *${ucapanWaktu}*
   
   *💃 ᴜᴘ ᴛɪᴍᴇ :* ${runtime(process.uptime())}
   ${biography}
