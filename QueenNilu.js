@@ -2908,12 +2908,12 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                 
                                    const footer = global.botname
                                    const buttons = [
-                                    {buttonId: `${docidd} ${janiya.hasil[0].url}`, buttonText: {displayText: '📁 DOCUMENT 📁'}, type: 1},
+                                    {buttonId: `niluj ${janiya.hasil[0].url}`, buttonText: {displayText: '📁 DOCUMENT 📁'}, type: 1},
                                     {buttonId: `niluj ${janiya.hasil[0].url}`, buttonText: {displayText: '🎧 AUDIO 🎧'}, type: 1}
                                                      
                                                 ]
                                             const buttonMessage = {    
-                                                image: { url: janiya.hasil[0].image },
+                                                image: { url: janiya.hasil[0].thumbnail },
                                                 caption: `◉⦁[ *💃 𝙽𝙸𝙻𝚄 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 💃* ]⦁◉
                                 
                                             *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
