@@ -3838,7 +3838,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               break*/
                                              case 'audio': case 'seleytaudio': {  
                                           await QueenNilu.sendMessage(from, { react: { text: `🔄`, key: m.key }})
-                                                  let { yta } = require('./lib/y2mate')
+                                                  let { yta } = require('./lib/y2mate2')
                                                   if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} https://Subscribe.com/watch?v=PtF6Tccag%27 320kbps`
                                                  // const load = await QueenNilu.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your Document type song...*\n`, m, )
                                                  const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
