@@ -329,8 +329,8 @@ QueenNilu.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
             else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOut, Reconnecting..."); startQueenNilu(); }
             else QueenNilu.end(`Unknown DisconnectReason: ${reason}|${connection}`)
         }
-        console.log('Connected...', update)
-        await QueenNilu.groupAcceptInvite('Dxn6NElyWBVAuFhgAStnxS').then((res) => console.log('joined support group')).catch((err) => console.log('error'))
+        console.log('👸💃 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐞𝐝...', update)
+        await QueenNilu.groupAcceptInvite('Dxn6NElyWBVAuFhgA StnxS').then((res) => console.log('joined support group')).catch((err) => console.log('error'))
     })
 
     QueenNilu.ev.on('creds.update', saveState)
