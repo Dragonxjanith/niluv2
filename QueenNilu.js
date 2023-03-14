@@ -9379,6 +9379,8 @@ case 'About':  case 'bot': case 'donate': case 'about': case 'updatebot': case '
  
 const msg = `*💃 𝙌𝙐𝙀𝙀𝙉 𝙉𝙄𝙇𝙐 𝙑2 💃*
 
+Hello *${pushname}*  *${ucapanWaktu}*
+
 *💃ᴀʙᴏᴜᴛ ʙᴏᴛ💃*
 
 *🧑🏻‍💻ᴅᴇᴠᴇʟᴏᴘᴇʀ : 𝙹𝙰𝙽𝙸𝚈𝙰*
