@@ -7653,7 +7653,7 @@ console.log(lyrics)
               
             }
             case 'gimage': case 'img2': {  
-            await QueenNilu.sendMessage(from, { react: { text: `🔍`, key: m.key }})
+            await QueenNilu.sendMessage(from, { react: { text: `🔎`, key: m.key }})
             if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} ml nana`
             let gis = require('g-i-s')
             gis(text, async (error, result) => {
@@ -9906,7 +9906,7 @@ await QueenNilu.sendMessage(from, { react: { text: `📄`, key: m.key }})
                                                          "rowId": `${prefix}niludownloadmenu`
                                                      },
                                                      {
-                                                         "title": "🔍 ꜱᴇᴀʀᴄʜ ᴄᴏᴍᴍᴀɴᴅꜱ",
+                                                         "title": "🔎 ꜱᴇᴀʀᴄʜ ᴄᴏᴍᴍᴀɴᴅꜱ",
                                                          "description": Lang.SEARCH_CMD ,
                                                          "rowId": `${prefix}nilusearchmenu`
                                                      },
@@ -10023,7 +10023,7 @@ case 'menu': {
   │ ${prefix}bcall
   └─────────◉
   
-  ╭──❰ *🔍𝚂𝙴𝙰𝚁𝙲𝙷 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂🔍* ❱
+  ╭──❰ *🔎𝚂𝙴𝙰𝚁𝙲𝙷 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂🔍* ❱
   │ ${prefix}play
   │ ${prefix}yts
   │ ${prefix}img
@@ -10607,7 +10607,7 @@ case 'grpmenu': {
     const ping = (end - start) + ' *_ᴍs_*' 
     const time = new Date().toLocaleString('HI', { timeZone: TIME_ZONE }).split(' ')[1]
   
-                            await QueenNilu.sendMessage(from, { react: { text: `🔍`, key: m.key }})
+                            await QueenNilu.sendMessage(from, { react: { text: `🔎`, key: m.key }})
   var PLAY = ''
   if (global.LANG == 'EN') PLAY = '```Search youtube and download```'
   if (global.LANG == 'SI') PLAY = '```යූටියුබ් හි සර්ච් කර Download කරයි```'
