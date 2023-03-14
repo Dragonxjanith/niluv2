@@ -9371,7 +9371,7 @@ const reply = `
     return m.reply (`*${q}* isn't a valid text`)
     }
     break
-case 'About': case 'script': case 'bot': case 'donate': case 'about': case 'updatebot': case 'cekbot': case 'sourcecode': {
+case 'About':  case 'bot': case 'donate': case 'about': case 'updatebot': case 'cekbot': case 'sourcecode': {
     anu = await fetchJson('https://github.com/Dragonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
     G_LINK = anu.PUBLIC_GROUP
  
