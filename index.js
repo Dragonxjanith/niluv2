@@ -1,7 +1,7 @@
 
 require('./settings')
 const { default: QueenNiluConnect, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
-const { state, saveState } = useMultiFileAuthState(`session.json`)
+const { state, saveCreds } = await useMultiFileAuthState('auth_info_baileys')
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
 const fs = require('fs')
@@ -333,7 +333,7 @@ QueenNilu.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
         await ElisaBotMd.groupAcceptInvite('FBZAur89UPoGrCV5i1AK6J').then((res) => console.log('joined support group')).catch((err) => console.log('error'))
     })
 
-    QueenNilu.ev.on('creds.update', saveState)
+    QueenNilu.ev.on('creds.update', saveCreds)
 
     // Add Other
 
