@@ -9704,7 +9704,7 @@ QueenNilu.readMessages([m.key])
 
    // await QueenNilu.sendReadReceipt(from, m.sender, [m.key.id])
              await QueenNilu.sendPresenceUpdate('recording', m.chat) 
-             await QueenNilu.sendMessage(m.chat, { audio: {url :'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/Nilu.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+             await QueenNilu.sendMessage(m.chat, { audio: {url :'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/Nilu.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: fakestatus }) 
  if (global.alive === 'default') {
  const ita = '```'
  await QueenNilu.sendMessage(from, { react: { text: `👋`, key: m.key }})
