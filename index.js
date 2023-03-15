@@ -1,6 +1,11 @@
+//═══════════════════════════════════════════════════════//
+//                  QUEEN ELISA WHATSAPP BOT 
+//                           [ script tuna ]
+//════════════════════════════//
+
 require('./settings')
-const { default: QueenNiluincConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
-const { state, saveState } = useSingleFileAuthState(`./session.json`)
+const { default: DarkMakerincConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
+const { state, saveState } = useSingleFileAuthState(`./${sessionName}.json`)
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
 const fs = require('fs')
@@ -11,14 +16,7 @@ const path = require('path')
 const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson,await , sleep } = require('./lib/myfunc')
-const sendnews = 'true'
-const _ = require('lodash')
-const axios = require('axios')
-const moment = require('moment-timezone')
-const getRandom = (ext) => {
-	return `${Math.floor(Math.random() * 10000)}${ext}`
-}
-  
+const sendnews = 'true'     
   
 
 var low
@@ -40,7 +38,7 @@ global.db = new Low(
   /https?:\/\//.test(opts['db'] || '') ?
    new cloudDBAdapter(opts['db']) : /mongodb/.test(opts['db']) ?
     new mongoDB(opts['db']) :
-      new JSONFile(`src/database.json`)
+      new JSONFile(`database/database.json`)
 )
 global.db.data = {
     users: {},
@@ -58,12 +56,49 @@ if (global.db) setInterval(async () => {
     if (global.db.data) await global.db.write()
   }, 30 * 1000)
 
+/*if(sendnews = 'true') setInterval(async () => {
+const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
+const latest_news = await esana_scrape({ fetch: 'latest' , passcode: 'uakdmin_sr_2064'})
 
+const newid = latest_news.news.helakuru.news_id
+
+if (global.newss_id === newid ){
+
+const title = latest_news.news.helakuru.title
+const news = latest_news.news.helakuru.description
+const img = latest_news.news.helakuru.thumb
+const url = latest_news.news.helakuru.url
+const date = latest_news.news.helakuru.data
+
+const cap = `*_🏷️ Title_ ${title}*\n\n*_📄 News_* ${news}\n`
+const templateButtons = [
+    {index: 1, urlButton: {displayText: `එසැන පුවත්`, url: url }},
+
+
+    ]
+
+const templateMessage = {
+    image: {url: img },
+    caption: '     ⫷ 👸 *𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝙽𝙴𝚆𝚂* 👸 ⫸\n\n'+cap,
+    footer: global.botnma,
+    templateButtons: templateButtons,
+    headerType: 4
+}
+     
+      await QueenNilu.sendMessage('120363039428064381@g.us', templateMessage, { quoted: m })
+      await QueenNilu.sendMessage('120363039428064381@g.us',{delete : load.key })  
+     global.global.newss_id = newid 
+
+} else {
+return
+}
+},30 * 1000)
+*/
 async function startQueenNilu() {
-    const QueenNilu = QueenNiluincConnect({
+    const QueenNilu = DarkMakerincConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['QueenNilu','Safari','1.0.0'],
+        browser: ['Elina Bot\Darkmaker','Safari','1.0.0'],
         auth: state
     })
 
@@ -90,7 +125,7 @@ async function startQueenNilu() {
         if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
       
         m = smsg(QueenNilu, mek, store)
-        require("./QueenNilu")(QueenNilu, m, chatUpdate, store)
+        require("./ElisaBot-V2")(QueenNilu, m, chatUpdate, store)
         } catch (err) {
             console.log(err)
         }
@@ -151,7 +186,7 @@ QueenNilu.sendMessage(anu.id, buttonMessage, {quoted:fgclink})
                 } else if (anu.action == 'remove') {
                     let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                     he = `He/She is gone bro ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
-                    let link = `https://youtu.be/c/janithsadanuwan`
+                    let link = `https://youtu.be/cvj3054O5NU`
 let buttons = [
 {buttonId: `halo`, buttonText: {displayText: 'BYE'}, type: 1}
 ]
@@ -168,7 +203,7 @@ buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `BYE DONT COME BACK HERE OKAY`,
-body: `SUBSCRIBE janiya`,
+body: `SUBSCRIBE NIMA OFC`,
 mediaType:2,
 thumbnail: buffer,
 sourceUrl: link,
@@ -269,11 +304,12 @@ QueenNilu.sendContact = async (jid, kon, quoted = '', opts = {}) => {
 
 
 
-        console.log('👸💃 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐞𝐝...',update);
-        await QueenNilu.groupAcceptInvite('Dxn6NElyWBVAuFhgAStnxS').then((res) => console.log('joined support group')).catch((err) => console.log('error'))
+        console.log('👸💬 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐞𝐝...',update);
+        await QueenNilu.groupAcceptInvite('DCQ9hERaQRHC23Fxxp6182').then((res) => console.log('joined support group')).catch((err) => console.log('error'))
         //await QueenNilu.sendText(QueenNilu.user.id,`Good Morning `)
+        await QueenNilu.sendMessage(QueenNilu.user.id, { image: { url : 'https://telegra.ph/file/dc1f402eb040f9b68aa5c.jpg'} , caption : "● *👸 QUEEN ELISA WHATSAPP BOT  👸* ●\n\n\n*✅ SUCCESS CONNECT YOUR WHATSAPP*\n\n*_🌐 website 🌐_*\n ```http://nimaelisa.cf``` \n\n*_🖥️ github link 🖥️_*\n```https://bit.ly/3QFzqKi```\n\n*_🖨️ Qr scan 🖨️_*\n```https://bit.ly/3dvhTWM```\n\n*_🎬 Youtube  🎬_*\n```http://youtube.com/c/MRNIMAOFC```\n\n💬  _USE_ *ping* _CHECK YOUR CONNECTION_\n\n\n```THANKS FRO USING QUEEN ELISA 💃♥️```" })
    
-        
+
  })
 
     QueenNilu.ev.on('creds.update', saveState)
