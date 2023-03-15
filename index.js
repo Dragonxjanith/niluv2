@@ -1,6 +1,6 @@
 
 require('./settings')
-const { default: QueenNiluConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
+const { default: QueenNiluConnect, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
 const fs = require('fs')
@@ -68,7 +68,7 @@ if (global.db) setInterval(async () => {
   }, 30 * 1000)
 
 async function startQueenNilu() {
-    const { state, saveState } = await useSingleFileAuthState('./${sessionName}.json')
+    const { state, saveState } = await useMultiFileAuthState('./${sessionName}.json')
     const QueenNilu = QueenNiluConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
