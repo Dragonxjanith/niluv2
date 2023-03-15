@@ -68,7 +68,7 @@ if (global.db) setInterval(async () => {
   }, 30 * 1000)
 
 async function startQueenNilu() {
-    const { state, saveState } = await useSingleFileAuthState('session.json')
+    const { state, saveState } = await useSingleFileAuthState('./${sessionName}.json')
     const QueenNilu = QueenNiluConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
