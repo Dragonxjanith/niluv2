@@ -2469,7 +2469,7 @@ m.reply(`Chat owner bro, please type .owner`)
 break
   case 'addprem':
 if (!isCreator) throw mess.owner
-if (!q) return m.reply(`Enter the sample number\n\nExample: \n${prefix}${command} 916909137213`)
+if (!q) return m.reply(`Enter the sample number\n\nExample: \n${prefix}${command} 94788175828`)
 if(isNaN(q)) return await m.reply('must be a number')
   if (q.includes(`+`)) return m.reply('Do not use + direct number 9169****')
 prmi = args.join(" ")
