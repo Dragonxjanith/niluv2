@@ -9833,7 +9833,7 @@ case 'twiter' : case 'insta': case 'igvid' : case 'fb': case 'get': {
 
 case 'settings':{
     if (!isCreator) throw mess.owner
-    await QueenNilu.sendMessage(from, { react: { text: `📄`, key: m.key }})
+    await QueenNilu.sendMessage(from, { react: { text: `⚙️`, key: m.key }})
         const sections =[{
     
             "title": "● ʙᴏᴛ ʟɪsᴛ ᴍᴇɴᴜ ᴄʟɪᴄᴋ ᴀɴᴅ sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴏᴡɴ ●",
@@ -9882,10 +9882,10 @@ case 'settings':{
                                }
                            ]
     const listMessage = {
-      text: " *Please Choose the Menu*\n\n𝚠𝚎𝚕𝚌𝚘𝚖𝚎 𝚃𝙾\n🙈 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 🫶🏻💙\n\👨🏻‍💻𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : 𝘑𝘈𝘕𝘐𝘠𝘈\n💍𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :_02.00.00_\n🪷𝚆𝙴𝙱𝚂𝙸𝚃𝙴: _https://janithsadanuwan.tech/QueenNilu_\n\n\n*💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ᴍᴇɴᴜ💃*",
+      text: "*⚙️ 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝚂𝙴𝚃𝚃𝙸𝙽𝙶 𝙻𝙸𝚂𝚃*\n\n\nYou Can Change The Bot Settings By The using This List 🤹‍♂️",
       footer: `𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄`,
-      title: `Hi 👋 ${pushname}`,
-      buttonText: "𝗔𝗟𝗟 𝗠𝗘𝗡𝗨",
+      title: `Hi 👋 ${ownername}`,
+      buttonText: "Click Here",
       sections
     }
     const sendMsg = await QueenNilu.sendMessage(m.chat, listMessage,{ react: { text: `👋`, key: m.key }})
