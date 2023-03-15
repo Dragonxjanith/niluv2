@@ -1,5 +1,5 @@
 //═══════════════════════════════════════════════════════//
-//                  QUEEN ELISA WHATSAPP BOT 
+//                  QUEEN NILU WHATSAPP BOT 
 //                           [ script tuna ]
 //════════════════════════════//
 
@@ -257,7 +257,7 @@ QueenNilu.sendContact = async (jid, kon, quoted = '', opts = {}) => {
         for (let i of kon) {
             list.push({
                 displayName: await QueenNilu.getName(i + '@s.whatsapp.net'),
-                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await QueenNilu.getName(i + '@s.whatsapp.net')}\nFN:${await QueenNilu.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:ELISA BOT MD 2022\nitem2.EMAIL;type=INTERNET:GitHub: ELISA-BOT\nEND:VCARD`
+                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await QueenNilu.getName(i + '@s.whatsapp.net')}\nFN:${await QueenNilu.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:QUEEN NILU BOT MD 2022\nitem2.EMAIL;type=INTERNET:GitHub: QUEEN-NILU\nEND:VCARD`
             })
         }
         QueenNilu.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
