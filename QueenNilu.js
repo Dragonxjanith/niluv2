@@ -6397,7 +6397,7 @@ View list of Messages With ${prefix}listmsg`)
             }
 	    break
 case 'developer': case 'dev': {
-reply(`•CHEEMS BOT DEVELOPER•\n\n\n   ©2021-2022 Xeon Bot Inc.\n\n🦄Dream Guy Xeon\nPm: wa.me/916909137213`)
+reply(`•Queen Nilu DEVELOPER•\n\n\n   ©2022-2023 .\n\nJanith sadanuwan\nPm: wa.me/94767438882`)
 }
             break
 case 'owner': case 'creator': case 'moderator': case 'mod': {
