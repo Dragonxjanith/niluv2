@@ -2326,7 +2326,7 @@ break
             }
             break
             case 'clear' : {
-                await ElisaBotMd.chatModify({
+                await QueenNilu.chatModify({
                             clear: {
                                 messages: [{
                                     id: m.key,
@@ -6547,6 +6547,7 @@ case 'keluar': case 'leave': {
                 if (!isCreator) throw mess.owner
                 QueenNilu.public = false
                 m.reply('*Successful in Changing To Self Usage*')
+                await QueenNilu.sendMessage(from, { react: { reply: `⛔`, key: m.key }})
             }
             break 
             case 'ping' : case 'ping2' : case 'p' :{
