@@ -6190,7 +6190,7 @@ m.reply(`There are no users who have rented bot yet`)
 }
 break
 case 'git': case 'gitclone':
-if (!args[0]) return m.reply(`Mana link nya?\nContoh :\n${prefix}${command} https://github.com/YukiShima4/tes`)
+if (!args[0]) return m.reply(`Mana link nya?\nContoh :\n${prefix}${command} https://github.com/Janithsadanuwan/QueenNilu`)
 if (!isUrl(args[0]) && !args[0].includes('github.com')) return reply(`Link invalid!!`)
 let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     let [, user, repo] = args[0].match(regex1) || []
