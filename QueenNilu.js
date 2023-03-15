@@ -6543,7 +6543,7 @@ case 'keluar': case 'leave': {
                 m.reply('*Successful in Changing To Public Usage*')
             }
             break
-            case 'self': { 
+            case 'self': case 'Private' :  { 
                 if (!isCreator) throw mess.owner
                 QueenNilu.public = false
                 m.reply('*Successful in Changing To Self Usage*')
