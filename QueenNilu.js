@@ -9688,6 +9688,7 @@ break
         await QueenNilu.sendMessage(from, { react: { text: `${mask}`, key: m.key }})
 }
 
+
 //-----------------ALIVE-----------------------------\\
  
 
@@ -9739,8 +9740,8 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
              await QueenNilu.sendMessage(from, { react: { text: `👋`, key: m.key }})
     
                     const templateButtons = [
-{ quickReplyButton: {displayText: ' 𝙻𝙸𝚂𝚃 𝙼𝙴𝙽𝚄 ', id: 'list' }} , 
-{ quickReplyButton: {displayText: ' 𝙼𝙴𝙽𝚄 ', id: 'allmenu' }}  ,
+{ quickReplyButton: {displayText: ' 𝙼𝙴𝙽𝚄 ', id: 'menu' }} , 
+{ quickReplyButton: {displayText: ' 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ', id: 'allmenu' }}  ,
 { quickReplyButton: {displayText: ' 𝙿𝙸𝙽𝙶 ️', id: 'botstetus' }}  
                         ]
  const buttonMessage = {
