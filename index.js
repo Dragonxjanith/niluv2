@@ -94,11 +94,13 @@ return
 }
 },30 * 1000)
 
+
+
 async function startQueenNilu() {
     const QueenNilu = DarkMakerincConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Elina Bot\Darkmaker','Safari','1.0.0'],
+        browser: ['QueenNilu','Safari','1.0.0'],
         auth: state
     })
 
