@@ -1,6 +1,6 @@
 
 require('./settings')
-const { default: QueenNiluConnect, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
+const { default: QueenNiluConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
 const fs = require('fs')
@@ -68,7 +68,7 @@ if (global.db) setInterval(async () => {
   }, 30 * 1000)
 
 async function startQueenNilu() {
-    const { state, saveCreds } = await useMultiFileAuthState('session.json')
+    const { state, saveState } = await useSingleFileAuthState('session.json')
     const QueenNilu = QueenNiluConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
@@ -333,7 +333,7 @@ QueenNilu.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
         await QueenNilu.groupAcceptInvite('FBZAur89UPoGrCV5i1AK6J').then((res) => console.log('joined support group')).catch((err) => console.log('error'))
     })
 
-    QueenNilu.ev.on('creds.update', saveCreds)
+    QueenNilu.ev.on('creds.update', saveState)
 
     // Add Other
 
