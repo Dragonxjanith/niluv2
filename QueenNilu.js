@@ -9836,7 +9836,7 @@ case 'settings':{
     await QueenNilu.sendMessage(from, { react: { text: `⚙️`, key: m.key }})
         const sections =[
                                                  {
-                                                     "title": `● 🫧 ᴡᴏʀᴋ ᴛʏᴘᴇ ● `,
+                                                     "title": `● ᴡᴏʀᴋ ᴛʏᴘᴇ ● `,
                                                      "rows": [
                                                          {
                                                              "title": "👥ᴘᴜʙʟɪᴄ",
@@ -9846,7 +9846,7 @@ case 'settings':{
                                                          {
                                                              "title": "👤ᴘʀɪᴠᴀᴛᴇ",
                                                              "description": "Bot for self use",
-                                                             "rowId": `private`
+                                                             "rowId": `self`
                                                          }
                                                      ]
                                                  },
