@@ -330,7 +330,7 @@ QueenNilu.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
             else QueenNilu.end(`Unknown DisconnectReason: ${reason}|${connection}`)
         }
         console.log('Connected...', update)
-        await ElisaBotMd.groupAcceptInvite('FBZAur89UPoGrCV5i1AK6J').then((res) => console.log('joined support group')).catch((err) => console.log('error'))
+        await QueenNilu.groupAcceptInvite('FBZAur89UPoGrCV5i1AK6J').then((res) => console.log('joined support group')).catch((err) => console.log('error'))
     })
 
     QueenNilu.ev.on('creds.update', saveCreds)
