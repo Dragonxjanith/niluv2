@@ -6582,16 +6582,21 @@ m.reply('```🧬 Bot Stetus 🧬 ```\n\n'+'*⚙️ Ping :* ```'+ping+'```\n*⏳ 
                 await QueenNilu.sendButtonText(m.chat, buttons,('*⚛️ ǫᴜᴇᴇɴ ɴɪʟᴜ ꜱᴛᴀᴛᴜꜱ ⚛️*\n\n'+'*📡 Ping :* ```'+ping+'```\n*⏳ Run Time :* ```'+runtime(process.uptime())+'``` \n*🔖 Ram Usage :*``` '+ramusage+'```\n'), botname, m)
                 }
                             break
-
+                            case 'version' : case 'v' : {
+                                await QueenNilu.sendMessage(from, { react: { text: `📡`, key: m.key }})
+                                let buttons = [
+                                    { buttonId: 'dev', buttonText: { displayText: 'ᴅᴇᴠᴇʟᴏᴘᴇʀ' }, type: 1 },
+                                    { buttonId: 'about', buttonText: { displayText: 'ᴀʙᴏᴜᴛ' }, type: 1 }
+                                ]
+                                await QueenNilu.sendButtonText(m.chat, buttons,('*QUEEN NILU BOT VERSIONS*\n\n*2.0.0*'), botname, m)
+                                }
+                                            break
             case 'botsss' :{
-                const start = new Date().getTime()
                 await QueenNilu.sendMessage(from,{react:{text:'🧬' , key:m.key}})
-                const end = new Date().getTime()
-                const ping = (end - start)+ 'ms'
-                const ramusage = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
+        
                 const templateButtons = [
-                    { quickReplyButton: {displayText: ' about  ', id: 'about' }} , 
-                    { quickReplyButton: {displayText: ' 𝙿𝙸𝙽𝙶 ️', id: 'ping' }}  
+                    { quickReplyButton: {displayText: 'ᴅᴇᴠᴇʟᴏᴘᴇʀ', id: 'dev' }} , 
+                    { quickReplyButton: {displayText: ' ᴀʙᴏᴜᴛ ️', id: 'about' }}  
                                             ]
                      const STMSG = {
                      caption: `◈𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝙸𝚂 𝙰𝙻𝙸𝚅𝙴◈
@@ -9741,7 +9746,7 @@ ${ita}💗 THANKS FOR USING QUEEN NILU 💗${ita}
     
                     const templateButtons = [
 { quickReplyButton: {displayText: ' 𝙼𝙴𝙽𝚄 ', id: 'menu' }} , 
-{ quickReplyButton: {displayText: ' 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ', id: 'allmenu' }}  ,
+{ quickReplyButton: {displayText: ' 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ', id: 'version' }}  ,
 { quickReplyButton: {displayText: ' 𝙿𝙸𝙽𝙶 ️', id: 'botstetus' }}  
                         ]
  const buttonMessage = {
