@@ -9828,6 +9828,70 @@ case 'twiter' : case 'insta': case 'igvid' : case 'fb': case 'get': {
             }		
 
 			break
+
+////////////////////SEttings menu 
+
+case 'settings':{
+    if (!isCreator) throw mess.owner
+    await QueenNilu.sendMessage(from, { react: { text: `📄`, key: m.key }})
+        const sections =[{
+    
+            "title": "● ʙᴏᴛ ʟɪsᴛ ᴍᴇɴᴜ ᴄʟɪᴄᴋ ᴀɴᴅ sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴏᴡɴ ●",
+                                                     "rows": [
+                                                         {
+                                                             "title": "👥 ɢʀᴏᴜᴘ ᴄᴏᴍᴍᴀɴᴅꜱ",
+                                                             "description": Lang.GROUP_CMD_DESC ,
+                                                             "rowId": `${prefix}grpmenu`
+                                                         }
+                                                     ]
+                                                 },
+                                                 {
+                                                     "title": `● ǫᴜᴇᴇɴ ɴɪʟᴜ ᴍᴇɴᴜ ● `,
+                                                     "rows": [
+                                                         {
+                                                             "title": "📥 ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏᴍᴍᴀɴᴅꜱ",
+                                                             "description": Lang.DOWNLOAD_CMD ,
+                                                             "rowId": `${prefix}niludownloadmenu`
+                                                         },
+                                                         {
+                                                             "title": "🔎 ꜱᴇᴀʀᴄʜ ᴄᴏᴍᴍᴀɴᴅꜱ",
+                                                             "description": Lang.SEARCH_CMD ,
+                                                             "rowId": `${prefix}nilusearchmenu`
+                                                         }
+                                                     ]
+                                                 },
+                                                 {
+                                                     "title": "● ᴏᴡɴᴇʀ ᴢᴏɴᴇ ●",
+                                                     "rows": [
+                                                         {
+                                                             "title": "🗣️ ᴏᴡɴᴇʀ ᴄᴏᴍᴍᴀɴᴅꜱ",
+                                                             "description": Lang.OWNER_CMD ,
+                                                             "rowId": `${prefix}ownermenu`
+                                                         }
+                                                     ]
+                                                 },
+                                                 {
+                                                     "title": "● ǫᴜᴇᴇɴ ɴɪʟᴜ ʙᴏᴛ ᴍᴅ ᴠ2 ●",
+                                                     "rows": [
+                                                         {
+                                                             "title": "💃 ᴀʙᴏᴜᴛ  ǫᴜᴇᴇɴ ɴɪʟᴜ",
+                                                             "description": Lang.ABOUT_CMD ,
+                                                             "rowId": `${prefix}about`
+                                                         }
+                                                       ]
+                               }
+                           ]
+    const listMessage = {
+      text: " *Please Choose the Menu*\n\n𝚠𝚎𝚕𝚌𝚘𝚖𝚎 𝚃𝙾\n🙈 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 🫶🏻💙\n\👨🏻‍💻𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 : 𝘑𝘈𝘕𝘐𝘠𝘈\n💍𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :_02.00.00_\n🪷𝚆𝙴𝙱𝚂𝙸𝚃𝙴: _https://janithsadanuwan.tech/QueenNilu_\n\n\n*💃Qᴜᴇᴇɴ ɴɪʟᴜ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ᴍᴇɴᴜ💃*",
+      footer: `𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄`,
+      title: `Hi 👋 ${pushname}`,
+      buttonText: "𝗔𝗟𝗟 𝗠𝗘𝗡𝗨",
+      sections
+    }
+    const sendMsg = await QueenNilu.sendMessage(m.chat, listMessage,{ react: { text: `👋`, key: m.key }})
+    }
+    break
+
 //----------------------------------------------------------LIST MENU --------------------------------------------
 
             case 'command':case 'listmenu': case 'list': case 'panel':{
