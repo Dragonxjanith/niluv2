@@ -9873,7 +9873,7 @@ case 'settings':{
                            ]
     const listMessage = {
       text: "*⚙️ 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝚂𝙴𝚃𝚃𝙸𝙽𝙶 𝙻𝙸𝚂𝚃*\n\n\nYou Can Change The Bot Settings By The using This List 🤹‍♂️",
-      footer: `𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄`,
+      footer: `ǫᴜᴇᴇɴ ɴɪʟᴜ`,
       title: `Hi 👋 ${ownername}`,
       buttonText: "Click Here",
       sections
