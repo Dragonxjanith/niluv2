@@ -9834,29 +9834,19 @@ case 'twiter' : case 'insta': case 'igvid' : case 'fb': case 'get': {
 case 'settings':{
     if (!isCreator) throw mess.owner
     await QueenNilu.sendMessage(from, { react: { text: `⚙️`, key: m.key }})
-        const sections =[{
-    
-            "title": "● ʙᴏᴛ ʟɪsᴛ ᴍᴇɴᴜ ᴄʟɪᴄᴋ ᴀɴᴅ sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴏᴡɴ ●",
-                                                     "rows": [
-                                                         {
-                                                             "title": "👥 ɢʀᴏᴜᴘ ᴄᴏᴍᴍᴀɴᴅꜱ",
-                                                             "description": Lang.GROUP_CMD_DESC ,
-                                                             "rowId": `${prefix}grpmenu`
-                                                         }
-                                                     ]
-                                                 },
+        const sections =[
                                                  {
-                                                     "title": `● ǫᴜᴇᴇɴ ɴɪʟᴜ ᴍᴇɴᴜ ● `,
+                                                     "title": `● 🫧 ᴡᴏʀᴋ ᴛʏᴘᴇ ● `,
                                                      "rows": [
                                                          {
-                                                             "title": "📥 ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏᴍᴍᴀɴᴅꜱ",
-                                                             "description": Lang.DOWNLOAD_CMD ,
-                                                             "rowId": `${prefix}niludownloadmenu`
+                                                             "title": "👥ᴘᴜʙʟɪᴄ",
+                                                             "description": "Bot for Public use",
+                                                             "rowId": `public`
                                                          },
                                                          {
-                                                             "title": "🔎 ꜱᴇᴀʀᴄʜ ᴄᴏᴍᴍᴀɴᴅꜱ",
-                                                             "description": Lang.SEARCH_CMD ,
-                                                             "rowId": `${prefix}nilusearchmenu`
+                                                             "title": "👤ᴘʀɪᴠᴀᴛᴇ",
+                                                             "description": "Bot for self use",
+                                                             "rowId": `private`
                                                          }
                                                      ]
                                                  },
