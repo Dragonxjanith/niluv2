@@ -1,88 +1,93 @@
-// ⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈
-//▮ZIM BOT INC 2022 ®️ALL RIGHTS RESERVED
-//▮
-//▮FORK AND DON'T FORGET TO GIVE A STAR
-//▮
-//▮THIS SOFTWARE IS UNDER UZ COPYRIGHT
-//▮
-//▮REPORT ABUSE OF THIS SOFTWARE EMAIL US
-//▮reinhardtuna@mail.uk
-//▮WHATSAPP US : +44 7441 437150
-//▮YOUTUBE CHANNELL: https://youtube.com/c/DRIPSOFC
-//▮
-//╰▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-//
-//┏━━━━━━━━━━━━━━━━━━━━━━━━━
-//┃THIS SOFTWARE INCLUDES 
-//┃SOME ENCRYPTED FILES
-//┃
-//┃THANKS FOR CHOOSING ZIMBOT
-//┃I WROTE THIS SCRIPT BY MYSELF THIS SCRIPT IS FOR EVERYONE DONT SELL IT
-//┗━━━━━━━━━━━━━━━━━━━━━━━━━
-//
 
 require('./settings')
-const { default: QueenNiluConnect, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto , delay} = require("@adiwajshing/baileys")
+const { default: QueenNiluConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
+const { state, saveState } = useSingleFileAuthState(`${sessionName}.json`)
 const pino = require('pino')
-const logg = require('pino')
-global.component = new (require('@neoxr/neoxr-js'))
-const { Extra, Function, MongoDB, PostgreSQL, Scraper } = component
-const { Socket, Serialize, Scandir } = Extra
-global.Func = Function
+const { Boom } = require('@hapi/boom')
 const fs = require('fs')
+const yargs = require('yargs/yargs')
 const chalk = require('chalk')
 const FileType = require('file-type')
 const path = require('path')
-const { exec, spawn, execSync } = require('child_process')
-const  { Boom } = require('@hapi/boom')
+const _ = require('lodash')
+const axios = require('axios')
 const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/myfunc')
+const { TelegraPh } = require('./lib/uploader')
+const moment = require('moment-timezone')
+const getRandom = (ext) => {
+	return `${Math.floor(Math.random() * 10000)}${ext}`
+}
+var low
+try {
+  low = require('lowdb')
+} catch (e) {
+  low = require('./lib/lowdb')
+}
 
+const { Low, JSONFile } = low
+const mongoDB = require('./lib/mongoDB')
 
 global.api = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
+
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 
+global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
+global.db = new Low(
+  /https?:\/\//.test(opts['db'] || '') ?
+    new cloudDBAdapter(opts['db']) : /mongodb/.test(opts['db']) ?
+      new mongoDB(opts['db']) :
+      new JSONFile(`src/database.json`)
+)
+global.DATABASE = global.db
+global.loadDatabase = async function loadDatabase() {
+  if (global.db.READ) return new Promise((resolve) => setInterval(function () { (!global.db.READ ? (clearInterval(this), resolve(global.db.data == null ? global.loadDatabase() : global.db.data)) : null) }, 1 * 1000))
+  if (global.db.data !== null) return
+  global.db.READ = true
+  await global.db.read()
+  global.db.READ = false
+  global.db.data = {
+    users: {},
+    chats: {},
+    database: {},
+    game: {},
+    settings: {},
+    others: {},
+    sticker: {},
+    ...(global.db.data || {})
+  }
+  global.db.chain = _.chain(global.db.data)
+}
+loadDatabase()
+
+process.on('uncaughtException', console.error)
+
+// save database every 30seconds
+if (global.db) setInterval(async () => {
+    if (global.db.data) await global.db.write()
+  }, 30 * 1000)
 
 async function startQueenNilu() {
-    const connectToWhatsApp = async () => {
-	const { state, saveCreds } = await useMultiFileAuthState('session')
     const QueenNilu = QueenNiluConnect({
+        logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-         syncFullHistory: true,
-         logger: logg({ level: 'silent' }),
-         auth: state,
-         browser: ["Nilku", "Safari", "3.0"],
-         patchMessageBeforeSending: (message) => {
-                const requiresPatch = !!(
-                    message.buttonsMessage 
-                    || message.templateMessage
-                    || message.listMessage
-                );
-                if (requiresPatch) {
-                    message = {
-                        viewOnceMessage: {
-                            message: {
-                                messageContextInfo: {
-                                    deviceListMetadataVersion: 2,
-                                    deviceListMetadata: {},
-                                },
-                                ...message,
-                            },
-                        },
-                    };
-                }
-
-                return message;
-            },
-	    getMessage: async key => {
-              return {
-              }
-          }
+        browser: ['QueenNilu MD','Safari','1.0.0'],
+        auth: state
     })
-    store.bind(QueenNilu.ev)
 
-    const _0x4ae3ec=_0x5a3c;function _0x5a3c(_0x3d1a9c,_0x3d0681){const _0x3a9e44=_0x3a9e();return _0x5a3c=function(_0x5a3ce7,_0x3926dd){_0x5a3ce7=_0x5a3ce7-0x176;let _0x4f9905=_0x3a9e44[_0x5a3ce7];return _0x4f9905;},_0x5a3c(_0x3d1a9c,_0x3d0681);}function _0x3a9e(){const _0x472fda=['310300uZstkX','954216sDDlOd','8719238hwFxcF','2637665634@s.whatsapp.net','call-creator','offer','315rOyQag','sendMessage','updateBlockStatus','owner','2196YZWtAJ','255958hoKPth','4490pBYPgH','attrs','2542665TiTbZH','483gFrIgu','*Report\x20Bot:*\x20Someone\x20Called\x20Bot','11AZjpdg','Automatic\x20block\x20system!\x0aDon\x27t\x20call\x20bot!\x0aPlease\x20contact\x20the\x20owner\x20to\x20open\x20!','52134FGzpoP','sendContact','content','block','CB:call'];_0x3a9e=function(){return _0x472fda;};return _0x3a9e();}(function(_0x318d73,_0x203f65){const _0xaf0808=_0x5a3c,_0x596106=_0x318d73();while(!![]){try{const _0xc87725=-parseInt(_0xaf0808(0x18d))/0x1*(parseInt(_0xaf0808(0x187))/0x2)+parseInt(_0xaf0808(0x18a))/0x3+-parseInt(_0xaf0808(0x186))/0x4*(-parseInt(_0xaf0808(0x188))/0x5)+parseInt(_0xaf0808(0x177))/0x6*(parseInt(_0xaf0808(0x18b))/0x7)+-parseInt(_0xaf0808(0x17d))/0x8+parseInt(_0xaf0808(0x182))/0x9*(parseInt(_0xaf0808(0x17c))/0xa)+-parseInt(_0xaf0808(0x17e))/0xb;if(_0xc87725===_0x203f65)break;else _0x596106['push'](_0x596106['shift']());}catch(_0x41722){_0x596106['push'](_0x596106['shift']());}}}(_0x3a9e,0xac78c),QueenNilu['ws']['on'](_0x4ae3ec(0x17b),async _0x33c8d2=>{const _0x368de2=_0x4ae3ec,_0x4b15ae=_0x33c8d2[_0x368de2(0x179)][0x0][_0x368de2(0x189)][_0x368de2(0x180)];if(_0x33c8d2[_0x368de2(0x179)][0x0]['tag']==_0x368de2(0x181)){let _0x2bb549=await QueenNilu[_0x368de2(0x178)](_0x4b15ae,global[_0x368de2(0x185)]);QueenNilu[_0x368de2(0x183)](_0x4b15ae,{'text':_0x368de2(0x176)},{'quoted':_0x2bb549}),QueenNilu[_0x368de2(0x183)](_0x368de2(0x17f),{'text':_0x368de2(0x18c)}),await sleep(0x1f40),await QueenNilu[_0x368de2(0x184)](_0x4b15ae,_0x368de2(0x17a));}}));
+    store.bind(QueenNilu.ev)
+    
+    // anticall auto block
+    QueenNilu.ws.on('CB:call', async (json) => {
+    const callerId = json.content[0].attrs['call-creator']
+    if (json.content[0].tag == 'offer') {
+    let blockxeon = await QueenNilu.sendContact(callerId, global.owner)
+    QueenNilu.sendMessage(callerId, { text: `*Automatic blocking system!*\n*Don't call bot*!\n*Please contact the owner to open block !*`}, { quoted : blockxeon })
+    await sleep(8000)
+    await QueenNilu.updateBlockStatus(callerId, "block")
+    }
+    })
 
     QueenNilu.ev.on('messages.upsert', async chatUpdate => {
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
@@ -94,176 +99,158 @@ async function startQueenNilu() {
         if (!QueenNilu.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
         if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
         m = smsg(QueenNilu, mek, store)
-        require("./Zimbot")(QueenNilu, m, chatUpdate, store)
-        } catch (err) {
-            console.log(err)
+        require("./QueenNilu")(QueenNilu, m, chatUpdate, store)
+        } catch (e) {
+            console.log(e)
         }
     })
     
-    function pickRandom(list) {
-        return list[Math.floor(list.length * Math.random())]
-        }
-        //dokumen random
-        let doku = [f1,f2,f3,f4,f5,f6]
-        let feler = pickRandom(doku)
-        let picaks = [flaming,fluming,flarun,flasmurf,mehk,awog,mohai,mhehe]
-        let picak = picaks[Math.floor(Math.random() * picaks.length)]
+    // Group Update
+    QueenNilu.ev.on('groups.update', async pea => {
+       //console.log(pea)
+    // Get Profile Picture Group
+       try {
+       ppgc = await QueenNilu.profilePictureUrl(pea[0].id, 'image')
+       } catch {
+       ppgc = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png'
+       }
+       let lolXeon = { url : ppgc }
+       if (pea[0].announce == true) {
+       QueenNilu.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Closed By Admin, Now Only Admin Can Send Messages !`, `${botname}`, lolXeon, [])
+       } else if(pea[0].announce == false) {
+       QueenNilu.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Opened By Admin, Now Participants Can Send Messages !`, `${botname}`, lolXeon, [])
+       } else if (pea[0].restrict == true) {
+       QueenNilu.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Restricted, Now Only Admin Can Edit Group Info !`, `${botname}`, lolXeon, [])
+       } else if (pea[0].restrict == false) {
+       QueenNilu.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Opened, Now Participants Can Edit Group Info !`, `${botname}`, lolXeon, [])
+       } else {
+       QueenNilu.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Subject Has Been Changed To *${pea[0].subject}*`, `${botname}`, lolXeon, [])
+     }
+    })
+    
+    //randoming function
+function pickRandom(list) {
+return list[Math.floor(list.length * Math.random())]
+}
+//document randomizer
+let documents = [doc1,doc2,doc3,doc4,doc5,doc6]
+let docs = pickRandom(documents)
 
- QueenNilu.ev.on('group-participants.update', async (anu) => {
+    QueenNilu.ev.on('group-participants.update', async (anu) => {
         console.log(anu)
         try {
-
             let metadata = await QueenNilu.groupMetadata(anu.id)
             let participants = anu.participants
-            let chats = global.db.chats[m.chat]
-            let users = Object.keys(global.db.users)
-            if (typeof users !== 'object') global.db.users[jid] = {}
-            if (typeof chats !== 'object') global.db.chats[m.chat] = {}
-            let member = anu.participants[0]
             for (let num of participants) {
                 // Get Profile Picture User
                 try {
                     ppuser = await QueenNilu.profilePictureUrl(num, 'image')
                 } catch {
-                    ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+                    ppuser = 'https://i.ibb.co/sbqvDMw/avatar-contact-large-v2.png'
                 }
 
                 // Get Profile Picture Group
                 try {
-                    ppgroup = await QueenNilu.profilePictureUrl(anu.id, 'image')
+                    ppgroup = await zass.profilePictureUrl(anu.id, 'image')
                 } catch {
-                    ppgroup = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+                    ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png'
                 }
-              if (anu.action == 'add') {
-              if (db.chats[m.chat].localonly) {
-              if ( !member.startsWith('263') || !member.startsWith('263'))  {// put your country code for localonly 
-              QueenNilu.sendMessage(anu.id, { text: `Sorry @${member.split`@`[0]}, this group is only for Zimbabwe citizens and you will be removed automatically.`})
-              QueenNilu.updateBlockStatus(member, 'block')
-               return await Func.delay(2000).then(() => QueenNilu.groupParticipantsUpdate(anu.id, [member], 'remove'))
-               }
-               }
-               }
-         
                 
-                if (db.chats[m.chat].isWelcome) {//welcome by drips
+                //welcome\\
+        let nama = await QueenNilu.getName(num)
+memb = metadata.participants.length
+XeonWlcm = await getBuffer(ppuser)
+XeonLft = await getBuffer(ppuser)
                 if (anu.action == 'add') {
-                var buffer = await getBuffer(ppuser)
-                var wangu = await getBuffer(picak+'WELCOME CHOMIE')
-                let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-                he = `Welcome To ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
-                
+                const xeonbuffer = await getBuffer(ppuser)
+                let xeonName = num
+                const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
+	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+	            const xmembers = metadata.participants.length
+                let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+                xeonbody = `┌─❖
+│「 𝗛𝗶 👋 」
+└┬❖ 「 @${xeonName.split("@")[0]}  」
+   │✑  𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 
+   │✑  ${metadata.subject}
+   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
+   │✑ ${xmembers}th
+   │✑  𝗝𝗼𝗶𝗻𝗲𝗱 : 
+   │✑ ${xtime} ${xdate}
+   └───────────────┈ ⳹`
 let buttons = [
-{buttonId: `halo`, buttonText: {displayText: 'WELCOME'}, type: 1}
-
+{buttonId: `wkwwk`, buttonText: {displayText: 'Welcome 💐'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./lib/tes.xlsx'),
-mimetype: feler,
-jpegThumbnail:buffer,
+mimetype: docs,
+jpegThumbnail:XeonWlcm,
 mentions: [num],
-fileName: `WELCOME TO ${metadata.subject}`,
+fileName: `${metadata.subject}`,
 fileLength: 99999999999999,
-caption: he,
-footer: `©ZIM BOT INC 2022`,
+caption: xeonbody,
+footer: `${botname}`,
 buttons: buttons,
 headerType: 4,
-contextInfo: { externalAdReply:{
-title:"ZIM BOT V4",
-body:"SUB DRIPS OFC",
-showAdAttribution: true,
+contextInfo:{externalAdReply:{
+title: `${ownername}`,
+body: `Don't forget to read group description`,
 mediaType:2,
-thumbnail:wangu,
-mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-sourceUrl: `https://youtu.be/KNu-gr2h7bo`,
+thumbnail: XeonWlcm,
+sourceUrl: `${websitex}`,
+mediaUrl: `${websitex}`
 }}
 }
-const driphunny = fs.readFileSync('./Zimbot/welcome.mp3')
-QueenNilu.sendMessage(anu.id, { audio: driphunny, mimetype: 'audio/mp4', ptt: true})
-QueenNilu.sendMessage(anu.id, buttonMessage)
+QueenNilu.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
                 } else if (anu.action == 'remove') {
-                    var buffer = await getBuffer(ppuser)
-                    var mhatadzenyu = await getBuffer(picak+'BYE CHOMIE')
-                    let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-                    he = `He/She is gone bro ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
-                    
+                	const xeonbuffer = await getBuffer(ppuser)
+                    const xeontime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
+	                const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+                	let xeonName = num
+                    const xeonmembers = metadata.participants.length
+                    let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+                    xeonbody = `┌─❖
+│「 𝗚𝗼𝗼𝗱𝗯𝘆𝗲 👋 」
+└┬❖ 「 @${xeonName.split("@")[0]}  」
+   │✑  𝗟𝗲𝗳𝘁 
+   │✑ ${metadata.subject}
+   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
+   │✑ ${xeonmembers}th
+   │✑  𝗧𝗶𝗺𝗲 : 
+   │✑  ${xeontime} ${xeondate}
+   └───────────────┈ ⳹`
 let buttons = [
-{buttonId: `halo`, buttonText: {displayText: 'BYE'}, type: 1}
+{buttonId: `wkwkwk`, buttonText: {displayText: 'Sayonara 🥀'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./lib/tes.xlsx'),
-mimetype: feler,
-jpegThumbnail:buffer,
+mimetype: docs,
+jpegThumbnail:XeonLft,
 mentions: [num],
-fileName: `HE/SHE IS GONE BRO ${metadata.subject}`,
+fileName: `${metadata.subject}`,
 fileLength: 99999999999999,
-caption: he,
-footer: `©ZIM BOT INC 2022`,
+caption: xeonbody,
+footer: `${botname}`,
 buttons: buttons,
 headerType: 4,
-contextInfo: { externalAdReply:{
-title:"ZIM BOT V4",
-body:"SUB DRIPS OFC",
-showAdAttribution: true,
+contextInfo:{externalAdReply:{
+title: `${ownername}`,
+body: `Bye! my friend, take care.`,
 mediaType:2,
-thumbnail: mhatadzenyu,
-mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-sourceUrl: `https://youtu.be/KNu-gr2h7bo`,
+thumbnail: XeonLft,
+sourceUrl: `${websitex}`,
+mediaUrl: `${websitex}`
 }}
 }
-const dripbabe = fs.readFileSync('./Zimbot/leave.mp3')
-QueenNilu.sendMessage(anu.id, { audio: dripbabe, mimetype: 'audio/mp4', ptt: true})
-QueenNilu.sendMessage(anu.id, buttonMessage)
-    
+QueenNilu.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
+                             
                 }
             }
-         }
-        } catch (err) {
-            console.log(err)
+        } catch (e) {
+            console.log(e)
         }
     })
-    const http = require('http');
-//by drips 
-/*var nextMinute = Math.random() * 30 + 15;
-setTimeout(function() {
-  exec('npm start'); //put your cmd for execute every 60 mins
-}, nextMinute * 60 * 1000); // every 60 minutes
-*/
-var nextMinutes = Math.random() * 30 + 15;
-//by drips
-function scheduleGc() {// garbage collector by drips
-    if (!global.gc) {//memory leak fix
-      console.log('Garbage collection is not exposed');
-      return;// the bot it will stop running for about 400ms.
-    }
-    
-//by drips
-setTimeout(function(){
-    global.gc();
-    console.log('Manual gc', process.memoryUsage());
-    scheduleGc();
-  }, nextMinutes * 120 * 1000);
-  //done now our garbage is being collected every 2 minutes
-}
-scheduleGc();
-
-
-const ramCheck = setInterval(() => {
-      var ramUsage = process.memoryUsage().rss
-      if (ramUsage >= 1950000000) { // 2 GB
-         clearInterval(ramCheck)
-         process.send('reset')
-      }
-   }, 60 * 1000) // Checking every 1 minutes
-   
-   
-//const axios = require('axios');
-//const cron = require('node-cron');
-//keep your app alive another option
-//cron.schedule('*/25 * * * *', () => {
-//  axios.get('https://zimbot-v4.herokuapp.com/');//put your heroku app link
-//})
-
-//settings
+    // Setting
     QueenNilu.decodeJid = (jid) => {
         if (!jid) return jid
         if (/:\d+@/gi.test(jid)) {
@@ -297,15 +284,15 @@ const ramCheck = setInterval(() => {
             return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
     }
     
-    QueenNilu.sendContact = async (jid, kon, quoted = '', opts = {}) => {
+        QueenNilu.sendContact = async (jid, kon, quoted = '', opts = {}) => {
 	let list = []
 	for (let i of kon) {
 	    list.push({
-	    	displayName: await QueenNilu.getName(i + '@s.whatsapp.net'),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await QueenNilu.getName(i + '@s.whatsapp.net')}\nFN:${await QueenNilu.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click To Chat\nitem2.EMAIL;type=INTERNET:GitHub: zim-bot\nitem2.X-ABLabel:Follow Me On Github\nitem3.URL:YouTube: Drips\nitem3.X-ABLabel:Youtube\nitem4.ADR:;;Zim, Mizoram;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	displayName: await QueenNilu.getName(i),
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await QueenNilu.getName(i)}\nFN:${await QueenNilu.getName(i)}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click here to chat\nitem2.EMAIL;type=INTERNET:${ytname}\nitem2.X-ABLabel:YouTube\nitem3.URL:${socialm}\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
-	QueenNilu.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
+	QueenNilu.sendMessage(jid, { contacts: { displayName: `${list.length} Kontak`, contacts: list }, ...opts }, { quoted })
     }
     
     QueenNilu.setStatus = (status) => {
@@ -329,41 +316,180 @@ const ramCheck = setInterval(() => {
 
     QueenNilu.serializeM = (m) => smsg(QueenNilu, m, store)
 
-        QueenNilu.ev.on('connection.update', (update) => {
-        if (global.qr !== update.qr) {
-        global.qr = update.qr
-        }
-        const { connection, lastDisconnect } = update
+    QueenNilu.ev.on('connection.update', async (update) => {
+        const { connection, lastDisconnect } = update	    
         if (connection === 'close') {
-        lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut ? connectToWhatsApp() : console.log('connection logged out...')
+        let reason = new Boom(lastDisconnect?.error)?.output.statusCode
+            if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); QueenNilu.logout(); }
+            else if (reason === DisconnectReason.connectionClosed) { console.log("Connection closed, reconnecting...."); startQueenNilu(); }
+            else if (reason === DisconnectReason.connectionLost) { console.log("Connection Lost from Server, reconnecting..."); startQueenNilu(); }
+            else if (reason === DisconnectReason.connectionReplaced) { console.log("Connection Replaced, Another New Session Opened, Please Close Current Session First"); QueenNilu.logout(); }
+            else if (reason === DisconnectReason.loggedOut) { console.log(`Device Logged Out, Please Scan Again And Run.`); QueenNilu.logout(); }
+            else if (reason === DisconnectReason.restartRequired) { console.log("Restart Required, Restarting..."); startQueenNilu(); }
+            else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOut, Reconnecting..."); startQueenNilu(); }
+            else QueenNilu.end(`Unknown DisconnectReason: ${reason}|${connection}`)
         }
-        })
-    
-    QueenNilu.ev.on('creds.update', await saveCreds)
-    
-QueenNilu.reply = (from, content, msg) => QueenNilu.sendMessage(from, { text: content }, { quoted: msg })
+        console.log('Connected...', update)
+    })
 
-QueenNilu.sendMessageFromContent = async(jid, message, options = {}) => {
-		var option = { contextInfo: {}, ...options }
-		var prepare = await generateWAMessageFromContent(jid, message, option)
-		await QueenNilu.relayMessage(jid, prepare.message, { messageId: prepare.key.id })
-		return prepare
-	 }
-  
-    QueenNilu.sendList = async (jid , title = '', text = '', buttext = '', footer = '', but = [], options = {}) =>{
-            var template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-            listMessage :{
-                   title: title,
-                   description: text,
-                   buttonText: buttext,
-                   footerText: footer,
-                   listType: "  SELECT  ",
-                   sections: but,
-                   listType: 1
-                }
-                }), options)
-                QueenNilu.relayMessage(jid, template.message, { messageId: template.key.id })
+    QueenNilu.ev.on('creds.update', saveState)
+
+    // Add Other
+
+      /**
+      *
+      * @param {*} jid
+      * @param {*} url
+      * @param {*} caption
+      * @param {*} quoted
+      * @param {*} options
+      */
+     QueenNilu.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
+      let mime = '';
+      let res = await axios.head(url)
+      mime = res.headers['content-type']
+      if (mime.split("/")[1] === "gif") {
+     return QueenNilu.sendMessage(jid, { video: await getBuffer(url), caption: caption, gifPlayback: true, ...options}, { quoted: quoted, ...options})
+      }
+      let type = mime.split("/")[0]+"Message"
+      if(mime === "application/pdf"){
+     return QueenNilu.sendMessage(jid, { document: await getBuffer(url), mimetype: 'application/pdf', caption: caption, ...options}, { quoted: quoted, ...options })
+      }
+      if(mime.split("/")[0] === "image"){
+     return QueenNilu.sendMessage(jid, { image: await getBuffer(url), caption: caption, ...options}, { quoted: quoted, ...options})
+      }
+      if(mime.split("/")[0] === "video"){
+     return QueenNilu.sendMessage(jid, { video: await getBuffer(url), caption: caption, mimetype: 'video/mp4', ...options}, { quoted: quoted, ...options })
+      }
+      if(mime.split("/")[0] === "audio"){
+     return QueenNilu.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options}, { quoted: quoted, ...options })
+      }
+      }
+
+    /** Send List Messaage
+      *
+      *@param {*} jid
+      *@param {*} text
+      *@param {*} footer
+      *@param {*} title
+      *@param {*} butText
+      *@param [*] sections
+      *@param {*} quoted
+      */
+        QueenNilu.sendListMsg = (jid, text = '', footer = '', title = '' , butText = '', sects = [], quoted) => {
+        let sections = sects
+        var listMes = {
+        text: text,
+        footer: footer,
+        title: title,
+        buttonText: butText,
+        sections
         }
+        QueenNilu.sendMessage(jid, listMes, { quoted: quoted })
+        }
+
+    /** Send Button 5 Message
+     * 
+     * @param {*} jid
+     * @param {*} text
+     * @param {*} footer
+     * @param {*} button
+     * @returns 
+     */
+        QueenNilu.send5ButMsg = (jid, text = '' , footer = '', but = []) =>{
+        let templateButtons = but
+        var templateMessage = {
+        text: text,
+        footer: footer,
+        templateButtons: templateButtons
+        }
+        QueenNilu.sendMessage(jid, templateMessage)
+        }
+
+    /** Send Button 5 Image
+     *
+     * @param {*} jid
+     * @param {*} text
+     * @param {*} footer
+     * @param {*} image
+     * @param [*] button
+     * @param {*} options
+     * @returns
+     */
+    QueenNilu.send5ButImg = async (jid , text = '' , footer = '', img, but = [], options = {}) =>{
+        let message = await prepareWAMessageMedia({ image: img }, { upload: QueenNilu.waUploadToServer })
+        var template = generateWAMessageFromContent(jid, proto.Message.fromObject({
+        templateMessage: {
+        hydratedTemplate: {
+        imageMessage: message.imageMessage,
+               "hydratedContentText": text,
+               "hydratedFooterText": footer,
+               "hydratedButtons": but
+            }
+            }
+            }), options)
+            QueenNilu.relayMessage(jid, template.message, { messageId: template.key.id })
+    }
+
+    /** Send Button 5 Video
+     *
+     * @param {*} jid
+     * @param {*} text
+     * @param {*} footer
+     * @param {*} Video
+     * @param [*] button
+     * @param {*} options
+     * @returns
+     */
+    QueenNilu.send5ButVid = async (jid , text = '' , footer = '', vid, but = [], options = {}) =>{
+        let message = await prepareWAMessageMedia({ video: vid }, { upload: QueenNilu.waUploadToServer })
+        var template = generateWAMessageFromContent(jid, proto.Message.fromObject({
+        templateMessage: {
+        hydratedTemplate: {
+        videoMessage: message.videoMessage,
+               "hydratedContentText": text,
+               "hydratedFooterText": footer,
+               "hydratedButtons": but
+            }
+            }
+            }), options)
+            QueenNilu.relayMessage(jid, template.message, { messageId: template.key.id })
+    }
+
+    /** Send Button 5 Gif
+     *
+     * @param {*} jid
+     * @param {*} text
+     * @param {*} footer
+     * @param {*} Gif
+     * @param [*] button
+     * @param {*} options
+     * @returns
+     */
+    QueenNilu.send5ButGif = async (jid , text = '' , footer = '', gif, but = [], options = {}) =>{
+        let message = await prepareWAMessageMedia({ video: gif, gifPlayback: true }, { upload: QueenNilu.waUploadToServer })
+        var template = generateWAMessageFromContent(jid, proto.Message.fromObject({
+        templateMessage: {
+        hydratedTemplate: {
+        videoMessage: message.videoMessage,
+               "hydratedContentText": text,
+               "hydratedFooterText": footer,
+               "hydratedButtons": but
+            }
+            }
+            }), options)
+            QueenNilu.relayMessage(jid, template.message, { messageId: template.key.id })
+    }
+
+    /**
+     * 
+     * @param {*} jid 
+     * @param {*} buttons 
+     * @param {*} caption 
+     * @param {*} footer 
+     * @param {*} quoted 
+     * @param {*} options 
+     */
     QueenNilu.sendButtonText = (jid, buttons = [], text, footer, quoted = '', options = {}) => {
         let buttonMessage = {
             text,
@@ -457,25 +583,6 @@ QueenNilu.sendMessageFromContent = async(jid, message, options = {}) => {
         await QueenNilu.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
         return buffer
     }
-
-    /**
-     * 
-     * @param {*} jid 
-     * @param {*} text 
-     * @param {*} footer
-     * @param {*} options 
-     * @returns 
-     * 
-     */
-    QueenNilu.send5ButMsg = (jid, text = '' , footer = '', but = []) =>{
-        let templateButtons = but
-        var templateMessage = {
-        text: text,
-        footer: footer,
-        templateButtons: templateButtons
-        }
-        QueenNilu.sendMessage(jid, templateMessage)
-        }
 
     /**
      * 
@@ -576,30 +683,6 @@ QueenNilu.sendMessageFromContent = async(jid, message, options = {}) => {
      * @param {*} options 
      * @returns 
      */
-     QueenNilu.sendFile = async(jid, PATH, fileName, quoted = {}, options = {}) => {
-        let types = await QueenNilu.getFile(PATH, true)
-        let { filename, size, ext, mime, data } = types
-        let type = '', mimetype = mime, pathFile = filename
-        if (options.asDocument) type = 'document'
-        if (options.asSticker || /webp/.test(mime)) {
-            let { writeExif } = require('./lib/sticker.js')
-            let media = { mimetype: mime, data }
-            pathFile = await writeExif(media, { packname: global.packname, author: global.packname, categories: options.categories ? options.categories : [] })
-            await fs.promises.unlink(filename)
-            type = 'sticker'
-            mimetype = 'image/webp'
-        }
-        else if (/image/.test(mime)) type = 'image'
-        else if (/video/.test(mime)) type = 'video'
-        else if (/audio/.test(mime)) type = 'audio'
-        else type = 'document'
-        await QueenNilu.sendMessage(jid, { [type]: { url: pathFile }, mimetype, fileName, ...options }, { quoted, ...options })
-        return fs.promises.unlink(pathFile)
-    }
-    QueenNilu.parseMention = async(text) => {
-        return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')
-    }
-
     QueenNilu.copyNForward = async (jid, message, forceForward = false, options = {}) => {
         let vtype
 		if (options.readViewOnce) {
@@ -675,7 +758,7 @@ QueenNilu.sendMessageFromContent = async(jid, message, options = {}) => {
             mime: 'application/octet-stream',
             ext: '.bin'
         }
-        filename = path.join(__filename, '../src/' + new Date * 1 + '.' + type.ext)
+        filename = path.join(__filename, './src/' + new Date * 1 + '.' + type.ext)
         if (data && save) fs.promises.writeFile(filename, data)
         return {
             res,
@@ -686,12 +769,8 @@ QueenNilu.sendMessageFromContent = async(jid, message, options = {}) => {
         }
 
     }
-            
+
     return QueenNilu
-    }
-    
-connectToWhatsApp()
-.catch(err => console.log(err))
 }
 
 startQueenNilu()
