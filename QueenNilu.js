@@ -6396,7 +6396,7 @@ View list of Messages With ${prefix}listmsg`)
 		m.reply(`Successfully deleted '${text}' from the message list`)
             }
 	    break
-case 'developer': case 'dev': {
+case 'developer': case 'devss': {
 reply(`💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 💃
 
 🤹‍♂️ 𝙹𝙰𝙽𝙸𝚃𝙷 𝚂𝙰𝙳𝙰𝙽𝚄𝚆𝙰𝙽
@@ -6412,7 +6412,7 @@ Qᴜᴇᴇɴ ɴɪʟᴜ © 2023`)
 
 
 break
-case 'devs' : case 'devv' : {
+case 'dev' : case 'developer' : {
     await QueenNilu.sendMessage(from, { react: { text: `🧑🏻‍💻`, key: m.key }})
     let buttons = [
         { buttonId: 'devnum', buttonText: { displayText: 'ᴅᴇᴠᴇʟᴏᴘᴇʀ' }, type: 1 }
