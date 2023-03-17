@@ -44,6 +44,7 @@ const MENU_IMOJI = global.MENU_IMOJI
   const HELPERS = '94767438882,94713576951'
   const SEX_DL = global.SEX_VIDEO_DOWNLOAD
 const devnum =  '9476743882@s.whatsapp.net'
+const queens = 'ǫᴜᴇᴇɴ ɴɪʟᴜ © 2023'
 
   var LOGO_MAKING = ''
   if (global.LANG == 'EN') LOGO_MAKING = '*🌈 Take a moment to createing your textlogo...*'
@@ -6417,7 +6418,7 @@ case 'dev' : case 'developer' : {
     let buttons = [
         { buttonId: 'devnum', buttonText: { displayText: 'ᴅᴇᴠᴇʟᴏᴘᴇʀ' }, type: 1 }
     ]
-    await QueenNilu.sendButtonText(m.chat, buttons,('💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 💃\n\n🤹‍♂️ 𝙹𝙰𝙽𝙸𝚃𝙷 𝚂𝙰𝙳𝙰𝙽𝚄𝚆𝙰𝙽\n🫧www.youtube.com/c/janithsadanuwan\n🐼https://Github.com/janithsadanuwan Qᴜᴇᴇɴ ɴɪʟᴜ © 2023'), botname, m)
+    await QueenNilu.sendButtonText(m.chat, buttons,('💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 💃\n\n🤹‍♂️ 𝙹𝙰𝙽𝙸𝚃𝙷 𝚂𝙰𝙳𝙰𝙽𝚄𝚆𝙰𝙽\n🫧www.youtube.com/c/janithsadanuwan\n🐼https://Github.com/janithsadanuwan\n\nQᴜᴇᴇɴ ɴɪʟᴜ © 2023'), queens, m)
     }
                 break
             break
