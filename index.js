@@ -1,6 +1,6 @@
 //═══════════════════════════════════════════════════════//
 //                  QUEEN NILU WHATSAPP BOT 
-//                           [ script tuna ]
+//                           [ script Xeon ]
 //════════════════════════════//
 
 require('./settings')
