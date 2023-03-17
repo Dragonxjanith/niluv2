@@ -4,7 +4,7 @@ const chalk = require('chalk');
 
 if (fs.existsSync('./language/' + global.LANG + '.json')) {
     console.log(
-        chalk.green.bold('Loading ' + global.LANG + ' language...')
+        chalk.green.bold('Loading ' + global.LANG + ' language...🔥')
     );
 
     var json = JSON.parse(fs.readFileSync('./language/' + global.LANG + '.json'));
