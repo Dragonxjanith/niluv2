@@ -1059,7 +1059,7 @@ case 'apk':{
     /*var P_LINK = ''
     if (global.LANG == 'EN') P_LINK = return reply('*💃 Please give me a correct link*\n _.apk https://play.google.com/store/apps/details?id=com.whatsapp_')
     if (global.LANG == 'EN') P_LINK = */
-    
+    await QueenNilu.sendMessage(from, { react: { text: `🧰`, key: m.key }})
                if (!text) return reply('*💃 Please give plastore app name*')
                 await QueenNilu.sendText(m.chat,mess.wait)
                await fetchJson(`https://api.akuari.my.id/search/playstoresearch?query=${text}`)
@@ -1905,7 +1905,7 @@ Cieeee, What's Going On❤️💖👀`
         }
                                    break
 	    case 'style': case 'styletext': {
-	        if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // response when limit runs out
+	        if ( global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // response when limit runs out
 		db.data.users[m.sender].limit -= 1 // -1 limit
 		let { styletext } = require('./lib/scraper')
 		if (!text) throw 'Enter Query text!'
