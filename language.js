@@ -1,4 +1,4 @@
-require('./settings');
+require('./Nilu-settings');
 const fs = require('fs');
 const chalk = require('chalk');
 
