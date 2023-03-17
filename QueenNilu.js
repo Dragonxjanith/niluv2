@@ -6397,7 +6397,15 @@ View list of Messages With ${prefix}listmsg`)
             }
 	    break
 case 'developer': case 'dev': {
-reply(`•QUEEN NILU DEVELOPER•\n\n\n   ©2022-2023 .\n\nJanith sadanuwan\nPm: wa.me/94767438882`)
+reply(`💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 💃
+
+🤹‍♂️ 𝙹𝙰𝙽𝙸𝚃𝙷 𝚂𝙰𝙳𝙰𝙽𝚄𝚆𝙰𝙽
+🫧www.youtube.com/c/janithsadanuwan
+🐼https://Github.com/janithsadanuwan
+
+Pm: wa.me/94767438882
+
+Qᴜᴇᴇɴ ɴɪʟᴜ © 2023`)
 }
             break
 case 'owner': case 'creator': case 'moderator': case 'mod': {
