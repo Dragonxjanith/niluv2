@@ -3616,7 +3616,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 case 'directaudiodown' : {
                 
                        const down = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
-                     //  const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
+                       const thub = await fetchJson('https://github.com/Dargonxjaniya/UPLOADS/raw/main/JSON/niludetails.json')
                        buf = await getBuffer(thub.SF_THUB)
                        const up = await QueenNilu.sendText(m.chat,global.SONG_UP, m, )
                        await QueenNilu.sendMessage(m.chat,{delete : down.key })  
