@@ -43,7 +43,7 @@ const MENU_IMOJI = global.MENU_IMOJI
   const D_E = MENU_IMOJI.split('|')[1]
   const HELPERS = '94767438882,94713576951'
   const SEX_DL = global.SEX_VIDEO_DOWNLOAD
-
+const devnum =  '9476743882@s.whatsapp.net'
 
   var LOGO_MAKING = ''
   if (global.LANG == 'EN') LOGO_MAKING = '*🌈 Take a moment to createing your textlogo...*'
@@ -6406,9 +6406,26 @@ reply(`💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐃𝐄𝐕𝐄𝐋𝐎𝐏�
 Pm: wa.me/94767438882
 
 Qᴜᴇᴇɴ ɴɪʟᴜ © 2023`)
+
+
 }
+
+
+break
+case 'devs' : case 'devv' : {
+    await QueenNilu.sendMessage(from, { react: { text: `🧑🏻‍💻`, key: m.key }})
+    let buttons = [
+        { buttonId: 'devnum', buttonText: { displayText: 'ᴅᴇᴠᴇʟᴏᴘᴇʀ' }, type: 1 }
+    ]
+    await QueenNilu.sendButtonText(m.chat, buttons,('💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 💃\n\n🤹‍♂️ 𝙹𝙰𝙽𝙸𝚃𝙷 𝚂𝙰𝙳𝙰𝙽𝚄𝚆𝙰𝙽\n🫧www.youtube.com/c/janithsadanuwan\n🐼https://Github.com/janithsadanuwan Qᴜᴇᴇɴ ɴɪʟᴜ © 2023'), botname, m)
+    }
+                break
             break
 case 'owner': case 'creator': case 'moderator': case 'mod': {
+QueenNilu.sendContact(m.chat, owner, m)
+}
+break
+case 'devnum': {
 QueenNilu.sendContact(m.chat, owner, m)
 }
             break
