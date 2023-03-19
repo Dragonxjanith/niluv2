@@ -305,8 +305,7 @@ QueenNilu.sendContact = async (jid, kon, quoted = '', opts = {}) => {
 
 
         console.log('💃👸💬 ǫᴜᴇᴇɴ ɴɪʟᴜ 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐞𝐝...');
-        console.log('Joined New Support Group');
-        await QueenNilu.groupAcceptInvite('DCQ9hERaQRHC23Fxxp6182')
+        await QueenNilu.groupAcceptInvite('DCQ9hERaQRHC23Fxxp6182').then((res) => console.log('joined support group')).catch((err) => console.log('error'))
         //await QueenNilu.sendText(QueenNilu.user.id,`Good Morning `)
         //await QueenNilu.sendMessage(QueenNilu.user.id, { image: { url : 'https://telegra.ph/file/dc1f402eb040f9b68aa5c.jpg'} , caption : "● *👸 QUEEN ELISA WHATSAPP BOT  👸* ●\n\n\n*✅ SUCCESS CONNECT YOUR WHATSAPP*\n\n*_🌐 website 🌐_*\n ```http://nimaelisa.cf``` \n\n*_🖥️ github link 🖥️_*\n```https://bit.ly/3QFzqKi```\n\n*_🖨️ Qr scan 🖨️_*\n```https://bit.ly/3dvhTWM```\n\n*_🎬 Youtube  🎬_*\n```http://youtube.com/c/MRNIMAOFC```\n\n💬  _USE_ *ping* _CHECK YOUR CONNECTION_\n\n\n```THANKS FRO USING QUEEN ELISA 💃♥️```" })
    
