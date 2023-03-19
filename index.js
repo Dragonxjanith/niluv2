@@ -4,8 +4,7 @@
 //════════════════════════════//
 
 require('./settings')
-const { default: QueenNilujaniyaConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
-const { state, saveState } = useSingleFileAuthState(`./${sessionName}.json`)
+const { default: QueenNilujaniyaConnect, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
 const fs = require('fs')
@@ -94,14 +93,16 @@ return
 }
 },30 * 1000)
 */
-async function startQueenNilu() {
+async function startQueenNilu(){
+    const connectToWhatsApp = async () => {
+	const { state, saveCreds } = await useMultiFileAuthState('auth_info_baileys')
     const QueenNilu = QueenNilujaniyaConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
         browser: ['QUEEN NILU V2','Safari','1.0.0'],
         auth: state
     })
-
+    }
 
     store.bind(QueenNilu.ev)
     
@@ -312,7 +313,7 @@ QueenNilu.sendContact = async (jid, kon, quoted = '', opts = {}) => {
 
  })
 
-    QueenNilu.ev.on('creds.update', saveState)
+    QueenNilu.ev.on('creds.update', saveCreds)
 
     // Add Other
     /** Send Button 5 Image
