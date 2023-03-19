@@ -5,7 +5,6 @@
 
 require('./settings')
 const { default: QueenNilujaniyaConnect, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
-const { state, saveCreds } = await useMultiFileAuthState('auth_info_baileys')
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
 const fs = require('fs')
@@ -94,18 +93,18 @@ return
 }
 },30 * 1000)
 */
-async function startQueenNilu(){
-    const connectToWhatsApp = async () => {
-    const QueenNilu = QueenNilujaniyaConnect({
-        logger: pino({ level: 'silent' }),
-        printQRInTerminal: true,
-        browser: ['QUEEN NILU V2','Safari','1.0.0'],
-        auth: state
-    })
-    }
 
-    store.bind(QueenNilu.ev)
+    async function startQueenNilu() {
+        const { state, saveCreds } = await useMultiFileAuthState('auth_info_baileys')
+        const QueenNilu = QueenNilujaniyaConnect({
+            logger: pino({ level: 'silent' }),
+            printQRInTerminal: true,
+            browser: ['QUEEN NILU V2','Safari','1.0.0'],
+            auth: state
+        })
     
+    
+        store.bind(QueenNilu.ev)
     // anticall auto block
     
 
