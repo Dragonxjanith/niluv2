@@ -2909,7 +2909,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                    const footer = global.botname
                                    const buttons = [
                                     {buttonId: `niluj ${janiya.hasil[0].url}`, buttonText: {displayText: '📁 DOCUMENT 📁'}, type: 1},
-                                    {buttonId: `niluj ${janiya.hasil.url}`, buttonText: {displayText: '🎧 AUDIO 🎧'}, type: 1}
+                                    {buttonId: `niluj ${janiya.hasil[0].url}`, buttonText: {displayText: '🎧 AUDIO 🎧'}, type: 1}
                                                      
                                                 ]
                                             const buttonMessage = {    
@@ -2942,12 +2942,12 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                        case 'niluj' : {
                                             if (!text.includes('https://youtube.com')) return reply('*💃 Please give me a correct link*\n _.song https://youtube.com/watch?v=b_yvlcRn0cM_')
                                             await QueenNilu.sendMessage(from, { react: { text: `🔄`, key: m.key }})
-                                                const song = await fetchJson(`https://api.akuari.my.id/downloader/youtube3?link=${text}&type=360`)
+                                                const song = await fetchJson(`https://api.akuari.my.id/downloader/yt1?link=${text}`)
                                                 
                                                 await QueenNilu.sendMessage(from, { text: `*📤 Uploading  ...*` }, { quoted: m })
                                                 const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
                                                 
-                                                QueenNilu.sendMessage(m.chat, {audio:{ song: audio.audio }, mimetype:"audio/mpeg", fileName: `${song.title}.mp3`,  quoted: m})
+                                                QueenNilu.sendMessage(m.chat, {audio:{ song: urldl_audio }, mimetype:"audio/mpeg", fileName: `${song.title}.mp3`,  quoted: m})
 
                                                 await QueenNilu.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
                                                 await QueenNilu.sendMessage(from, { react: { text: `✅`, key: m.key }}).catch((err) => m.reply(NOT_FOUND))
