@@ -2942,7 +2942,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                        case 'niluj' : {
                                             if (!text.includes('https://youtube.com')) return reply('*💃 Please give me a correct link*\n _.song https://youtube.com/watch?v=b_yvlcRn0cM_')
                                             await QueenNilu.sendMessage(from, { react: { text: `🔄`, key: m.key }})
-                                                const song = await fetchJson(`https://api.akuari.my.id/downloader/yt1?link=${text}`)
+                                                const song = await fetchJson(`https://api.akuari.my.id/downloader/yt1?link=${text}&type=360`)
                                                 
                                                 await QueenNilu.sendMessage(from, { text: `*📤 Uploading  ...*` }, { quoted: m })
                                                 const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
