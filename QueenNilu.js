@@ -3184,7 +3184,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           }     
                                           break 
                                           case 'video2' :{
-                                          const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
+                                          const thub = await fetchJson('https://github.com/Dargonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
                                           buf = await getBuffer(thub.YT_THUB)
                                           if (!text) return reply('*💃 Need video name or url*')
                                           if (text.includes('https://youtu')){
@@ -3604,7 +3604,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 if (global.LANG == 'SI' ) UPLOAD = '*📤 ඔබගේ විඩියෝව ඔබවෙත එවමින් පවතී...*'
                 if (global.LANG == 'EN' ) UPLOAD = '*📤 UPLOADING YOUR VIDEO...*'
                        const down = await QueenNilu.sendText(m.chat,DOWNLOAD, m, )
-                       const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
+                       const thub = await fetchJson('https://github.com/Dargonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
                        buf = await getBuffer(thub.SF_THUB)
                        const up = await QueenNilu.sendText(m.chat,UPLOAD, m, )
                        await QueenNilu.sendMessage(m.chat,{delete : down.key })  
@@ -3616,7 +3616,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                 case 'directaudiodown' : {
                 
                        const down = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
-                     //  const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
+                     //  const thub = await fetchJson('https://github.com/Dargonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
                        buf = await getBuffer(thub.SF_THUB)
                        const up = await QueenNilu.sendText(m.chat,global.SONG_UP, m, )
                        await QueenNilu.sendMessage(m.chat,{delete : down.key })  
@@ -3735,7 +3735,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                                   }
                                                   break
                                                   case 'ytmp4' : {
-                                                  const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
+                                                  const thub = await fetchJson('https://github.com/Dargonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                           if(!text) return m.reply('*💃 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
                                           if (!text.includes('https://youtu')) return m.reply('*💃 Need youtube url* \n'+'```ℹ️ Example .ytmp4 https://youtube.com/watch?v=WoWlWb6vbzA```')
@@ -3823,7 +3823,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: m.key }})
                                               await QueenNilu.sendText(m.chat,mess.wait)
                                               const qulity = args[1]
-                                              /*const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
+                                              /*const thub = await fetchJson('https://github.com/Dargonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                               const boltc = require('@bochilteam/scraper')
                                               //const search = args[0]
@@ -3832,7 +3832,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               const nilu = await boltc.youtubedlv2(search.all[0].url)
                                               */
                                               if(qulity = '144p'){
-                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
+                                              const thub = await fetchJson('https://github.com/Dargonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                               const boltc = require('@bochilteam/scraper')
                                               //const search = args[0]
@@ -3845,7 +3845,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
                                               }else if(qulity = '240p'){
-                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
+                                              const thub = await fetchJson('https://github.com/Dargonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                               const boltc = require('@bochilteam/scraper')
                                               //const search = args[0]
@@ -3858,7 +3858,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
                                               }else if(qulity = '480'){
-                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
+                                              const thub = await fetchJson('https://github.com/Dargonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                               const boltc = require('@bochilteam/scraper')
                                               //const search = args[0]
@@ -3872,7 +3872,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           
                                               
                                               }else if(qulity = '720'){
-                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
+                                              const thub = await fetchJson('https://github.com/Dargonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                               const boltc = require('@bochilteam/scraper')
                                               //const search = args[0]
@@ -3886,7 +3886,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           
                                               
                                               }else if (qulity = '1080'){
-                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
+                                              const thub = await fetchJson('https://github.com/Dargonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                               const boltc = require('@bochilteam/scraper')
                                               //const search = args[0]
@@ -3899,7 +3899,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                           await QueenNilu.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4',jpegThumbnail:buf, caption: global.cap }, { quoted: m })
                                           
                                               }
-                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
+                                              const thub = await fetchJson('https://github.com/Dargonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
                                               const buf = await getBuffer(thub.YT_THUB)
                                               const boltc = require('@bochilteam/scraper')
                                               //const search = args[0]
@@ -3917,7 +3917,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                               break
                                               case '22ytmp4': case '22ytvideo': {  
                                               await QueenNilu.sendMessage(from, { react: { text: `📽️`, key: m.key }})
-                                              const thub = await fetchJson('https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/niludetails.json')
+                                              const thub = await fetchJson('https://github.com/Dargonxjanith/UPLOADS/raw/main/JSON/niludetails.json')
                                               buf = await getBuffer(thub.YT_THUB)
                 
                                                   let { ytv } = require('./lib/y2mate')
@@ -9541,7 +9541,7 @@ break
 if (global.ANTI_BADWORD == 'true' && m.isGroup && !isAdmins && !isCreator) {
          
     const bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'))
-    //await fetchJson(`https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/BADWORD.json`)
+    //await fetchJson(`https://github.com/Dargonxjanith/UPLOADS/raw/main/JSON/BADWORD.json`)
     for (any in bad){
     if (budy.toLowerCase().includes(bad[any])){
     if (!isBotAdmins) return 
