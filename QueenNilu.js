@@ -2909,7 +2909,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
                                    const footer = global.botname
                                    const buttons = [
                                     {buttonId: `niluj ${janiya.hasil[0].url}`, buttonText: {displayText: '📁 DOCUMENT 📁'}, type: 1},
-                                    {buttonId: `niluj ${janiya.hasil[0].url}`, buttonText: {displayText: '🎧 AUDIO 🎧'}, type: 1}
+                                    {buttonId: `niluj ${janiya.hasil.url}`, buttonText: {displayText: '🎧 AUDIO 🎧'}, type: 1}
                                                      
                                                 ]
                                             const buttonMessage = {    
